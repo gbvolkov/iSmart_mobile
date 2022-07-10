@@ -8,6 +8,8 @@ import 'schema/users_record.dart';
 import 'schema/categories_record.dart';
 import 'schema/settings_record.dart';
 import 'schema/notification_types_record.dart';
+import 'schema/themes_record.dart';
+import 'schema/sub_themes_record.dart';
 import 'schema/serializers.dart';
 
 export 'dart:async' show StreamSubscription;
@@ -19,6 +21,8 @@ export 'schema/users_record.dart';
 export 'schema/categories_record.dart';
 export 'schema/settings_record.dart';
 export 'schema/notification_types_record.dart';
+export 'schema/themes_record.dart';
+export 'schema/sub_themes_record.dart';
 
 /// Functions to query UsersRecords (as a Stream and as a Future).
 Stream<List<UsersRecord>> queryUsersRecord({
@@ -188,6 +192,90 @@ Future<FFFirestorePage<NotificationTypesRecord>>
           pageSize: pageSize,
           isStream: isStream,
         );
+
+/// Functions to query ThemesRecords (as a Stream and as a Future).
+Stream<List<ThemesRecord>> queryThemesRecord({
+  Query Function(Query) queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      ThemesRecord.collection,
+      ThemesRecord.serializer,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<ThemesRecord>> queryThemesRecordOnce({
+  Query Function(Query) queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      ThemesRecord.collection,
+      ThemesRecord.serializer,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<FFFirestorePage<ThemesRecord>> queryThemesRecordPage({
+  Query Function(Query) queryBuilder,
+  DocumentSnapshot nextPageMarker,
+  int pageSize,
+  bool isStream,
+}) =>
+    queryCollectionPage(
+      ThemesRecord.collection,
+      ThemesRecord.serializer,
+      queryBuilder: queryBuilder,
+      nextPageMarker: nextPageMarker,
+      pageSize: pageSize,
+      isStream: isStream,
+    );
+
+/// Functions to query SubThemesRecords (as a Stream and as a Future).
+Stream<List<SubThemesRecord>> querySubThemesRecord({
+  Query Function(Query) queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      SubThemesRecord.collection,
+      SubThemesRecord.serializer,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<SubThemesRecord>> querySubThemesRecordOnce({
+  Query Function(Query) queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      SubThemesRecord.collection,
+      SubThemesRecord.serializer,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<FFFirestorePage<SubThemesRecord>> querySubThemesRecordPage({
+  Query Function(Query) queryBuilder,
+  DocumentSnapshot nextPageMarker,
+  int pageSize,
+  bool isStream,
+}) =>
+    queryCollectionPage(
+      SubThemesRecord.collection,
+      SubThemesRecord.serializer,
+      queryBuilder: queryBuilder,
+      nextPageMarker: nextPageMarker,
+      pageSize: pageSize,
+      isStream: isStream,
+    );
 
 Stream<List<T>> queryCollection<T>(Query collection, Serializer<T> serializer,
     {Query Function(Query) queryBuilder,

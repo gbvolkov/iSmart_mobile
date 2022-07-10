@@ -17,6 +17,38 @@
           "order": "ASCENDING"
         }
       ]
+    },
+    {
+      "collectionGroup": "categories",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "parent_id",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "class_name",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "themes",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "subject_id",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "class_id",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "sort_order",
+          "order": "ASCENDING"
+        }
+      ]
     }
   ]
 }

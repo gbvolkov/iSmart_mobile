@@ -61,12 +61,17 @@ class _PlatformWebViewWidgetState extends State<PlatformWebViewWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Expanded(
-                child: FlutterFlowWebView(
-                  url: widget.platformURL,
-                  bypass: false,
-                  height: MediaQuery.of(context).size.height * 1,
-                  verticalScroll: false,
-                  horizontalScroll: false,
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    FlutterFlowWebView(
+                      url: widget.platformURL,
+                      bypass: false,
+                      height: MediaQuery.of(context).size.height * 0.75,
+                      verticalScroll: false,
+                      horizontalScroll: false,
+                    ),
+                  ],
                 ),
               ),
             ],

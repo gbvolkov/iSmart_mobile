@@ -4,6 +4,8 @@ import 'users_record.dart';
 import 'categories_record.dart';
 import 'settings_record.dart';
 import 'notification_types_record.dart';
+import 'themes_record.dart';
+import 'sub_themes_record.dart';
 
 import 'index.dart';
 
@@ -18,6 +20,8 @@ const kDocumentReferenceField = 'Document__Reference__Field';
   CategoriesRecord,
   SettingsRecord,
   NotificationTypesRecord,
+  ThemesRecord,
+  SubThemesRecord,
 ])
 final Serializers serializers = (_$serializers.toBuilder()
       ..add(DocumentReferenceSerializer())

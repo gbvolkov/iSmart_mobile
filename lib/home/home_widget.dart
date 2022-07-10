@@ -3,10 +3,12 @@ import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../platform_web_view/platform_web_view_widget.dart';
+import '../themes/themes_widget.dart';
 import '../flutter_flow/custom_functions.dart' as functions;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:text_search/text_search.dart';
 
 class HomeWidget extends StatefulWidget {
   const HomeWidget({
@@ -21,6 +23,7 @@ class HomeWidget extends StatefulWidget {
 }
 
 class _HomeWidgetState extends State<HomeWidget> {
+  List<CategoriesRecord> simpleSearchResults = [];
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -234,103 +237,209 @@ class _HomeWidgetState extends State<HomeWidget> {
                                               gridViewIndex];
                                       return Stack(
                                         children: [
-                                          Material(
-                                            color: Colors.transparent,
-                                            elevation: 0,
-                                            shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(8),
-                                            ),
-                                            child: Container(
-                                              width: MediaQuery.of(context)
-                                                  .size
-                                                  .width,
-                                              height: MediaQuery.of(context)
-                                                      .size
-                                                      .height *
-                                                  1,
-                                              decoration: BoxDecoration(
-                                                gradient: LinearGradient(
-                                                  colors: [
-                                                    Color(0xFFF0F7EA),
-                                                    Color(0xFFDDEBFC)
-                                                  ],
-                                                  stops: [0, 1],
-                                                  begin: AlignmentDirectional(
-                                                      -1, 0),
-                                                  end: AlignmentDirectional(
-                                                      1, 0),
-                                                ),
+                                          Align(
+                                            alignment:
+                                                AlignmentDirectional(0, 0),
+                                            child: Material(
+                                              color: Colors.transparent,
+                                              elevation: 0,
+                                              shape: RoundedRectangleBorder(
                                                 borderRadius:
                                                     BorderRadius.circular(8),
-                                                border: Border.all(
-                                                  color: Color(0xFFE2EFFF),
-                                                  width: 1,
-                                                ),
                                               ),
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                children: [
-                                                  Align(
-                                                    alignment:
-                                                        AlignmentDirectional(
-                                                            0, 0),
-                                                    child: Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0, 2, 0, 0),
-                                                      child: ClipRRect(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(8),
-                                                        child: Image.network(
-                                                          functions.getImageURL(
-                                                              FFAppState()
-                                                                  .baseURL,
+                                              child: Container(
+                                                width: MediaQuery.of(context)
+                                                    .size
+                                                    .width,
+                                                height: MediaQuery.of(context)
+                                                        .size
+                                                        .height *
+                                                    1,
+                                                decoration: BoxDecoration(
+                                                  gradient: LinearGradient(
+                                                    colors: [
+                                                      Color(0xFFF0F7EA),
+                                                      Color(0xFFDDEBFC)
+                                                    ],
+                                                    stops: [0, 1],
+                                                    begin: AlignmentDirectional(
+                                                        -1, 0),
+                                                    end: AlignmentDirectional(
+                                                        1, 0),
+                                                  ),
+                                                  borderRadius:
+                                                      BorderRadius.circular(8),
+                                                  border: Border.all(
+                                                    color: Color(0xFFE2EFFF),
+                                                    width: 1,
+                                                  ),
+                                                ),
+                                                child: InkWell(
+                                                  onTap: () async {
+                                                    setState(() => FFAppState()
+                                                            .subjectSelectionGroupCode =
+                                                        gridViewCategoriesRecord
+                                                            .code);
+                                                    await queryCategoriesRecordOnce()
+                                                        .then(
+                                                          (records) => simpleSearchResults =
+                                                              TextSearch(
+                                                            records
+                                                                .map(
+                                                                  (record) =>
+                                                                      TextSearchItem(
+                                                                          record,
+                                                                          [
+                                                                        record
+                                                                            .parentId
+                                                                      ]),
+                                                                )
+                                                                .toList(),
+                                                          )
+                                                                  .search(
+                                                                      valueOrDefault<
+                                                                          String>(
+                                                                    gridViewCategoriesRecord
+                                                                        .id,
+                                                                    '\"\"',
+                                                                  ))
+                                                                  .map((r) =>
+                                                                      r.object)
+                                                                  .toList(),
+                                                        )
+                                                        .onError((_, __) =>
+                                                            simpleSearchResults =
+                                                                [])
+                                                        .whenComplete(() =>
+                                                            setState(() {}));
+
+                                                    setState(() => FFAppState()
+                                                            .currentSubjectID =
+                                                        functions.getFirtCategorySubjectID(
+                                                            simpleSearchResults
+                                                                .toList(),
+                                                            gridViewCategoriesRecord
+                                                                .id));
+                                                    setState(() => FFAppState()
+                                                            .currentClassID =
+                                                        functions.getFirstCategoryClassID(
+                                                            simpleSearchResults
+                                                                .toList(),
+                                                            gridViewCategoriesRecord
+                                                                .id));
+                                                    setState(() => FFAppState()
+                                                            .subjectSelectionCode =
+                                                        functions.getFirstCategoryCode(
+                                                            simpleSearchResults
+                                                                .toList(),
+                                                            gridViewCategoriesRecord
+                                                                .id));
+                                                    await Navigator.push(
+                                                      context,
+                                                      MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            ThemesWidget(
+                                                          currentCategoryID:
                                                               gridViewCategoriesRecord
-                                                                  .imageUrl),
-                                                          width: 70,
-                                                          height: 70,
-                                                          fit: BoxFit.cover,
+                                                                  .id,
+                                                          currentCategoryName:
+                                                              gridViewCategoriesRecord
+                                                                  .description,
                                                         ),
                                                       ),
-                                                    ),
-                                                  ),
-                                                  Container(
-                                                    width: double.infinity,
-                                                    height: 24,
-                                                    decoration: BoxDecoration(
-                                                      color: Color(0xFFEEEEEE),
-                                                    ),
-                                                    alignment:
-                                                        AlignmentDirectional(
-                                                            0, 0),
-                                                    child: Text(
-                                                      gridViewCategoriesRecord
-                                                          .name,
-                                                      textAlign:
-                                                          TextAlign.center,
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                    );
+                                                  },
+                                                  child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    children: [
+                                                      Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                                    0, 4, 0, 0),
+                                                        child: Container(
+                                                          width: 70,
+                                                          height: 70,
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            color: Color(
+                                                                0xFFEEEEEE),
+                                                          ),
+                                                          child: Align(
+                                                            alignment:
+                                                                AlignmentDirectional(
+                                                                    0, 0),
+                                                            child: ClipRRect(
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          8),
+                                                              child:
+                                                                  Image.network(
+                                                                functions.getImageURL(
+                                                                    FFAppState()
+                                                                        .baseURL,
+                                                                    gridViewCategoriesRecord
+                                                                        .imageUrl),
+                                                                width: 70,
+                                                                height: 70,
+                                                                fit: BoxFit
+                                                                    .contain,
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                      Container(
+                                                        width: double.infinity,
+                                                        height: 24,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color:
+                                                              Color(0xFFEEEEEE),
+                                                        ),
+                                                        alignment:
+                                                            AlignmentDirectional(
+                                                                0, 0),
+                                                        child: Text(
+                                                          gridViewCategoriesRecord
+                                                              .name,
+                                                          textAlign:
+                                                              TextAlign.center,
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
                                                               .subtitle1
                                                               .override(
                                                                 fontFamily:
                                                                     'Nunito Sans',
                                                                 fontSize: 18,
                                                               ),
-                                                    ),
+                                                        ),
+                                                      ),
+                                                    ],
                                                   ),
-                                                ],
+                                                ),
                                               ),
                                             ),
                                           ),
                                           Align(
                                             alignment: AlignmentDirectional(
-                                                -0.96, -0.88),
-                                            child: InkWell(
-                                              onTap: () async {
+                                                -0.01, -0.6),
+                                            child: FlutterFlowIconButton(
+                                              borderColor: Colors.transparent,
+                                              borderRadius: 8,
+                                              borderWidth: 1,
+                                              buttonSize: 42,
+                                              fillColor: Color(0x9AFFCC00),
+                                              icon: Icon(
+                                                FFIcons.kismartLogo,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryText,
+                                                size: 21,
+                                              ),
+                                              onPressed: () async {
                                                 await Navigator.push(
                                                   context,
                                                   MaterialPageRoute(
@@ -351,13 +460,6 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                   ),
                                                 );
                                               },
-                                              child: Icon(
-                                                FFIcons.kismartLogo,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryText,
-                                                size: 40,
-                                              ),
                                             ),
                                           ),
                                         ],

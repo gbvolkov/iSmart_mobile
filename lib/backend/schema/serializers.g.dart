@@ -10,6 +10,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(CategoriesRecord.serializer)
       ..add(NotificationTypesRecord.serializer)
       ..add(SettingsRecord.serializer)
+      ..add(SubThemesRecord.serializer)
+      ..add(ThemesRecord.serializer)
       ..add(UsersRecord.serializer)
       ..addBuilderFactory(
           const FullType(BuiltList, const [
