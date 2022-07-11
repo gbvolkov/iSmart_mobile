@@ -1,4 +1,5 @@
 import '../auth/auth_util.dart';
+import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -14,23 +15,23 @@ class SignUpWidget extends StatefulWidget {
 }
 
 class _SignUpWidgetState extends State<SignUpWidget> {
-  TextEditingController inpEmailController1;
-  TextEditingController inpPasswordController1;
-  bool inpPasswordVisibility1;
-  TextEditingController inpEmailController2;
-  TextEditingController inpPasswordController2;
-  bool inpPasswordVisibility2;
+  TextEditingController inpEmailLoginController;
+  TextEditingController inpPasswordLoginController;
+  bool inpPasswordLoginVisibility;
+  TextEditingController inpEmailSignupController;
+  TextEditingController inpPasswordSignupController;
+  bool inpPasswordSignupVisibility;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    inpEmailController1 = TextEditingController();
-    inpPasswordController1 = TextEditingController();
-    inpPasswordVisibility1 = false;
-    inpEmailController2 = TextEditingController();
-    inpPasswordController2 = TextEditingController();
-    inpPasswordVisibility2 = false;
+    inpEmailLoginController = TextEditingController();
+    inpPasswordLoginController = TextEditingController();
+    inpPasswordLoginVisibility = false;
+    inpEmailSignupController = TextEditingController();
+    inpPasswordSignupController = TextEditingController();
+    inpPasswordSignupVisibility = false;
   }
 
   @override
@@ -108,7 +109,8 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   8, 24, 8, 0),
                                           child: TextFormField(
-                                            controller: inpEmailController1,
+                                            controller:
+                                                inpEmailSignupController,
                                             autofocus: true,
                                             obscureText: false,
                                             decoration: InputDecoration(
@@ -152,10 +154,11 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   8, 12, 8, 0),
                                           child: TextFormField(
-                                            controller: inpPasswordController1,
+                                            controller:
+                                                inpPasswordSignupController,
                                             autofocus: true,
                                             obscureText:
-                                                !inpPasswordVisibility1,
+                                                !inpPasswordSignupVisibility,
                                             decoration: InputDecoration(
                                               hintText: 'Введите пароль',
                                               hintStyle:
@@ -189,13 +192,13 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                               ),
                                               suffixIcon: InkWell(
                                                 onTap: () => setState(
-                                                  () => inpPasswordVisibility1 =
-                                                      !inpPasswordVisibility1,
+                                                  () => inpPasswordSignupVisibility =
+                                                      !inpPasswordSignupVisibility,
                                                 ),
                                                 focusNode: FocusNode(
                                                     skipTraversal: true),
                                                 child: Icon(
-                                                  inpPasswordVisibility1
+                                                  inpPasswordSignupVisibility
                                                       ? Icons
                                                           .visibility_outlined
                                                       : Icons
@@ -220,12 +223,21 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                 final user =
                                                     await createAccountWithEmail(
                                                   context,
-                                                  inpEmailController1.text,
-                                                  inpPasswordController1.text,
+                                                  inpEmailSignupController.text,
+                                                  inpPasswordSignupController
+                                                      .text,
                                                 );
                                                 if (user == null) {
                                                   return;
                                                 }
+
+                                                final usersCreateData =
+                                                    createUsersRecordData(
+                                                  isAdmin: false,
+                                                );
+                                                await UsersRecord.collection
+                                                    .doc(user.uid)
+                                                    .update(usersCreateData);
 
                                                 await Navigator.push(
                                                   context,
@@ -292,7 +304,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   8, 24, 8, 0),
                                           child: TextFormField(
-                                            controller: inpEmailController2,
+                                            controller: inpEmailLoginController,
                                             autofocus: true,
                                             obscureText: false,
                                             decoration: InputDecoration(
@@ -336,10 +348,11 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   8, 12, 8, 0),
                                           child: TextFormField(
-                                            controller: inpPasswordController2,
+                                            controller:
+                                                inpPasswordLoginController,
                                             autofocus: true,
                                             obscureText:
-                                                !inpPasswordVisibility2,
+                                                !inpPasswordLoginVisibility,
                                             decoration: InputDecoration(
                                               hintText: 'Введите пароль',
                                               hintStyle:
@@ -373,13 +386,13 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                               ),
                                               suffixIcon: InkWell(
                                                 onTap: () => setState(
-                                                  () => inpPasswordVisibility2 =
-                                                      !inpPasswordVisibility2,
+                                                  () => inpPasswordLoginVisibility =
+                                                      !inpPasswordLoginVisibility,
                                                 ),
                                                 focusNode: FocusNode(
                                                     skipTraversal: true),
                                                 child: Icon(
-                                                  inpPasswordVisibility2
+                                                  inpPasswordLoginVisibility
                                                       ? Icons
                                                           .visibility_outlined
                                                       : Icons
@@ -404,8 +417,9 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                 final user =
                                                     await signInWithEmail(
                                                   context,
-                                                  inpEmailController1.text,
-                                                  inpPasswordController1.text,
+                                                  inpEmailLoginController.text,
+                                                  inpPasswordLoginController
+                                                      .text,
                                                 );
                                                 if (user == null) {
                                                   return;

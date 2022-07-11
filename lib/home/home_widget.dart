@@ -1,8 +1,10 @@
+import '../auth/auth_util.dart';
 import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../platform_web_view/platform_web_view_widget.dart';
+import '../sign_up/sign_up_widget.dart';
 import '../themes/themes_widget.dart';
 import '../flutter_flow/custom_functions.dart' as functions;
 import 'package:auto_size_text/auto_size_text.dart';
@@ -55,7 +57,28 @@ class _HomeWidgetState extends State<HomeWidget> {
                 fontSize: 22,
               ),
         ),
-        actions: [],
+        actions: [
+          FlutterFlowIconButton(
+            borderColor: Colors.transparent,
+            borderRadius: 30,
+            borderWidth: 1,
+            buttonSize: 60,
+            icon: Icon(
+              Icons.exit_to_app,
+              color: FlutterFlowTheme.of(context).primaryText,
+              size: 30,
+            ),
+            onPressed: () async {
+              await signOut();
+              await Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SignUpWidget(),
+                ),
+              );
+            },
+          ),
+        ],
         centerTitle: true,
         elevation: 2,
       ),
@@ -315,25 +338,40 @@ class _HomeWidgetState extends State<HomeWidget> {
 
                                                     setState(() => FFAppState()
                                                             .currentSubjectID =
-                                                        functions.getFirtCategorySubjectID(
-                                                            simpleSearchResults
-                                                                .toList(),
-                                                            gridViewCategoriesRecord
-                                                                .id));
+                                                        functions
+                                                            .getFirstCategoryFromList(
+                                                                simpleSearchResults
+                                                                    .toList(),
+                                                                gridViewCategoriesRecord
+                                                                    .id)
+                                                            .subjectId);
                                                     setState(() => FFAppState()
                                                             .currentClassID =
-                                                        functions.getFirstCategoryClassID(
-                                                            simpleSearchResults
-                                                                .toList(),
-                                                            gridViewCategoriesRecord
-                                                                .id));
+                                                        functions
+                                                            .getFirstCategoryFromList(
+                                                                simpleSearchResults
+                                                                    .toList(),
+                                                                gridViewCategoriesRecord
+                                                                    .id)
+                                                            .classId);
                                                     setState(() => FFAppState()
                                                             .subjectSelectionCode =
-                                                        functions.getFirstCategoryCode(
-                                                            simpleSearchResults
-                                                                .toList(),
-                                                            gridViewCategoriesRecord
-                                                                .id));
+                                                        functions
+                                                            .getFirstCategoryFromList(
+                                                                simpleSearchResults
+                                                                    .toList(),
+                                                                gridViewCategoriesRecord
+                                                                    .id)
+                                                            .code);
+                                                    setState(() => FFAppState()
+                                                            .subjectSelectionID =
+                                                        functions
+                                                            .getFirstCategoryFromList(
+                                                                simpleSearchResults
+                                                                    .toList(),
+                                                                gridViewCategoriesRecord
+                                                                    .id)
+                                                            .id);
                                                     await Navigator.push(
                                                       context,
                                                       MaterialPageRoute(
@@ -343,6 +381,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                               gridViewCategoriesRecord
                                                                   .id,
                                                           currentCategoryName:
+                                                              gridViewCategoriesRecord
+                                                                  .name,
+                                                          currentCategoryDescription:
                                                               gridViewCategoriesRecord
                                                                   .description,
                                                         ),

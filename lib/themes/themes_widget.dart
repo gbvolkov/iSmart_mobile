@@ -3,6 +3,7 @@ import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../platform_web_view/platform_web_view_widget.dart';
+import '../sub_themes/sub_themes_widget.dart';
 import '../flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,10 +13,12 @@ class ThemesWidget extends StatefulWidget {
     Key key,
     this.currentCategoryID,
     this.currentCategoryName,
+    this.currentCategoryDescription,
   }) : super(key: key);
 
   final String currentCategoryID;
   final String currentCategoryName;
+  final String currentCategoryDescription;
 
   @override
   _ThemesWidgetState createState() => _ThemesWidgetState();
@@ -46,7 +49,7 @@ class _ThemesWidgetState extends State<ThemesWidget> {
           },
         ),
         title: Text(
-          'Темы',
+          widget.currentCategoryName,
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Nunito Sans',
                 color: FlutterFlowTheme.of(context).primaryText,
@@ -93,7 +96,7 @@ class _ThemesWidgetState extends State<ThemesWidget> {
                           child: Align(
                             alignment: AlignmentDirectional(-1, 0),
                             child: Text(
-                              widget.currentCategoryName,
+                              widget.currentCategoryDescription,
                               textAlign: TextAlign.start,
                               style: FlutterFlowTheme.of(context).subtitle2,
                             ),
@@ -164,6 +167,9 @@ class _ThemesWidgetState extends State<ThemesWidget> {
                                             setState(() => FFAppState()
                                                     .subjectSelectionCode =
                                                 listViewCategoriesRecord.code);
+                                            setState(() => FFAppState()
+                                                    .subjectSelectionID =
+                                                listViewCategoriesRecord.id);
                                           },
                                           child: Material(
                                             color: Colors.transparent,
@@ -329,37 +335,54 @@ class _ThemesWidgetState extends State<ThemesWidget> {
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceAround,
                                             children: [
-                                              Container(
-                                                width: MediaQuery.of(context)
-                                                        .size
-                                                        .width *
-                                                    0.7,
-                                                height: 48,
-                                                decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryBackground,
-                                                ),
-                                                child: Align(
-                                                  alignment:
-                                                      AlignmentDirectional(
-                                                          -1, 0),
-                                                  child: Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(
-                                                                8, 0, 0, 0),
-                                                    child: Text(
-                                                      '${listViewThemesRecord.number} ${listViewThemesRecord.name}',
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyText1
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Nunito Sans',
-                                                                fontSize: 16,
-                                                              ),
+                                              InkWell(
+                                                onTap: () async {
+                                                  await Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          SubThemesWidget(
+                                                        theme:
+                                                            listViewThemesRecord,
+                                                        currentSubjectSelectorID:
+                                                            FFAppState()
+                                                                .subjectSelectionID,
+                                                      ),
+                                                    ),
+                                                  );
+                                                },
+                                                child: Container(
+                                                  width: MediaQuery.of(context)
+                                                          .size
+                                                          .width *
+                                                      0.7,
+                                                  height: 48,
+                                                  decoration: BoxDecoration(
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .primaryBackground,
+                                                  ),
+                                                  child: Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            -1, 0),
+                                                    child: Padding(
+                                                      padding:
+                                                          EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  8, 0, 0, 0),
+                                                      child: Text(
+                                                        '${listViewThemesRecord.number} ${listViewThemesRecord.name}',
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyText1
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Nunito Sans',
+                                                                  fontSize: 16,
+                                                                ),
+                                                      ),
                                                     ),
                                                   ),
                                                 ),
@@ -421,18 +444,6 @@ class _ThemesWidgetState extends State<ThemesWidget> {
                     ],
                   ),
                 ),
-              ),
-              Text(
-                FFAppState().currentClassID,
-                style: FlutterFlowTheme.of(context).bodyText1,
-              ),
-              Text(
-                FFAppState().currentSubjectID,
-                style: FlutterFlowTheme.of(context).bodyText1,
-              ),
-              Text(
-                widget.currentCategoryID,
-                style: FlutterFlowTheme.of(context).bodyText1,
               ),
             ],
           ),

@@ -1,3 +1,4 @@
+import '../auth/auth_util.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -18,7 +19,14 @@ class PlatformWebViewWidget extends StatefulWidget {
 }
 
 class _PlatformWebViewWidgetState extends State<PlatformWebViewWidget> {
+  TextEditingController textController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  void initState() {
+    super.initState();
+    textController = TextEditingController(text: widget.platformURL);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -71,6 +79,40 @@ class _PlatformWebViewWidgetState extends State<PlatformWebViewWidget> {
                       verticalScroll: false,
                       horizontalScroll: false,
                     ),
+                    if ((valueOrDefault(currentUserDocument?.isAdmin, false)) ==
+                        true)
+                      AuthUserStreamWidget(
+                        child: TextFormField(
+                          controller: textController,
+                          autofocus: true,
+                          obscureText: false,
+                          decoration: InputDecoration(
+                            hintText: '[Some hint text...]',
+                            hintStyle: FlutterFlowTheme.of(context).bodyText2,
+                            enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color(0x00000000),
+                                width: 1,
+                              ),
+                              borderRadius: const BorderRadius.only(
+                                topLeft: Radius.circular(4.0),
+                                topRight: Radius.circular(4.0),
+                              ),
+                            ),
+                            focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color(0x00000000),
+                                width: 1,
+                              ),
+                              borderRadius: const BorderRadius.only(
+                                topLeft: Radius.circular(4.0),
+                                topRight: Radius.circular(4.0),
+                              ),
+                            ),
+                          ),
+                          style: FlutterFlowTheme.of(context).bodyText1,
+                        ),
+                      ),
                   ],
                 ),
               ),

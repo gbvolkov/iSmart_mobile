@@ -57,6 +57,22 @@ String getThemePlatformURL(
       categoryCode;
 }
 
+String getSubThemePlatformURL(
+  String baseSimulatorURL,
+  ThemesRecord currentTheme,
+  SubThemesRecord currentSubTheme,
+  String currentSubjectSelectorID,
+) {
+  return baseSimulatorURL +
+      currentSubjectSelectorID +
+      "/" +
+      currentTheme.subjectId +
+      "/" +
+      currentTheme.classId +
+      "/" +
+      currentSubTheme.id;
+}
+
 List<DocumentReference> filterThemes(
   List<DocumentReference> themesCollection,
   String regexString,
@@ -100,55 +116,4 @@ CategoriesRecord getFirstCategoryFromList(
     return cat1.className.compareTo(cat2.className);
   });
   return categories.first;
-}
-
-String getFirtCategorySubjectID(
-  List<CategoriesRecord> categories,
-  String parentId,
-) {
-  if (categories.isNotEmpty) {
-    categories.removeWhere((cat) {
-      return cat.parentId != parentId;
-    });
-    categories.sort((cat1, cat2) {
-      return cat1.className.compareTo(cat2.className);
-    });
-    return categories[0].subjectId;
-  } else {
-    return "";
-  }
-}
-
-String getFirstCategoryClassID(
-  List<CategoriesRecord> categories,
-  String parentId,
-) {
-  if (categories.isNotEmpty) {
-    categories.removeWhere((cat) {
-      return cat.parentId != parentId;
-    });
-    categories.sort((cat1, cat2) {
-      return cat1.className.compareTo(cat2.className);
-    });
-    return categories[0].classId;
-  } else {
-    return "";
-  }
-}
-
-String getFirstCategoryCode(
-  List<CategoriesRecord> categories,
-  String parentId,
-) {
-  if (categories.isNotEmpty) {
-    categories.removeWhere((cat) {
-      return cat.parentId != parentId;
-    });
-    categories.sort((cat1, cat2) {
-      return cat1.className.compareTo(cat2.className);
-    });
-    return categories[0].code;
-  } else {
-    return "";
-  }
 }
