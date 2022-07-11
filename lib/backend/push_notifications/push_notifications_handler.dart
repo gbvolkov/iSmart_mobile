@@ -94,7 +94,6 @@ final pageBuilderMap = <String, Future<Widget> Function(Map<String, dynamic>)>{
         currentSubjectSelectorID:
             getParameter(data, 'currentSubjectSelectorID'),
       ),
-  'Test': (data) async => TestWidget(),
 };
 
 bool hasMatchingParameters(Map<String, dynamic> data, Set<String> params) =>

@@ -162,7 +162,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                                       topRight: Radius.circular(0),
                                     ),
                                     child: Image.network(
-                                      columnCategoriesRecord.imageUrl,
+                                      functions.getImageURL(
+                                          FFAppState().baseURL,
+                                          columnCategoriesRecord.imageUrl),
                                       width: 100,
                                       height: 100,
                                       fit: BoxFit.cover,

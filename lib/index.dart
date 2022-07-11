@@ -6,4 +6,3 @@ export 'platform_web_view/platform_web_view_widget.dart'
     show PlatformWebViewWidget;
 export 'themes/themes_widget.dart' show ThemesWidget;
 export 'sub_themes/sub_themes_widget.dart' show SubThemesWidget;
-export 'test/test_widget.dart' show TestWidget;
