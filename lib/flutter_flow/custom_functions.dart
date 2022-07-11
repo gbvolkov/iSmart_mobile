@@ -14,14 +14,22 @@ String getImageURL(
   String baseURL,
   String imageURL,
 ) {
-  return baseURL + imageURL;
+  if (!imageURL.startsWith("https:")) {
+    return baseURL + imageURL;
+  } else {
+    return imageURL;
+  }
 }
 
 String getImageURLString(
   String baseURL,
   String imageURL,
 ) {
-  return baseURL + imageURL;
+  if (!imageURL.startsWith("https:")) {
+    return baseURL + imageURL;
+  } else {
+    return imageURL;
+  }
 }
 
 String getCategoryPlatformURL(

@@ -149,6 +149,13 @@ class _$CategoriesRecordSerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.image;
+    if (value != null) {
+      result
+        ..add('image')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
     value = object.reference;
     if (value != null) {
       result
@@ -249,6 +256,10 @@ class _$CategoriesRecordSerializer
           result.code = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'image':
+          result.image = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'Document__Reference__Field':
           result.reference = serializers.deserialize(value,
                   specifiedType: const FullType(
@@ -300,6 +311,8 @@ class _$CategoriesRecord extends CategoriesRecord {
   @override
   final String code;
   @override
+  final String image;
+  @override
   final DocumentReference<Object> reference;
 
   factory _$CategoriesRecord(
@@ -325,6 +338,7 @@ class _$CategoriesRecord extends CategoriesRecord {
       this.parent,
       this.children,
       this.code,
+      this.image,
       this.reference})
       : super._();
 
@@ -358,6 +372,7 @@ class _$CategoriesRecord extends CategoriesRecord {
         parent == other.parent &&
         children == other.children &&
         code == other.code &&
+        image == other.image &&
         reference == other.reference;
   }
 
@@ -381,31 +396,25 @@ class _$CategoriesRecord extends CategoriesRecord {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc(
-                                                                                0,
-                                                                                name
-                                                                                    .hashCode),
-                                                                            id
-                                                                                .hashCode),
-                                                                        parentId
-                                                                            .hashCode),
-                                                                    practiceId
-                                                                        .hashCode),
-                                                                description
-                                                                    .hashCode),
-                                                            type.hashCode),
-                                                        imageUrl.hashCode),
-                                                    shortDescription.hashCode),
-                                                isVisible.hashCode),
-                                            sortOrder.hashCode),
-                                        classId.hashCode),
-                                    className.hashCode),
-                                subjectId.hashCode),
-                            subjectName.hashCode),
-                        practiceName.hashCode),
-                    parent.hashCode),
-                children.hashCode),
-            code.hashCode),
+                                                                            $jc($jc(0, name.hashCode),
+                                                                                id.hashCode),
+                                                                            parentId.hashCode),
+                                                                        practiceId.hashCode),
+                                                                    description.hashCode),
+                                                                type.hashCode),
+                                                            imageUrl.hashCode),
+                                                        shortDescription.hashCode),
+                                                    isVisible.hashCode),
+                                                sortOrder.hashCode),
+                                            classId.hashCode),
+                                        className.hashCode),
+                                    subjectId.hashCode),
+                                subjectName.hashCode),
+                            practiceName.hashCode),
+                        parent.hashCode),
+                    children.hashCode),
+                code.hashCode),
+            image.hashCode),
         reference.hashCode));
   }
 
@@ -430,6 +439,7 @@ class _$CategoriesRecord extends CategoriesRecord {
           ..add('parent', parent)
           ..add('children', children)
           ..add('code', code)
+          ..add('image', image)
           ..add('reference', reference))
         .toString();
   }
@@ -514,6 +524,10 @@ class CategoriesRecordBuilder
   String get code => _$this._code;
   set code(String code) => _$this._code = code;
 
+  String _image;
+  String get image => _$this._image;
+  set image(String image) => _$this._image = image;
+
   DocumentReference<Object> _reference;
   DocumentReference<Object> get reference => _$this._reference;
   set reference(DocumentReference<Object> reference) =>
@@ -544,6 +558,7 @@ class CategoriesRecordBuilder
       _parent = $v.parent;
       _children = $v.children?.toBuilder();
       _code = $v.code;
+      _image = $v.image;
       _reference = $v.reference;
       _$v = null;
     }
@@ -585,6 +600,7 @@ class CategoriesRecordBuilder
               parent: parent,
               children: _children?.build(),
               code: code,
+              image: image,
               reference: reference);
     } catch (_) {
       String _$failedField;

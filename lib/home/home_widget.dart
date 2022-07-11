@@ -1,13 +1,16 @@
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
+import '../backend/firebase_storage/storage.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../flutter_flow/upload_media.dart';
 import '../platform_web_view/platform_web_view_widget.dart';
 import '../sign_up/sign_up_widget.dart';
 import '../themes/themes_widget.dart';
 import '../flutter_flow/custom_functions.dart' as functions;
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:text_search/text_search.dart';
@@ -26,6 +29,8 @@ class HomeWidget extends StatefulWidget {
 
 class _HomeWidgetState extends State<HomeWidget> {
   List<CategoriesRecord> simpleSearchResults = [];
+  String uploadedFileUrl2 = '';
+  String uploadedFileUrl1 = '';
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -157,9 +162,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                       topRight: Radius.circular(0),
                                     ),
                                     child: Image.network(
-                                      functions.getImageURL(
-                                          FFAppState().baseURL,
-                                          columnCategoriesRecord.imageUrl),
+                                      columnCategoriesRecord.imageUrl,
                                       width: 100,
                                       height: 100,
                                       fit: BoxFit.cover,
@@ -198,23 +201,95 @@ class _HomeWidgetState extends State<HomeWidget> {
                                       ),
                                     ),
                                   ),
+                                  if (valueOrDefault(
+                                          currentUserDocument?.isAdmin,
+                                          false) ??
+                                      true)
+                                    Align(
+                                      alignment:
+                                          AlignmentDirectional(1.02, -1.08),
+                                      child: AuthUserStreamWidget(
+                                        child: FlutterFlowIconButton(
+                                          borderColor: Colors.transparent,
+                                          borderRadius: 20,
+                                          borderWidth: 1,
+                                          buttonSize: 40,
+                                          icon: Icon(
+                                            Icons.more_vert,
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryText,
+                                            size: 30,
+                                          ),
+                                          onPressed: () async {
+                                            final selectedMedia =
+                                                await selectMediaWithSourceBottomSheet(
+                                              context: context,
+                                              allowPhoto: true,
+                                            );
+                                            if (selectedMedia != null &&
+                                                selectedMedia.every((m) =>
+                                                    validateFileFormat(
+                                                        m.storagePath,
+                                                        context))) {
+                                              showUploadMessage(
+                                                context,
+                                                'Uploading file...',
+                                                showLoading: true,
+                                              );
+                                              final downloadUrls = (await Future
+                                                      .wait(selectedMedia.map(
+                                                          (m) async =>
+                                                              await uploadData(
+                                                                  m.storagePath,
+                                                                  m.bytes))))
+                                                  .where((u) => u != null)
+                                                  .toList();
+                                              ScaffoldMessenger.of(context)
+                                                  .hideCurrentSnackBar();
+                                              if (downloadUrls != null &&
+                                                  downloadUrls.length ==
+                                                      selectedMedia.length) {
+                                                setState(() =>
+                                                    uploadedFileUrl1 =
+                                                        downloadUrls.first);
+                                                showUploadMessage(
+                                                  context,
+                                                  'Success!',
+                                                );
+                                              } else {
+                                                showUploadMessage(
+                                                  context,
+                                                  'Failed to upload media',
+                                                );
+                                                return;
+                                              }
+                                            }
+
+                                            final categoriesUpdateData =
+                                                createCategoriesRecordData(
+                                              imageUrl: uploadedFileUrl1,
+                                            );
+                                            await columnCategoriesRecord
+                                                .reference
+                                                .update(categoriesUpdateData);
+                                          },
+                                        ),
+                                      ),
+                                    ),
                                 ],
                               ),
                             ),
                           ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
-                            child: Image.asset(
-                              'assets/images/620d2782cf9e172916fd74d0_main_image.png',
-                              width: double.infinity,
-                              height: 200,
-                              fit: BoxFit.cover,
-                            ),
+                          Image.asset(
+                            'assets/images/620d2782cf9e172916fd74d0_main_image.png',
+                            width: double.infinity,
+                            height: 200,
+                            fit: BoxFit.cover,
                           ),
                           Expanded(
                             child: Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(8, 12, 8, 0),
+                                  EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
                               child: StreamBuilder<List<CategoriesRecord>>(
                                 stream: queryCategoriesRecord(
                                   queryBuilder: (categoriesRecord) =>
@@ -503,6 +578,89 @@ class _HomeWidgetState extends State<HomeWidget> {
                                               },
                                             ),
                                           ),
+                                          if (valueOrDefault(
+                                                  currentUserDocument?.isAdmin,
+                                                  false) ??
+                                              true)
+                                            Align(
+                                              alignment: AlignmentDirectional(
+                                                  1.02, -1.08),
+                                              child: AuthUserStreamWidget(
+                                                child: FlutterFlowIconButton(
+                                                  borderColor:
+                                                      Colors.transparent,
+                                                  borderRadius: 20,
+                                                  borderWidth: 1,
+                                                  buttonSize: 40,
+                                                  icon: Icon(
+                                                    Icons.more_vert,
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .primaryText,
+                                                    size: 30,
+                                                  ),
+                                                  onPressed: () async {
+                                                    final selectedMedia =
+                                                        await selectMediaWithSourceBottomSheet(
+                                                      context: context,
+                                                      allowPhoto: true,
+                                                    );
+                                                    if (selectedMedia != null &&
+                                                        selectedMedia.every((m) =>
+                                                            validateFileFormat(
+                                                                m.storagePath,
+                                                                context))) {
+                                                      showUploadMessage(
+                                                        context,
+                                                        'Uploading file...',
+                                                        showLoading: true,
+                                                      );
+                                                      final downloadUrls = (await Future
+                                                              .wait(selectedMedia
+                                                                  .map((m) async =>
+                                                                      await uploadData(
+                                                                          m.storagePath,
+                                                                          m.bytes))))
+                                                          .where((u) => u != null)
+                                                          .toList();
+                                                      ScaffoldMessenger.of(
+                                                              context)
+                                                          .hideCurrentSnackBar();
+                                                      if (downloadUrls !=
+                                                              null &&
+                                                          downloadUrls.length ==
+                                                              selectedMedia
+                                                                  .length) {
+                                                        setState(() =>
+                                                            uploadedFileUrl2 =
+                                                                downloadUrls
+                                                                    .first);
+                                                        showUploadMessage(
+                                                          context,
+                                                          'Success!',
+                                                        );
+                                                      } else {
+                                                        showUploadMessage(
+                                                          context,
+                                                          'Failed to upload media',
+                                                        );
+                                                        return;
+                                                      }
+                                                    }
+
+                                                    final categoriesUpdateData =
+                                                        createCategoriesRecordData(
+                                                      imageUrl:
+                                                          uploadedFileUrl2,
+                                                    );
+                                                    await gridViewCategoriesRecord
+                                                        .reference
+                                                        .update(
+                                                            categoriesUpdateData);
+                                                  },
+                                                ),
+                                              ),
+                                            ),
                                         ],
                                       );
                                     },

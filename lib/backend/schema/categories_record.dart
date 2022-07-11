@@ -77,6 +77,9 @@ abstract class CategoriesRecord
   String get code;
 
   @nullable
+  String get image;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
@@ -97,7 +100,8 @@ abstract class CategoriesRecord
     ..subjectName = ''
     ..practiceName = ''
     ..children = ListBuilder()
-    ..code = '';
+    ..code = ''
+    ..image = '';
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('categories');
@@ -138,6 +142,7 @@ Map<String, dynamic> createCategoriesRecordData({
   String practiceName,
   DocumentReference parent,
   String code,
+  String image,
 }) =>
     serializers.toFirestore(
         CategoriesRecord.serializer,
@@ -159,4 +164,5 @@ Map<String, dynamic> createCategoriesRecordData({
           ..practiceName = practiceName
           ..parent = parent
           ..children = null
-          ..code = code));
+          ..code = code
+          ..image = image));
