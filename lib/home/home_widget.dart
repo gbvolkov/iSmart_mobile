@@ -16,12 +16,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:text_search/text_search.dart';
 
 class HomeWidget extends StatefulWidget {
-  const HomeWidget({
-    Key key,
-    this.baseURL,
-  }) : super(key: key);
-
-  final String baseURL;
+  const HomeWidget({Key key}) : super(key: key);
 
   @override
   _HomeWidgetState createState() => _HomeWidgetState();
@@ -70,7 +65,7 @@ class _HomeWidgetState extends State<HomeWidget> {
             buttonSize: 60,
             icon: Icon(
               Icons.exit_to_app,
-              color: FlutterFlowTheme.of(context).primaryText,
+              color: FlutterFlowTheme.of(context).secondaryText,
               size: 30,
             ),
             onPressed: () async {
@@ -132,11 +127,10 @@ class _HomeWidgetState extends State<HomeWidget> {
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(8, 12, 8, 0),
+                            padding: EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
                             child: Container(
                               width: double.infinity,
-                              height: 120,
+                              height: 100,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context)
                                     .primaryBackground,
@@ -324,8 +318,8 @@ class _HomeWidgetState extends State<HomeWidget> {
                                     gridDelegate:
                                         SliverGridDelegateWithFixedCrossAxisCount(
                                       crossAxisCount: 2,
-                                      crossAxisSpacing: 8,
-                                      mainAxisSpacing: 8,
+                                      crossAxisSpacing: 4,
+                                      mainAxisSpacing: 4,
                                       childAspectRatio: 1.5,
                                     ),
                                     scrollDirection: Axis.vertical,

@@ -98,13 +98,38 @@ List<ThemesRecord> filterThemesList(
   List<ThemesRecord> themesCollection,
   String regexString,
 ) {
-  List<ThemesRecord> result;
-  for (var theme in themesCollection) {
-    if (theme.toString().contains(regexString)) {
-      result.add(theme);
+  if (regexString.isNotEmpty) {
+    List<ThemesRecord> result = [];
+    for (var theme in themesCollection) {
+      if ((theme.number + ' ' + theme.name)
+          .toLowerCase()
+          .contains(regexString.toLowerCase())) {
+        result.add(theme);
+      }
     }
+    return result;
+  } else {
+    return themesCollection;
   }
-  return result;
+}
+
+List<SubThemesRecord> filterSubThemesList(
+  List<SubThemesRecord> subThemesCollection,
+  String regexString,
+) {
+  if (regexString.isNotEmpty) {
+    List<SubThemesRecord> result = [];
+    for (var subtheme in subThemesCollection) {
+      if ((subtheme.number + ' ' + subtheme.name)
+          .toLowerCase()
+          .contains(regexString.toLowerCase())) {
+        result.add(subtheme);
+      }
+    }
+    return result;
+  } else {
+    return subThemesCollection;
+  }
 }
 
 DocumentReference getFirstCategory(List<DocumentReference> categiriesList) {

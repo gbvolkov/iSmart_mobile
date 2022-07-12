@@ -34,6 +34,8 @@ class FFAppState {
   String currentSubjectID = '';
 
   dynamic searchResult;
+
+  String baseSimulatorURL = 'https://edu.ismart.org/learn/';
 }
 
 LatLng _latLngFromString(String val) {

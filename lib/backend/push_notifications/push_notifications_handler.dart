@@ -82,17 +82,17 @@ final pageBuilderMap = <String, Future<Widget> Function(Map<String, dynamic>)>{
   'PlatformWebView': (data) async => PlatformWebViewWidget(
         platformURL: getParameter(data, 'platformURL'),
       ),
-  'Themes': (data) async => ThemesWidget(
-        currentCategoryID: getParameter(data, 'currentCategoryID'),
-        currentCategoryName: getParameter(data, 'currentCategoryName'),
-        currentCategoryDescription:
-            getParameter(data, 'currentCategoryDescription'),
-      ),
   'SubThemes': (data) async => SubThemesWidget(
         theme:
             await getDocumentParameter(data, 'theme', ThemesRecord.serializer),
         currentSubjectSelectorID:
             getParameter(data, 'currentSubjectSelectorID'),
+      ),
+  'Themes': (data) async => ThemesWidget(
+        currentCategoryID: getParameter(data, 'currentCategoryID'),
+        currentCategoryName: getParameter(data, 'currentCategoryName'),
+        currentCategoryDescription:
+            getParameter(data, 'currentCategoryDescription'),
       ),
 };
 

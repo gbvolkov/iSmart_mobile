@@ -19,6 +19,20 @@
       ]
     },
     {
+      "collectionGroup": "sub_themes",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "theme_id",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "sort_order",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
       "collectionGroup": "categories",
       "queryScope": "COLLECTION",
       "fields": [
@@ -42,20 +56,6 @@
         },
         {
           "fieldPath": "class_id",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "sort_order",
-          "order": "ASCENDING"
-        }
-      ]
-    },
-    {
-      "collectionGroup": "sub_themes",
-      "queryScope": "COLLECTION",
-      "fields": [
-        {
-          "fieldPath": "theme_id",
           "order": "ASCENDING"
         },
         {

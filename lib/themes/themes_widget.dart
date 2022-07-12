@@ -5,6 +5,8 @@ import '../flutter_flow/flutter_flow_util.dart';
 import '../platform_web_view/platform_web_view_widget.dart';
 import '../sub_themes/sub_themes_widget.dart';
 import '../flutter_flow/custom_functions.dart' as functions;
+import 'package:auto_size_text/auto_size_text.dart';
+import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -25,7 +27,14 @@ class ThemesWidget extends StatefulWidget {
 }
 
 class _ThemesWidgetState extends State<ThemesWidget> {
+  TextEditingController txtSearchInpController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  void initState() {
+    super.initState();
+    txtSearchInpController = TextEditingController();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -240,210 +249,300 @@ class _ThemesWidgetState extends State<ThemesWidget> {
                   ],
                 ),
               ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 32, 0, 0),
-                child: Container(
-                  width: double.infinity,
-                  height: MediaQuery.of(context).size.height * 0.5,
-                  decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).primaryBackground,
-                  ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Expanded(
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(8, 12, 8, 0),
-                          child: Material(
-                            color: Colors.transparent,
-                            elevation: 0,
-                            child: Container(
-                              width: double.infinity,
-                              height: double.infinity,
-                              decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .primaryBackground,
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryText,
-                                  )
-                                ],
-                                border: Border.all(
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryBackground,
-                                ),
-                              ),
-                              child: StreamBuilder<List<ThemesRecord>>(
-                                stream: queryThemesRecord(
-                                  queryBuilder: (themesRecord) => themesRecord
-                                      .where('subject_id',
-                                          isEqualTo:
-                                              FFAppState().currentSubjectID)
-                                      .where('class_id',
-                                          isEqualTo:
-                                              FFAppState().currentClassID)
-                                      .orderBy('sort_order'),
-                                ),
-                                builder: (context, snapshot) {
-                                  // Customize what your widget looks like when it's loading.
-                                  if (!snapshot.hasData) {
-                                    return Center(
-                                      child: SizedBox(
-                                        width: 50,
-                                        height: 50,
-                                        child: CircularProgressIndicator(
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryColor,
+              FutureBuilder<List<ThemesRecord>>(
+                future: queryThemesRecordOnce(
+                  queryBuilder: (themesRecord) => themesRecord
+                      .where('subject_id',
+                          isEqualTo: FFAppState().currentSubjectID)
+                      .where('class_id', isEqualTo: FFAppState().currentClassID)
+                      .orderBy('sort_order'),
+                ),
+                builder: (context, snapshot) {
+                  // Customize what your widget looks like when it's loading.
+                  if (!snapshot.hasData) {
+                    return Center(
+                      child: SizedBox(
+                        width: 50,
+                        height: 50,
+                        child: CircularProgressIndicator(
+                          color: FlutterFlowTheme.of(context).primaryColor,
+                        ),
+                      ),
+                    );
+                  }
+                  List<ThemesRecord> containerThemesRecordList = snapshot.data;
+                  return Container(
+                    width: double.infinity,
+                    height: MediaQuery.of(context).size.height * 0.55,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).primaryBackground,
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Expanded(
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      4, 0, 4, 0),
+                                  child: TextFormField(
+                                    controller: txtSearchInpController,
+                                    onChanged: (_) => EasyDebounce.debounce(
+                                      'txtSearchInpController',
+                                      Duration(milliseconds: 1000),
+                                      () => setState(() {}),
+                                    ),
+                                    obscureText: false,
+                                    decoration: InputDecoration(
+                                      hintStyle: FlutterFlowTheme.of(context)
+                                          .bodyText2,
+                                      enabledBorder: UnderlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: Color(0x6657636C),
+                                          width: 1,
+                                        ),
+                                        borderRadius: const BorderRadius.only(
+                                          topLeft: Radius.circular(4.0),
+                                          topRight: Radius.circular(4.0),
                                         ),
                                       ),
-                                    );
-                                  }
-                                  List<ThemesRecord> listViewThemesRecordList =
-                                      snapshot.data;
-                                  return ListView.builder(
-                                    padding: EdgeInsets.zero,
-                                    primary: false,
-                                    shrinkWrap: true,
-                                    scrollDirection: Axis.vertical,
-                                    itemCount: listViewThemesRecordList.length,
-                                    itemBuilder: (context, listViewIndex) {
-                                      final listViewThemesRecord =
-                                          listViewThemesRecordList[
-                                              listViewIndex];
-                                      return Material(
-                                        color: Colors.transparent,
-                                        elevation: 0,
-                                        child: Container(
-                                          width: double.infinity,
-                                          height: 80,
-                                          decoration: BoxDecoration(
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryBackground,
-                                            boxShadow: [
-                                              BoxShadow(
-                                                blurRadius: 4,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryText,
-                                                offset: Offset(0, 2),
-                                              )
-                                            ],
-                                          ),
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceAround,
-                                            children: [
-                                              InkWell(
-                                                onTap: () async {
-                                                  await Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          SubThemesWidget(
-                                                        theme:
-                                                            listViewThemesRecord,
-                                                        currentSubjectSelectorID:
-                                                            FFAppState()
-                                                                .subjectSelectionID,
-                                                      ),
-                                                    ),
-                                                  );
-                                                },
-                                                child: Container(
-                                                  width: MediaQuery.of(context)
-                                                          .size
-                                                          .width *
-                                                      0.7,
-                                                  height: 48,
-                                                  decoration: BoxDecoration(
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .primaryBackground,
+                                      focusedBorder: UnderlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: Color(0x6657636C),
+                                          width: 1,
+                                        ),
+                                        borderRadius: const BorderRadius.only(
+                                          topLeft: Radius.circular(4.0),
+                                          topRight: Radius.circular(4.0),
+                                        ),
+                                      ),
+                                      prefixIcon: Icon(
+                                        Icons.search,
+                                        color: Color(0xA557636C),
+                                        size: 20,
+                                      ),
+                                      suffixIcon:
+                                          txtSearchInpController.text.isNotEmpty
+                                              ? InkWell(
+                                                  onTap: () => setState(
+                                                    () => txtSearchInpController
+                                                        ?.clear(),
                                                   ),
-                                                  child: Align(
-                                                    alignment:
-                                                        AlignmentDirectional(
-                                                            -1, 0),
-                                                    child: Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  8, 0, 0, 0),
-                                                      child: Text(
-                                                        '${listViewThemesRecord.number} ${listViewThemesRecord.name}',
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
+                                                  child: Icon(
+                                                    Icons.clear,
+                                                    color: Color(0xA557636C),
+                                                    size: 24,
+                                                  ),
+                                                )
+                                              : null,
+                                    ),
+                                    style:
+                                        FlutterFlowTheme.of(context).bodyText1,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(8, 12, 8, 0),
+                            child: Material(
+                              color: Colors.transparent,
+                              elevation: 0,
+                              child: Container(
+                                width: double.infinity,
+                                height: double.infinity,
+                                decoration: BoxDecoration(
+                                  color: FlutterFlowTheme.of(context)
+                                      .primaryBackground,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
+                                    )
+                                  ],
+                                  border: Border.all(
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                  ),
+                                ),
+                                child: Builder(
+                                  builder: (context) {
+                                    final themesListFiltered = functions
+                                            .filterThemesList(
+                                                containerThemesRecordList
+                                                    .toList(),
+                                                txtSearchInpController.text)
+                                            .map((e) => e)
+                                            .toList()
+                                            ?.toList() ??
+                                        [];
+                                    return ListView.builder(
+                                      padding: EdgeInsets.zero,
+                                      primary: false,
+                                      shrinkWrap: true,
+                                      scrollDirection: Axis.vertical,
+                                      itemCount: themesListFiltered.length,
+                                      itemBuilder:
+                                          (context, themesListFilteredIndex) {
+                                        final themesListFilteredItem =
+                                            themesListFiltered[
+                                                themesListFilteredIndex];
+                                        return Material(
+                                          color: Colors.transparent,
+                                          elevation: 0,
+                                          child: Container(
+                                            width: double.infinity,
+                                            height: 80,
+                                            decoration: BoxDecoration(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryBackground,
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .secondaryText,
+                                                )
+                                              ],
+                                            ),
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceAround,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.stretch,
+                                              children: [
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(0, 2, 0, 2),
+                                                  child: InkWell(
+                                                    onTap: () async {
+                                                      await Navigator.push(
+                                                        context,
+                                                        PageTransition(
+                                                          type:
+                                                              PageTransitionType
+                                                                  .fade,
+                                                          duration: Duration(
+                                                              milliseconds: 0),
+                                                          reverseDuration:
+                                                              Duration(
+                                                                  milliseconds:
+                                                                      0),
+                                                          child:
+                                                              SubThemesWidget(
+                                                            theme:
+                                                                themesListFilteredItem,
+                                                            currentSubjectSelectorID:
+                                                                FFAppState()
+                                                                    .subjectSelectionID,
+                                                          ),
+                                                        ),
+                                                      );
+                                                    },
+                                                    child: Container(
+                                                      width:
+                                                          MediaQuery.of(context)
+                                                                  .size
+                                                                  .width *
+                                                              0.7,
+                                                      height: double.infinity,
+                                                      decoration: BoxDecoration(
+                                                        color: FlutterFlowTheme
+                                                                .of(context)
+                                                            .primaryBackground,
+                                                      ),
+                                                      child: Align(
+                                                        alignment:
+                                                            AlignmentDirectional(
+                                                                -1, 0),
+                                                        child: Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(8,
+                                                                      0, 0, 0),
+                                                          child: AutoSizeText(
+                                                            '${themesListFilteredItem.number} ${themesListFilteredItem.name}',
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
                                                                 .bodyText1
                                                                 .override(
                                                                   fontFamily:
                                                                       'Nunito Sans',
                                                                   fontSize: 16,
                                                                 ),
+                                                          ),
+                                                        ),
                                                       ),
                                                     ),
                                                   ),
                                                 ),
-                                              ),
-                                              Align(
-                                                alignment:
-                                                    AlignmentDirectional(0, 0),
-                                                child: FlutterFlowIconButton(
-                                                  borderColor:
-                                                      Colors.transparent,
-                                                  borderRadius: 12,
-                                                  borderWidth: 1,
-                                                  buttonSize: 60,
-                                                  fillColor:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .primaryColor,
-                                                  icon: Icon(
-                                                    FFIcons.kismartLogo,
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .primaryText,
-                                                    size: 40,
-                                                  ),
-                                                  onPressed: () async {
-                                                    await Navigator.push(
-                                                      context,
-                                                      MaterialPageRoute(
-                                                        builder: (context) =>
-                                                            PlatformWebViewWidget(
-                                                          platformURL: functions
-                                                              .getThemePlatformURL(
-                                                                  FFAppState()
-                                                                      .baseCategoryPlatformURL,
-                                                                  FFAppState()
-                                                                      .subjectSelectionCode,
-                                                                  FFAppState()
-                                                                      .subjectSelectionGroupCode,
-                                                                  listViewThemesRecord
-                                                                      .code),
+                                                Align(
+                                                  alignment:
+                                                      AlignmentDirectional(
+                                                          0, 0),
+                                                  child: FlutterFlowIconButton(
+                                                    borderColor:
+                                                        Colors.transparent,
+                                                    borderRadius: 12,
+                                                    borderWidth: 1,
+                                                    buttonSize: 60,
+                                                    fillColor:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .primaryColor,
+                                                    icon: Icon(
+                                                      FFIcons.kismartLogo,
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primaryText,
+                                                      size: 40,
+                                                    ),
+                                                    onPressed: () async {
+                                                      await Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                          builder: (context) =>
+                                                              PlatformWebViewWidget(
+                                                            platformURL: functions.getThemePlatformURL(
+                                                                FFAppState()
+                                                                    .baseCategoryPlatformURL,
+                                                                FFAppState()
+                                                                    .subjectSelectionCode,
+                                                                FFAppState()
+                                                                    .subjectSelectionGroupCode,
+                                                                themesListFilteredItem
+                                                                    .code),
+                                                          ),
                                                         ),
-                                                      ),
-                                                    );
-                                                  },
+                                                      );
+                                                    },
+                                                  ),
                                                 ),
-                                              ),
-                                            ],
+                                              ],
+                                            ),
                                           ),
-                                        ),
-                                      );
-                                    },
-                                  );
-                                },
+                                        );
+                                      },
+                                    );
+                                  },
+                                ),
                               ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                ),
+                      ],
+                    ),
+                  );
+                },
               ),
             ],
           ),
