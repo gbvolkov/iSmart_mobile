@@ -94,6 +94,7 @@ final pageBuilderMap = <String, Future<Widget> Function(Map<String, dynamic>)>{
         currentCategoryDescription:
             getParameter(data, 'currentCategoryDescription'),
       ),
+  'Welcome': (data) async => WelcomeWidget(),
 };
 
 bool hasMatchingParameters(Map<String, dynamic> data, Set<String> params) =>

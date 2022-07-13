@@ -42,7 +42,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
         backgroundColor: FlutterFlowTheme.of(context).primaryColor,
         automaticallyImplyLeading: false,
         title: Text(
-          'Добро пожаловать в iSmart',
+          'Учимся с iSmart',
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Nunito Sans',
                 color: FlutterFlowTheme.of(context).primaryText,
@@ -279,6 +279,49 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                             ),
                                           ),
                                         ),
+                                        Align(
+                                          alignment: AlignmentDirectional(1, 0),
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0, 32, 16, 0),
+                                            child: InkWell(
+                                              onTap: () async {
+                                                final user =
+                                                    await signInAnonymously(
+                                                        context);
+                                                if (user == null) {
+                                                  return;
+                                                }
+                                                await Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        NavBarPage(
+                                                            initialPage:
+                                                                'Home'),
+                                                  ),
+                                                );
+                                              },
+                                              child: Text(
+                                                'Продолжить без регистрации',
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyText1
+                                                    .override(
+                                                      fontFamily: 'Nunito Sans',
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .secondaryColor,
+                                                      fontSize: 8,
+                                                      decoration: TextDecoration
+                                                          .underline,
+                                                    ),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -461,6 +504,49 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                 ),
                                                 borderRadius:
                                                     BorderRadius.circular(8),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        Align(
+                                          alignment: AlignmentDirectional(1, 0),
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0, 32, 16, 0),
+                                            child: InkWell(
+                                              onTap: () async {
+                                                final user =
+                                                    await signInAnonymously(
+                                                        context);
+                                                if (user == null) {
+                                                  return;
+                                                }
+                                                await Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        NavBarPage(
+                                                            initialPage:
+                                                                'Home'),
+                                                  ),
+                                                );
+                                              },
+                                              child: Text(
+                                                'Продолжить без регистрации',
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyText1
+                                                    .override(
+                                                      fontFamily: 'Nunito Sans',
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .secondaryColor,
+                                                      fontSize: 8,
+                                                      decoration: TextDecoration
+                                                          .underline,
+                                                    ),
                                               ),
                                             ),
                                           ),

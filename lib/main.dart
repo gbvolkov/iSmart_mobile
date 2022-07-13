@@ -91,7 +91,7 @@ class _MyAppState extends State<MyApp> {
             )
           : currentUser.loggedIn
               ? PushNotificationsHandler(child: NavBarPage())
-              : SignUpWidget(),
+              : WelcomeWidget(),
     );
   }
 }
