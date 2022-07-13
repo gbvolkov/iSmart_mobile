@@ -271,37 +271,58 @@ class _SubThemesWidgetState extends State<SubThemesWidget> {
                                                 Padding(
                                                   padding: EdgeInsetsDirectional
                                                       .fromSTEB(0, 2, 0, 2),
-                                                  child: Container(
-                                                    width:
-                                                        MediaQuery.of(context)
-                                                                .size
-                                                                .width *
-                                                            0.7,
-                                                    height: double.infinity,
-                                                    decoration: BoxDecoration(
-                                                      color: FlutterFlowTheme
-                                                              .of(context)
-                                                          .primaryBackground,
-                                                    ),
-                                                    child: Align(
-                                                      alignment:
-                                                          AlignmentDirectional(
-                                                              -1, 0),
-                                                      child: Padding(
-                                                        padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    8, 0, 0, 0),
-                                                        child: AutoSizeText(
-                                                          '${subthemesListFilteredItem.number} ${subthemesListFilteredItem.name}',
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyText1
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Nunito Sans',
-                                                                fontSize: 16,
-                                                              ),
+                                                  child: InkWell(
+                                                    onTap: () async {
+                                                      await Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                          builder: (context) =>
+                                                              PlatformWebViewWidget(
+                                                            platformURL: functions
+                                                                .getSubThemePlatformURL(
+                                                                    FFAppState()
+                                                                        .baseSimulatorURL,
+                                                                    widget
+                                                                        .theme,
+                                                                    subthemesListFilteredItem,
+                                                                    widget
+                                                                        .currentSubjectSelectorID),
+                                                          ),
+                                                        ),
+                                                      );
+                                                    },
+                                                    child: Container(
+                                                      width:
+                                                          MediaQuery.of(context)
+                                                                  .size
+                                                                  .width *
+                                                              0.7,
+                                                      height: double.infinity,
+                                                      decoration: BoxDecoration(
+                                                        color: FlutterFlowTheme
+                                                                .of(context)
+                                                            .primaryBackground,
+                                                      ),
+                                                      child: Align(
+                                                        alignment:
+                                                            AlignmentDirectional(
+                                                                -1, 0),
+                                                        child: Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(8,
+                                                                      0, 0, 0),
+                                                          child: AutoSizeText(
+                                                            '${subthemesListFilteredItem.number} ${subthemesListFilteredItem.name}',
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .bodyText1
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Nunito Sans',
+                                                                  fontSize: 16,
+                                                                ),
+                                                          ),
                                                         ),
                                                       ),
                                                     ),
