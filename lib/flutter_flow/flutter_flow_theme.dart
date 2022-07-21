@@ -8,17 +8,17 @@ abstract class FlutterFlowTheme {
     return LightModeTheme();
   }
 
-  Color primaryColor;
-  Color secondaryColor;
-  Color tertiaryColor;
-  Color alternate;
-  Color primaryBackground;
-  Color secondaryBackground;
-  Color primaryText;
-  Color secondaryText;
+  late Color primaryColor;
+  late Color secondaryColor;
+  late Color tertiaryColor;
+  late Color alternate;
+  late Color primaryBackground;
+  late Color secondaryBackground;
+  late Color primaryText;
+  late Color secondaryText;
 
-  Color primaryBtnText;
-  Color lineColor;
+  late Color primaryBtnText;
+  late Color lineColor;
 
   String get title1Family => typography.title1Family;
   TextStyle get title1 => typography.title1;
@@ -39,17 +39,17 @@ abstract class FlutterFlowTheme {
 }
 
 class LightModeTheme extends FlutterFlowTheme {
-  Color primaryColor = const Color(0xFFFFCC00);
-  Color secondaryColor = const Color(0xFFC4B5FD);
-  Color tertiaryColor = const Color(0xFFF3F4F6);
-  Color alternate = const Color(0xFFFF5963);
-  Color primaryBackground = const Color(0xFFFAFAFA);
-  Color secondaryBackground = const Color(0xFFFFFFFF);
-  Color primaryText = const Color(0xFF101213);
-  Color secondaryText = const Color(0xFF57636C);
+  late Color primaryColor = const Color(0xFFFFCC00);
+  late Color secondaryColor = const Color(0xFFC4B5FD);
+  late Color tertiaryColor = const Color(0xFFF3F4F6);
+  late Color alternate = const Color(0xFFFF5963);
+  late Color primaryBackground = const Color(0xFFFAFAFA);
+  late Color secondaryBackground = const Color(0xFFFFFFFF);
+  late Color primaryText = const Color(0xFF101213);
+  late Color secondaryText = const Color(0xFF57636C);
 
-  Color primaryBtnText = Color(0xFFF3F4F6);
-  Color lineColor = Color(0xFF57636C);
+  late Color primaryBtnText = Color(0xFFF3F4F6);
+  late Color lineColor = Color(0xFF57636C);
 }
 
 abstract class Typography {
@@ -127,19 +127,19 @@ class ThemeTypography extends Typography {
 
 extension TextStyleHelper on TextStyle {
   TextStyle override({
-    String fontFamily,
-    Color color,
-    double fontSize,
-    FontWeight fontWeight,
-    double letterSpacing,
-    FontStyle fontStyle,
+    String? fontFamily,
+    Color? color,
+    double? fontSize,
+    FontWeight? fontWeight,
+    double? letterSpacing,
+    FontStyle? fontStyle,
     bool useGoogleFonts = true,
-    TextDecoration decoration,
-    double lineHeight,
+    TextDecoration? decoration,
+    double? lineHeight,
   }) =>
       useGoogleFonts
           ? GoogleFonts.getFont(
-              fontFamily,
+              fontFamily!,
               color: color ?? this.color,
               fontSize: fontSize ?? this.fontSize,
               letterSpacing: letterSpacing ?? this.letterSpacing,

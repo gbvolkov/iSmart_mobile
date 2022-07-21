@@ -7,11 +7,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 class NewsdetailsWidget extends StatefulWidget {
   const NewsdetailsWidget({
-    Key key,
+    Key? key,
     this.news,
   }) : super(key: key);
 
-  final NewsRecord news;
+  final NewsRecord? news;
 
   @override
   _NewsdetailsWidgetState createState() => _NewsdetailsWidgetState();
@@ -50,7 +50,7 @@ class _NewsdetailsWidgetState extends State<NewsdetailsWidget> {
               Align(
                 alignment: AlignmentDirectional(0, 0),
                 child: Image.network(
-                  widget.news.image,
+                  widget.news!.image!,
                   width: double.infinity,
                   height: double.infinity,
                   fit: BoxFit.cover,
@@ -66,7 +66,7 @@ class _NewsdetailsWidgetState extends State<NewsdetailsWidget> {
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
                       child: Text(
-                        widget.news.title,
+                        widget.news!.title!,
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).title1,
                       ),
@@ -80,24 +80,11 @@ class _NewsdetailsWidgetState extends State<NewsdetailsWidget> {
                           maxHeight: double.infinity,
                         ),
                         decoration: BoxDecoration(),
-                        child: Align(
-                          alignment: AlignmentDirectional(0, 0),
-                          child: Container(
-                            width: double.infinity,
-                            height: double.infinity,
-                            child: custom_widgets.MarkdownWindget(
-                              width: double.infinity,
-                              height: double.infinity,
-                              mdtext: widget.news.newsText,
-                              bgColor: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              txtColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
-                              fontSize: 16.0,
-                              letterSpacing: 0.3,
-                              wordSpacing: 4.0,
-                              linkColor: Color(0xFF366EE1),
-                            ),
+                        child: Container(
+                          child: custom_widgets.MarkdownWindget(
+                            bgColor: Color(0x00000000),
+                            txtColor: Color(0x00000000),
+                            linkColor: Color(0x00000000),
                           ),
                         ),
                       ),

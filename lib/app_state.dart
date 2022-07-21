@@ -20,16 +20,16 @@ class FFAppState {
     _publicnews = prefs
             .getStringList('ff_publicnews')
             ?.map((path) => path.ref)
-            ?.toList() ??
+            .toList() ??
         _publicnews;
     _privatenews = prefs
             .getStringList('ff_privatenews')
             ?.map((path) => path.ref)
-            ?.toList() ??
+            .toList() ??
         _privatenews;
   }
 
-  SharedPreferences prefs;
+  late SharedPreferences prefs;
 
   String baseURL = 'https://storage.yandexcloud.net/ismart-files/assets/';
 
@@ -88,7 +88,7 @@ class FFAppState {
   }
 }
 
-LatLng _latLngFromString(String val) {
+LatLng? _latLngFromString(String? val) {
   if (val == null) {
     return null;
   }

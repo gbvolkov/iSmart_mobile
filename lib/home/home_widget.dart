@@ -17,7 +17,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:text_search/text_search.dart';
 
 class HomeWidget extends StatefulWidget {
-  const HomeWidget({Key key}) : super(key: key);
+  const HomeWidget({Key? key}) : super(key: key);
 
   @override
   _HomeWidgetState createState() => _HomeWidgetState();
@@ -48,7 +48,7 @@ class _HomeWidgetState extends State<HomeWidget> {
             size: 30,
           ),
           onPressed: () async {
-            scaffoldKey.currentState.openDrawer();
+            scaffoldKey.currentState!.openDrawer();
           },
         ),
         title: Text(
@@ -166,6 +166,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                   await uploadData(
                                                       m.storagePath, m.bytes))))
                                           .where((u) => u != null)
+                                          .map((u) => u!)
                                           .toList();
                                       ScaffoldMessenger.of(context)
                                           .hideCurrentSnackBar();
@@ -191,7 +192,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                         createUsersRecordData(
                                       photoUrl: uploadedFileUrl3,
                                     );
-                                    await currentUserReference
+                                    await currentUserReference!
                                         .update(usersUpdateData);
                                   },
                                 ),
@@ -359,15 +360,13 @@ class _HomeWidgetState extends State<HomeWidget> {
                         );
                       }
                       List<CategoriesRecord> columnCategoriesRecordList =
-                          snapshot.data;
+                          snapshot.data!;
                       // Return an empty Container when the document does not exist.
-                      if (snapshot.data.isEmpty) {
+                      if (snapshot.data!.isEmpty) {
                         return Container();
                       }
                       final columnCategoriesRecord =
-                          columnCategoriesRecordList.isNotEmpty
-                              ? columnCategoriesRecordList.first
-                              : null;
+                          columnCategoriesRecordList.first;
                       return Column(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -403,8 +402,8 @@ class _HomeWidgetState extends State<HomeWidget> {
                                     ),
                                     child: Image.network(
                                       functions.getImageURL(
-                                          FFAppState().baseURL,
-                                          columnCategoriesRecord.imageUrl),
+                                          FFAppState().baseURL!,
+                                          columnCategoriesRecord!.imageUrl!),
                                       width: 100,
                                       height: 100,
                                       fit: BoxFit.cover,
@@ -435,7 +434,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   4, 0, 4, 0),
                                           child: AutoSizeText(
-                                            columnCategoriesRecord.name,
+                                            columnCategoriesRecord!.name!,
                                             style: FlutterFlowTheme.of(context)
                                                 .title1,
                                           ),
@@ -485,6 +484,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                   m.storagePath,
                                                                   m.bytes))))
                                                   .where((u) => u != null)
+                                                  .map((u) => u!)
                                                   .toList();
                                               ScaffoldMessenger.of(context)
                                                   .hideCurrentSnackBar();
@@ -511,7 +511,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                 createCategoriesRecordData(
                                               imageUrl: uploadedFileUrl1,
                                             );
-                                            await columnCategoriesRecord
+                                            await columnCategoriesRecord!
                                                 .reference
                                                 .update(categoriesUpdateData);
                                           },
@@ -538,7 +538,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                       categoriesRecord
                                           .where('parent_id',
                                               isEqualTo:
-                                                  columnCategoriesRecord.id)
+                                                  columnCategoriesRecord!.id)
                                           .where('is_visible', isEqualTo: true)
                                           .orderBy('sort_order'),
                                 ),
@@ -558,7 +558,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                   }
                                   List<CategoriesRecord>
                                       gridViewCategoriesRecordList =
-                                      snapshot.data;
+                                      snapshot.data!;
                                   return GridView.builder(
                                     padding: EdgeInsets.zero,
                                     gridDelegate:
@@ -618,8 +618,8 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                   onTap: () async {
                                                     setState(() => FFAppState()
                                                             .subjectSelectionGroupCode =
-                                                        gridViewCategoriesRecord
-                                                            .code);
+                                                        gridViewCategoriesRecord!
+                                                            .code!);
                                                     await queryCategoriesRecordOnce()
                                                         .then(
                                                           (records) => simpleSearchResults =
@@ -631,7 +631,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                           record,
                                                                           [
                                                                         record
-                                                                            .parentId
+                                                                            .parentId!
                                                                       ]),
                                                                 )
                                                                 .toList(),
@@ -639,7 +639,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                   .search(
                                                                       valueOrDefault<
                                                                           String>(
-                                                                    gridViewCategoriesRecord
+                                                                    gridViewCategoriesRecord!
                                                                         .id,
                                                                     '\"\"',
                                                                   ))
@@ -659,49 +659,49 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                             .getFirstCategoryFromList(
                                                                 simpleSearchResults
                                                                     .toList(),
-                                                                gridViewCategoriesRecord
-                                                                    .id)
-                                                            .subjectId);
+                                                                gridViewCategoriesRecord!
+                                                                    .id!)!
+                                                            .subjectId!);
                                                     setState(() => FFAppState()
                                                             .currentClassID =
                                                         functions
                                                             .getFirstCategoryFromList(
                                                                 simpleSearchResults
                                                                     .toList(),
-                                                                gridViewCategoriesRecord
-                                                                    .id)
-                                                            .classId);
+                                                                gridViewCategoriesRecord!
+                                                                    .id!)!
+                                                            .classId!);
                                                     setState(() => FFAppState()
                                                             .subjectSelectionCode =
                                                         functions
                                                             .getFirstCategoryFromList(
                                                                 simpleSearchResults
                                                                     .toList(),
-                                                                gridViewCategoriesRecord
-                                                                    .id)
-                                                            .code);
+                                                                gridViewCategoriesRecord!
+                                                                    .id!)!
+                                                            .code!);
                                                     setState(() => FFAppState()
                                                             .subjectSelectionID =
                                                         functions
                                                             .getFirstCategoryFromList(
                                                                 simpleSearchResults
                                                                     .toList(),
-                                                                gridViewCategoriesRecord
-                                                                    .id)
-                                                            .id);
+                                                                gridViewCategoriesRecord!
+                                                                    .id!)!
+                                                            .id!);
                                                     await Navigator.push(
                                                       context,
                                                       MaterialPageRoute(
                                                         builder: (context) =>
                                                             ThemesWidget(
                                                           currentCategoryID:
-                                                              gridViewCategoriesRecord
+                                                              gridViewCategoriesRecord!
                                                                   .id,
                                                           currentCategoryName:
-                                                              gridViewCategoriesRecord
+                                                              gridViewCategoriesRecord!
                                                                   .name,
                                                           currentCategoryDescription:
-                                                              gridViewCategoriesRecord
+                                                              gridViewCategoriesRecord!
                                                                   .description,
                                                         ),
                                                       ),
@@ -737,9 +737,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                   Image.network(
                                                                 functions.getImageURL(
                                                                     FFAppState()
-                                                                        .baseURL,
-                                                                    gridViewCategoriesRecord
-                                                                        .imageUrl),
+                                                                        .baseURL!,
+                                                                    gridViewCategoriesRecord!
+                                                                        .imageUrl!),
                                                                 width: 70,
                                                                 height: 70,
                                                                 fit: BoxFit
@@ -761,8 +761,8 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                             AlignmentDirectional(
                                                                 0, 0),
                                                         child: Text(
-                                                          gridViewCategoriesRecord
-                                                              .name,
+                                                          gridViewCategoriesRecord!
+                                                              .name!,
                                                           textAlign:
                                                               TextAlign.center,
                                                           style: FlutterFlowTheme
@@ -803,17 +803,18 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                   MaterialPageRoute(
                                                     builder: (context) =>
                                                         PlatformWebViewWidget(
-                                                      platformURL: functions.getCategoryPlatformURL(
-                                                          FFAppState()
-                                                              .baseCategoryPlatformURL,
-                                                          gridViewCategoriesRecord
-                                                              .code,
-                                                          gridViewCategoriesRecord
-                                                              .type,
-                                                          '\"\"',
-                                                          '\"\"',
-                                                          '\"\"',
-                                                          '\"\"'),
+                                                      platformURL: functions
+                                                          .getCategoryPlatformURL(
+                                                              FFAppState()
+                                                                  .baseCategoryPlatformURL!,
+                                                              gridViewCategoriesRecord!
+                                                                  .code!,
+                                                              gridViewCategoriesRecord!
+                                                                  .type!,
+                                                              '\"\"',
+                                                              '\"\"',
+                                                              '\"\"',
+                                                              '\"\"'),
                                                     ),
                                                   ),
                                                 );
@@ -864,6 +865,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                           m.storagePath,
                                                                           m.bytes))))
                                                           .where((u) => u != null)
+                                                          .map((u) => u!)
                                                           .toList();
                                                       ScaffoldMessenger.of(
                                                               context)
@@ -895,7 +897,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                       imageUrl:
                                                           uploadedFileUrl2,
                                                     );
-                                                    await gridViewCategoriesRecord
+                                                    await gridViewCategoriesRecord!
                                                         .reference
                                                         .update(
                                                             categoriesUpdateData);

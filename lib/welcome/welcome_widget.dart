@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class WelcomeWidget extends StatefulWidget {
-  const WelcomeWidget({Key key}) : super(key: key);
+  const WelcomeWidget({Key? key}) : super(key: key);
 
   @override
   _WelcomeWidgetState createState() => _WelcomeWidgetState();

@@ -17,10 +17,10 @@ class _$SubThemesRecordSerializer
   final String wireName = 'SubThemesRecord';
 
   @override
-  Iterable<Object> serialize(Serializers serializers, SubThemesRecord object,
+  Iterable<Object?> serialize(Serializers serializers, SubThemesRecord object,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    Object value;
+    final result = <Object?>[];
+    Object? value;
     value = object.id;
     if (value != null) {
       result
@@ -70,20 +70,20 @@ class _$SubThemesRecordSerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
-    value = object.reference;
+    value = object.ffRef;
     if (value != null) {
       result
         ..add('Document__Reference__Field')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(
-                DocumentReference, const [const FullType(Object)])));
+                DocumentReference, const [const FullType.nullable(Object)])));
     }
     return result;
   }
 
   @override
   SubThemesRecord deserialize(
-      Serializers serializers, Iterable<Object> serialized,
+      Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
     final result = new SubThemesRecordBuilder();
 
@@ -91,41 +91,41 @@ class _$SubThemesRecordSerializer
     while (iterator.moveNext()) {
       final key = iterator.current as String;
       iterator.moveNext();
-      final Object value = iterator.current;
+      final Object? value = iterator.current;
       switch (key) {
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'name':
           result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'theme_id':
           result.themeId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'number':
           result.number = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'difficulty_level':
           result.difficultyLevel = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'theme_name':
           result.themeName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'sort_order':
           result.sortOrder = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'Document__Reference__Field':
-          result.reference = serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      DocumentReference, const [const FullType(Object)]))
-              as DocumentReference<Object>;
+          result.ffRef = serializers.deserialize(value,
+              specifiedType: const FullType(DocumentReference, const [
+                const FullType.nullable(Object)
+              ])) as DocumentReference<Object?>?;
           break;
       }
     }
@@ -136,23 +136,23 @@ class _$SubThemesRecordSerializer
 
 class _$SubThemesRecord extends SubThemesRecord {
   @override
-  final String id;
+  final String? id;
   @override
-  final String name;
+  final String? name;
   @override
-  final String themeId;
+  final String? themeId;
   @override
-  final String number;
+  final String? number;
   @override
-  final String difficultyLevel;
+  final String? difficultyLevel;
   @override
-  final String themeName;
+  final String? themeName;
   @override
-  final String sortOrder;
+  final String? sortOrder;
   @override
-  final DocumentReference<Object> reference;
+  final DocumentReference<Object?>? ffRef;
 
-  factory _$SubThemesRecord([void Function(SubThemesRecordBuilder) updates]) =>
+  factory _$SubThemesRecord([void Function(SubThemesRecordBuilder)? updates]) =>
       (new SubThemesRecordBuilder()..update(updates)).build();
 
   _$SubThemesRecord._(
@@ -163,7 +163,7 @@ class _$SubThemesRecord extends SubThemesRecord {
       this.difficultyLevel,
       this.themeName,
       this.sortOrder,
-      this.reference})
+      this.ffRef})
       : super._();
 
   @override
@@ -185,7 +185,7 @@ class _$SubThemesRecord extends SubThemesRecord {
         difficultyLevel == other.difficultyLevel &&
         themeName == other.themeName &&
         sortOrder == other.sortOrder &&
-        reference == other.reference;
+        ffRef == other.ffRef;
   }
 
   @override
@@ -201,7 +201,7 @@ class _$SubThemesRecord extends SubThemesRecord {
                     difficultyLevel.hashCode),
                 themeName.hashCode),
             sortOrder.hashCode),
-        reference.hashCode));
+        ffRef.hashCode));
   }
 
   @override
@@ -214,48 +214,47 @@ class _$SubThemesRecord extends SubThemesRecord {
           ..add('difficultyLevel', difficultyLevel)
           ..add('themeName', themeName)
           ..add('sortOrder', sortOrder)
-          ..add('reference', reference))
+          ..add('ffRef', ffRef))
         .toString();
   }
 }
 
 class SubThemesRecordBuilder
     implements Builder<SubThemesRecord, SubThemesRecordBuilder> {
-  _$SubThemesRecord _$v;
+  _$SubThemesRecord? _$v;
 
-  String _id;
-  String get id => _$this._id;
-  set id(String id) => _$this._id = id;
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
 
-  String _name;
-  String get name => _$this._name;
-  set name(String name) => _$this._name = name;
+  String? _name;
+  String? get name => _$this._name;
+  set name(String? name) => _$this._name = name;
 
-  String _themeId;
-  String get themeId => _$this._themeId;
-  set themeId(String themeId) => _$this._themeId = themeId;
+  String? _themeId;
+  String? get themeId => _$this._themeId;
+  set themeId(String? themeId) => _$this._themeId = themeId;
 
-  String _number;
-  String get number => _$this._number;
-  set number(String number) => _$this._number = number;
+  String? _number;
+  String? get number => _$this._number;
+  set number(String? number) => _$this._number = number;
 
-  String _difficultyLevel;
-  String get difficultyLevel => _$this._difficultyLevel;
-  set difficultyLevel(String difficultyLevel) =>
+  String? _difficultyLevel;
+  String? get difficultyLevel => _$this._difficultyLevel;
+  set difficultyLevel(String? difficultyLevel) =>
       _$this._difficultyLevel = difficultyLevel;
 
-  String _themeName;
-  String get themeName => _$this._themeName;
-  set themeName(String themeName) => _$this._themeName = themeName;
+  String? _themeName;
+  String? get themeName => _$this._themeName;
+  set themeName(String? themeName) => _$this._themeName = themeName;
 
-  String _sortOrder;
-  String get sortOrder => _$this._sortOrder;
-  set sortOrder(String sortOrder) => _$this._sortOrder = sortOrder;
+  String? _sortOrder;
+  String? get sortOrder => _$this._sortOrder;
+  set sortOrder(String? sortOrder) => _$this._sortOrder = sortOrder;
 
-  DocumentReference<Object> _reference;
-  DocumentReference<Object> get reference => _$this._reference;
-  set reference(DocumentReference<Object> reference) =>
-      _$this._reference = reference;
+  DocumentReference<Object?>? _ffRef;
+  DocumentReference<Object?>? get ffRef => _$this._ffRef;
+  set ffRef(DocumentReference<Object?>? ffRef) => _$this._ffRef = ffRef;
 
   SubThemesRecordBuilder() {
     SubThemesRecord._initializeBuilder(this);
@@ -271,7 +270,7 @@ class SubThemesRecordBuilder
       _difficultyLevel = $v.difficultyLevel;
       _themeName = $v.themeName;
       _sortOrder = $v.sortOrder;
-      _reference = $v.reference;
+      _ffRef = $v.ffRef;
       _$v = null;
     }
     return this;
@@ -284,7 +283,7 @@ class SubThemesRecordBuilder
   }
 
   @override
-  void update(void Function(SubThemesRecordBuilder) updates) {
+  void update(void Function(SubThemesRecordBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
@@ -299,7 +298,7 @@ class SubThemesRecordBuilder
             difficultyLevel: difficultyLevel,
             themeName: themeName,
             sortOrder: sortOrder,
-            reference: reference);
+            ffRef: ffRef);
     replace(_$result);
     return _$result;
   }

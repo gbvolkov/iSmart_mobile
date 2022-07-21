@@ -11,12 +11,11 @@ abstract class NewsCategoriesRecord
   static Serializer<NewsCategoriesRecord> get serializer =>
       _$newsCategoriesRecordSerializer;
 
-  @nullable
-  String get name;
+  String? get name;
 
-  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
-  DocumentReference get reference;
+  DocumentReference? get ffRef;
+  DocumentReference get reference => ffRef!;
 
   static void _initializeBuilder(NewsCategoriesRecordBuilder builder) =>
       builder..name = '';
@@ -26,11 +25,11 @@ abstract class NewsCategoriesRecord
 
   static Stream<NewsCategoriesRecord> getDocument(DocumentReference ref) => ref
       .snapshots()
-      .map((s) => serializers.deserializeWith(serializer, serializedData(s)));
+      .map((s) => serializers.deserializeWith(serializer, serializedData(s))!);
 
   static Future<NewsCategoriesRecord> getDocumentOnce(DocumentReference ref) =>
       ref.get().then(
-          (s) => serializers.deserializeWith(serializer, serializedData(s)));
+          (s) => serializers.deserializeWith(serializer, serializedData(s))!);
 
   NewsCategoriesRecord._();
   factory NewsCategoriesRecord(
@@ -40,11 +39,18 @@ abstract class NewsCategoriesRecord
   static NewsCategoriesRecord getDocumentFromData(
           Map<String, dynamic> data, DocumentReference reference) =>
       serializers.deserializeWith(serializer,
-          {...mapFromFirestore(data), kDocumentReferenceField: reference});
+          {...mapFromFirestore(data), kDocumentReferenceField: reference})!;
 }
 
 Map<String, dynamic> createNewsCategoriesRecordData({
-  String name,
-}) =>
-    serializers.toFirestore(NewsCategoriesRecord.serializer,
-        NewsCategoriesRecord((n) => n..name = name));
+  String? name,
+}) {
+  final firestoreData = serializers.toFirestore(
+    NewsCategoriesRecord.serializer,
+    NewsCategoriesRecord(
+      (n) => n..name = name,
+    ),
+  );
+
+  return firestoreData;
+}

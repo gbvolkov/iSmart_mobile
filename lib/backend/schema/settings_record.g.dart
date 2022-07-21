@@ -17,10 +17,10 @@ class _$SettingsRecordSerializer
   final String wireName = 'SettingsRecord';
 
   @override
-  Iterable<Object> serialize(Serializers serializers, SettingsRecord object,
+  Iterable<Object?> serialize(Serializers serializers, SettingsRecord object,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    Object value;
+    final result = <Object?>[];
+    Object? value;
     value = object.name;
     if (value != null) {
       result
@@ -49,20 +49,20 @@ class _$SettingsRecordSerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
-    value = object.reference;
+    value = object.ffRef;
     if (value != null) {
       result
         ..add('Document__Reference__Field')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(
-                DocumentReference, const [const FullType(Object)])));
+                DocumentReference, const [const FullType.nullable(Object)])));
     }
     return result;
   }
 
   @override
   SettingsRecord deserialize(
-      Serializers serializers, Iterable<Object> serialized,
+      Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
     final result = new SettingsRecordBuilder();
 
@@ -70,29 +70,29 @@ class _$SettingsRecordSerializer
     while (iterator.moveNext()) {
       final key = iterator.current as String;
       iterator.moveNext();
-      final Object value = iterator.current;
+      final Object? value = iterator.current;
       switch (key) {
         case 'name':
           result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'image_base_url':
           result.imageBaseUrl = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'caterogy_platform_entry_base':
           result.caterogyPlatformEntryBase = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'grade_code_default':
           result.gradeCodeDefault = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'Document__Reference__Field':
-          result.reference = serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      DocumentReference, const [const FullType(Object)]))
-              as DocumentReference<Object>;
+          result.ffRef = serializers.deserialize(value,
+              specifiedType: const FullType(DocumentReference, const [
+                const FullType.nullable(Object)
+              ])) as DocumentReference<Object?>?;
           break;
       }
     }
@@ -103,17 +103,17 @@ class _$SettingsRecordSerializer
 
 class _$SettingsRecord extends SettingsRecord {
   @override
-  final String name;
+  final String? name;
   @override
-  final String imageBaseUrl;
+  final String? imageBaseUrl;
   @override
-  final String caterogyPlatformEntryBase;
+  final String? caterogyPlatformEntryBase;
   @override
-  final String gradeCodeDefault;
+  final String? gradeCodeDefault;
   @override
-  final DocumentReference<Object> reference;
+  final DocumentReference<Object?>? ffRef;
 
-  factory _$SettingsRecord([void Function(SettingsRecordBuilder) updates]) =>
+  factory _$SettingsRecord([void Function(SettingsRecordBuilder)? updates]) =>
       (new SettingsRecordBuilder()..update(updates)).build();
 
   _$SettingsRecord._(
@@ -121,7 +121,7 @@ class _$SettingsRecord extends SettingsRecord {
       this.imageBaseUrl,
       this.caterogyPlatformEntryBase,
       this.gradeCodeDefault,
-      this.reference})
+      this.ffRef})
       : super._();
 
   @override
@@ -140,7 +140,7 @@ class _$SettingsRecord extends SettingsRecord {
         imageBaseUrl == other.imageBaseUrl &&
         caterogyPlatformEntryBase == other.caterogyPlatformEntryBase &&
         gradeCodeDefault == other.gradeCodeDefault &&
-        reference == other.reference;
+        ffRef == other.ffRef;
   }
 
   @override
@@ -150,7 +150,7 @@ class _$SettingsRecord extends SettingsRecord {
             $jc($jc($jc(0, name.hashCode), imageBaseUrl.hashCode),
                 caterogyPlatformEntryBase.hashCode),
             gradeCodeDefault.hashCode),
-        reference.hashCode));
+        ffRef.hashCode));
   }
 
   @override
@@ -160,37 +160,36 @@ class _$SettingsRecord extends SettingsRecord {
           ..add('imageBaseUrl', imageBaseUrl)
           ..add('caterogyPlatformEntryBase', caterogyPlatformEntryBase)
           ..add('gradeCodeDefault', gradeCodeDefault)
-          ..add('reference', reference))
+          ..add('ffRef', ffRef))
         .toString();
   }
 }
 
 class SettingsRecordBuilder
     implements Builder<SettingsRecord, SettingsRecordBuilder> {
-  _$SettingsRecord _$v;
+  _$SettingsRecord? _$v;
 
-  String _name;
-  String get name => _$this._name;
-  set name(String name) => _$this._name = name;
+  String? _name;
+  String? get name => _$this._name;
+  set name(String? name) => _$this._name = name;
 
-  String _imageBaseUrl;
-  String get imageBaseUrl => _$this._imageBaseUrl;
-  set imageBaseUrl(String imageBaseUrl) => _$this._imageBaseUrl = imageBaseUrl;
+  String? _imageBaseUrl;
+  String? get imageBaseUrl => _$this._imageBaseUrl;
+  set imageBaseUrl(String? imageBaseUrl) => _$this._imageBaseUrl = imageBaseUrl;
 
-  String _caterogyPlatformEntryBase;
-  String get caterogyPlatformEntryBase => _$this._caterogyPlatformEntryBase;
-  set caterogyPlatformEntryBase(String caterogyPlatformEntryBase) =>
+  String? _caterogyPlatformEntryBase;
+  String? get caterogyPlatformEntryBase => _$this._caterogyPlatformEntryBase;
+  set caterogyPlatformEntryBase(String? caterogyPlatformEntryBase) =>
       _$this._caterogyPlatformEntryBase = caterogyPlatformEntryBase;
 
-  String _gradeCodeDefault;
-  String get gradeCodeDefault => _$this._gradeCodeDefault;
-  set gradeCodeDefault(String gradeCodeDefault) =>
+  String? _gradeCodeDefault;
+  String? get gradeCodeDefault => _$this._gradeCodeDefault;
+  set gradeCodeDefault(String? gradeCodeDefault) =>
       _$this._gradeCodeDefault = gradeCodeDefault;
 
-  DocumentReference<Object> _reference;
-  DocumentReference<Object> get reference => _$this._reference;
-  set reference(DocumentReference<Object> reference) =>
-      _$this._reference = reference;
+  DocumentReference<Object?>? _ffRef;
+  DocumentReference<Object?>? get ffRef => _$this._ffRef;
+  set ffRef(DocumentReference<Object?>? ffRef) => _$this._ffRef = ffRef;
 
   SettingsRecordBuilder() {
     SettingsRecord._initializeBuilder(this);
@@ -203,7 +202,7 @@ class SettingsRecordBuilder
       _imageBaseUrl = $v.imageBaseUrl;
       _caterogyPlatformEntryBase = $v.caterogyPlatformEntryBase;
       _gradeCodeDefault = $v.gradeCodeDefault;
-      _reference = $v.reference;
+      _ffRef = $v.ffRef;
       _$v = null;
     }
     return this;
@@ -216,7 +215,7 @@ class SettingsRecordBuilder
   }
 
   @override
-  void update(void Function(SettingsRecordBuilder) updates) {
+  void update(void Function(SettingsRecordBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
@@ -228,7 +227,7 @@ class SettingsRecordBuilder
             imageBaseUrl: imageBaseUrl,
             caterogyPlatformEntryBase: caterogyPlatformEntryBase,
             gradeCodeDefault: gradeCodeDefault,
-            reference: reference);
+            ffRef: ffRef);
     replace(_$result);
     return _$result;
   }

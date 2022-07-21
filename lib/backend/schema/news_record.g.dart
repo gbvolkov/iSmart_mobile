@@ -15,10 +15,10 @@ class _$NewsRecordSerializer implements StructuredSerializer<NewsRecord> {
   final String wireName = 'NewsRecord';
 
   @override
-  Iterable<Object> serialize(Serializers serializers, NewsRecord object,
+  Iterable<Object?> serialize(Serializers serializers, NewsRecord object,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    Object value;
+    final result = <Object?>[];
+    Object? value;
     value = object.newsText;
     if (value != null) {
       result
@@ -53,7 +53,8 @@ class _$NewsRecordSerializer implements StructuredSerializer<NewsRecord> {
         ..add('to_list')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(BuiltList, const [
-              const FullType(DocumentReference, const [const FullType(Object)])
+              const FullType(
+                  DocumentReference, const [const FullType.nullable(Object)])
             ])));
     }
     value = object.pageName;
@@ -90,7 +91,8 @@ class _$NewsRecordSerializer implements StructuredSerializer<NewsRecord> {
         ..add('sent_to_list')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(BuiltList, const [
-              const FullType(DocumentReference, const [const FullType(Object)])
+              const FullType(
+                  DocumentReference, const [const FullType.nullable(Object)])
             ])));
     }
     value = object.isPublic;
@@ -107,19 +109,19 @@ class _$NewsRecordSerializer implements StructuredSerializer<NewsRecord> {
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
-    value = object.reference;
+    value = object.ffRef;
     if (value != null) {
       result
         ..add('Document__Reference__Field')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(
-                DocumentReference, const [const FullType(Object)])));
+                DocumentReference, const [const FullType.nullable(Object)])));
     }
     return result;
   }
 
   @override
-  NewsRecord deserialize(Serializers serializers, Iterable<Object> serialized,
+  NewsRecord deserialize(Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
     final result = new NewsRecordBuilder();
 
@@ -127,67 +129,67 @@ class _$NewsRecordSerializer implements StructuredSerializer<NewsRecord> {
     while (iterator.moveNext()) {
       final key = iterator.current as String;
       iterator.moveNext();
-      final Object value = iterator.current;
+      final Object? value = iterator.current;
       switch (key) {
         case 'news_text':
           result.newsText = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'image':
           result.image = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'title':
           result.title = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'status':
           result.status = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'to_list':
           result.toList.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
                 const FullType(
-                    DocumentReference, const [const FullType(Object)])
-              ])) as BuiltList<Object>);
+                    DocumentReference, const [const FullType.nullable(Object)])
+              ]))! as BuiltList<Object?>);
           break;
         case 'page_name':
           result.pageName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'page_parameters':
           result.pageParameters = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'scheduled_time':
           result.scheduledTime = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
+              specifiedType: const FullType(DateTime)) as DateTime?;
           break;
         case 'sent_time':
           result.sentTime = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
+              specifiedType: const FullType(DateTime)) as DateTime?;
           break;
         case 'sent_to_list':
           result.sentToList.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
                 const FullType(
-                    DocumentReference, const [const FullType(Object)])
-              ])) as BuiltList<Object>);
+                    DocumentReference, const [const FullType.nullable(Object)])
+              ]))! as BuiltList<Object?>);
           break;
         case 'is_public':
           result.isPublic = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'category':
           result.category = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'Document__Reference__Field':
-          result.reference = serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      DocumentReference, const [const FullType(Object)]))
-              as DocumentReference<Object>;
+          result.ffRef = serializers.deserialize(value,
+              specifiedType: const FullType(DocumentReference, const [
+                const FullType.nullable(Object)
+              ])) as DocumentReference<Object?>?;
           break;
       }
     }
@@ -198,33 +200,33 @@ class _$NewsRecordSerializer implements StructuredSerializer<NewsRecord> {
 
 class _$NewsRecord extends NewsRecord {
   @override
-  final String newsText;
+  final String? newsText;
   @override
-  final String image;
+  final String? image;
   @override
-  final String title;
+  final String? title;
   @override
-  final String status;
+  final String? status;
   @override
-  final BuiltList<DocumentReference<Object>> toList;
+  final BuiltList<DocumentReference<Object?>>? toList;
   @override
-  final String pageName;
+  final String? pageName;
   @override
-  final String pageParameters;
+  final String? pageParameters;
   @override
-  final DateTime scheduledTime;
+  final DateTime? scheduledTime;
   @override
-  final DateTime sentTime;
+  final DateTime? sentTime;
   @override
-  final BuiltList<DocumentReference<Object>> sentToList;
+  final BuiltList<DocumentReference<Object?>>? sentToList;
   @override
-  final bool isPublic;
+  final bool? isPublic;
   @override
-  final String category;
+  final String? category;
   @override
-  final DocumentReference<Object> reference;
+  final DocumentReference<Object?>? ffRef;
 
-  factory _$NewsRecord([void Function(NewsRecordBuilder) updates]) =>
+  factory _$NewsRecord([void Function(NewsRecordBuilder)? updates]) =>
       (new NewsRecordBuilder()..update(updates)).build();
 
   _$NewsRecord._(
@@ -240,7 +242,7 @@ class _$NewsRecord extends NewsRecord {
       this.sentToList,
       this.isPublic,
       this.category,
-      this.reference})
+      this.ffRef})
       : super._();
 
   @override
@@ -266,7 +268,7 @@ class _$NewsRecord extends NewsRecord {
         sentToList == other.sentToList &&
         isPublic == other.isPublic &&
         category == other.category &&
-        reference == other.reference;
+        ffRef == other.ffRef;
   }
 
   @override
@@ -294,7 +296,7 @@ class _$NewsRecord extends NewsRecord {
                     sentToList.hashCode),
                 isPublic.hashCode),
             category.hashCode),
-        reference.hashCode));
+        ffRef.hashCode));
   }
 
   @override
@@ -312,72 +314,71 @@ class _$NewsRecord extends NewsRecord {
           ..add('sentToList', sentToList)
           ..add('isPublic', isPublic)
           ..add('category', category)
-          ..add('reference', reference))
+          ..add('ffRef', ffRef))
         .toString();
   }
 }
 
 class NewsRecordBuilder implements Builder<NewsRecord, NewsRecordBuilder> {
-  _$NewsRecord _$v;
+  _$NewsRecord? _$v;
 
-  String _newsText;
-  String get newsText => _$this._newsText;
-  set newsText(String newsText) => _$this._newsText = newsText;
+  String? _newsText;
+  String? get newsText => _$this._newsText;
+  set newsText(String? newsText) => _$this._newsText = newsText;
 
-  String _image;
-  String get image => _$this._image;
-  set image(String image) => _$this._image = image;
+  String? _image;
+  String? get image => _$this._image;
+  set image(String? image) => _$this._image = image;
 
-  String _title;
-  String get title => _$this._title;
-  set title(String title) => _$this._title = title;
+  String? _title;
+  String? get title => _$this._title;
+  set title(String? title) => _$this._title = title;
 
-  String _status;
-  String get status => _$this._status;
-  set status(String status) => _$this._status = status;
+  String? _status;
+  String? get status => _$this._status;
+  set status(String? status) => _$this._status = status;
 
-  ListBuilder<DocumentReference<Object>> _toList;
-  ListBuilder<DocumentReference<Object>> get toList =>
-      _$this._toList ??= new ListBuilder<DocumentReference<Object>>();
-  set toList(ListBuilder<DocumentReference<Object>> toList) =>
+  ListBuilder<DocumentReference<Object?>>? _toList;
+  ListBuilder<DocumentReference<Object?>> get toList =>
+      _$this._toList ??= new ListBuilder<DocumentReference<Object?>>();
+  set toList(ListBuilder<DocumentReference<Object?>>? toList) =>
       _$this._toList = toList;
 
-  String _pageName;
-  String get pageName => _$this._pageName;
-  set pageName(String pageName) => _$this._pageName = pageName;
+  String? _pageName;
+  String? get pageName => _$this._pageName;
+  set pageName(String? pageName) => _$this._pageName = pageName;
 
-  String _pageParameters;
-  String get pageParameters => _$this._pageParameters;
-  set pageParameters(String pageParameters) =>
+  String? _pageParameters;
+  String? get pageParameters => _$this._pageParameters;
+  set pageParameters(String? pageParameters) =>
       _$this._pageParameters = pageParameters;
 
-  DateTime _scheduledTime;
-  DateTime get scheduledTime => _$this._scheduledTime;
-  set scheduledTime(DateTime scheduledTime) =>
+  DateTime? _scheduledTime;
+  DateTime? get scheduledTime => _$this._scheduledTime;
+  set scheduledTime(DateTime? scheduledTime) =>
       _$this._scheduledTime = scheduledTime;
 
-  DateTime _sentTime;
-  DateTime get sentTime => _$this._sentTime;
-  set sentTime(DateTime sentTime) => _$this._sentTime = sentTime;
+  DateTime? _sentTime;
+  DateTime? get sentTime => _$this._sentTime;
+  set sentTime(DateTime? sentTime) => _$this._sentTime = sentTime;
 
-  ListBuilder<DocumentReference<Object>> _sentToList;
-  ListBuilder<DocumentReference<Object>> get sentToList =>
-      _$this._sentToList ??= new ListBuilder<DocumentReference<Object>>();
-  set sentToList(ListBuilder<DocumentReference<Object>> sentToList) =>
+  ListBuilder<DocumentReference<Object?>>? _sentToList;
+  ListBuilder<DocumentReference<Object?>> get sentToList =>
+      _$this._sentToList ??= new ListBuilder<DocumentReference<Object?>>();
+  set sentToList(ListBuilder<DocumentReference<Object?>>? sentToList) =>
       _$this._sentToList = sentToList;
 
-  bool _isPublic;
-  bool get isPublic => _$this._isPublic;
-  set isPublic(bool isPublic) => _$this._isPublic = isPublic;
+  bool? _isPublic;
+  bool? get isPublic => _$this._isPublic;
+  set isPublic(bool? isPublic) => _$this._isPublic = isPublic;
 
-  String _category;
-  String get category => _$this._category;
-  set category(String category) => _$this._category = category;
+  String? _category;
+  String? get category => _$this._category;
+  set category(String? category) => _$this._category = category;
 
-  DocumentReference<Object> _reference;
-  DocumentReference<Object> get reference => _$this._reference;
-  set reference(DocumentReference<Object> reference) =>
-      _$this._reference = reference;
+  DocumentReference<Object?>? _ffRef;
+  DocumentReference<Object?>? get ffRef => _$this._ffRef;
+  set ffRef(DocumentReference<Object?>? ffRef) => _$this._ffRef = ffRef;
 
   NewsRecordBuilder() {
     NewsRecord._initializeBuilder(this);
@@ -398,7 +399,7 @@ class NewsRecordBuilder implements Builder<NewsRecord, NewsRecordBuilder> {
       _sentToList = $v.sentToList?.toBuilder();
       _isPublic = $v.isPublic;
       _category = $v.category;
-      _reference = $v.reference;
+      _ffRef = $v.ffRef;
       _$v = null;
     }
     return this;
@@ -411,7 +412,7 @@ class NewsRecordBuilder implements Builder<NewsRecord, NewsRecordBuilder> {
   }
 
   @override
-  void update(void Function(NewsRecordBuilder) updates) {
+  void update(void Function(NewsRecordBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
@@ -433,9 +434,9 @@ class NewsRecordBuilder implements Builder<NewsRecord, NewsRecordBuilder> {
               sentToList: _sentToList?.build(),
               isPublic: isPublic,
               category: category,
-              reference: reference);
+              ffRef: ffRef);
     } catch (_) {
-      String _$failedField;
+      late String _$failedField;
       try {
         _$failedField = 'toList';
         _toList?.build();

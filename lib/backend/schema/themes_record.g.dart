@@ -16,10 +16,10 @@ class _$ThemesRecordSerializer implements StructuredSerializer<ThemesRecord> {
   final String wireName = 'ThemesRecord';
 
   @override
-  Iterable<Object> serialize(Serializers serializers, ThemesRecord object,
+  Iterable<Object?> serialize(Serializers serializers, ThemesRecord object,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    Object value;
+    final result = <Object?>[];
+    Object? value;
     value = object.id;
     if (value != null) {
       result
@@ -97,19 +97,20 @@ class _$ThemesRecordSerializer implements StructuredSerializer<ThemesRecord> {
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
-    value = object.reference;
+    value = object.ffRef;
     if (value != null) {
       result
         ..add('Document__Reference__Field')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(
-                DocumentReference, const [const FullType(Object)])));
+                DocumentReference, const [const FullType.nullable(Object)])));
     }
     return result;
   }
 
   @override
-  ThemesRecord deserialize(Serializers serializers, Iterable<Object> serialized,
+  ThemesRecord deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
     final result = new ThemesRecordBuilder();
 
@@ -117,57 +118,57 @@ class _$ThemesRecordSerializer implements StructuredSerializer<ThemesRecord> {
     while (iterator.moveNext()) {
       final key = iterator.current as String;
       iterator.moveNext();
-      final Object value = iterator.current;
+      final Object? value = iterator.current;
       switch (key) {
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'name':
           result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'subject_id':
           result.subjectId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'subject_name':
           result.subjectName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'class_id':
           result.classId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'class_name':
           result.className = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'is_active':
           result.isActive = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'code':
           result.code = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'is_school_program':
           result.isSchoolProgram = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'number':
           result.number = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'sort_order':
           result.sortOrder = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'Document__Reference__Field':
-          result.reference = serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      DocumentReference, const [const FullType(Object)]))
-              as DocumentReference<Object>;
+          result.ffRef = serializers.deserialize(value,
+              specifiedType: const FullType(DocumentReference, const [
+                const FullType.nullable(Object)
+              ])) as DocumentReference<Object?>?;
           break;
       }
     }
@@ -178,31 +179,31 @@ class _$ThemesRecordSerializer implements StructuredSerializer<ThemesRecord> {
 
 class _$ThemesRecord extends ThemesRecord {
   @override
-  final String id;
+  final String? id;
   @override
-  final String name;
+  final String? name;
   @override
-  final String subjectId;
+  final String? subjectId;
   @override
-  final String subjectName;
+  final String? subjectName;
   @override
-  final String classId;
+  final String? classId;
   @override
-  final String className;
+  final String? className;
   @override
-  final bool isActive;
+  final bool? isActive;
   @override
-  final String code;
+  final String? code;
   @override
-  final bool isSchoolProgram;
+  final bool? isSchoolProgram;
   @override
-  final String number;
+  final String? number;
   @override
-  final String sortOrder;
+  final String? sortOrder;
   @override
-  final DocumentReference<Object> reference;
+  final DocumentReference<Object?>? ffRef;
 
-  factory _$ThemesRecord([void Function(ThemesRecordBuilder) updates]) =>
+  factory _$ThemesRecord([void Function(ThemesRecordBuilder)? updates]) =>
       (new ThemesRecordBuilder()..update(updates)).build();
 
   _$ThemesRecord._(
@@ -217,7 +218,7 @@ class _$ThemesRecord extends ThemesRecord {
       this.isSchoolProgram,
       this.number,
       this.sortOrder,
-      this.reference})
+      this.ffRef})
       : super._();
 
   @override
@@ -242,7 +243,7 @@ class _$ThemesRecord extends ThemesRecord {
         isSchoolProgram == other.isSchoolProgram &&
         number == other.number &&
         sortOrder == other.sortOrder &&
-        reference == other.reference;
+        ffRef == other.ffRef;
   }
 
   @override
@@ -268,7 +269,7 @@ class _$ThemesRecord extends ThemesRecord {
                     isSchoolProgram.hashCode),
                 number.hashCode),
             sortOrder.hashCode),
-        reference.hashCode));
+        ffRef.hashCode));
   }
 
   @override
@@ -285,64 +286,63 @@ class _$ThemesRecord extends ThemesRecord {
           ..add('isSchoolProgram', isSchoolProgram)
           ..add('number', number)
           ..add('sortOrder', sortOrder)
-          ..add('reference', reference))
+          ..add('ffRef', ffRef))
         .toString();
   }
 }
 
 class ThemesRecordBuilder
     implements Builder<ThemesRecord, ThemesRecordBuilder> {
-  _$ThemesRecord _$v;
+  _$ThemesRecord? _$v;
 
-  String _id;
-  String get id => _$this._id;
-  set id(String id) => _$this._id = id;
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
 
-  String _name;
-  String get name => _$this._name;
-  set name(String name) => _$this._name = name;
+  String? _name;
+  String? get name => _$this._name;
+  set name(String? name) => _$this._name = name;
 
-  String _subjectId;
-  String get subjectId => _$this._subjectId;
-  set subjectId(String subjectId) => _$this._subjectId = subjectId;
+  String? _subjectId;
+  String? get subjectId => _$this._subjectId;
+  set subjectId(String? subjectId) => _$this._subjectId = subjectId;
 
-  String _subjectName;
-  String get subjectName => _$this._subjectName;
-  set subjectName(String subjectName) => _$this._subjectName = subjectName;
+  String? _subjectName;
+  String? get subjectName => _$this._subjectName;
+  set subjectName(String? subjectName) => _$this._subjectName = subjectName;
 
-  String _classId;
-  String get classId => _$this._classId;
-  set classId(String classId) => _$this._classId = classId;
+  String? _classId;
+  String? get classId => _$this._classId;
+  set classId(String? classId) => _$this._classId = classId;
 
-  String _className;
-  String get className => _$this._className;
-  set className(String className) => _$this._className = className;
+  String? _className;
+  String? get className => _$this._className;
+  set className(String? className) => _$this._className = className;
 
-  bool _isActive;
-  bool get isActive => _$this._isActive;
-  set isActive(bool isActive) => _$this._isActive = isActive;
+  bool? _isActive;
+  bool? get isActive => _$this._isActive;
+  set isActive(bool? isActive) => _$this._isActive = isActive;
 
-  String _code;
-  String get code => _$this._code;
-  set code(String code) => _$this._code = code;
+  String? _code;
+  String? get code => _$this._code;
+  set code(String? code) => _$this._code = code;
 
-  bool _isSchoolProgram;
-  bool get isSchoolProgram => _$this._isSchoolProgram;
-  set isSchoolProgram(bool isSchoolProgram) =>
+  bool? _isSchoolProgram;
+  bool? get isSchoolProgram => _$this._isSchoolProgram;
+  set isSchoolProgram(bool? isSchoolProgram) =>
       _$this._isSchoolProgram = isSchoolProgram;
 
-  String _number;
-  String get number => _$this._number;
-  set number(String number) => _$this._number = number;
+  String? _number;
+  String? get number => _$this._number;
+  set number(String? number) => _$this._number = number;
 
-  String _sortOrder;
-  String get sortOrder => _$this._sortOrder;
-  set sortOrder(String sortOrder) => _$this._sortOrder = sortOrder;
+  String? _sortOrder;
+  String? get sortOrder => _$this._sortOrder;
+  set sortOrder(String? sortOrder) => _$this._sortOrder = sortOrder;
 
-  DocumentReference<Object> _reference;
-  DocumentReference<Object> get reference => _$this._reference;
-  set reference(DocumentReference<Object> reference) =>
-      _$this._reference = reference;
+  DocumentReference<Object?>? _ffRef;
+  DocumentReference<Object?>? get ffRef => _$this._ffRef;
+  set ffRef(DocumentReference<Object?>? ffRef) => _$this._ffRef = ffRef;
 
   ThemesRecordBuilder() {
     ThemesRecord._initializeBuilder(this);
@@ -362,7 +362,7 @@ class ThemesRecordBuilder
       _isSchoolProgram = $v.isSchoolProgram;
       _number = $v.number;
       _sortOrder = $v.sortOrder;
-      _reference = $v.reference;
+      _ffRef = $v.ffRef;
       _$v = null;
     }
     return this;
@@ -375,7 +375,7 @@ class ThemesRecordBuilder
   }
 
   @override
-  void update(void Function(ThemesRecordBuilder) updates) {
+  void update(void Function(ThemesRecordBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
@@ -394,7 +394,7 @@ class ThemesRecordBuilder
             isSchoolProgram: isSchoolProgram,
             number: number,
             sortOrder: sortOrder,
-            reference: reference);
+            ffRef: ffRef);
     replace(_$result);
     return _$result;
   }

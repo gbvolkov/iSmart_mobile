@@ -17,10 +17,10 @@ class _$CategoriesRecordSerializer
   final String wireName = 'CategoriesRecord';
 
   @override
-  Iterable<Object> serialize(Serializers serializers, CategoriesRecord object,
+  Iterable<Object?> serialize(Serializers serializers, CategoriesRecord object,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    Object value;
+    final result = <Object?>[];
+    Object? value;
     value = object.name;
     if (value != null) {
       result
@@ -131,7 +131,7 @@ class _$CategoriesRecordSerializer
         ..add('parent')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(
-                DocumentReference, const [const FullType(Object)])));
+                DocumentReference, const [const FullType.nullable(Object)])));
     }
     value = object.children;
     if (value != null) {
@@ -139,7 +139,8 @@ class _$CategoriesRecordSerializer
         ..add('children')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(BuiltList, const [
-              const FullType(DocumentReference, const [const FullType(Object)])
+              const FullType(
+                  DocumentReference, const [const FullType.nullable(Object)])
             ])));
     }
     value = object.code;
@@ -156,20 +157,20 @@ class _$CategoriesRecordSerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
-    value = object.reference;
+    value = object.ffRef;
     if (value != null) {
       result
         ..add('Document__Reference__Field')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(
-                DocumentReference, const [const FullType(Object)])));
+                DocumentReference, const [const FullType.nullable(Object)])));
     }
     return result;
   }
 
   @override
   CategoriesRecord deserialize(
-      Serializers serializers, Iterable<Object> serialized,
+      Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
     final result = new CategoriesRecordBuilder();
 
@@ -177,94 +178,94 @@ class _$CategoriesRecordSerializer
     while (iterator.moveNext()) {
       final key = iterator.current as String;
       iterator.moveNext();
-      final Object value = iterator.current;
+      final Object? value = iterator.current;
       switch (key) {
         case 'name':
           result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'parent_id':
           result.parentId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'practice_id':
           result.practiceId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'description':
           result.description = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'type':
           result.type = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'image_url':
           result.imageUrl = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'short_description':
           result.shortDescription = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'is_visible':
           result.isVisible = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'sort_order':
           result.sortOrder = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+              specifiedType: const FullType(int)) as int?;
           break;
         case 'class_id':
           result.classId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'class_name':
           result.className = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'subject_id':
           result.subjectId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'subject_name':
           result.subjectName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'practice_name':
           result.practiceName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'parent':
           result.parent = serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      DocumentReference, const [const FullType(Object)]))
-              as DocumentReference<Object>;
+              specifiedType: const FullType(DocumentReference, const [
+                const FullType.nullable(Object)
+              ])) as DocumentReference<Object?>?;
           break;
         case 'children':
           result.children.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
                 const FullType(
-                    DocumentReference, const [const FullType(Object)])
-              ])) as BuiltList<Object>);
+                    DocumentReference, const [const FullType.nullable(Object)])
+              ]))! as BuiltList<Object?>);
           break;
         case 'code':
           result.code = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'image':
           result.image = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'Document__Reference__Field':
-          result.reference = serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      DocumentReference, const [const FullType(Object)]))
-              as DocumentReference<Object>;
+          result.ffRef = serializers.deserialize(value,
+              specifiedType: const FullType(DocumentReference, const [
+                const FullType.nullable(Object)
+              ])) as DocumentReference<Object?>?;
           break;
       }
     }
@@ -275,48 +276,48 @@ class _$CategoriesRecordSerializer
 
 class _$CategoriesRecord extends CategoriesRecord {
   @override
-  final String name;
+  final String? name;
   @override
-  final String id;
+  final String? id;
   @override
-  final String parentId;
+  final String? parentId;
   @override
-  final String practiceId;
+  final String? practiceId;
   @override
-  final String description;
+  final String? description;
   @override
-  final String type;
+  final String? type;
   @override
-  final String imageUrl;
+  final String? imageUrl;
   @override
-  final String shortDescription;
+  final String? shortDescription;
   @override
-  final bool isVisible;
+  final bool? isVisible;
   @override
-  final int sortOrder;
+  final int? sortOrder;
   @override
-  final String classId;
+  final String? classId;
   @override
-  final String className;
+  final String? className;
   @override
-  final String subjectId;
+  final String? subjectId;
   @override
-  final String subjectName;
+  final String? subjectName;
   @override
-  final String practiceName;
+  final String? practiceName;
   @override
-  final DocumentReference<Object> parent;
+  final DocumentReference<Object?>? parent;
   @override
-  final BuiltList<DocumentReference<Object>> children;
+  final BuiltList<DocumentReference<Object?>>? children;
   @override
-  final String code;
+  final String? code;
   @override
-  final String image;
+  final String? image;
   @override
-  final DocumentReference<Object> reference;
+  final DocumentReference<Object?>? ffRef;
 
   factory _$CategoriesRecord(
-          [void Function(CategoriesRecordBuilder) updates]) =>
+          [void Function(CategoriesRecordBuilder)? updates]) =>
       (new CategoriesRecordBuilder()..update(updates)).build();
 
   _$CategoriesRecord._(
@@ -339,7 +340,7 @@ class _$CategoriesRecord extends CategoriesRecord {
       this.children,
       this.code,
       this.image,
-      this.reference})
+      this.ffRef})
       : super._();
 
   @override
@@ -373,7 +374,7 @@ class _$CategoriesRecord extends CategoriesRecord {
         children == other.children &&
         code == other.code &&
         image == other.image &&
-        reference == other.reference;
+        ffRef == other.ffRef;
   }
 
   @override
@@ -415,7 +416,7 @@ class _$CategoriesRecord extends CategoriesRecord {
                     children.hashCode),
                 code.hashCode),
             image.hashCode),
-        reference.hashCode));
+        ffRef.hashCode));
   }
 
   @override
@@ -440,98 +441,97 @@ class _$CategoriesRecord extends CategoriesRecord {
           ..add('children', children)
           ..add('code', code)
           ..add('image', image)
-          ..add('reference', reference))
+          ..add('ffRef', ffRef))
         .toString();
   }
 }
 
 class CategoriesRecordBuilder
     implements Builder<CategoriesRecord, CategoriesRecordBuilder> {
-  _$CategoriesRecord _$v;
+  _$CategoriesRecord? _$v;
 
-  String _name;
-  String get name => _$this._name;
-  set name(String name) => _$this._name = name;
+  String? _name;
+  String? get name => _$this._name;
+  set name(String? name) => _$this._name = name;
 
-  String _id;
-  String get id => _$this._id;
-  set id(String id) => _$this._id = id;
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
 
-  String _parentId;
-  String get parentId => _$this._parentId;
-  set parentId(String parentId) => _$this._parentId = parentId;
+  String? _parentId;
+  String? get parentId => _$this._parentId;
+  set parentId(String? parentId) => _$this._parentId = parentId;
 
-  String _practiceId;
-  String get practiceId => _$this._practiceId;
-  set practiceId(String practiceId) => _$this._practiceId = practiceId;
+  String? _practiceId;
+  String? get practiceId => _$this._practiceId;
+  set practiceId(String? practiceId) => _$this._practiceId = practiceId;
 
-  String _description;
-  String get description => _$this._description;
-  set description(String description) => _$this._description = description;
+  String? _description;
+  String? get description => _$this._description;
+  set description(String? description) => _$this._description = description;
 
-  String _type;
-  String get type => _$this._type;
-  set type(String type) => _$this._type = type;
+  String? _type;
+  String? get type => _$this._type;
+  set type(String? type) => _$this._type = type;
 
-  String _imageUrl;
-  String get imageUrl => _$this._imageUrl;
-  set imageUrl(String imageUrl) => _$this._imageUrl = imageUrl;
+  String? _imageUrl;
+  String? get imageUrl => _$this._imageUrl;
+  set imageUrl(String? imageUrl) => _$this._imageUrl = imageUrl;
 
-  String _shortDescription;
-  String get shortDescription => _$this._shortDescription;
-  set shortDescription(String shortDescription) =>
+  String? _shortDescription;
+  String? get shortDescription => _$this._shortDescription;
+  set shortDescription(String? shortDescription) =>
       _$this._shortDescription = shortDescription;
 
-  bool _isVisible;
-  bool get isVisible => _$this._isVisible;
-  set isVisible(bool isVisible) => _$this._isVisible = isVisible;
+  bool? _isVisible;
+  bool? get isVisible => _$this._isVisible;
+  set isVisible(bool? isVisible) => _$this._isVisible = isVisible;
 
-  int _sortOrder;
-  int get sortOrder => _$this._sortOrder;
-  set sortOrder(int sortOrder) => _$this._sortOrder = sortOrder;
+  int? _sortOrder;
+  int? get sortOrder => _$this._sortOrder;
+  set sortOrder(int? sortOrder) => _$this._sortOrder = sortOrder;
 
-  String _classId;
-  String get classId => _$this._classId;
-  set classId(String classId) => _$this._classId = classId;
+  String? _classId;
+  String? get classId => _$this._classId;
+  set classId(String? classId) => _$this._classId = classId;
 
-  String _className;
-  String get className => _$this._className;
-  set className(String className) => _$this._className = className;
+  String? _className;
+  String? get className => _$this._className;
+  set className(String? className) => _$this._className = className;
 
-  String _subjectId;
-  String get subjectId => _$this._subjectId;
-  set subjectId(String subjectId) => _$this._subjectId = subjectId;
+  String? _subjectId;
+  String? get subjectId => _$this._subjectId;
+  set subjectId(String? subjectId) => _$this._subjectId = subjectId;
 
-  String _subjectName;
-  String get subjectName => _$this._subjectName;
-  set subjectName(String subjectName) => _$this._subjectName = subjectName;
+  String? _subjectName;
+  String? get subjectName => _$this._subjectName;
+  set subjectName(String? subjectName) => _$this._subjectName = subjectName;
 
-  String _practiceName;
-  String get practiceName => _$this._practiceName;
-  set practiceName(String practiceName) => _$this._practiceName = practiceName;
+  String? _practiceName;
+  String? get practiceName => _$this._practiceName;
+  set practiceName(String? practiceName) => _$this._practiceName = practiceName;
 
-  DocumentReference<Object> _parent;
-  DocumentReference<Object> get parent => _$this._parent;
-  set parent(DocumentReference<Object> parent) => _$this._parent = parent;
+  DocumentReference<Object?>? _parent;
+  DocumentReference<Object?>? get parent => _$this._parent;
+  set parent(DocumentReference<Object?>? parent) => _$this._parent = parent;
 
-  ListBuilder<DocumentReference<Object>> _children;
-  ListBuilder<DocumentReference<Object>> get children =>
-      _$this._children ??= new ListBuilder<DocumentReference<Object>>();
-  set children(ListBuilder<DocumentReference<Object>> children) =>
+  ListBuilder<DocumentReference<Object?>>? _children;
+  ListBuilder<DocumentReference<Object?>> get children =>
+      _$this._children ??= new ListBuilder<DocumentReference<Object?>>();
+  set children(ListBuilder<DocumentReference<Object?>>? children) =>
       _$this._children = children;
 
-  String _code;
-  String get code => _$this._code;
-  set code(String code) => _$this._code = code;
+  String? _code;
+  String? get code => _$this._code;
+  set code(String? code) => _$this._code = code;
 
-  String _image;
-  String get image => _$this._image;
-  set image(String image) => _$this._image = image;
+  String? _image;
+  String? get image => _$this._image;
+  set image(String? image) => _$this._image = image;
 
-  DocumentReference<Object> _reference;
-  DocumentReference<Object> get reference => _$this._reference;
-  set reference(DocumentReference<Object> reference) =>
-      _$this._reference = reference;
+  DocumentReference<Object?>? _ffRef;
+  DocumentReference<Object?>? get ffRef => _$this._ffRef;
+  set ffRef(DocumentReference<Object?>? ffRef) => _$this._ffRef = ffRef;
 
   CategoriesRecordBuilder() {
     CategoriesRecord._initializeBuilder(this);
@@ -559,7 +559,7 @@ class CategoriesRecordBuilder
       _children = $v.children?.toBuilder();
       _code = $v.code;
       _image = $v.image;
-      _reference = $v.reference;
+      _ffRef = $v.ffRef;
       _$v = null;
     }
     return this;
@@ -572,7 +572,7 @@ class CategoriesRecordBuilder
   }
 
   @override
-  void update(void Function(CategoriesRecordBuilder) updates) {
+  void update(void Function(CategoriesRecordBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
@@ -601,9 +601,9 @@ class CategoriesRecordBuilder
               children: _children?.build(),
               code: code,
               image: image,
-              reference: reference);
+              ffRef: ffRef);
     } catch (_) {
-      String _$failedField;
+      late String _$failedField;
       try {
         _$failedField = 'children';
         _children?.build();

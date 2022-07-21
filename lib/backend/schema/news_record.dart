@@ -9,53 +9,41 @@ part 'news_record.g.dart';
 abstract class NewsRecord implements Built<NewsRecord, NewsRecordBuilder> {
   static Serializer<NewsRecord> get serializer => _$newsRecordSerializer;
 
-  @nullable
   @BuiltValueField(wireName: 'news_text')
-  String get newsText;
+  String? get newsText;
 
-  @nullable
-  String get image;
+  String? get image;
 
-  @nullable
-  String get title;
+  String? get title;
 
-  @nullable
-  String get status;
+  String? get status;
 
-  @nullable
   @BuiltValueField(wireName: 'to_list')
-  BuiltList<DocumentReference> get toList;
+  BuiltList<DocumentReference>? get toList;
 
-  @nullable
   @BuiltValueField(wireName: 'page_name')
-  String get pageName;
+  String? get pageName;
 
-  @nullable
   @BuiltValueField(wireName: 'page_parameters')
-  String get pageParameters;
+  String? get pageParameters;
 
-  @nullable
   @BuiltValueField(wireName: 'scheduled_time')
-  DateTime get scheduledTime;
+  DateTime? get scheduledTime;
 
-  @nullable
   @BuiltValueField(wireName: 'sent_time')
-  DateTime get sentTime;
+  DateTime? get sentTime;
 
-  @nullable
   @BuiltValueField(wireName: 'sent_to_list')
-  BuiltList<DocumentReference> get sentToList;
+  BuiltList<DocumentReference>? get sentToList;
 
-  @nullable
   @BuiltValueField(wireName: 'is_public')
-  bool get isPublic;
+  bool? get isPublic;
 
-  @nullable
-  String get category;
+  String? get category;
 
-  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
-  DocumentReference get reference;
+  DocumentReference? get ffRef;
+  DocumentReference get reference => ffRef!;
 
   static void _initializeBuilder(NewsRecordBuilder builder) => builder
     ..newsText = ''
@@ -74,11 +62,47 @@ abstract class NewsRecord implements Built<NewsRecord, NewsRecordBuilder> {
 
   static Stream<NewsRecord> getDocument(DocumentReference ref) => ref
       .snapshots()
-      .map((s) => serializers.deserializeWith(serializer, serializedData(s)));
+      .map((s) => serializers.deserializeWith(serializer, serializedData(s))!);
 
   static Future<NewsRecord> getDocumentOnce(DocumentReference ref) => ref
       .get()
-      .then((s) => serializers.deserializeWith(serializer, serializedData(s)));
+      .then((s) => serializers.deserializeWith(serializer, serializedData(s))!);
+
+  static NewsRecord fromAlgolia(AlgoliaObjectSnapshot snapshot) => NewsRecord(
+        (c) => c
+          ..newsText = snapshot.data['news_text']
+          ..image = snapshot.data['image']
+          ..title = snapshot.data['title']
+          ..status = snapshot.data['status']
+          ..toList = safeGet(
+              () => ListBuilder(snapshot.data['to_list'].map((s) => toRef(s))))
+          ..pageName = snapshot.data['page_name']
+          ..pageParameters = snapshot.data['page_parameters']
+          ..scheduledTime = safeGet(() => DateTime.fromMillisecondsSinceEpoch(
+              snapshot.data['scheduled_time']))
+          ..sentTime = safeGet(() =>
+              DateTime.fromMillisecondsSinceEpoch(snapshot.data['sent_time']))
+          ..sentToList = safeGet(() =>
+              ListBuilder(snapshot.data['sent_to_list'].map((s) => toRef(s))))
+          ..isPublic = snapshot.data['is_public']
+          ..category = snapshot.data['category']
+          ..ffRef = NewsRecord.collection.doc(snapshot.objectID),
+      );
+
+  static Future<List<NewsRecord>> search(
+          {String? term,
+          FutureOr<LatLng>? location,
+          int? maxResults,
+          double? searchRadiusMeters}) =>
+      FFAlgoliaManager.instance
+          .algoliaQuery(
+            index: 'news',
+            term: term,
+            maxResults: maxResults,
+            location: location,
+            searchRadiusMeters: searchRadiusMeters,
+          )
+          .then((r) => r.map(fromAlgolia).toList());
 
   NewsRecord._();
   factory NewsRecord([void Function(NewsRecordBuilder) updates]) = _$NewsRecord;
@@ -86,33 +110,39 @@ abstract class NewsRecord implements Built<NewsRecord, NewsRecordBuilder> {
   static NewsRecord getDocumentFromData(
           Map<String, dynamic> data, DocumentReference reference) =>
       serializers.deserializeWith(serializer,
-          {...mapFromFirestore(data), kDocumentReferenceField: reference});
+          {...mapFromFirestore(data), kDocumentReferenceField: reference})!;
 }
 
 Map<String, dynamic> createNewsRecordData({
-  String newsText,
-  String image,
-  String title,
-  String status,
-  String pageName,
-  String pageParameters,
-  DateTime scheduledTime,
-  DateTime sentTime,
-  bool isPublic,
-  String category,
-}) =>
-    serializers.toFirestore(
-        NewsRecord.serializer,
-        NewsRecord((n) => n
-          ..newsText = newsText
-          ..image = image
-          ..title = title
-          ..status = status
-          ..toList = null
-          ..pageName = pageName
-          ..pageParameters = pageParameters
-          ..scheduledTime = scheduledTime
-          ..sentTime = sentTime
-          ..sentToList = null
-          ..isPublic = isPublic
-          ..category = category));
+  String? newsText,
+  String? image,
+  String? title,
+  String? status,
+  String? pageName,
+  String? pageParameters,
+  DateTime? scheduledTime,
+  DateTime? sentTime,
+  bool? isPublic,
+  String? category,
+}) {
+  final firestoreData = serializers.toFirestore(
+    NewsRecord.serializer,
+    NewsRecord(
+      (n) => n
+        ..newsText = newsText
+        ..image = image
+        ..title = title
+        ..status = status
+        ..toList = null
+        ..pageName = pageName
+        ..pageParameters = pageParameters
+        ..scheduledTime = scheduledTime
+        ..sentTime = sentTime
+        ..sentToList = null
+        ..isPublic = isPublic
+        ..category = category,
+    ),
+  );
+
+  return firestoreData;
+}

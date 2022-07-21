@@ -8,19 +8,19 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SignUpWidget extends StatefulWidget {
-  const SignUpWidget({Key key}) : super(key: key);
+  const SignUpWidget({Key? key}) : super(key: key);
 
   @override
   _SignUpWidgetState createState() => _SignUpWidgetState();
 }
 
 class _SignUpWidgetState extends State<SignUpWidget> {
-  TextEditingController inpEmailLoginController;
-  TextEditingController inpPasswordLoginController;
-  bool inpPasswordLoginVisibility;
-  TextEditingController inpEmailSignupController;
-  TextEditingController inpPasswordSignupController;
-  bool inpPasswordSignupVisibility;
+  TextEditingController? inpEmailLoginController;
+  TextEditingController? inpPasswordLoginController;
+  late bool inpPasswordLoginVisibility;
+  TextEditingController? inpEmailSignupController;
+  TextEditingController? inpPasswordSignupController;
+  late bool inpPasswordSignupVisibility;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -223,8 +223,9 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                 final user =
                                                     await createAccountWithEmail(
                                                   context,
-                                                  inpEmailSignupController.text,
-                                                  inpPasswordSignupController
+                                                  inpEmailSignupController!
+                                                      .text,
+                                                  inpPasswordSignupController!
                                                       .text,
                                                 );
                                                 if (user == null) {
@@ -460,8 +461,8 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                 final user =
                                                     await signInWithEmail(
                                                   context,
-                                                  inpEmailLoginController.text,
-                                                  inpPasswordLoginController
+                                                  inpEmailLoginController!.text,
+                                                  inpPasswordLoginController!
                                                       .text,
                                                 );
                                                 if (user == null) {

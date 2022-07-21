@@ -8,18 +8,18 @@ import 'package:google_fonts/google_fonts.dart';
 
 class PlatformWebViewWidget extends StatefulWidget {
   const PlatformWebViewWidget({
-    Key key,
+    Key? key,
     this.platformURL,
   }) : super(key: key);
 
-  final String platformURL;
+  final String? platformURL;
 
   @override
   _PlatformWebViewWidgetState createState() => _PlatformWebViewWidgetState();
 }
 
 class _PlatformWebViewWidgetState extends State<PlatformWebViewWidget> {
-  TextEditingController textController;
+  TextEditingController? textController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -73,7 +73,7 @@ class _PlatformWebViewWidgetState extends State<PlatformWebViewWidget> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     FlutterFlowWebView(
-                      url: widget.platformURL,
+                      url: widget.platformURL!,
                       bypass: false,
                       height: MediaQuery.of(context).size.height * 0.75,
                       verticalScroll: false,

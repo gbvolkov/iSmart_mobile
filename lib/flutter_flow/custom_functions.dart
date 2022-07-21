@@ -21,17 +21,6 @@ String getImageURL(
   }
 }
 
-String getImageURLString(
-  String baseURL,
-  String imageURL,
-) {
-  if (!imageURL.startsWith("https:")) {
-    return baseURL + imageURL;
-  } else {
-    return imageURL;
-  }
-}
-
 String getCategoryPlatformURL(
   String baseCategoryURL,
   String categoryCode,
@@ -45,7 +34,7 @@ String getCategoryPlatformURL(
     case "subjectSelectionGroup":
       return baseCategoryURL + categoryCode;
     case "subjectSelection":
-      return baseCategoryURL + parentCode + "/?categoryCode=" + categoryCode;
+      return '$baseCategoryURL$parentCode/?categoryCode=$categoryCode';
     default:
       return baseCategoryURL;
   }
@@ -57,12 +46,7 @@ String getThemePlatformURL(
   String parentCode,
   String themeCode,
 ) {
-  return baseCategoryURL +
-      parentCode +
-      "/" +
-      themeCode +
-      "?categoryCode=" +
-      categoryCode;
+  return '$baseCategoryURL$parentCode/$themeCode?categoryCode=$categoryCode';
 }
 
 String getSubThemePlatformURL(
@@ -71,21 +55,14 @@ String getSubThemePlatformURL(
   SubThemesRecord currentSubTheme,
   String currentSubjectSelectorID,
 ) {
-  return baseSimulatorURL +
-      currentSubjectSelectorID +
-      "/" +
-      currentTheme.subjectId +
-      "/" +
-      currentTheme.classId +
-      "/" +
-      currentSubTheme.id;
+  return '$baseSimulatorURL$currentSubjectSelectorID/${currentTheme.subjectId}/${currentTheme.classId}/${currentSubTheme.id}';
 }
 
 List<DocumentReference> filterThemes(
   List<DocumentReference> themesCollection,
   String regexString,
 ) {
-  List<DocumentReference> result;
+  List<DocumentReference> result = [];
   for (var theme in themesCollection) {
     if (theme.toString().contains(regexString)) {
       result.add(theme);
@@ -101,7 +78,7 @@ List<ThemesRecord> filterThemesList(
   if (regexString.isNotEmpty) {
     List<ThemesRecord> result = [];
     for (var theme in themesCollection) {
-      if ((theme.number + ' ' + theme.name)
+      if (('${theme.number} ${theme.name}')
           .toLowerCase()
           .contains(regexString.toLowerCase())) {
         result.add(theme);
@@ -120,7 +97,7 @@ List<SubThemesRecord> filterSubThemesList(
   if (regexString.isNotEmpty) {
     List<SubThemesRecord> result = [];
     for (var subtheme in subThemesCollection) {
-      if ((subtheme.number + ' ' + subtheme.name)
+      if (('${subtheme.number}  ${subtheme.name}')
           .toLowerCase()
           .contains(regexString.toLowerCase())) {
         result.add(subtheme);
@@ -146,7 +123,7 @@ CategoriesRecord getFirstCategoryFromList(
     return cat.parentId != parentId;
   });
   categories.sort((cat1, cat2) {
-    return cat1.className.compareTo(cat2.className);
+    return (cat1.className ?? "").compareTo(cat2.className ?? "");
   });
   return categories.first;
 }
@@ -174,20 +151,22 @@ DateTime addDays(
 List<NewsRecord> getMyNews(
   List<NewsRecord> news,
   DocumentReference user,
-  String newscategory,
+  String? newscategory,
 ) {
   // Add your function code here!
   List<NewsRecord> result = [];
+
   for (var newsItem in news) {
-    if (newsItem.isPublic || newsItem.toList.contains(user)) {
-      if (newscategory.isEmpty ||
-          newscategory == "*" ||
-          newscategory
-                  .toLowerCase()
-                  .compareTo(newsItem.category.toLowerCase()) ==
-              0) {
-        result.add(newsItem);
-      }
+    var isPublic = newsItem.isPublic ?? false;
+    var toList =
+        (newsItem.toList) ?? [] as BuiltList<DocumentReference<UsersRecord>>;
+    var category = newsItem.category ?? "";
+    var isMy = isPublic && toList.contains(user);
+    var isCategory = (newscategory == null) ||
+        (newscategory.toLowerCase().compareTo(category.toLowerCase()) == 0);
+
+    if (isMy && isCategory) {
+      result.add(newsItem);
     }
   }
   return result;

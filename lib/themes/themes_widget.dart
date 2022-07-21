@@ -12,22 +12,22 @@ import 'package:google_fonts/google_fonts.dart';
 
 class ThemesWidget extends StatefulWidget {
   const ThemesWidget({
-    Key key,
+    Key? key,
     this.currentCategoryID,
     this.currentCategoryName,
     this.currentCategoryDescription,
   }) : super(key: key);
 
-  final String currentCategoryID;
-  final String currentCategoryName;
-  final String currentCategoryDescription;
+  final String? currentCategoryID;
+  final String? currentCategoryName;
+  final String? currentCategoryDescription;
 
   @override
   _ThemesWidgetState createState() => _ThemesWidgetState();
 }
 
 class _ThemesWidgetState extends State<ThemesWidget> {
-  TextEditingController txtSearchInpController;
+  TextEditingController? txtSearchInpController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -58,7 +58,7 @@ class _ThemesWidgetState extends State<ThemesWidget> {
           },
         ),
         title: Text(
-          widget.currentCategoryName,
+          widget.currentCategoryName!,
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Nunito Sans',
                 color: FlutterFlowTheme.of(context).primaryText,
@@ -105,7 +105,7 @@ class _ThemesWidgetState extends State<ThemesWidget> {
                           child: Align(
                             alignment: AlignmentDirectional(-1, 0),
                             child: Text(
-                              widget.currentCategoryDescription,
+                              widget.currentCategoryDescription!,
                               textAlign: TextAlign.start,
                               style: FlutterFlowTheme.of(context).subtitle2,
                             ),
@@ -146,7 +146,7 @@ class _ThemesWidgetState extends State<ThemesWidget> {
                                 );
                               }
                               List<CategoriesRecord>
-                                  listViewCategoriesRecordList = snapshot.data;
+                                  listViewCategoriesRecordList = snapshot.data!;
                               return ListView.builder(
                                 padding: EdgeInsets.zero,
                                 primary: false,
@@ -167,18 +167,19 @@ class _ThemesWidgetState extends State<ThemesWidget> {
                                           onTap: () async {
                                             setState(() =>
                                                 FFAppState().currentClassID =
-                                                    listViewCategoriesRecord
-                                                        .classId);
+                                                    listViewCategoriesRecord!
+                                                        .classId!);
                                             setState(() =>
                                                 FFAppState().currentSubjectID =
-                                                    listViewCategoriesRecord
-                                                        .subjectId);
+                                                    listViewCategoriesRecord!
+                                                        .subjectId!);
                                             setState(() => FFAppState()
                                                     .subjectSelectionCode =
-                                                listViewCategoriesRecord.code);
+                                                listViewCategoriesRecord!
+                                                    .code!);
                                             setState(() => FFAppState()
                                                     .subjectSelectionID =
-                                                listViewCategoriesRecord.id);
+                                                listViewCategoriesRecord!.id!);
                                           },
                                           child: Material(
                                             color: Colors.transparent,
@@ -225,8 +226,8 @@ class _ThemesWidgetState extends State<ThemesWidget> {
                                                 alignment:
                                                     AlignmentDirectional(0, 0),
                                                 child: Text(
-                                                  listViewCategoriesRecord
-                                                      .className,
+                                                  listViewCategoriesRecord!
+                                                      .className!,
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -270,7 +271,7 @@ class _ThemesWidgetState extends State<ThemesWidget> {
                       ),
                     );
                   }
-                  List<ThemesRecord> containerThemesRecordList = snapshot.data;
+                  List<ThemesRecord> containerThemesRecordList = snapshot.data!;
                   return Container(
                     width: double.infinity,
                     height: MediaQuery.of(context).size.height * 0.55,
@@ -325,20 +326,20 @@ class _ThemesWidgetState extends State<ThemesWidget> {
                                         color: Color(0xA557636C),
                                         size: 20,
                                       ),
-                                      suffixIcon:
-                                          txtSearchInpController.text.isNotEmpty
-                                              ? InkWell(
-                                                  onTap: () => setState(
-                                                    () => txtSearchInpController
-                                                        ?.clear(),
-                                                  ),
-                                                  child: Icon(
-                                                    Icons.clear,
-                                                    color: Color(0xA557636C),
-                                                    size: 24,
-                                                  ),
-                                                )
-                                              : null,
+                                      suffixIcon: txtSearchInpController!
+                                              .text.isNotEmpty
+                                          ? InkWell(
+                                              onTap: () => setState(
+                                                () => txtSearchInpController
+                                                    ?.clear(),
+                                              ),
+                                              child: Icon(
+                                                Icons.clear,
+                                                color: Color(0xA557636C),
+                                                size: 24,
+                                              ),
+                                            )
+                                          : null,
                                     ),
                                     style:
                                         FlutterFlowTheme.of(context).bodyText1,
@@ -378,7 +379,7 @@ class _ThemesWidgetState extends State<ThemesWidget> {
                                             .filterThemesList(
                                                 containerThemesRecordList
                                                     .toList(),
-                                                txtSearchInpController.text)
+                                                txtSearchInpController!.text)
                                             .map((e) => e)
                                             .toList()
                                             ?.toList() ??
@@ -469,7 +470,7 @@ class _ThemesWidgetState extends State<ThemesWidget> {
                                                                   .fromSTEB(8,
                                                                       0, 0, 0),
                                                           child: AutoSizeText(
-                                                            '${themesListFilteredItem.number} ${themesListFilteredItem.name}',
+                                                            '${themesListFilteredItem!.number} ${themesListFilteredItem!.name}',
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyText1
@@ -514,13 +515,13 @@ class _ThemesWidgetState extends State<ThemesWidget> {
                                                               PlatformWebViewWidget(
                                                             platformURL: functions.getThemePlatformURL(
                                                                 FFAppState()
-                                                                    .baseCategoryPlatformURL,
+                                                                    .baseCategoryPlatformURL!,
                                                                 FFAppState()
-                                                                    .subjectSelectionCode,
+                                                                    .subjectSelectionCode!,
                                                                 FFAppState()
-                                                                    .subjectSelectionGroupCode,
-                                                                themesListFilteredItem
-                                                                    .code),
+                                                                    .subjectSelectionGroupCode!,
+                                                                themesListFilteredItem!
+                                                                    .code!),
                                                           ),
                                                         ),
                                                       );

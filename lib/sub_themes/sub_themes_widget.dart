@@ -11,20 +11,20 @@ import 'package:google_fonts/google_fonts.dart';
 
 class SubThemesWidget extends StatefulWidget {
   const SubThemesWidget({
-    Key key,
+    Key? key,
     this.theme,
     this.currentSubjectSelectorID,
   }) : super(key: key);
 
-  final ThemesRecord theme;
-  final String currentSubjectSelectorID;
+  final ThemesRecord? theme;
+  final String? currentSubjectSelectorID;
 
   @override
   _SubThemesWidgetState createState() => _SubThemesWidgetState();
 }
 
 class _SubThemesWidgetState extends State<SubThemesWidget> {
-  TextEditingController txtSearchInpController;
+  TextEditingController? txtSearchInpController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -55,7 +55,7 @@ class _SubThemesWidgetState extends State<SubThemesWidget> {
           },
         ),
         title: Text(
-          '${widget.theme.subjectName} ${widget.theme.className}',
+          '${widget.theme!.subjectName} ${widget.theme!.className}',
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Nunito Sans',
                 color: FlutterFlowTheme.of(context).primaryText,
@@ -91,7 +91,7 @@ class _SubThemesWidgetState extends State<SubThemesWidget> {
                     child: Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
                       child: Text(
-                        '${widget.theme.number} ${widget.theme.name}',
+                        '${widget.theme!.number} ${widget.theme!.name}',
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).title3,
                       ),
@@ -102,7 +102,7 @@ class _SubThemesWidgetState extends State<SubThemesWidget> {
               FutureBuilder<List<SubThemesRecord>>(
                 future: querySubThemesRecordOnce(
                   queryBuilder: (subThemesRecord) => subThemesRecord
-                      .where('theme_id', isEqualTo: widget.theme.id)
+                      .where('theme_id', isEqualTo: widget.theme!.id)
                       .orderBy('sort_order'),
                 ),
                 builder: (context, snapshot) {
@@ -119,7 +119,7 @@ class _SubThemesWidgetState extends State<SubThemesWidget> {
                     );
                   }
                   List<SubThemesRecord> containerSubThemesRecordList =
-                      snapshot.data;
+                      snapshot.data!;
                   return Container(
                     width: double.infinity,
                     height: MediaQuery.of(context).size.height * 0.55,
@@ -174,20 +174,20 @@ class _SubThemesWidgetState extends State<SubThemesWidget> {
                                         color: Color(0xA557636C),
                                         size: 20,
                                       ),
-                                      suffixIcon:
-                                          txtSearchInpController.text.isNotEmpty
-                                              ? InkWell(
-                                                  onTap: () => setState(
-                                                    () => txtSearchInpController
-                                                        ?.clear(),
-                                                  ),
-                                                  child: Icon(
-                                                    Icons.clear,
-                                                    color: Color(0xA557636C),
-                                                    size: 24,
-                                                  ),
-                                                )
-                                              : null,
+                                      suffixIcon: txtSearchInpController!
+                                              .text.isNotEmpty
+                                          ? InkWell(
+                                              onTap: () => setState(
+                                                () => txtSearchInpController
+                                                    ?.clear(),
+                                              ),
+                                              child: Icon(
+                                                Icons.clear,
+                                                color: Color(0xA557636C),
+                                                size: 24,
+                                              ),
+                                            )
+                                          : null,
                                     ),
                                     style:
                                         FlutterFlowTheme.of(context).bodyText1,
@@ -227,7 +227,7 @@ class _SubThemesWidgetState extends State<SubThemesWidget> {
                                             .filterSubThemesList(
                                                 containerSubThemesRecordList
                                                     .toList(),
-                                                txtSearchInpController.text)
+                                                txtSearchInpController!.text)
                                             .map((e) => e)
                                             .toList()
                                             ?.toList() ??
@@ -281,12 +281,12 @@ class _SubThemesWidgetState extends State<SubThemesWidget> {
                                                             platformURL: functions
                                                                 .getSubThemePlatformURL(
                                                                     FFAppState()
-                                                                        .baseSimulatorURL,
+                                                                        .baseSimulatorURL!,
                                                                     widget
-                                                                        .theme,
+                                                                        .theme!,
                                                                     subthemesListFilteredItem,
                                                                     widget
-                                                                        .currentSubjectSelectorID),
+                                                                        .currentSubjectSelectorID!),
                                                           ),
                                                         ),
                                                       );
@@ -313,7 +313,7 @@ class _SubThemesWidgetState extends State<SubThemesWidget> {
                                                                   .fromSTEB(8,
                                                                       0, 0, 0),
                                                           child: AutoSizeText(
-                                                            '${subthemesListFilteredItem.number} ${subthemesListFilteredItem.name}',
+                                                            '${subthemesListFilteredItem!.number} ${subthemesListFilteredItem!.name}',
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyText1
@@ -359,12 +359,12 @@ class _SubThemesWidgetState extends State<SubThemesWidget> {
                                                             platformURL: functions
                                                                 .getSubThemePlatformURL(
                                                                     FFAppState()
-                                                                        .baseSimulatorURL,
+                                                                        .baseSimulatorURL!,
                                                                     widget
-                                                                        .theme,
+                                                                        .theme!,
                                                                     subthemesListFilteredItem,
                                                                     widget
-                                                                        .currentSubjectSelectorID),
+                                                                        .currentSubjectSelectorID!),
                                                           ),
                                                         ),
                                                       );

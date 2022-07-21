@@ -6,15 +6,15 @@ import 'index.dart'; // Imports other custom widgets
 import '../../flutter_flow/custom_functions.dart'; // Imports custom functions
 import 'package:flutter/material.dart';
 // Begin custom widget code
-import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:url_launcher/url_launcher.dart' as launcher;
+import 'package:flutter_markdown/flutter_markdown.dart' as markdown;
 
 class MarkdownWindget extends StatefulWidget {
   const MarkdownWindget({
-    Key key,
-    this.width,
-    this.height,
-    this.mdtext,
+    Key? key,
+    required this.width,
+    required this.height,
+    required this.mdText,
     this.bgColor,
     this.txtColor,
     this.linkColor,
@@ -26,18 +26,26 @@ class MarkdownWindget extends StatefulWidget {
 
   final double width;
   final double height;
-  final String mdtext;
-  final Color bgColor;
-  final Color txtColor;
-  final Color linkColor;
-  final String fontFamily;
-  final double fontSize;
-  final double letterSpacing;
-  final double wordSpacing;
+  final String mdText;
+  final Color? bgColor;
+  final Color? txtColor;
+  final Color? linkColor;
+  final String? fontFamily;
+  final double? fontSize;
+  final double? letterSpacing;
+  final double? wordSpacing;
 
   @override
   _MarkdownWindgetState createState() => _MarkdownWindgetState();
 }
+
+/*void launchUrl(Uri uri) async {
+  String url = uri.toString();
+  if (await canLaunch(url)) {
+    await launch(url);
+  }
+}
+*/
 
 // Handle the link. The [href] in the callback contains information
 // from the link. The url_launcher package or other similar package
@@ -48,7 +56,7 @@ Future<void> linkOnTapHandler(
   String title,
 ) async {
   var uri = Uri.parse(href);
-  launchUrl(uri);
+  launcher.launchUrl(uri);
 }
 
 class _MarkdownWindgetState extends State<MarkdownWindget> {
@@ -68,10 +76,10 @@ class _MarkdownWindgetState extends State<MarkdownWindget> {
         fontSize: widget.fontSize,
         letterSpacing: widget.letterSpacing,
         wordSpacing: widget.wordSpacing);
-    return MarkdownBody(
-        styleSheet: MarkdownStyleSheet(a: linkStyle, p: txtStyle),
-        data: widget.mdtext,
-        onTapLink: (String text, String href, String title) =>
-            linkOnTapHandler(text, href, title));
+    return markdown.MarkdownBody(
+        styleSheet: markdown.MarkdownStyleSheet(a: linkStyle, p: txtStyle),
+        data: widget.mdText,
+        onTapLink: (String text, String? href, String title) =>
+            linkOnTapHandler(text, href!, title));
   }
 }

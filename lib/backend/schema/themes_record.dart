@@ -10,49 +10,38 @@ abstract class ThemesRecord
     implements Built<ThemesRecord, ThemesRecordBuilder> {
   static Serializer<ThemesRecord> get serializer => _$themesRecordSerializer;
 
-  @nullable
-  String get id;
+  String? get id;
 
-  @nullable
-  String get name;
+  String? get name;
 
-  @nullable
   @BuiltValueField(wireName: 'subject_id')
-  String get subjectId;
+  String? get subjectId;
 
-  @nullable
   @BuiltValueField(wireName: 'subject_name')
-  String get subjectName;
+  String? get subjectName;
 
-  @nullable
   @BuiltValueField(wireName: 'class_id')
-  String get classId;
+  String? get classId;
 
-  @nullable
   @BuiltValueField(wireName: 'class_name')
-  String get className;
+  String? get className;
 
-  @nullable
   @BuiltValueField(wireName: 'is_active')
-  bool get isActive;
+  bool? get isActive;
 
-  @nullable
-  String get code;
+  String? get code;
 
-  @nullable
   @BuiltValueField(wireName: 'is_school_program')
-  bool get isSchoolProgram;
+  bool? get isSchoolProgram;
 
-  @nullable
-  String get number;
+  String? get number;
 
-  @nullable
   @BuiltValueField(wireName: 'sort_order')
-  String get sortOrder;
+  String? get sortOrder;
 
-  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
-  DocumentReference get reference;
+  DocumentReference? get ffRef;
+  DocumentReference get reference => ffRef!;
 
   static void _initializeBuilder(ThemesRecordBuilder builder) => builder
     ..id = ''
@@ -72,11 +61,11 @@ abstract class ThemesRecord
 
   static Stream<ThemesRecord> getDocument(DocumentReference ref) => ref
       .snapshots()
-      .map((s) => serializers.deserializeWith(serializer, serializedData(s)));
+      .map((s) => serializers.deserializeWith(serializer, serializedData(s))!);
 
   static Future<ThemesRecord> getDocumentOnce(DocumentReference ref) => ref
       .get()
-      .then((s) => serializers.deserializeWith(serializer, serializedData(s)));
+      .then((s) => serializers.deserializeWith(serializer, serializedData(s))!);
 
   ThemesRecord._();
   factory ThemesRecord([void Function(ThemesRecordBuilder) updates]) =
@@ -85,33 +74,39 @@ abstract class ThemesRecord
   static ThemesRecord getDocumentFromData(
           Map<String, dynamic> data, DocumentReference reference) =>
       serializers.deserializeWith(serializer,
-          {...mapFromFirestore(data), kDocumentReferenceField: reference});
+          {...mapFromFirestore(data), kDocumentReferenceField: reference})!;
 }
 
 Map<String, dynamic> createThemesRecordData({
-  String id,
-  String name,
-  String subjectId,
-  String subjectName,
-  String classId,
-  String className,
-  bool isActive,
-  String code,
-  bool isSchoolProgram,
-  String number,
-  String sortOrder,
-}) =>
-    serializers.toFirestore(
-        ThemesRecord.serializer,
-        ThemesRecord((t) => t
-          ..id = id
-          ..name = name
-          ..subjectId = subjectId
-          ..subjectName = subjectName
-          ..classId = classId
-          ..className = className
-          ..isActive = isActive
-          ..code = code
-          ..isSchoolProgram = isSchoolProgram
-          ..number = number
-          ..sortOrder = sortOrder));
+  String? id,
+  String? name,
+  String? subjectId,
+  String? subjectName,
+  String? classId,
+  String? className,
+  bool? isActive,
+  String? code,
+  bool? isSchoolProgram,
+  String? number,
+  String? sortOrder,
+}) {
+  final firestoreData = serializers.toFirestore(
+    ThemesRecord.serializer,
+    ThemesRecord(
+      (t) => t
+        ..id = id
+        ..name = name
+        ..subjectId = subjectId
+        ..subjectName = subjectName
+        ..classId = classId
+        ..className = className
+        ..isActive = isActive
+        ..code = code
+        ..isSchoolProgram = isSchoolProgram
+        ..number = number
+        ..sortOrder = sortOrder,
+    ),
+  );
+
+  return firestoreData;
+}

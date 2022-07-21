@@ -10,11 +10,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 class NewsWidget extends StatefulWidget {
   const NewsWidget({
-    Key key,
+    Key? key,
     this.news,
   }) : super(key: key);
 
-  final NewsRecord news;
+  final NewsRecord? news;
 
   @override
   _NewsWidgetState createState() => _NewsWidgetState();
@@ -47,7 +47,7 @@ class _NewsWidgetState extends State<NewsWidget> {
             ),
           );
         }
-        List<NewsRecord> newsNewsRecordList = snapshot.data;
+        List<NewsRecord> newsNewsRecordList = snapshot.data!;
         return Scaffold(
           key: scaffoldKey,
           appBar: AppBar(
@@ -108,7 +108,7 @@ class _NewsWidgetState extends State<NewsWidget> {
                                       final mynews = functions
                                               .getMyNews(
                                                   newsNewsRecordList.toList(),
-                                                  currentUserReference,
+                                                  currentUserReference!,
                                                   '*')
                                               .map((e) => e)
                                               .toList()
@@ -186,7 +186,7 @@ class _NewsWidgetState extends State<NewsWidget> {
                                                                   0),
                                                         ),
                                                         child: Image.network(
-                                                          mynewsItem.image,
+                                                          mynewsItem!.image!,
                                                           width: 20,
                                                           height: 20,
                                                           fit: BoxFit.cover,
@@ -240,8 +240,8 @@ class _NewsWidgetState extends State<NewsWidget> {
                                                                             0),
                                                                 child:
                                                                     AutoSizeText(
-                                                                  mynewsItem
-                                                                      .title
+                                                                  mynewsItem!
+                                                                      .title!
                                                                       .maybeHandleOverflow(
                                                                     maxChars:
                                                                         12,
@@ -267,8 +267,8 @@ class _NewsWidgetState extends State<NewsWidget> {
                                                                             0),
                                                                 child:
                                                                     AutoSizeText(
-                                                                  mynewsItem
-                                                                      .newsText,
+                                                                  mynewsItem!
+                                                                      .newsText!,
                                                                   textAlign:
                                                                       TextAlign
                                                                           .center,
@@ -301,7 +301,7 @@ class _NewsWidgetState extends State<NewsWidget> {
                                       final mynews = functions
                                               .getMyNews(
                                                   newsNewsRecordList.toList(),
-                                                  currentUserReference,
+                                                  currentUserReference!,
                                                   'Тренажёр')
                                               .map((e) => e)
                                               .toList()
@@ -355,7 +355,7 @@ class _NewsWidgetState extends State<NewsWidget> {
                                                             Radius.circular(0),
                                                       ),
                                                       child: Image.network(
-                                                        mynewsItem.image,
+                                                        mynewsItem!.image!,
                                                         width: 20,
                                                         height: 20,
                                                         fit: BoxFit.cover,
@@ -399,7 +399,7 @@ class _NewsWidgetState extends State<NewsWidget> {
                                                                         0,
                                                                         0),
                                                             child: AutoSizeText(
-                                                              mynewsItem.title
+                                                              mynewsItem!.title!
                                                                   .maybeHandleOverflow(
                                                                 maxChars: 12,
                                                                 replacement:
@@ -423,8 +423,8 @@ class _NewsWidgetState extends State<NewsWidget> {
                                                                         4,
                                                                         0),
                                                             child: AutoSizeText(
-                                                              mynewsItem
-                                                                  .newsText,
+                                                              mynewsItem!
+                                                                  .newsText!,
                                                               textAlign:
                                                                   TextAlign
                                                                       .start,
@@ -455,7 +455,7 @@ class _NewsWidgetState extends State<NewsWidget> {
                                       final mynews = functions
                                               .getMyNews(
                                                   newsNewsRecordList.toList(),
-                                                  currentUserReference,
+                                                  currentUserReference!,
                                                   'Новости')
                                               .map((e) => e)
                                               .toList()
@@ -509,7 +509,7 @@ class _NewsWidgetState extends State<NewsWidget> {
                                                             Radius.circular(0),
                                                       ),
                                                       child: Image.network(
-                                                        mynewsItem.image,
+                                                        mynewsItem!.image!,
                                                         width: 20,
                                                         height: 20,
                                                         fit: BoxFit.cover,
@@ -553,7 +553,7 @@ class _NewsWidgetState extends State<NewsWidget> {
                                                                         0,
                                                                         0),
                                                             child: AutoSizeText(
-                                                              mynewsItem.title
+                                                              mynewsItem!.title!
                                                                   .maybeHandleOverflow(
                                                                 maxChars: 12,
                                                                 replacement:
@@ -577,8 +577,8 @@ class _NewsWidgetState extends State<NewsWidget> {
                                                                         4,
                                                                         0),
                                                             child: AutoSizeText(
-                                                              mynewsItem
-                                                                  .newsText,
+                                                              mynewsItem!
+                                                                  .newsText!,
                                                               textAlign:
                                                                   TextAlign
                                                                       .start,

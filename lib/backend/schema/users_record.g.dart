@@ -15,10 +15,10 @@ class _$UsersRecordSerializer implements StructuredSerializer<UsersRecord> {
   final String wireName = 'UsersRecord';
 
   @override
-  Iterable<Object> serialize(Serializers serializers, UsersRecord object,
+  Iterable<Object?> serialize(Serializers serializers, UsersRecord object,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    Object value;
+    final result = <Object?>[];
+    Object? value;
     value = object.email;
     if (value != null) {
       result
@@ -68,19 +68,19 @@ class _$UsersRecordSerializer implements StructuredSerializer<UsersRecord> {
         ..add(
             serializers.serialize(value, specifiedType: const FullType(bool)));
     }
-    value = object.reference;
+    value = object.ffRef;
     if (value != null) {
       result
         ..add('Document__Reference__Field')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(
-                DocumentReference, const [const FullType(Object)])));
+                DocumentReference, const [const FullType.nullable(Object)])));
     }
     return result;
   }
 
   @override
-  UsersRecord deserialize(Serializers serializers, Iterable<Object> serialized,
+  UsersRecord deserialize(Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
     final result = new UsersRecordBuilder();
 
@@ -88,41 +88,41 @@ class _$UsersRecordSerializer implements StructuredSerializer<UsersRecord> {
     while (iterator.moveNext()) {
       final key = iterator.current as String;
       iterator.moveNext();
-      final Object value = iterator.current;
+      final Object? value = iterator.current;
       switch (key) {
         case 'email':
           result.email = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'display_name':
           result.displayName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'photo_url':
           result.photoUrl = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'uid':
           result.uid = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'created_time':
           result.createdTime = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
+              specifiedType: const FullType(DateTime)) as DateTime?;
           break;
         case 'phone_number':
           result.phoneNumber = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'is_admin':
           result.isAdmin = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'Document__Reference__Field':
-          result.reference = serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      DocumentReference, const [const FullType(Object)]))
-              as DocumentReference<Object>;
+          result.ffRef = serializers.deserialize(value,
+              specifiedType: const FullType(DocumentReference, const [
+                const FullType.nullable(Object)
+              ])) as DocumentReference<Object?>?;
           break;
       }
     }
@@ -133,23 +133,23 @@ class _$UsersRecordSerializer implements StructuredSerializer<UsersRecord> {
 
 class _$UsersRecord extends UsersRecord {
   @override
-  final String email;
+  final String? email;
   @override
-  final String displayName;
+  final String? displayName;
   @override
-  final String photoUrl;
+  final String? photoUrl;
   @override
-  final String uid;
+  final String? uid;
   @override
-  final DateTime createdTime;
+  final DateTime? createdTime;
   @override
-  final String phoneNumber;
+  final String? phoneNumber;
   @override
-  final bool isAdmin;
+  final bool? isAdmin;
   @override
-  final DocumentReference<Object> reference;
+  final DocumentReference<Object?>? ffRef;
 
-  factory _$UsersRecord([void Function(UsersRecordBuilder) updates]) =>
+  factory _$UsersRecord([void Function(UsersRecordBuilder)? updates]) =>
       (new UsersRecordBuilder()..update(updates)).build();
 
   _$UsersRecord._(
@@ -160,7 +160,7 @@ class _$UsersRecord extends UsersRecord {
       this.createdTime,
       this.phoneNumber,
       this.isAdmin,
-      this.reference})
+      this.ffRef})
       : super._();
 
   @override
@@ -181,7 +181,7 @@ class _$UsersRecord extends UsersRecord {
         createdTime == other.createdTime &&
         phoneNumber == other.phoneNumber &&
         isAdmin == other.isAdmin &&
-        reference == other.reference;
+        ffRef == other.ffRef;
   }
 
   @override
@@ -197,7 +197,7 @@ class _$UsersRecord extends UsersRecord {
                     createdTime.hashCode),
                 phoneNumber.hashCode),
             isAdmin.hashCode),
-        reference.hashCode));
+        ffRef.hashCode));
   }
 
   @override
@@ -210,46 +210,45 @@ class _$UsersRecord extends UsersRecord {
           ..add('createdTime', createdTime)
           ..add('phoneNumber', phoneNumber)
           ..add('isAdmin', isAdmin)
-          ..add('reference', reference))
+          ..add('ffRef', ffRef))
         .toString();
   }
 }
 
 class UsersRecordBuilder implements Builder<UsersRecord, UsersRecordBuilder> {
-  _$UsersRecord _$v;
+  _$UsersRecord? _$v;
 
-  String _email;
-  String get email => _$this._email;
-  set email(String email) => _$this._email = email;
+  String? _email;
+  String? get email => _$this._email;
+  set email(String? email) => _$this._email = email;
 
-  String _displayName;
-  String get displayName => _$this._displayName;
-  set displayName(String displayName) => _$this._displayName = displayName;
+  String? _displayName;
+  String? get displayName => _$this._displayName;
+  set displayName(String? displayName) => _$this._displayName = displayName;
 
-  String _photoUrl;
-  String get photoUrl => _$this._photoUrl;
-  set photoUrl(String photoUrl) => _$this._photoUrl = photoUrl;
+  String? _photoUrl;
+  String? get photoUrl => _$this._photoUrl;
+  set photoUrl(String? photoUrl) => _$this._photoUrl = photoUrl;
 
-  String _uid;
-  String get uid => _$this._uid;
-  set uid(String uid) => _$this._uid = uid;
+  String? _uid;
+  String? get uid => _$this._uid;
+  set uid(String? uid) => _$this._uid = uid;
 
-  DateTime _createdTime;
-  DateTime get createdTime => _$this._createdTime;
-  set createdTime(DateTime createdTime) => _$this._createdTime = createdTime;
+  DateTime? _createdTime;
+  DateTime? get createdTime => _$this._createdTime;
+  set createdTime(DateTime? createdTime) => _$this._createdTime = createdTime;
 
-  String _phoneNumber;
-  String get phoneNumber => _$this._phoneNumber;
-  set phoneNumber(String phoneNumber) => _$this._phoneNumber = phoneNumber;
+  String? _phoneNumber;
+  String? get phoneNumber => _$this._phoneNumber;
+  set phoneNumber(String? phoneNumber) => _$this._phoneNumber = phoneNumber;
 
-  bool _isAdmin;
-  bool get isAdmin => _$this._isAdmin;
-  set isAdmin(bool isAdmin) => _$this._isAdmin = isAdmin;
+  bool? _isAdmin;
+  bool? get isAdmin => _$this._isAdmin;
+  set isAdmin(bool? isAdmin) => _$this._isAdmin = isAdmin;
 
-  DocumentReference<Object> _reference;
-  DocumentReference<Object> get reference => _$this._reference;
-  set reference(DocumentReference<Object> reference) =>
-      _$this._reference = reference;
+  DocumentReference<Object?>? _ffRef;
+  DocumentReference<Object?>? get ffRef => _$this._ffRef;
+  set ffRef(DocumentReference<Object?>? ffRef) => _$this._ffRef = ffRef;
 
   UsersRecordBuilder() {
     UsersRecord._initializeBuilder(this);
@@ -265,7 +264,7 @@ class UsersRecordBuilder implements Builder<UsersRecord, UsersRecordBuilder> {
       _createdTime = $v.createdTime;
       _phoneNumber = $v.phoneNumber;
       _isAdmin = $v.isAdmin;
-      _reference = $v.reference;
+      _ffRef = $v.ffRef;
       _$v = null;
     }
     return this;
@@ -278,7 +277,7 @@ class UsersRecordBuilder implements Builder<UsersRecord, UsersRecordBuilder> {
   }
 
   @override
-  void update(void Function(UsersRecordBuilder) updates) {
+  void update(void Function(UsersRecordBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
@@ -293,7 +292,7 @@ class UsersRecordBuilder implements Builder<UsersRecord, UsersRecordBuilder> {
             createdTime: createdTime,
             phoneNumber: phoneNumber,
             isAdmin: isAdmin,
-            reference: reference);
+            ffRef: ffRef);
     replace(_$result);
     return _$result;
   }

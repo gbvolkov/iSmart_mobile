@@ -5,8 +5,8 @@ import 'package:webviewx/webviewx.dart';
 
 class FlutterFlowWebView extends StatefulWidget {
   const FlutterFlowWebView({
-    Key key,
-    @required this.url,
+    Key? key,
+    required this.url,
     this.width,
     this.height,
     this.bypass = false,
@@ -17,8 +17,8 @@ class FlutterFlowWebView extends StatefulWidget {
   final bool bypass;
   final bool horizontalScroll;
   final bool verticalScroll;
-  final double height;
-  final double width;
+  final double? height;
+  final double? width;
   final String url;
 
   @override

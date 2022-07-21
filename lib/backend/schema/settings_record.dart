@@ -11,24 +11,20 @@ abstract class SettingsRecord
   static Serializer<SettingsRecord> get serializer =>
       _$settingsRecordSerializer;
 
-  @nullable
-  String get name;
+  String? get name;
 
-  @nullable
   @BuiltValueField(wireName: 'image_base_url')
-  String get imageBaseUrl;
+  String? get imageBaseUrl;
 
-  @nullable
   @BuiltValueField(wireName: 'caterogy_platform_entry_base')
-  String get caterogyPlatformEntryBase;
+  String? get caterogyPlatformEntryBase;
 
-  @nullable
   @BuiltValueField(wireName: 'grade_code_default')
-  String get gradeCodeDefault;
+  String? get gradeCodeDefault;
 
-  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
-  DocumentReference get reference;
+  DocumentReference? get ffRef;
+  DocumentReference get reference => ffRef!;
 
   static void _initializeBuilder(SettingsRecordBuilder builder) => builder
     ..name = ''
@@ -41,11 +37,11 @@ abstract class SettingsRecord
 
   static Stream<SettingsRecord> getDocument(DocumentReference ref) => ref
       .snapshots()
-      .map((s) => serializers.deserializeWith(serializer, serializedData(s)));
+      .map((s) => serializers.deserializeWith(serializer, serializedData(s))!);
 
   static Future<SettingsRecord> getDocumentOnce(DocumentReference ref) => ref
       .get()
-      .then((s) => serializers.deserializeWith(serializer, serializedData(s)));
+      .then((s) => serializers.deserializeWith(serializer, serializedData(s))!);
 
   SettingsRecord._();
   factory SettingsRecord([void Function(SettingsRecordBuilder) updates]) =
@@ -54,19 +50,25 @@ abstract class SettingsRecord
   static SettingsRecord getDocumentFromData(
           Map<String, dynamic> data, DocumentReference reference) =>
       serializers.deserializeWith(serializer,
-          {...mapFromFirestore(data), kDocumentReferenceField: reference});
+          {...mapFromFirestore(data), kDocumentReferenceField: reference})!;
 }
 
 Map<String, dynamic> createSettingsRecordData({
-  String name,
-  String imageBaseUrl,
-  String caterogyPlatformEntryBase,
-  String gradeCodeDefault,
-}) =>
-    serializers.toFirestore(
-        SettingsRecord.serializer,
-        SettingsRecord((s) => s
-          ..name = name
-          ..imageBaseUrl = imageBaseUrl
-          ..caterogyPlatformEntryBase = caterogyPlatformEntryBase
-          ..gradeCodeDefault = gradeCodeDefault));
+  String? name,
+  String? imageBaseUrl,
+  String? caterogyPlatformEntryBase,
+  String? gradeCodeDefault,
+}) {
+  final firestoreData = serializers.toFirestore(
+    SettingsRecord.serializer,
+    SettingsRecord(
+      (s) => s
+        ..name = name
+        ..imageBaseUrl = imageBaseUrl
+        ..caterogyPlatformEntryBase = caterogyPlatformEntryBase
+        ..gradeCodeDefault = gradeCodeDefault,
+    ),
+  );
+
+  return firestoreData;
+}

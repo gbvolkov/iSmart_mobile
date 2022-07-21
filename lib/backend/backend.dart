@@ -28,7 +28,7 @@ export 'schema/news_record.dart';
 
 /// Functions to query UsersRecords (as a Stream and as a Future).
 Stream<List<UsersRecord>> queryUsersRecord({
-  Query Function(Query) queryBuilder,
+  Query Function(Query)? queryBuilder,
   int limit = -1,
   bool singleRecord = false,
 }) =>
@@ -41,7 +41,7 @@ Stream<List<UsersRecord>> queryUsersRecord({
     );
 
 Future<List<UsersRecord>> queryUsersRecordOnce({
-  Query Function(Query) queryBuilder,
+  Query Function(Query)? queryBuilder,
   int limit = -1,
   bool singleRecord = false,
 }) =>
@@ -54,10 +54,10 @@ Future<List<UsersRecord>> queryUsersRecordOnce({
     );
 
 Future<FFFirestorePage<UsersRecord>> queryUsersRecordPage({
-  Query Function(Query) queryBuilder,
-  DocumentSnapshot nextPageMarker,
-  int pageSize,
-  bool isStream,
+  Query Function(Query)? queryBuilder,
+  DocumentSnapshot? nextPageMarker,
+  required int pageSize,
+  required bool isStream,
 }) =>
     queryCollectionPage(
       UsersRecord.collection,
@@ -70,7 +70,7 @@ Future<FFFirestorePage<UsersRecord>> queryUsersRecordPage({
 
 /// Functions to query CategoriesRecords (as a Stream and as a Future).
 Stream<List<CategoriesRecord>> queryCategoriesRecord({
-  Query Function(Query) queryBuilder,
+  Query Function(Query)? queryBuilder,
   int limit = -1,
   bool singleRecord = false,
 }) =>
@@ -83,7 +83,7 @@ Stream<List<CategoriesRecord>> queryCategoriesRecord({
     );
 
 Future<List<CategoriesRecord>> queryCategoriesRecordOnce({
-  Query Function(Query) queryBuilder,
+  Query Function(Query)? queryBuilder,
   int limit = -1,
   bool singleRecord = false,
 }) =>
@@ -96,10 +96,10 @@ Future<List<CategoriesRecord>> queryCategoriesRecordOnce({
     );
 
 Future<FFFirestorePage<CategoriesRecord>> queryCategoriesRecordPage({
-  Query Function(Query) queryBuilder,
-  DocumentSnapshot nextPageMarker,
-  int pageSize,
-  bool isStream,
+  Query Function(Query)? queryBuilder,
+  DocumentSnapshot? nextPageMarker,
+  required int pageSize,
+  required bool isStream,
 }) =>
     queryCollectionPage(
       CategoriesRecord.collection,
@@ -112,7 +112,7 @@ Future<FFFirestorePage<CategoriesRecord>> queryCategoriesRecordPage({
 
 /// Functions to query SettingsRecords (as a Stream and as a Future).
 Stream<List<SettingsRecord>> querySettingsRecord({
-  Query Function(Query) queryBuilder,
+  Query Function(Query)? queryBuilder,
   int limit = -1,
   bool singleRecord = false,
 }) =>
@@ -125,7 +125,7 @@ Stream<List<SettingsRecord>> querySettingsRecord({
     );
 
 Future<List<SettingsRecord>> querySettingsRecordOnce({
-  Query Function(Query) queryBuilder,
+  Query Function(Query)? queryBuilder,
   int limit = -1,
   bool singleRecord = false,
 }) =>
@@ -138,10 +138,10 @@ Future<List<SettingsRecord>> querySettingsRecordOnce({
     );
 
 Future<FFFirestorePage<SettingsRecord>> querySettingsRecordPage({
-  Query Function(Query) queryBuilder,
-  DocumentSnapshot nextPageMarker,
-  int pageSize,
-  bool isStream,
+  Query Function(Query)? queryBuilder,
+  DocumentSnapshot? nextPageMarker,
+  required int pageSize,
+  required bool isStream,
 }) =>
     queryCollectionPage(
       SettingsRecord.collection,
@@ -154,7 +154,7 @@ Future<FFFirestorePage<SettingsRecord>> querySettingsRecordPage({
 
 /// Functions to query ThemesRecords (as a Stream and as a Future).
 Stream<List<ThemesRecord>> queryThemesRecord({
-  Query Function(Query) queryBuilder,
+  Query Function(Query)? queryBuilder,
   int limit = -1,
   bool singleRecord = false,
 }) =>
@@ -167,7 +167,7 @@ Stream<List<ThemesRecord>> queryThemesRecord({
     );
 
 Future<List<ThemesRecord>> queryThemesRecordOnce({
-  Query Function(Query) queryBuilder,
+  Query Function(Query)? queryBuilder,
   int limit = -1,
   bool singleRecord = false,
 }) =>
@@ -180,10 +180,10 @@ Future<List<ThemesRecord>> queryThemesRecordOnce({
     );
 
 Future<FFFirestorePage<ThemesRecord>> queryThemesRecordPage({
-  Query Function(Query) queryBuilder,
-  DocumentSnapshot nextPageMarker,
-  int pageSize,
-  bool isStream,
+  Query Function(Query)? queryBuilder,
+  DocumentSnapshot? nextPageMarker,
+  required int pageSize,
+  required bool isStream,
 }) =>
     queryCollectionPage(
       ThemesRecord.collection,
@@ -196,7 +196,7 @@ Future<FFFirestorePage<ThemesRecord>> queryThemesRecordPage({
 
 /// Functions to query SubThemesRecords (as a Stream and as a Future).
 Stream<List<SubThemesRecord>> querySubThemesRecord({
-  Query Function(Query) queryBuilder,
+  Query Function(Query)? queryBuilder,
   int limit = -1,
   bool singleRecord = false,
 }) =>
@@ -209,7 +209,7 @@ Stream<List<SubThemesRecord>> querySubThemesRecord({
     );
 
 Future<List<SubThemesRecord>> querySubThemesRecordOnce({
-  Query Function(Query) queryBuilder,
+  Query Function(Query)? queryBuilder,
   int limit = -1,
   bool singleRecord = false,
 }) =>
@@ -222,10 +222,10 @@ Future<List<SubThemesRecord>> querySubThemesRecordOnce({
     );
 
 Future<FFFirestorePage<SubThemesRecord>> querySubThemesRecordPage({
-  Query Function(Query) queryBuilder,
-  DocumentSnapshot nextPageMarker,
-  int pageSize,
-  bool isStream,
+  Query Function(Query)? queryBuilder,
+  DocumentSnapshot? nextPageMarker,
+  required int pageSize,
+  required bool isStream,
 }) =>
     queryCollectionPage(
       SubThemesRecord.collection,
@@ -238,7 +238,7 @@ Future<FFFirestorePage<SubThemesRecord>> querySubThemesRecordPage({
 
 /// Functions to query NewsCategoriesRecords (as a Stream and as a Future).
 Stream<List<NewsCategoriesRecord>> queryNewsCategoriesRecord({
-  Query Function(Query) queryBuilder,
+  Query Function(Query)? queryBuilder,
   int limit = -1,
   bool singleRecord = false,
 }) =>
@@ -251,7 +251,7 @@ Stream<List<NewsCategoriesRecord>> queryNewsCategoriesRecord({
     );
 
 Future<List<NewsCategoriesRecord>> queryNewsCategoriesRecordOnce({
-  Query Function(Query) queryBuilder,
+  Query Function(Query)? queryBuilder,
   int limit = -1,
   bool singleRecord = false,
 }) =>
@@ -264,10 +264,10 @@ Future<List<NewsCategoriesRecord>> queryNewsCategoriesRecordOnce({
     );
 
 Future<FFFirestorePage<NewsCategoriesRecord>> queryNewsCategoriesRecordPage({
-  Query Function(Query) queryBuilder,
-  DocumentSnapshot nextPageMarker,
-  int pageSize,
-  bool isStream,
+  Query Function(Query)? queryBuilder,
+  DocumentSnapshot? nextPageMarker,
+  required int pageSize,
+  required bool isStream,
 }) =>
     queryCollectionPage(
       NewsCategoriesRecord.collection,
@@ -280,7 +280,7 @@ Future<FFFirestorePage<NewsCategoriesRecord>> queryNewsCategoriesRecordPage({
 
 /// Functions to query NewsRecords (as a Stream and as a Future).
 Stream<List<NewsRecord>> queryNewsRecord({
-  Query Function(Query) queryBuilder,
+  Query Function(Query)? queryBuilder,
   int limit = -1,
   bool singleRecord = false,
 }) =>
@@ -293,7 +293,7 @@ Stream<List<NewsRecord>> queryNewsRecord({
     );
 
 Future<List<NewsRecord>> queryNewsRecordOnce({
-  Query Function(Query) queryBuilder,
+  Query Function(Query)? queryBuilder,
   int limit = -1,
   bool singleRecord = false,
 }) =>
@@ -306,10 +306,10 @@ Future<List<NewsRecord>> queryNewsRecordOnce({
     );
 
 Future<FFFirestorePage<NewsRecord>> queryNewsRecordPage({
-  Query Function(Query) queryBuilder,
-  DocumentSnapshot nextPageMarker,
-  int pageSize,
-  bool isStream,
+  Query Function(Query)? queryBuilder,
+  DocumentSnapshot? nextPageMarker,
+  required int pageSize,
+  required bool isStream,
 }) =>
     queryCollectionPage(
       NewsRecord.collection,
@@ -321,7 +321,7 @@ Future<FFFirestorePage<NewsRecord>> queryNewsRecordPage({
     );
 
 Stream<List<T>> queryCollection<T>(Query collection, Serializer<T> serializer,
-    {Query Function(Query) queryBuilder,
+    {Query Function(Query)? queryBuilder,
     int limit = -1,
     bool singleRecord = false}) {
   final builder = queryBuilder ?? (q) => q;
@@ -339,12 +339,13 @@ Stream<List<T>> queryCollection<T>(Query collection, Serializer<T> serializer,
         ),
       )
       .where((d) => d != null)
+      .map((d) => d!)
       .toList());
 }
 
 Future<List<T>> queryCollectionOnce<T>(
     Query collection, Serializer<T> serializer,
-    {Query Function(Query) queryBuilder,
+    {Query Function(Query)? queryBuilder,
     int limit = -1,
     bool singleRecord = false}) {
   final builder = queryBuilder ?? (q) => q;
@@ -360,13 +361,14 @@ Future<List<T>> queryCollectionOnce<T>(
         ),
       )
       .where((d) => d != null)
+      .map((d) => d!)
       .toList());
 }
 
 class FFFirestorePage<T> {
   final List<T> data;
-  final Stream<List<T>> dataStream;
-  final QueryDocumentSnapshot nextPageMarker;
+  final Stream<List<T>>? dataStream;
+  final QueryDocumentSnapshot? nextPageMarker;
 
   FFFirestorePage(this.data, this.dataStream, this.nextPageMarker);
 }
@@ -374,17 +376,17 @@ class FFFirestorePage<T> {
 Future<FFFirestorePage<T>> queryCollectionPage<T>(
   Query collection,
   Serializer<T> serializer, {
-  Query Function(Query) queryBuilder,
-  DocumentSnapshot nextPageMarker,
-  int pageSize,
-  bool isStream,
+  Query Function(Query)? queryBuilder,
+  DocumentSnapshot? nextPageMarker,
+  required int pageSize,
+  required bool isStream,
 }) async {
   final builder = queryBuilder ?? (q) => q;
   var query = builder(collection).limit(pageSize);
   if (nextPageMarker != null) {
     query = query.startAfterDocument(nextPageMarker);
   }
-  Stream<QuerySnapshot> docSnapshotStream;
+  Stream<QuerySnapshot>? docSnapshotStream;
   QuerySnapshot docSnapshot;
   if (isStream) {
     docSnapshotStream = query.snapshots();
@@ -400,6 +402,7 @@ Future<FFFirestorePage<T>> queryCollectionPage<T>(
         ),
       )
       .where((d) => d != null)
+      .map((d) => d!)
       .toList();
   final data = getDocs(docSnapshot);
   final dataStream = docSnapshotStream?.map(getDocs);
