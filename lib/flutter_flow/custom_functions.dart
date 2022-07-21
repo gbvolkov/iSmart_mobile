@@ -160,10 +160,11 @@ List<NewsRecord> getMyNews(
     var isPublic = newsItem.isPublic ?? false;
     var toList =
         (newsItem.toList) ?? [] as BuiltList<DocumentReference<UsersRecord>>;
-    var category = newsItem.category ?? "";
-    var isMy = isPublic && toList.contains(user);
-    var isCategory = (newscategory == null) ||
-        (newscategory.toLowerCase().compareTo(category.toLowerCase()) == 0);
+    var category = newsItem.category ?? "*";
+    var isMy = isPublic || toList.contains(user);
+    var cat = newscategory ?? "*";
+    var isCategory = (cat == "*") ||
+        (cat.toLowerCase().compareTo(category.toLowerCase()) == 0);
 
     if (isMy && isCategory) {
       result.add(newsItem);

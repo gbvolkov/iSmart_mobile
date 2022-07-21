@@ -81,10 +81,17 @@ class _NewsdetailsWidgetState extends State<NewsdetailsWidget> {
                         ),
                         decoration: BoxDecoration(),
                         child: Container(
+                          width: double.infinity,
+                          height: double.infinity,
                           child: custom_widgets.MarkdownWindget(
-                            bgColor: Color(0x00000000),
-                            txtColor: Color(0x00000000),
-                            linkColor: Color(0x00000000),
+                            width: double.infinity,
+                            height: double.infinity,
+                            mdText: widget.news!.newsText!,
+                            bgColor: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
+                            txtColor:
+                                FlutterFlowTheme.of(context).secondaryText,
+                            linkColor: Color(0xFF366EE1),
                           ),
                         ),
                       ),
