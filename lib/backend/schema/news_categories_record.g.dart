@@ -1,27 +1,27 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'notification_types_record.dart';
+part of 'news_categories_record.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-Serializer<NotificationTypesRecord> _$notificationTypesRecordSerializer =
-    new _$NotificationTypesRecordSerializer();
+Serializer<NewsCategoriesRecord> _$newsCategoriesRecordSerializer =
+    new _$NewsCategoriesRecordSerializer();
 
-class _$NotificationTypesRecordSerializer
-    implements StructuredSerializer<NotificationTypesRecord> {
+class _$NewsCategoriesRecordSerializer
+    implements StructuredSerializer<NewsCategoriesRecord> {
   @override
   final Iterable<Type> types = const [
-    NotificationTypesRecord,
-    _$NotificationTypesRecord
+    NewsCategoriesRecord,
+    _$NewsCategoriesRecord
   ];
   @override
-  final String wireName = 'NotificationTypesRecord';
+  final String wireName = 'NewsCategoriesRecord';
 
   @override
   Iterable<Object> serialize(
-      Serializers serializers, NotificationTypesRecord object,
+      Serializers serializers, NewsCategoriesRecord object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[];
     Object value;
@@ -44,10 +44,10 @@ class _$NotificationTypesRecordSerializer
   }
 
   @override
-  NotificationTypesRecord deserialize(
+  NewsCategoriesRecord deserialize(
       Serializers serializers, Iterable<Object> serialized,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = new NotificationTypesRecordBuilder();
+    final result = new NewsCategoriesRecordBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -72,31 +72,31 @@ class _$NotificationTypesRecordSerializer
   }
 }
 
-class _$NotificationTypesRecord extends NotificationTypesRecord {
+class _$NewsCategoriesRecord extends NewsCategoriesRecord {
   @override
   final String name;
   @override
   final DocumentReference<Object> reference;
 
-  factory _$NotificationTypesRecord(
-          [void Function(NotificationTypesRecordBuilder) updates]) =>
-      (new NotificationTypesRecordBuilder()..update(updates)).build();
+  factory _$NewsCategoriesRecord(
+          [void Function(NewsCategoriesRecordBuilder) updates]) =>
+      (new NewsCategoriesRecordBuilder()..update(updates)).build();
 
-  _$NotificationTypesRecord._({this.name, this.reference}) : super._();
+  _$NewsCategoriesRecord._({this.name, this.reference}) : super._();
 
   @override
-  NotificationTypesRecord rebuild(
-          void Function(NotificationTypesRecordBuilder) updates) =>
+  NewsCategoriesRecord rebuild(
+          void Function(NewsCategoriesRecordBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  NotificationTypesRecordBuilder toBuilder() =>
-      new NotificationTypesRecordBuilder()..replace(this);
+  NewsCategoriesRecordBuilder toBuilder() =>
+      new NewsCategoriesRecordBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is NotificationTypesRecord &&
+    return other is NewsCategoriesRecord &&
         name == other.name &&
         reference == other.reference;
   }
@@ -108,17 +108,16 @@ class _$NotificationTypesRecord extends NotificationTypesRecord {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('NotificationTypesRecord')
+    return (newBuiltValueToStringHelper('NewsCategoriesRecord')
           ..add('name', name)
           ..add('reference', reference))
         .toString();
   }
 }
 
-class NotificationTypesRecordBuilder
-    implements
-        Builder<NotificationTypesRecord, NotificationTypesRecordBuilder> {
-  _$NotificationTypesRecord _$v;
+class NewsCategoriesRecordBuilder
+    implements Builder<NewsCategoriesRecord, NewsCategoriesRecordBuilder> {
+  _$NewsCategoriesRecord _$v;
 
   String _name;
   String get name => _$this._name;
@@ -129,11 +128,11 @@ class NotificationTypesRecordBuilder
   set reference(DocumentReference<Object> reference) =>
       _$this._reference = reference;
 
-  NotificationTypesRecordBuilder() {
-    NotificationTypesRecord._initializeBuilder(this);
+  NewsCategoriesRecordBuilder() {
+    NewsCategoriesRecord._initializeBuilder(this);
   }
 
-  NotificationTypesRecordBuilder get _$this {
+  NewsCategoriesRecordBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _name = $v.name;
@@ -144,20 +143,20 @@ class NotificationTypesRecordBuilder
   }
 
   @override
-  void replace(NotificationTypesRecord other) {
+  void replace(NewsCategoriesRecord other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$NotificationTypesRecord;
+    _$v = other as _$NewsCategoriesRecord;
   }
 
   @override
-  void update(void Function(NotificationTypesRecordBuilder) updates) {
+  void update(void Function(NewsCategoriesRecordBuilder) updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  _$NotificationTypesRecord build() {
-    final _$result = _$v ??
-        new _$NotificationTypesRecord._(name: name, reference: reference);
+  _$NewsCategoriesRecord build() {
+    final _$result =
+        _$v ?? new _$NewsCategoriesRecord._(name: name, reference: reference);
     replace(_$result);
     return _$result;
   }

@@ -150,3 +150,45 @@ CategoriesRecord getFirstCategoryFromList(
   });
   return categories.first;
 }
+
+List<NewsRecord> joinNewsLists(
+  List<NewsRecord> personalNews,
+  List<NewsRecord> publicNews,
+) {
+  // Add your function code here!
+  List<NewsRecord> joinNews = [];
+  joinNews.addAll(personalNews);
+  joinNews.addAll(publicNews);
+
+  return joinNews;
+}
+
+DateTime addDays(
+  DateTime currenttime,
+  int days,
+) {
+  // Add your function code here!
+  return currenttime.add(Duration(days: days));
+}
+
+List<NewsRecord> getMyNews(
+  List<NewsRecord> news,
+  DocumentReference user,
+  String newscategory,
+) {
+  // Add your function code here!
+  List<NewsRecord> result = [];
+  for (var newsItem in news) {
+    if (newsItem.isPublic || newsItem.toList.contains(user)) {
+      if (newscategory.isEmpty ||
+          newscategory == "*" ||
+          newscategory
+                  .toLowerCase()
+                  .compareTo(newsItem.category.toLowerCase()) ==
+              0) {
+        result.add(newsItem);
+      }
+    }
+  }
+  return result;
+}

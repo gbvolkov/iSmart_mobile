@@ -7,9 +7,10 @@ import '../flutter_flow/flutter_flow_util.dart';
 import 'schema/users_record.dart';
 import 'schema/categories_record.dart';
 import 'schema/settings_record.dart';
-import 'schema/notification_types_record.dart';
 import 'schema/themes_record.dart';
 import 'schema/sub_themes_record.dart';
+import 'schema/news_categories_record.dart';
+import 'schema/news_record.dart';
 import 'schema/serializers.dart';
 
 export 'dart:async' show StreamSubscription;
@@ -20,9 +21,10 @@ export 'schema/serializers.dart';
 export 'schema/users_record.dart';
 export 'schema/categories_record.dart';
 export 'schema/settings_record.dart';
-export 'schema/notification_types_record.dart';
 export 'schema/themes_record.dart';
 export 'schema/sub_themes_record.dart';
+export 'schema/news_categories_record.dart';
+export 'schema/news_record.dart';
 
 /// Functions to query UsersRecords (as a Stream and as a Future).
 Stream<List<UsersRecord>> queryUsersRecord({
@@ -150,49 +152,6 @@ Future<FFFirestorePage<SettingsRecord>> querySettingsRecordPage({
       isStream: isStream,
     );
 
-/// Functions to query NotificationTypesRecords (as a Stream and as a Future).
-Stream<List<NotificationTypesRecord>> queryNotificationTypesRecord({
-  Query Function(Query) queryBuilder,
-  int limit = -1,
-  bool singleRecord = false,
-}) =>
-    queryCollection(
-      NotificationTypesRecord.collection,
-      NotificationTypesRecord.serializer,
-      queryBuilder: queryBuilder,
-      limit: limit,
-      singleRecord: singleRecord,
-    );
-
-Future<List<NotificationTypesRecord>> queryNotificationTypesRecordOnce({
-  Query Function(Query) queryBuilder,
-  int limit = -1,
-  bool singleRecord = false,
-}) =>
-    queryCollectionOnce(
-      NotificationTypesRecord.collection,
-      NotificationTypesRecord.serializer,
-      queryBuilder: queryBuilder,
-      limit: limit,
-      singleRecord: singleRecord,
-    );
-
-Future<FFFirestorePage<NotificationTypesRecord>>
-    queryNotificationTypesRecordPage({
-  Query Function(Query) queryBuilder,
-  DocumentSnapshot nextPageMarker,
-  int pageSize,
-  bool isStream,
-}) =>
-        queryCollectionPage(
-          NotificationTypesRecord.collection,
-          NotificationTypesRecord.serializer,
-          queryBuilder: queryBuilder,
-          nextPageMarker: nextPageMarker,
-          pageSize: pageSize,
-          isStream: isStream,
-        );
-
 /// Functions to query ThemesRecords (as a Stream and as a Future).
 Stream<List<ThemesRecord>> queryThemesRecord({
   Query Function(Query) queryBuilder,
@@ -271,6 +230,90 @@ Future<FFFirestorePage<SubThemesRecord>> querySubThemesRecordPage({
     queryCollectionPage(
       SubThemesRecord.collection,
       SubThemesRecord.serializer,
+      queryBuilder: queryBuilder,
+      nextPageMarker: nextPageMarker,
+      pageSize: pageSize,
+      isStream: isStream,
+    );
+
+/// Functions to query NewsCategoriesRecords (as a Stream and as a Future).
+Stream<List<NewsCategoriesRecord>> queryNewsCategoriesRecord({
+  Query Function(Query) queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      NewsCategoriesRecord.collection,
+      NewsCategoriesRecord.serializer,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<NewsCategoriesRecord>> queryNewsCategoriesRecordOnce({
+  Query Function(Query) queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      NewsCategoriesRecord.collection,
+      NewsCategoriesRecord.serializer,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<FFFirestorePage<NewsCategoriesRecord>> queryNewsCategoriesRecordPage({
+  Query Function(Query) queryBuilder,
+  DocumentSnapshot nextPageMarker,
+  int pageSize,
+  bool isStream,
+}) =>
+    queryCollectionPage(
+      NewsCategoriesRecord.collection,
+      NewsCategoriesRecord.serializer,
+      queryBuilder: queryBuilder,
+      nextPageMarker: nextPageMarker,
+      pageSize: pageSize,
+      isStream: isStream,
+    );
+
+/// Functions to query NewsRecords (as a Stream and as a Future).
+Stream<List<NewsRecord>> queryNewsRecord({
+  Query Function(Query) queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      NewsRecord.collection,
+      NewsRecord.serializer,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<NewsRecord>> queryNewsRecordOnce({
+  Query Function(Query) queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      NewsRecord.collection,
+      NewsRecord.serializer,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<FFFirestorePage<NewsRecord>> queryNewsRecordPage({
+  Query Function(Query) queryBuilder,
+  DocumentSnapshot nextPageMarker,
+  int pageSize,
+  bool isStream,
+}) =>
+    queryCollectionPage(
+      NewsRecord.collection,
+      NewsRecord.serializer,
       queryBuilder: queryBuilder,
       nextPageMarker: nextPageMarker,
       pageSize: pageSize,

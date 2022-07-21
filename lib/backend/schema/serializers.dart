@@ -3,9 +3,10 @@ import 'package:built_value/standard_json_plugin.dart';
 import 'users_record.dart';
 import 'categories_record.dart';
 import 'settings_record.dart';
-import 'notification_types_record.dart';
 import 'themes_record.dart';
 import 'sub_themes_record.dart';
+import 'news_categories_record.dart';
+import 'news_record.dart';
 
 import 'index.dart';
 
@@ -19,9 +20,10 @@ const kDocumentReferenceField = 'Document__Reference__Field';
   UsersRecord,
   CategoriesRecord,
   SettingsRecord,
-  NotificationTypesRecord,
   ThemesRecord,
   SubThemesRecord,
+  NewsCategoriesRecord,
+  NewsRecord,
 ])
 final Serializers serializers = (_$serializers.toBuilder()
       ..add(DocumentReferenceSerializer())

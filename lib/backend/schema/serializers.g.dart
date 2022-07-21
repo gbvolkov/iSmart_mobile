@@ -8,11 +8,22 @@ part of 'serializers.dart';
 
 Serializers _$serializers = (new Serializers().toBuilder()
       ..add(CategoriesRecord.serializer)
-      ..add(NotificationTypesRecord.serializer)
+      ..add(NewsCategoriesRecord.serializer)
+      ..add(NewsRecord.serializer)
       ..add(SettingsRecord.serializer)
       ..add(SubThemesRecord.serializer)
       ..add(ThemesRecord.serializer)
       ..add(UsersRecord.serializer)
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(DocumentReference, const [const FullType(Object)])
+          ]),
+          () => new ListBuilder<DocumentReference<Object>>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(DocumentReference, const [const FullType(Object)])
+          ]),
+          () => new ListBuilder<DocumentReference<Object>>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(DocumentReference, const [const FullType(Object)])

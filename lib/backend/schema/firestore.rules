@@ -22,13 +22,6 @@ service cloud.firestore {
       allow delete: if false;
     }
 
-    match /notification_types/{document} {
-      allow create: if false;
-      allow read: if false;
-      allow write: if false;
-      allow delete: if false;
-    }
-
     match /themes/{document} {
       allow create: if false;
       allow read: if true;
@@ -40,6 +33,20 @@ service cloud.firestore {
       allow create: if false;
       allow read: if true;
       allow write: if request.auth != null;
+      allow delete: if false;
+    }
+
+    match /news_categories/{document} {
+      allow create: if false;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /news/{document} {
+      allow create: if request.auth != null;
+      allow read: if true;
+      allow write: if false;
       allow delete: if false;
     }
   }

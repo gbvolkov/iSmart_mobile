@@ -78,7 +78,11 @@ class _PushNotificationsHandlerState extends State<PushNotificationsHandler> {
 
 final pageBuilderMap = <String, Future<Widget> Function(Map<String, dynamic>)>{
   'SignUp': (data) async => SignUpWidget(),
-  'Notifications': (data) async => NavBarPage(initialPage: 'Notifications'),
+  'News': (data) async => hasMatchingParameters(data, {'news'})
+      ? NewsWidget(
+          news: await getDocumentParameter(data, 'news', NewsRecord.serializer),
+        )
+      : NavBarPage(initialPage: 'News'),
   'PlatformWebView': (data) async => PlatformWebViewWidget(
         platformURL: getParameter(data, 'platformURL'),
       ),
@@ -95,6 +99,9 @@ final pageBuilderMap = <String, Future<Widget> Function(Map<String, dynamic>)>{
             getParameter(data, 'currentCategoryDescription'),
       ),
   'Welcome': (data) async => WelcomeWidget(),
+  'Newsdetails': (data) async => NewsdetailsWidget(
+        news: await getDocumentParameter(data, 'news', NewsRecord.serializer),
+      ),
 };
 
 bool hasMatchingParameters(Map<String, dynamic> data, Set<String> params) =>
