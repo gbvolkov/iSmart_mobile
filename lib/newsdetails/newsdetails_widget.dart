@@ -71,14 +71,29 @@ class _NewsdetailsWidgetState extends State<NewsdetailsWidget> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(60, 60, 20, 0),
                       child: Container(
                         width: double.infinity,
-                        height: 100,
+                        height: 200,
                         constraints: BoxConstraints(
                           maxHeight: double.infinity,
                         ),
-                        decoration: BoxDecoration(),
+                        decoration: BoxDecoration(
+                          color: Color(0x5457636C),
+                        ),
+                        child: Text(
+                          widget.news!.newsText!,
+                          textAlign: TextAlign.justify,
+                          style: FlutterFlowTheme.of(context)
+                              .bodyText1
+                              .override(
+                                fontFamily: 'Nunito Sans',
+                                color:
+                                    FlutterFlowTheme.of(context).tertiaryColor,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                        ),
                       ),
                     ),
                   ],
