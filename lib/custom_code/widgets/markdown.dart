@@ -9,8 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart' as launcher;
 import 'package:flutter_markdown/flutter_markdown.dart' as markdown;
 
-class MarkdownWindget extends StatefulWidget {
-  const MarkdownWindget({
+class MarkdownWidget extends StatefulWidget {
+  const MarkdownWidget({
     Key? key,
     required this.width,
     required this.height,
@@ -34,7 +34,7 @@ class MarkdownWindget extends StatefulWidget {
   final double? wordSpacing;
 
   @override
-  _MarkdownWindgetState createState() => _MarkdownWindgetState();
+  _MarkdownWidgetState createState() => _MarkdownWidgetState();
 }
 
 void launchUrl(Uri uri) async {
@@ -56,7 +56,7 @@ Future<void> linkOnTapHandler(
   launchUrl(uri);
 }
 
-class _MarkdownWindgetState extends State<MarkdownWindget> {
+class _MarkdownWidgetState extends State<MarkdownWidget> {
   @override
   Widget build(BuildContext context) {
     TextStyle txtStyle = TextStyle(
