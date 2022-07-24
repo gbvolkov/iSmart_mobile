@@ -68,42 +68,6 @@ abstract class NewsRecord implements Built<NewsRecord, NewsRecordBuilder> {
       .get()
       .then((s) => serializers.deserializeWith(serializer, serializedData(s))!);
 
-  static NewsRecord fromAlgolia(AlgoliaObjectSnapshot snapshot) => NewsRecord(
-        (c) => c
-          ..newsText = snapshot.data['news_text']
-          ..image = snapshot.data['image']
-          ..title = snapshot.data['title']
-          ..status = snapshot.data['status']
-          ..toList = safeGet(
-              () => ListBuilder(snapshot.data['to_list'].map((s) => toRef(s))))
-          ..pageName = snapshot.data['page_name']
-          ..pageParameters = snapshot.data['page_parameters']
-          ..scheduledTime = safeGet(() => DateTime.fromMillisecondsSinceEpoch(
-              snapshot.data['scheduled_time']))
-          ..sentTime = safeGet(() =>
-              DateTime.fromMillisecondsSinceEpoch(snapshot.data['sent_time']))
-          ..sentToList = safeGet(() =>
-              ListBuilder(snapshot.data['sent_to_list'].map((s) => toRef(s))))
-          ..isPublic = snapshot.data['is_public']
-          ..category = snapshot.data['category']
-          ..ffRef = NewsRecord.collection.doc(snapshot.objectID),
-      );
-
-  static Future<List<NewsRecord>> search(
-          {String? term,
-          FutureOr<LatLng>? location,
-          int? maxResults,
-          double? searchRadiusMeters}) =>
-      FFAlgoliaManager.instance
-          .algoliaQuery(
-            index: 'news',
-            term: term,
-            maxResults: maxResults,
-            location: location,
-            searchRadiusMeters: searchRadiusMeters,
-          )
-          .then((r) => r.map(fromAlgolia).toList());
-
   NewsRecord._();
   factory NewsRecord([void Function(NewsRecordBuilder) updates]) = _$NewsRecord;
 

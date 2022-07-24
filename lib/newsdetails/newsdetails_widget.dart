@@ -44,59 +44,78 @@ class _NewsdetailsWidgetState extends State<NewsdetailsWidget> {
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
-          child: Stack(
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Align(
-                alignment: AlignmentDirectional(0, 0),
-                child: Image.network(
-                  widget.news!.image!,
+              Expanded(
+                child: Container(
                   width: double.infinity,
-                  height: double.infinity,
-                  fit: BoxFit.cover,
+                  height: 100,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        FlutterFlowTheme.of(context).primaryBackground,
+                        FlutterFlowTheme.of(context).primaryColor
+                      ],
+                      stops: [0, 1],
+                      begin: AlignmentDirectional(0, -1),
+                      end: AlignmentDirectional(0, 1),
+                    ),
+                  ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Align(
+                        alignment: AlignmentDirectional(0, 0),
+                        child: Image.network(
+                          valueOrDefault<String>(
+                            widget.news!.image!,
+                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/i-smart-je1a8v/assets/yocx559q3lpd/ismart_logo.png',
+                          ),
+                          width: double.infinity,
+                          height: 200,
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                      Align(
+                        alignment: AlignmentDirectional(-1, 0),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(20, 60, 0, 0),
+                          child: Text(
+                            widget.news!.title!,
+                            textAlign: TextAlign.start,
+                            style: FlutterFlowTheme.of(context).title1,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Align(
-                alignment: AlignmentDirectional(0, 0),
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
-                      child: Text(
-                        widget.news!.title!,
-                        textAlign: TextAlign.center,
-                        style: FlutterFlowTheme.of(context).title1,
-                      ),
+              Expanded(
+                child: Container(
+                  width: double.infinity,
+                  height: 100,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        FlutterFlowTheme.of(context).primaryColor,
+                        FlutterFlowTheme.of(context).secondaryColor
+                      ],
+                      stops: [0, 1],
+                      begin: AlignmentDirectional(0, -1),
+                      end: AlignmentDirectional(0, 1),
                     ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(60, 60, 20, 0),
-                      child: Container(
-                        width: double.infinity,
-                        height: 200,
-                        constraints: BoxConstraints(
-                          maxHeight: double.infinity,
-                        ),
-                        decoration: BoxDecoration(
-                          color: Color(0x5457636C),
-                        ),
-                        child: Text(
-                          widget.news!.newsText!,
-                          textAlign: TextAlign.justify,
-                          style: FlutterFlowTheme.of(context)
-                              .bodyText1
-                              .override(
-                                fontFamily: 'Nunito Sans',
-                                color:
-                                    FlutterFlowTheme.of(context).tertiaryColor,
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                              ),
-                        ),
-                      ),
+                    borderRadius: BorderRadius.circular(0),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
+                    child: Text(
+                      widget.news!.newsText!,
+                      style: FlutterFlowTheme.of(context).bodyText2,
                     ),
-                  ],
+                  ),
                 ),
               ),
             ],
