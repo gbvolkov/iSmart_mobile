@@ -1,6 +1,7 @@
 import '../auth/auth_util.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -42,6 +43,30 @@ class _PageViewTestWidgetState extends State<PageViewTestWidget> {
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
+              FFButtonWidget(
+                onPressed: () async {
+                  await pageViewController?.animateToPage(
+                    0,
+                    duration: Duration(milliseconds: 500),
+                    curve: Curves.ease,
+                  );
+                },
+                text: 'Button',
+                options: FFButtonOptions(
+                  width: 130,
+                  height: 40,
+                  color: FlutterFlowTheme.of(context).primaryColor,
+                  textStyle: FlutterFlowTheme.of(context).subtitle2.override(
+                        fontFamily: 'Nunito Sans',
+                        color: Colors.white,
+                      ),
+                  borderSide: BorderSide(
+                    color: Colors.transparent,
+                    width: 1,
+                  ),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+              ),
               Expanded(
                 child: Container(
                   width: double.infinity,
