@@ -14,7 +14,8 @@ class PageViewTestWidget extends StatefulWidget {
 }
 
 class _PageViewTestWidgetState extends State<PageViewTestWidget> {
-  PageController? pageViewController;
+  PageController? imagePageViewController;
+  PageController? welcomePageViewController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -43,9 +44,76 @@ class _PageViewTestWidgetState extends State<PageViewTestWidget> {
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
+              Expanded(
+                child: Container(
+                  width: double.infinity,
+                  height: 500,
+                  child: Stack(
+                    children: [
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 50),
+                        child: PageView(
+                          controller: imagePageViewController ??=
+                              PageController(initialPage: 0),
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            Image.network(
+                              'https://picsum.photos/seed/156/600',
+                              width: 100,
+                              height: 100,
+                              fit: BoxFit.cover,
+                            ),
+                            Image.network(
+                              'https://picsum.photos/seed/130/600',
+                              width: 100,
+                              height: 100,
+                              fit: BoxFit.cover,
+                            ),
+                            Image.network(
+                              'https://picsum.photos/seed/224/600',
+                              width: 100,
+                              height: 100,
+                              fit: BoxFit.cover,
+                            ),
+                          ],
+                        ),
+                      ),
+                      Align(
+                        alignment: AlignmentDirectional(0, 1),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                          child: SmoothPageIndicator(
+                            controller: imagePageViewController ??=
+                                PageController(initialPage: 0),
+                            count: 3,
+                            axisDirection: Axis.horizontal,
+                            onDotClicked: (i) {
+                              imagePageViewController!.animateToPage(
+                                i,
+                                duration: Duration(milliseconds: 500),
+                                curve: Curves.ease,
+                              );
+                            },
+                            effect: ExpandingDotsEffect(
+                              expansionFactor: 2,
+                              spacing: 8,
+                              radius: 16,
+                              dotWidth: 16,
+                              dotHeight: 16,
+                              dotColor: Color(0xFF9E9E9E),
+                              activeDotColor: Color(0xFF3F51B5),
+                              paintStyle: PaintingStyle.fill,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
               FFButtonWidget(
                 onPressed: () async {
-                  await pageViewController?.animateToPage(
+                  await welcomePageViewController?.animateToPage(
                     0,
                     duration: Duration(milliseconds: 500),
                     curve: Curves.ease,
@@ -76,7 +144,7 @@ class _PageViewTestWidgetState extends State<PageViewTestWidget> {
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 50),
                         child: PageView(
-                          controller: pageViewController ??=
+                          controller: welcomePageViewController ??=
                               PageController(initialPage: 0),
                           scrollDirection: Axis.horizontal,
                           children: [
@@ -314,12 +382,12 @@ class _PageViewTestWidgetState extends State<PageViewTestWidget> {
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
                           child: SmoothPageIndicator(
-                            controller: pageViewController ??=
+                            controller: welcomePageViewController ??=
                                 PageController(initialPage: 0),
                             count: 3,
                             axisDirection: Axis.horizontal,
                             onDotClicked: (i) {
-                              pageViewController!.animateToPage(
+                              welcomePageViewController!.animateToPage(
                                 i,
                                 duration: Duration(milliseconds: 500),
                                 curve: Curves.ease,
