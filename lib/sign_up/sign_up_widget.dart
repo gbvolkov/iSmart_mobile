@@ -3,7 +3,6 @@ import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../main.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -220,6 +219,9 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                     12, 48, 12, 0),
                                             child: FFButtonWidget(
                                               onPressed: () async {
+                                                GoRouter.of(context)
+                                                    .prepareAuthEvent();
+
                                                 final user =
                                                     await createAccountWithEmail(
                                                   context,
@@ -240,15 +242,8 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                     .doc(user.uid)
                                                     .update(usersCreateData);
 
-                                                await Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        NavBarPage(
-                                                            initialPage:
-                                                                'Home'),
-                                                  ),
-                                                );
+                                                context.pushNamedAuth(
+                                                    'Home', mounted);
                                               },
                                               text: 'Зарегистрироваться',
                                               options: FFButtonOptions(
@@ -288,21 +283,16 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                     0, 32, 16, 0),
                                             child: InkWell(
                                               onTap: () async {
+                                                GoRouter.of(context)
+                                                    .prepareAuthEvent();
                                                 final user =
                                                     await signInAnonymously(
                                                         context);
                                                 if (user == null) {
                                                   return;
                                                 }
-                                                await Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        NavBarPage(
-                                                            initialPage:
-                                                                'Home'),
-                                                  ),
-                                                );
+                                                context.pushNamedAuth(
+                                                    'Home', mounted);
                                               },
                                               child: Text(
                                                 'Продолжить без регистрации',
@@ -458,6 +448,9 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                     12, 48, 12, 0),
                                             child: FFButtonWidget(
                                               onPressed: () async {
+                                                GoRouter.of(context)
+                                                    .prepareAuthEvent();
+
                                                 final user =
                                                     await signInWithEmail(
                                                   context,
@@ -469,15 +462,8 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                   return;
                                                 }
 
-                                                await Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        NavBarPage(
-                                                            initialPage:
-                                                                'Home'),
-                                                  ),
-                                                );
+                                                context.pushNamedAuth(
+                                                    'Home', mounted);
                                               },
                                               text: 'Войти',
                                               options: FFButtonOptions(
@@ -517,21 +503,16 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                     0, 32, 16, 0),
                                             child: InkWell(
                                               onTap: () async {
+                                                GoRouter.of(context)
+                                                    .prepareAuthEvent();
                                                 final user =
                                                     await signInAnonymously(
                                                         context);
                                                 if (user == null) {
                                                   return;
                                                 }
-                                                await Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        NavBarPage(
-                                                            initialPage:
-                                                                'Home'),
-                                                  ),
-                                                );
+                                                context.pushNamedAuth(
+                                                    'Home', mounted);
                                               },
                                               child: Text(
                                                 'Продолжить без регистрации',

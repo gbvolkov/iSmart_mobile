@@ -1,6 +1,8 @@
 import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../custom_code/widgets/index.dart' as custom_widgets;
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -51,7 +53,7 @@ class _NewsdetailsWidgetState extends State<NewsdetailsWidget> {
               Expanded(
                 child: Container(
                   width: double.infinity,
-                  height: 100,
+                  height: double.infinity,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
                       colors: [
@@ -81,8 +83,8 @@ class _NewsdetailsWidgetState extends State<NewsdetailsWidget> {
                       Align(
                         alignment: AlignmentDirectional(-1, 0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(20, 60, 0, 0),
-                          child: Text(
+                          padding: EdgeInsetsDirectional.fromSTEB(20, 40, 0, 0),
+                          child: AutoSizeText(
                             widget.news!.title!,
                             textAlign: TextAlign.start,
                             style: FlutterFlowTheme.of(context).title1,
@@ -96,7 +98,7 @@ class _NewsdetailsWidgetState extends State<NewsdetailsWidget> {
               Expanded(
                 child: Container(
                   width: double.infinity,
-                  height: 100,
+                  height: double.infinity,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
                       colors: [
@@ -110,10 +112,17 @@ class _NewsdetailsWidgetState extends State<NewsdetailsWidget> {
                     borderRadius: BorderRadius.circular(0),
                   ),
                   child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
-                    child: Text(
-                      widget.news!.newsText!,
-                      style: FlutterFlowTheme.of(context).bodyText2,
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 4, 0, 0),
+                    child: Container(
+                      width: double.infinity,
+                      height: double.infinity,
+                      child: custom_widgets.MarkdownWidget(
+                        width: double.infinity,
+                        height: double.infinity,
+                        mdText: widget.news!.newsText!,
+                        txtColor: FlutterFlowTheme.of(context).secondaryText,
+                        linkColor: Color(0xFF366EE1),
+                      ),
                     ),
                   ),
                 ),

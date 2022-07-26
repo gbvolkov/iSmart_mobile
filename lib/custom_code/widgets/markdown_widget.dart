@@ -12,8 +12,8 @@ import 'package:flutter_markdown/flutter_markdown.dart' as markdown;
 class MarkdownWidget extends StatefulWidget {
   const MarkdownWidget({
     Key? key,
-    required this.width,
-    required this.height,
+    this.width,
+    this.height,
     required this.mdText,
     this.txtColor,
     this.linkColor,
@@ -23,8 +23,8 @@ class MarkdownWidget extends StatefulWidget {
     this.wordSpacing,
   }) : super(key: key);
 
-  final double width;
-  final double height;
+  final double? width;
+  final double? height;
   final String mdText;
   final Color? txtColor;
   final Color? linkColor;
@@ -35,25 +35,6 @@ class MarkdownWidget extends StatefulWidget {
 
   @override
   _MarkdownWidgetState createState() => _MarkdownWidgetState();
-}
-
-void launchUrl(Uri uri) async {
-  String url = uri.toString();
-  if (await launcher.canLaunch(url)) {
-    await launcher.launch(url);
-  }
-}
-
-// Handle the link. The [href] in the callback contains information
-// from the link. The url_launcher package or other similar package
-// can be used to execute the link.
-Future<void> linkOnTapHandler(
-  String text,
-  String href,
-  String title,
-) async {
-  var uri = Uri.parse(href);
-  launchUrl(uri);
 }
 
 class _MarkdownWidgetState extends State<MarkdownWidget> {
@@ -77,4 +58,23 @@ class _MarkdownWidgetState extends State<MarkdownWidget> {
         onTapLink: (String text, String? href, String title) =>
             linkOnTapHandler(text, href!, title));
   }
+}
+
+void launchUrl(Uri uri) async {
+  String url = uri.toString();
+  if (await launcher.canLaunch(url)) {
+    await launcher.launch(url);
+  }
+}
+
+// Handle the link. The [href] in the callback contains information
+// from the link. The url_launcher package or other similar package
+// can be used to execute the link.
+Future<void> linkOnTapHandler(
+  String text,
+  String href,
+  String title,
+) async {
+  var uri = Uri.parse(href);
+  launchUrl(uri);
 }

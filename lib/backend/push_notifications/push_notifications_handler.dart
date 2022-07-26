@@ -78,7 +78,20 @@ class _PushNotificationsHandlerState extends State<PushNotificationsHandler> {
 }
 
 final pageBuilderMap = <String, Future<Widget> Function(Map<String, dynamic>)>{
+  'Welcome': (data) async => WelcomeWidget(),
   'SignUp': (data) async => SignUpWidget(),
+  'Themes': (data) async => ThemesWidget(
+        currentCategoryID: getParameter(data, 'currentCategoryID'),
+        currentCategoryName: getParameter(data, 'currentCategoryName'),
+        currentCategoryDescription:
+            getParameter(data, 'currentCategoryDescription'),
+      ),
+  'SubThemes': (data) async => SubThemesWidget(
+        theme:
+            await getDocumentParameter(data, 'theme', ThemesRecord.serializer),
+        currentSubjectSelectorID:
+            getParameter(data, 'currentSubjectSelectorID'),
+      ),
   'News': (data) async => hasMatchingParameters(data, {'news'})
       ? NewsWidget(
           news: await getDocumentParameter(data, 'news', NewsRecord.serializer),
@@ -87,22 +100,10 @@ final pageBuilderMap = <String, Future<Widget> Function(Map<String, dynamic>)>{
   'PlatformWebView': (data) async => PlatformWebViewWidget(
         platformURL: getParameter(data, 'platformURL'),
       ),
-  'SubThemes': (data) async => SubThemesWidget(
-        theme:
-            await getDocumentParameter(data, 'theme', ThemesRecord.serializer),
-        currentSubjectSelectorID:
-            getParameter(data, 'currentSubjectSelectorID'),
-      ),
-  'Themes': (data) async => ThemesWidget(
-        currentCategoryID: getParameter(data, 'currentCategoryID'),
-        currentCategoryName: getParameter(data, 'currentCategoryName'),
-        currentCategoryDescription:
-            getParameter(data, 'currentCategoryDescription'),
-      ),
-  'Welcome': (data) async => WelcomeWidget(),
   'Newsdetails': (data) async => NewsdetailsWidget(
         news: await getDocumentParameter(data, 'news', NewsRecord.serializer),
       ),
+  'PageViewTest': (data) async => PageViewTestWidget(),
 };
 
 bool hasMatchingParameters(Map<String, dynamic> data, Set<String> params) =>

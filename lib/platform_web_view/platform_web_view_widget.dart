@@ -5,6 +5,7 @@ import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_web_view.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:share_plus/share_plus.dart';
 
 class PlatformWebViewWidget extends StatefulWidget {
   const PlatformWebViewWidget({
@@ -46,7 +47,7 @@ class _PlatformWebViewWidgetState extends State<PlatformWebViewWidget> {
             size: 30,
           ),
           onPressed: () async {
-            Navigator.pop(context);
+            context.pop();
           },
         ),
         title: Text(
@@ -84,7 +85,7 @@ class _PlatformWebViewWidgetState extends State<PlatformWebViewWidget> {
                       AuthUserStreamWidget(
                         child: TextFormField(
                           controller: textController,
-                          autofocus: true,
+                          readOnly: true,
                           obscureText: false,
                           decoration: InputDecoration(
                             hintText: '[Some hint text...]',
@@ -111,6 +112,25 @@ class _PlatformWebViewWidgetState extends State<PlatformWebViewWidget> {
                             ),
                           ),
                           style: FlutterFlowTheme.of(context).bodyText1,
+                        ),
+                      ),
+                    if (valueOrDefault(currentUserDocument?.isAdmin, false) ??
+                        true)
+                      AuthUserStreamWidget(
+                        child: FlutterFlowIconButton(
+                          borderColor: Colors.transparent,
+                          borderRadius: 30,
+                          borderWidth: 1,
+                          buttonSize: 60,
+                          icon: Icon(
+                            Icons.share_outlined,
+                            color: FlutterFlowTheme.of(context).primaryText,
+                            size: 30,
+                          ),
+                          onPressed: () async {
+                            await Share.share(
+                                'ismart://ismart.org${GoRouter.of(context).location}');
+                          },
                         ),
                       ),
                   ],

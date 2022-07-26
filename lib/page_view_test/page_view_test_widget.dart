@@ -1,19 +1,18 @@
 import '../auth/auth_util.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class WelcomeWidget extends StatefulWidget {
-  const WelcomeWidget({Key? key}) : super(key: key);
+class PageViewTestWidget extends StatefulWidget {
+  const PageViewTestWidget({Key? key}) : super(key: key);
 
   @override
-  _WelcomeWidgetState createState() => _WelcomeWidgetState();
+  _PageViewTestWidgetState createState() => _PageViewTestWidgetState();
 }
 
-class _WelcomeWidgetState extends State<WelcomeWidget> {
+class _PageViewTestWidgetState extends State<PageViewTestWidget> {
   PageController? pageViewController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -25,7 +24,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
         backgroundColor: FlutterFlowTheme.of(context).primaryColor,
         automaticallyImplyLeading: false,
         title: Text(
-          'Учимся с iSmart',
+          'Page Title',
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Nunito Sans',
                 color: FlutterFlowTheme.of(context).primaryText,
@@ -271,13 +270,13 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                               ),
                             ),
                             Image.network(
-                              'https://picsum.photos/seed/777/600',
+                              'https://picsum.photos/seed/973/600',
                               width: 100,
                               height: 100,
                               fit: BoxFit.cover,
                             ),
                             Image.network(
-                              'https://picsum.photos/seed/894/600',
+                              'https://picsum.photos/seed/527/600',
                               width: 100,
                               height: 100,
                               fit: BoxFit.cover,
@@ -307,68 +306,14 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                               radius: 16,
                               dotWidth: 16,
                               dotHeight: 16,
-                              dotColor: Color(0x5CFFCC00),
-                              activeDotColor:
-                                  FlutterFlowTheme.of(context).primaryColor,
+                              dotColor: Color(0xFF9E9E9E),
+                              activeDotColor: Color(0xFF3F51B5),
                               paintStyle: PaintingStyle.fill,
                             ),
                           ),
                         ),
                       ),
                     ],
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(32, 64, 32, 0),
-                child: FFButtonWidget(
-                  onPressed: () async {
-                    context.pushNamed('SignUp');
-                  },
-                  text: 'Регистрация',
-                  icon: Icon(
-                    Icons.person,
-                    size: 20,
-                  ),
-                  options: FFButtonOptions(
-                    width: double.infinity,
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
-                    color: FlutterFlowTheme.of(context).primaryColor,
-                    textStyle: FlutterFlowTheme.of(context).subtitle2.override(
-                          fontFamily: 'Nunito Sans',
-                          color: FlutterFlowTheme.of(context).secondaryText,
-                          fontWeight: FontWeight.w500,
-                        ),
-                    borderSide: BorderSide(
-                      color: Colors.transparent,
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                ),
-              ),
-              Align(
-                alignment: AlignmentDirectional(1, 0),
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 32, 16, 0),
-                  child: InkWell(
-                    onTap: () async {
-                      GoRouter.of(context).prepareAuthEvent();
-                      final user = await signInAnonymously(context);
-                      if (user == null) {
-                        return;
-                      }
-                      context.pushNamedAuth('Home', mounted);
-                    },
-                    child: Text(
-                      'Продолжить без регистрации',
-                      style: FlutterFlowTheme.of(context).bodyText1.override(
-                            fontFamily: 'Nunito Sans',
-                            color: FlutterFlowTheme.of(context).secondaryColor,
-                            fontSize: 8,
-                            decoration: TextDecoration.underline,
-                          ),
-                    ),
                   ),
                 ),
               ),

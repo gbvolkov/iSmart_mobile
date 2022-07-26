@@ -2,8 +2,6 @@ import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../platform_web_view/platform_web_view_widget.dart';
-import '../sub_themes/sub_themes_widget.dart';
 import '../flutter_flow/custom_functions.dart' as functions;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_debounce/easy_debounce.dart';
@@ -54,7 +52,7 @@ class _ThemesWidgetState extends State<ThemesWidget> {
             size: 30,
           ),
           onPressed: () async {
-            Navigator.pop(context);
+            context.pop();
           },
         ),
         title: Text(
@@ -425,27 +423,35 @@ class _ThemesWidgetState extends State<ThemesWidget> {
                                                       .fromSTEB(0, 2, 0, 2),
                                                   child: InkWell(
                                                     onTap: () async {
-                                                      await Navigator.push(
-                                                        context,
-                                                        PageTransition(
-                                                          type:
-                                                              PageTransitionType
-                                                                  .fade,
-                                                          duration: Duration(
-                                                              milliseconds: 0),
-                                                          reverseDuration:
-                                                              Duration(
-                                                                  milliseconds:
-                                                                      0),
-                                                          child:
-                                                              SubThemesWidget(
-                                                            theme:
-                                                                themesListFilteredItem,
-                                                            currentSubjectSelectorID:
-                                                                FFAppState()
-                                                                    .subjectSelectionID,
+                                                      context.pushNamed(
+                                                        'SubThemes',
+                                                        queryParams: {
+                                                          'theme': serializeParam(
+                                                              themesListFilteredItem,
+                                                              ParamType
+                                                                  .Document),
+                                                          'currentSubjectSelectorID':
+                                                              serializeParam(
+                                                                  FFAppState()
+                                                                      .subjectSelectionID,
+                                                                  ParamType
+                                                                      .String),
+                                                        }.withoutNulls,
+                                                        extra: <String,
+                                                            dynamic>{
+                                                          'theme':
+                                                              themesListFilteredItem,
+                                                          kTransitionInfoKey:
+                                                              TransitionInfo(
+                                                            hasTransition: true,
+                                                            transitionType:
+                                                                PageTransitionType
+                                                                    .fade,
+                                                            duration: Duration(
+                                                                milliseconds:
+                                                                    0),
                                                           ),
-                                                        ),
+                                                        },
                                                       );
                                                     },
                                                     child: Container(
@@ -508,22 +514,21 @@ class _ThemesWidgetState extends State<ThemesWidget> {
                                                       size: 40,
                                                     ),
                                                     onPressed: () async {
-                                                      await Navigator.push(
-                                                        context,
-                                                        MaterialPageRoute(
-                                                          builder: (context) =>
-                                                              PlatformWebViewWidget(
-                                                            platformURL: functions.getThemePlatformURL(
-                                                                FFAppState()
-                                                                    .baseCategoryPlatformURL!,
-                                                                FFAppState()
-                                                                    .subjectSelectionCode!,
-                                                                FFAppState()
-                                                                    .subjectSelectionGroupCode!,
-                                                                themesListFilteredItem!
-                                                                    .code!),
-                                                          ),
-                                                        ),
+                                                      context.pushNamed(
+                                                        'PlatformWebView',
+                                                        queryParams: {
+                                                          'platformURL': serializeParam(
+                                                              functions.getThemePlatformURL(
+                                                                  FFAppState()
+                                                                      .baseCategoryPlatformURL!,
+                                                                  FFAppState()
+                                                                      .subjectSelectionCode!,
+                                                                  FFAppState()
+                                                                      .subjectSelectionGroupCode!,
+                                                                  themesListFilteredItem!
+                                                                      .code!),
+                                                              ParamType.String),
+                                                        }.withoutNulls,
                                                       );
                                                     },
                                                   ),

@@ -7,8 +7,8 @@ import '../../flutter_flow/custom_functions.dart'; // Imports custom functions
 import 'package:flutter/material.dart';
 
 // Begin custom widget code
-class Test extends StatefulWidget {
-  const Test({
+class Libs extends StatefulWidget {
+  const Libs({
     Key? key,
     this.width,
     this.height,
@@ -18,10 +18,10 @@ class Test extends StatefulWidget {
   final double? height;
 
   @override
-  _TestState createState() => _TestState();
+  _LibsState createState() => _LibsState();
 }
 
-class _TestState extends State<Test> {
+class _LibsState extends State<Libs> {
   @override
   Widget build(BuildContext context) {
     return Container();

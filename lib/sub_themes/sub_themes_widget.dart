@@ -2,7 +2,6 @@ import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../platform_web_view/platform_web_view_widget.dart';
 import '../flutter_flow/custom_functions.dart' as functions;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_debounce/easy_debounce.dart';
@@ -51,7 +50,7 @@ class _SubThemesWidgetState extends State<SubThemesWidget> {
             size: 30,
           ),
           onPressed: () async {
-            Navigator.pop(context);
+            context.pop();
           },
         ),
         title: Text(
@@ -273,22 +272,19 @@ class _SubThemesWidgetState extends State<SubThemesWidget> {
                                                       .fromSTEB(0, 2, 0, 2),
                                                   child: InkWell(
                                                     onTap: () async {
-                                                      await Navigator.push(
-                                                        context,
-                                                        MaterialPageRoute(
-                                                          builder: (context) =>
-                                                              PlatformWebViewWidget(
-                                                            platformURL: functions
-                                                                .getSubThemePlatformURL(
-                                                                    FFAppState()
-                                                                        .baseSimulatorURL!,
-                                                                    widget
-                                                                        .theme!,
-                                                                    subthemesListFilteredItem,
-                                                                    widget
-                                                                        .currentSubjectSelectorID!),
-                                                          ),
-                                                        ),
+                                                      context.pushNamed(
+                                                        'PlatformWebView',
+                                                        queryParams: {
+                                                          'platformURL': serializeParam(
+                                                              functions.getSubThemePlatformURL(
+                                                                  FFAppState()
+                                                                      .baseSimulatorURL!,
+                                                                  widget.theme!,
+                                                                  subthemesListFilteredItem,
+                                                                  widget
+                                                                      .currentSubjectSelectorID!),
+                                                              ParamType.String),
+                                                        }.withoutNulls,
                                                       );
                                                     },
                                                     child: Container(
@@ -351,22 +347,19 @@ class _SubThemesWidgetState extends State<SubThemesWidget> {
                                                       size: 40,
                                                     ),
                                                     onPressed: () async {
-                                                      await Navigator.push(
-                                                        context,
-                                                        MaterialPageRoute(
-                                                          builder: (context) =>
-                                                              PlatformWebViewWidget(
-                                                            platformURL: functions
-                                                                .getSubThemePlatformURL(
-                                                                    FFAppState()
-                                                                        .baseSimulatorURL!,
-                                                                    widget
-                                                                        .theme!,
-                                                                    subthemesListFilteredItem,
-                                                                    widget
-                                                                        .currentSubjectSelectorID!),
-                                                          ),
-                                                        ),
+                                                      context.pushNamed(
+                                                        'PlatformWebView',
+                                                        queryParams: {
+                                                          'platformURL': serializeParam(
+                                                              functions.getSubThemePlatformURL(
+                                                                  FFAppState()
+                                                                      .baseSimulatorURL!,
+                                                                  widget.theme!,
+                                                                  subthemesListFilteredItem,
+                                                                  widget
+                                                                      .currentSubjectSelectorID!),
+                                                              ParamType.String),
+                                                        }.withoutNulls,
                                                       );
                                                     },
                                                   ),

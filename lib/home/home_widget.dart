@@ -6,9 +6,6 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../flutter_flow/upload_media.dart';
-import '../platform_web_view/platform_web_view_widget.dart';
-import '../sign_up/sign_up_widget.dart';
-import '../themes/themes_widget.dart';
 import '../flutter_flow/custom_functions.dart' as functions;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -71,13 +68,9 @@ class _HomeWidgetState extends State<HomeWidget> {
               size: 30,
             ),
             onPressed: () async {
+              GoRouter.of(context).prepareAuthEvent();
               await signOut();
-              await Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => SignUpWidget(),
-                ),
-              );
+              context.pushNamedAuth('SignUp', mounted);
             },
           ),
         ],
@@ -230,13 +223,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                                 EdgeInsetsDirectional.fromSTEB(0, 64, 0, 0),
                             child: FFButtonWidget(
                               onPressed: () async {
+                                GoRouter.of(context).prepareAuthEvent();
                                 await signOut();
-                                await Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => SignUpWidget(),
-                                  ),
-                                );
+                                context.pushNamedAuth('SignUp', mounted);
                               },
                               text: 'Выйти',
                               icon: Icon(
@@ -288,13 +277,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                                 EdgeInsetsDirectional.fromSTEB(0, 64, 0, 0),
                             child: FFButtonWidget(
                               onPressed: () async {
+                                GoRouter.of(context).prepareAuthEvent();
                                 await signOut();
-                                await Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => SignUpWidget(),
-                                  ),
-                                );
+                                context.pushNamedAuth('SignUp', mounted);
                               },
                               text: 'Зарегистрироваться?',
                               icon: Icon(
@@ -689,22 +674,28 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                 gridViewCategoriesRecord!
                                                                     .id!)!
                                                             .id!);
-                                                    await Navigator.push(
-                                                      context,
-                                                      MaterialPageRoute(
-                                                        builder: (context) =>
-                                                            ThemesWidget(
-                                                          currentCategoryID:
-                                                              gridViewCategoriesRecord!
-                                                                  .id,
-                                                          currentCategoryName:
-                                                              gridViewCategoriesRecord!
-                                                                  .name,
-                                                          currentCategoryDescription:
-                                                              gridViewCategoriesRecord!
-                                                                  .description,
-                                                        ),
-                                                      ),
+                                                    context.pushNamed(
+                                                      'Themes',
+                                                      queryParams: {
+                                                        'currentCategoryID':
+                                                            serializeParam(
+                                                                gridViewCategoriesRecord!
+                                                                    .id,
+                                                                ParamType
+                                                                    .String),
+                                                        'currentCategoryName':
+                                                            serializeParam(
+                                                                gridViewCategoriesRecord!
+                                                                    .name,
+                                                                ParamType
+                                                                    .String),
+                                                        'currentCategoryDescription':
+                                                            serializeParam(
+                                                                gridViewCategoriesRecord!
+                                                                    .description,
+                                                                ParamType
+                                                                    .String),
+                                                      }.withoutNulls,
                                                     );
                                                   },
                                                   child: Column(
@@ -798,25 +789,23 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                 size: 21,
                                               ),
                                               onPressed: () async {
-                                                await Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        PlatformWebViewWidget(
-                                                      platformURL: functions
-                                                          .getCategoryPlatformURL(
-                                                              FFAppState()
-                                                                  .baseCategoryPlatformURL!,
-                                                              gridViewCategoriesRecord!
-                                                                  .code!,
-                                                              gridViewCategoriesRecord!
-                                                                  .type!,
-                                                              '\"\"',
-                                                              '\"\"',
-                                                              '\"\"',
-                                                              '\"\"'),
-                                                    ),
-                                                  ),
+                                                context.pushNamed(
+                                                  'PlatformWebView',
+                                                  queryParams: {
+                                                    'platformURL': serializeParam(
+                                                        functions.getCategoryPlatformURL(
+                                                            FFAppState()
+                                                                .baseCategoryPlatformURL!,
+                                                            gridViewCategoriesRecord!
+                                                                .code!,
+                                                            gridViewCategoriesRecord!
+                                                                .type!,
+                                                            '\"\"',
+                                                            '\"\"',
+                                                            '\"\"',
+                                                            '\"\"'),
+                                                        ParamType.String),
+                                                  }.withoutNulls,
                                                 );
                                               },
                                             ),
