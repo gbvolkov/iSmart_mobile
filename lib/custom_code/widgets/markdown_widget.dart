@@ -62,9 +62,9 @@ class _MarkdownWidgetState extends State<MarkdownWidget> {
 
 void launchUrl(Uri uri) async {
   String url = uri.toString();
-  if (await launcher.canLaunch(url)) {
-    await launcher.launch(url);
-  }
+  //if (await launcher.canLaunch(url)) {
+  await launcher.launch(url);
+  //}
 }
 
 // Handle the link. The [href] in the callback contains information

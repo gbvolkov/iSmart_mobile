@@ -7,6 +7,7 @@ import 'themes_record.dart';
 import 'sub_themes_record.dart';
 import 'news_categories_record.dart';
 import 'news_record.dart';
+import 'reviews_record.dart';
 
 import 'index.dart';
 
@@ -24,6 +25,7 @@ const kDocumentReferenceField = 'Document__Reference__Field';
   SubThemesRecord,
   NewsCategoriesRecord,
   NewsRecord,
+  ReviewsRecord,
 ])
 final Serializers serializers = (_$serializers.toBuilder()
       ..add(DocumentReferenceSerializer())
