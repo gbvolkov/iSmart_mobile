@@ -18,7 +18,7 @@ class WelcomeWidget extends StatefulWidget {
 class _WelcomeWidgetState extends State<WelcomeWidget> {
   PageController? pageViewController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  int _currentPage = 0;
+  num _currentPage = 0;
   late Timer _timer;
 
   @override
@@ -26,6 +26,8 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
     super.initState();
     _timer = Timer.periodic(Duration(seconds: 10), (Timer timer) {
       if (pageViewController != null) {
+        //pageViewController.nextPage(duration: duration, curve: curve)
+        _currentPage = pageViewController?.page ?? 0;
         if (_currentPage < 2) {
           _currentPage++;
         } else {
@@ -33,7 +35,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
         }
 
         pageViewController?.animateToPage(
-          _currentPage,
+          _currentPage.toInt(),
           duration: Duration(milliseconds: 500),
           curve: Curves.easeIn,
         );
