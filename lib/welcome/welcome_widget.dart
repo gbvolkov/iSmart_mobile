@@ -6,6 +6,7 @@ import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'dart:async';
 
 class WelcomeWidget extends StatefulWidget {
   const WelcomeWidget({Key? key}) : super(key: key);
@@ -17,6 +18,28 @@ class WelcomeWidget extends StatefulWidget {
 class _WelcomeWidgetState extends State<WelcomeWidget> {
   PageController? pageViewController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  int _currentPage = 0;
+  late Timer _timer;
+
+  @override
+  void initState() {
+    super.initState();
+    _timer = Timer.periodic(Duration(seconds: 10), (Timer timer) {
+      if (pageViewController != null) {
+        if (_currentPage < 2) {
+          _currentPage++;
+        } else {
+          _currentPage = 0;
+        }
+
+        pageViewController?.animateToPage(
+          _currentPage,
+          duration: Duration(milliseconds: 500),
+          curve: Curves.easeIn,
+        );
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
