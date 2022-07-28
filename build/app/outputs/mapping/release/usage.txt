@@ -44,6 +44,10 @@ io.grpc.android.AndroidChannelBuilder:
     private static final java.lang.String LOG_TAG
 androidx.fragment.R$styleable
 com.google.common.hash.Murmur3_128HashFunction$Murmur3_128Hasher
+io.flutter.plugins.webviewflutter.InstanceManager:
+    public long addHostCreatedInstance(java.lang.Object)
+    private static final long MIN_HOST_CREATED_IDENTIFIER
+    private static final long CLEAR_FINALIZED_WEAK_REFERENCES_INTERVAL
 androidx.collection.SimpleArrayMap:
     public void <init>(androidx.collection.SimpleArrayMap)
     public void putAll(androidx.collection.SimpleArrayMap)
@@ -518,6 +522,9 @@ kotlin.jvm.internal.DefaultConstructorMarker:
     private void <init>()
 com.squareup.okhttp.internal.framed.FramedConnection$Reader$1
 com.google.android.datatransport.runtime.time.Monotonic
+com.google.android.gms.internal.firebase-auth-api.zzgq:
+    static void <clinit>()
+    static final synthetic int[] zza
 androidx.browser.customtabs.CustomTabsClient$2$3
 com.google.android.gms.common.api.internal.DataHolderResult
 com.google.api.Property$PropertyType
@@ -534,9 +541,6 @@ androidx.browser.customtabs.CustomTabsService$Result
 com.google.common.collect.Collections2$PermutationIterator
 com.google.android.gms.auth.api.signin.GoogleSignInStatusCodes
 androidx.legacy.coreutils.R$integer
-com.google.android.gms.internal.firebase-auth-api.zzht:
-    static void <clinit>()
-    static final synthetic int[] zza
 com.google.common.collect.StandardTable$Row$2
 com.google.common.collect.ConcurrentHashMultiset
 com.google.android.datatransport.runtime.dagger.internal.MapProviderFactory
@@ -554,6 +558,11 @@ io.grpc.internal.ReadableBuffers$BufferInputStream:
 androidx.annotation.RawRes
 io.flutter.plugins.urllauncher.R$layout
 io.flutter.plugins.pathprovider.R$color
+com.google.android.gms.internal.firebase-auth-api.zztw:
+    public final void zzd(com.google.android.gms.internal.firebase-auth-api.zzvp,com.google.android.gms.internal.firebase-auth-api.zzun)
+    public final void zze(com.google.android.gms.internal.firebase-auth-api.zzvr,com.google.android.gms.internal.firebase-auth-api.zzun)
+    public final void zzm(java.lang.String,com.google.android.gms.internal.firebase-auth-api.zzun)
+    public final void zzu(com.google.android.gms.internal.firebase-auth-api.zzxp,com.google.android.gms.internal.firebase-auth-api.zzun)
 com.google.android.gms.internal.base.zak
 com.google.protobuf.StringValue$1
 io.grpc.TlsChannelCredentials
@@ -579,8 +588,6 @@ com.gbv.ismart.R$color
 androidx.annotation.RestrictTo$Scope
 com.google.firebase.installations.interop.R$string
 com.google.protobuf.MapEntryLite$1
-com.google.android.gms.internal.firebase-auth-api.zzaao:
-    private void <init>()
 androidx.core.util.ObjectsCompat$Api19Impl:
     private void <init>()
 com.squareup.okhttp.internal.http.Http1xStream$FixedLengthSource
@@ -589,8 +596,6 @@ com.google.firebase.messaging.R$styleable
 com.google.common.collect.EvictingQueue
 androidx.core.app.JobIntentService
 com.google.common.graph.Traverser$InsertionOrder$1
-com.google.android.gms.internal.firebase-auth-api.zzuz:
-    public abstract void zzm(java.lang.String,com.google.android.gms.internal.firebase-auth-api.zzuy)
 com.google.common.collect.MultimapBuilder$MultimapBuilderWithKeys$1
 com.google.common.cache.CacheBuilderSpec$DurationParser
 kotlin.collections.ArraysKt___ArraysKt$asIterable$$inlined$Iterable$2
@@ -625,8 +630,6 @@ androidx.core.location.LocationManagerCompat$CancellableLocationListener
 com.google.common.cache.LocalCache$LoadingValueReference$1
 com.google.android.gms.auth.api.R
 kotlin.text.StringsKt__StringsKt$splitToSequence$2
-com.google.android.gms.internal.firebase-auth-api.zzaam:
-    private void <init>()
 com.google.firebase.storage.FileDownloadTask:
     long getDownloadedSizeInBytes()
     static final int PREFERRED_CHUNK_SIZE
@@ -793,9 +796,6 @@ com.google.common.collect.ImmutableList:
 com.google.firebase.firestore.core.View:
     com.google.firebase.database.collection.ImmutableSortedSet getLimboDocuments()
 io.flutter.app.FlutterActivityDelegate$ViewFactory
-com.google.android.gms.internal.firebase-auth-api.zzyf:
-    public java.lang.Object set(int,java.lang.Object)
-    public void add(int,java.lang.Object)
 kotlinx.coroutines.channels.ChannelsKt__DeprecatedKt$toMap$2
 io.grpc.ClientInterceptors$CheckedForwardingClientCall
 kotlin.text.StringsKt___StringsKt$windowedSequence$1
@@ -803,7 +803,10 @@ com.google.android.datatransport.backend.cct.R
 androidx.core.telephony.SubscriptionManagerCompat$Api29Impl
 androidx.core.text.TextDirectionHeuristicsCompat
 com.google.common.util.concurrent.ClosingFuture$10
+com.google.android.gms.internal.firebase-auth-api.zzzi:
+    public final synthetic bridge com.google.android.gms.internal.firebase-auth-api.zzxs zzf()
 com.google.android.gms.common.api.GoogleApiClient$Builder
+dev.fluttercommunity.plus.share.R$attr
 com.google.common.math.LinearTransformation$1
 kotlin.collections.ArraysKt__ArraysJVMKt:
     public static final synthetic java.lang.Object[] orEmpty(java.lang.Object[])
@@ -1165,6 +1168,9 @@ androidx.core.view.WindowInsetsControllerCompat$Impl30:
     void removeOnControllableInsetsChangedListener(androidx.core.view.WindowInsetsControllerCompat$OnControllableInsetsChangedListener)
 kotlin.sequences.SequencesKt___SequencesKt$filterIsInstance$1
 androidx.core.provider.DocumentsContractCompat$DocumentsContractApi21Impl
+com.google.android.gms.internal.firebase-auth-api.zzhu:
+    static void <clinit>()
+    static final synthetic int[] zza
 io.flutter.plugins.webviewflutter.R
 com.google.common.base.FinalizableReferenceQueue$FinalizerLoader
 com.google.common.reflect.Types$GenericArrayTypeImpl
@@ -1183,6 +1189,8 @@ com.google.firebase.messaging.ServiceStarter:
 androidx.core.view.NestedScrollingChild3
 com.google.protobuf.DescriptorProtos$SourceCodeInfo$Location
 com.google.common.base.Functions$IdentityFunction
+com.google.android.gms.internal.firebase-auth-api.zztx:
+    public final void zzb(java.lang.String)
 com.google.api.QuotaLimit$1
 com.google.android.gms.internal.base.zaj
 com.google.errorprone.annotations.concurrent.LockMethod
@@ -1287,6 +1295,8 @@ androidx.collection.CircularIntArray
 com.google.android.gms.auth.account.zze
 com.google.common.util.concurrent.MoreExecutors$Application
 com.google.firebase.auth.internal.R
+com.google.firebase.auth.internal.zzag:
+    public static com.google.firebase.auth.internal.zzag zza(java.lang.String)
 io.grpc.InternalServerInterceptors
 android.support.customtabs.ICustomTabsCallback
 com.google.android.gms.internal.auth-api-phone.zzk
@@ -1884,9 +1894,6 @@ androidx.viewpager.widget.PagerTabStrip$1
 androidx.core.content.PermissionChecker$PermissionResult
 com.google.firebase.firestore.local.MemoryRemoteDocumentCache$1
 com.google.protobuf.DescriptorProtos$DescriptorProto$ReservedRangeOrBuilder
-com.google.android.gms.internal.firebase-auth-api.zzgs:
-    static void <clinit>()
-    static final synthetic int[] zza
 androidx.customview.R$drawable
 com.google.android.gms.auth.api.signin.internal.zbe:
     public final android.content.Intent getSignInIntent()
@@ -2159,6 +2166,7 @@ kotlin.collections.CollectionsKt__IterablesKt:
     public static final java.util.List flatten(java.lang.Iterable)
     public static final kotlin.Pair unzip(java.lang.Iterable)
     public void <init>()
+com.google.android.gms.internal.firebase-auth-api.zzsv
 com.google.android.gms.auth.account.zzd
 com.google.android.gms.common.internal.ClientIdentity
 kotlin.ContextFunctionTypeParams
@@ -2313,6 +2321,7 @@ com.google.android.gms.internal.auth-api-phone.zzh:
     public final void zze(com.google.android.gms.common.api.internal.IStatusCallback)
     public final void zzf(com.google.android.gms.common.api.internal.IStatusCallback)
     public final void zzh(java.lang.String,com.google.android.gms.internal.auth-api-phone.zzj)
+dev.fluttercommunity.plus.share.R$dimen
 com.google.common.collect.Synchronized$SynchronizedEntry
 com.google.firebase.firestore.remote.OnlineStateTracker:
     private static final int MAX_WATCH_STREAM_FAILURES
@@ -2421,7 +2430,6 @@ com.google.firebase.firestore.FirebaseFirestore:
     public com.google.firebase.firestore.FirebaseFirestoreSettings getFirestoreSettings()
     public void useEmulator(java.lang.String,int)
     public com.google.android.gms.tasks.Task setIndexConfiguration(java.lang.String)
-    public com.google.android.gms.tasks.Task runTransaction(com.google.firebase.firestore.Transaction$Function)
     public com.google.android.gms.tasks.Task runBatch(com.google.firebase.firestore.WriteBatch$Function)
     com.google.firebase.firestore.util.AsyncQueue getAsyncQueue()
     public com.google.firebase.firestore.ListenerRegistration addSnapshotsInSyncListener(android.app.Activity,java.lang.Runnable)
@@ -2523,8 +2531,6 @@ com.google.android.datatransport.TransportFactory:
 com.google.common.collect.LinkedListMultimap$KeyList
 com.google.android.gms.auth.api.signin.GoogleSignInResult:
     public boolean isSuccess()
-com.google.android.gms.internal.firebase-auth-api.zzyh:
-    void <init>()
 com.google.android.datatransport.runtime.scheduling.jobscheduling.SchedulerConfig:
     public java.util.Set getFlags(com.google.android.datatransport.Priority)
     private static final long TWENTY_FOUR_HOURS
@@ -2836,6 +2842,9 @@ com.google.firestore.admin.v1.IndexProto
 com.google.common.collect.ArrayListMultimap
 com.google.firebase.storage.DeleteStorageTask:
     private static final java.lang.String TAG
+com.google.android.gms.internal.firebase-auth-api.zzgt:
+    static void <clinit>()
+    static final synthetic int[] zza
 kotlinx.coroutines.flow.FlowKt__EmittersKt$onEmpty$$inlined$unsafeFlow$1$1
 com.google.common.util.concurrent.AbstractCatchingFuture$CatchingFuture
 androidx.webkit.WebSettingsCompat
@@ -2977,9 +2986,6 @@ com.google.common.hash.MacHashFunction$MacHasher
 com.google.api.MetricDescriptor$MetricDescriptorMetadata
 com.google.android.gms.internal.common.zzae
 io.flutter.plugins.firebase.firestore.R$integer
-com.google.android.gms.internal.firebase-auth-api.zzhw:
-    static void <clinit>()
-    static final synthetic int[] zza
 kotlinx.coroutines.flow.FlowKt__BuildersKt$asFlow$$inlined$unsafeFlow$6$1
 com.google.gson.internal.UnsafeAllocator$3
 com.google.common.collect.CompactHashMap$3
@@ -3004,9 +3010,6 @@ com.tekartik.sqflite.BuildConfig
 com.google.common.collect.ForwardingSortedMultiset$StandardElementSet
 androidx.core.text.PrecomputedTextCompat
 androidx.core.view.ViewCompat$Api15Impl
-com.google.android.gms.internal.firebase-auth-api.zziz:
-    static void <clinit>()
-    static final synthetic int[] zza
 com.google.firebase.firestore.local.SQLiteMutationQueue:
     private synthetic void lambda$getAllMutationBatchesAffectingQuery$10(java.util.List,int,android.database.Cursor)
     private synthetic void lambda$getAllMutationBatchesAffectingDocumentKey$7(java.util.List,android.database.Cursor)
@@ -3148,6 +3151,9 @@ com.google.firebase.functions.Serializer:
     static final java.lang.String UNSIGNED_LONG_TYPE
 com.google.api.FieldBehavior$FieldBehaviorVerifier
 com.google.common.collect.Sets$DescendingSet
+dev.fluttercommunity.plus.share.SharePlusPlugin:
+    public static void registerWith(io.flutter.plugin.common.PluginRegistry$Registrar)
+    private static final java.lang.String CHANNEL
 kotlinx.coroutines.JobSupport$AwaitContinuation
 kotlinx.coroutines.debug.internal.DebugCoroutineInfo
 kotlin.time.AbstractLongTimeSource$LongTimeMark
@@ -3249,6 +3255,11 @@ com.google.gson.stream.MalformedJsonException:
     public void <init>(java.lang.String,java.lang.Throwable)
     public void <init>(java.lang.Throwable)
     private static final long serialVersionUID
+com.google.android.gms.internal.firebase-auth-api.zzrm:
+    public final void zzn(com.google.android.gms.internal.firebase-auth-api.zzvp,java.lang.String,com.google.android.gms.internal.firebase-auth-api.zzth)
+    public final void zzo(com.google.android.gms.internal.firebase-auth-api.zzvr,com.google.android.gms.internal.firebase-auth-api.zzth)
+    public final void zzy(java.lang.String,com.google.android.gms.internal.firebase-auth-api.zzth)
+    public final void zzH(java.lang.String,java.lang.String,com.google.android.gms.internal.firebase-auth-api.zzth)
 com.google.apphosting.datastore.testing.DatastoreTestTrace$FirestoreV1Action$ActionCase
 kotlinx.coroutines.channels.ChannelsKt__DeprecatedKt$elementAtOrNull$1
 com.google.common.graph.MutableValueGraph
@@ -3304,9 +3315,6 @@ kotlin.sequences.SequencesKt___SequencesKt$minus$3$iterator$1
 io.grpc.protobuf.lite.ProtoLiteUtils$MetadataMarshaller
 kotlinx.coroutines.flow.FlowKt__ErrorsKt$catch$$inlined$unsafeFlow$1$1
 androidx.core.app.ActivityOptionsCompat$Api21Impl
-com.google.android.gms.internal.firebase-auth-api.zzgm:
-    static void <clinit>()
-    static final synthetic int[] zza
 io.grpc.okhttp.internal.framed.Variant:
     public abstract io.grpc.okhttp.internal.Protocol getProtocol()
 com.google.common.collect.AbstractMultiset$ElementSet
@@ -3378,8 +3386,6 @@ com.google.common.collect.FilteredEntryMultimap
 com.squareup.okhttp.Cache$CacheRequestImpl$1
 com.google.protobuf.Syntax$1
 com.google.api.ChangeType$ChangeTypeVerifier
-com.google.android.gms.internal.firebase-auth-api.zzts:
-    public final void zzm()
 com.google.protobuf.SmallSortedMap:
     static com.google.protobuf.SmallSortedMap newInstanceForTest(int)
     java.lang.Iterable getOverflowEntriesDescending()
@@ -3387,6 +3393,7 @@ com.google.firestore.v1.ListDocumentsResponse$Builder
 com.google.android.gms.internal.auth-api-phone.zzn
 com.google.apphosting.datastore.testing.DatastoreTestTrace$StatusProto$Builder
 androidx.core.location.LocationManagerCompat$Api19Impl
+dev.fluttercommunity.plus.share.R
 com.google.android.gms.common.data.DataBufferUtils
 androidx.core.view.ScaleGestureDetectorCompat$Api19Impl
 com.aboutyou.dart_packages.sign_in_with_apple.R$styleable
@@ -3395,8 +3402,8 @@ androidx.core.content.LocusIdCompat$Api29Impl
 androidx.core.util.Pools$Pool
 com.google.android.gms.auth.api.R$layout
 com.google.gson.internal.ObjectConstructor
-com.google.common.math.Quantiles$Scale
 androidx.annotation.RequiresPermission
+com.google.common.math.Quantiles$Scale
 kotlinx.coroutines.sync.MutexImpl$TryLockDesc$PrepareOp
 androidx.core.widget.NestedScrollView
 kotlin.ReplaceWith
@@ -3409,6 +3416,7 @@ com.tekartik.sqflite.Database:
 androidx.webkit.WebViewClientCompat$SafeBrowsingThreat
 kotlinx.coroutines.flow.FlowKt__ReduceKt$first$$inlined$collectWhile$2
 com.google.common.collect.ForwardingConcurrentMap
+dev.fluttercommunity.plus.share.R$id
 com.google.android.gms.common.internal.service.zah
 kotlin.collections.ArrayDeque$Companion
 kotlinx.coroutines.flow.FlowKt__TransformKt$filterIsInstance$$inlined$filter$1$2
@@ -3451,6 +3459,9 @@ io.grpc.okhttp.internal.framed.Settings:
 com.google.firebase.firestore.index.package-info
 com.google.firebase.installations.internal.FidListenerHandle
 com.google.common.util.concurrent.ServiceManager$2
+com.google.android.gms.internal.firebase-auth-api.zzjv:
+    static void <clinit>()
+    static final synthetic int[] zza
 androidx.interpolator.view.animation.LinearOutSlowInInterpolator
 kotlinx.coroutines.internal.SegmentOrClosed
 com.google.common.collect.Multimaps$MapMultimap$1$1
@@ -3875,6 +3886,7 @@ com.google.firebase.messaging.ByteStreams:
     private static final int MAX_ARRAY_LEN
     private static final int TO_BYTE_ARRAY_DEQUE_SIZE
 kotlinx.coroutines.sync.SemaphoreKt
+com.google.android.gms.internal.firebase-auth-api.zzph
 io.grpc.InternalChannelz$ChannelTrace
 com.google.api.MetricDescriptor$ValueType$1
 io.flutter.embedding.engine.plugins.service.ServiceControlSurface
@@ -4262,6 +4274,9 @@ com.google.common.util.concurrent.AbstractCatchingFuture
 com.squareup.okhttp.internal.framed.Spdy3
 androidx.core.hardware.fingerprint.FingerprintManagerCompat$1
 com.google.common.collect.ForwardingImmutableSet
+com.google.android.gms.internal.firebase-auth-api.zzgn:
+    static void <clinit>()
+    static final synthetic int[] zza
 androidx.core.graphics.PathUtils
 com.google.common.util.concurrent.AbstractScheduledService$ServiceDelegate$3
 androidx.core.view.WindowInsetsAnimationCompat$Callback$DispatchMode
@@ -4271,9 +4286,6 @@ io.flutter.embedding.android.FlutterFragment$NewEngineFragmentBuilder
 androidx.core.provider.DocumentsContractCompat$DocumentsContractApi24Impl
 io.flutter.plugins.webviewflutter.R$attr
 com.google.common.cache.LongAddables
-com.google.android.gms.internal.firebase-auth-api.zzhq:
-    static void <clinit>()
-    static final synthetic int[] zza
 com.google.firebase.database.collection.RBTreeSortedMap:
     void <init>(java.util.Comparator)
     com.google.firebase.database.collection.LLRBNode getRoot()
@@ -4312,7 +4324,6 @@ com.google.android.gms.auth.GoogleAuthUtil:
     public static final int CHANGE_TYPE_ACCOUNT_RENAMED_FROM
     public static final int CHANGE_TYPE_ACCOUNT_RENAMED_TO
 kotlin.jvm.internal.MutablePropertyReference1Impl
-com.google.android.gms.internal.firebase-auth-api.zzsq
 kotlin.io.FilesKt__FileReadWriteKt$readLines$1
 androidx.core.view.ActionProvider
 com.google.common.collect.Iterators$ArrayItr
@@ -4373,8 +4384,6 @@ androidx.core.app.NotificationManagerCompat:
     public static final int IMPORTANCE_DEFAULT
     public static final int IMPORTANCE_HIGH
     public static final int IMPORTANCE_MAX
-com.google.android.gms.internal.firebase-auth-api.zztt:
-    public final void zzs(com.google.android.gms.internal.firebase-auth-api.zzpa,com.google.android.gms.internal.firebase-auth-api.zztr)
 androidx.core.view.WindowInsetsAnimationControllerCompat
 androidx.collection.ArraySet:
     public void <init>(androidx.collection.ArraySet)
@@ -4446,8 +4455,6 @@ androidx.core.text.PrecomputedTextCompat$Params
 com.google.common.collect.ForwardingBlockingDeque
 kotlin.jvm.internal.markers.KMutableIterator
 com.google.protobuf.DescriptorProtos$FileOptions$OptimizeMode$OptimizeModeVerifier
-io.flutter.plugins.firebase.auth.GeneratedAndroidFirebaseAuth:
-    public void <init>()
 androidx.core.text.TextDirectionHeuristicsCompat$FirstStrong
 com.google.firebase.installations.FirebaseInstallations:
     public static com.google.firebase.installations.FirebaseInstallations getInstance()
@@ -4481,9 +4488,6 @@ com.google.firestore.v1.Precondition$Builder:
 kotlin.properties.Delegates
 com.google.type.PostalAddressOrBuilder
 androidx.core.content.IntentCompat$Api15Impl
-com.google.android.gms.internal.firebase-auth-api.zzit:
-    static void <clinit>()
-    static final synthetic int[] zza
 com.google.android.gms.auth.api.identity.GetSignInIntentRequest
 io.flutter.view.FlutterView$ViewportMetrics
 androidx.core.view.accessibility.AccessibilityManagerCompat$TouchExplorationStateChangeListenerWrapper
@@ -4796,6 +4800,7 @@ com.google.common.collect.Iterators$2
 androidx.core.text.PrecomputedTextCompat$Params$Builder
 androidx.annotation.Discouraged
 com.google.protobuf.DescriptorProtos$SourceCodeInfo$Builder
+com.google.android.gms.internal.firebase-auth-api.zzpi
 kotlin.comparisons.ComparisonsKt__ComparisonsKt$compareBy$1
 com.google.apphosting.datastore.testing.DatastoreTestTrace$FirestoreV1Action$Rollback
 kotlin.text.MatcherMatchResult$groupValues$1
@@ -4989,7 +4994,6 @@ com.google.firebase.messaging.FirebaseMessagingService:
     private static final int RECENTLY_RECEIVED_MESSAGE_IDS_MAX_SIZE
 kotlinx.coroutines.flow.DistinctFlowImpl$collect$$inlined$collect$1
 com.google.common.reflect.TypeToken$Bounds
-com.google.android.gms.internal.firebase-auth-api.zzro
 com.google.rpc.ResourceInfoOrBuilder
 io.grpc.internal.ServerImplBuilder$ClientTransportServersBuilder
 kotlin.time.DurationUnit
@@ -5112,6 +5116,9 @@ com.google.common.io.BaseEncoding$Alphabet:
     com.google.common.io.BaseEncoding$Alphabet upperCase()
     com.google.common.io.BaseEncoding$Alphabet lowerCase()
 com.google.common.collect.Maps$FilteredEntryNavigableMap
+com.google.android.gms.internal.firebase-auth-api.zzhr:
+    static void <clinit>()
+    static final synthetic int[] zza
 com.google.common.util.concurrent.FuturesGetChecked$GetCheckedTypeValidator
 androidx.viewpager.widget.ViewPager$4
 kotlin.collections.AbstractSet
@@ -5326,9 +5333,6 @@ com.google.firestore.v1.WriteResponse$Builder:
     public com.google.firestore.v1.WriteResponse$Builder clearCommitTime()
 androidx.core.app.NotificationCompat$InboxStyle
 io.flutter.plugins.firebase.auth.Constants
-com.google.android.gms.internal.firebase-auth-api.zzjx:
-    static void <clinit>()
-    static final synthetic int[] zza
 kotlinx.coroutines.selects.UnbiasedSelectBuilderImpl$invoke$1
 kotlinx.coroutines.channels.ChannelsKt__DeprecatedKt$minWith$1
 com.google.android.gms.common.ConnectionResult:
@@ -5554,9 +5558,6 @@ kotlin.jvm.Throws
 com.google.common.util.concurrent.AbstractListeningExecutorService
 kotlin.sequences.SequencesKt__SequencesKt$shuffled$1
 com.google.common.util.concurrent.ClosingFuture$Combiner4$2
-com.google.android.gms.internal.firebase-auth-api.zzyd:
-    public abstract com.google.android.gms.internal.firebase-auth-api.zzyd zzf()
-    public synthetic bridge java.lang.Object clone()
 com.google.firebase.encoders.json.JsonValueObjectEncoderContext:
     private void <init>(com.google.firebase.encoders.json.JsonValueObjectEncoderContext)
     public com.google.firebase.encoders.json.JsonValueObjectEncoderContext add(java.lang.String,double)
@@ -5788,9 +5789,6 @@ com.google.gson.FieldNamingPolicy$3
 kotlin.collections.AbstractList$ListIteratorImpl
 com.google.common.primitives.Longs$AsciiDigits
 com.google.type.Expr$1
-com.google.android.gms.internal.firebase-auth-api.zzgp:
-    static void <clinit>()
-    static final synthetic int[] zza
 com.google.firestore.v1.DocumentDelete$Builder:
     public java.lang.String getDocument()
     public com.google.protobuf.ByteString getDocumentBytes()
@@ -5857,7 +5855,6 @@ com.google.android.datatransport.runtime.time.TimeModule:
 com.google.common.collect.NaturalOrdering
 com.google.firebase.internal.InternalTokenProvider
 com.google.type.DateTime$1
-com.google.android.gms.internal.firebase-auth-api.zzss
 com.google.common.collect.LinkedHashMultimap$ValueSet$1
 com.tekartik.sqflite.operation.BaseReadOperation:
     protected abstract com.tekartik.sqflite.operation.OperationResult getOperationResult()
@@ -5930,6 +5927,9 @@ com.google.android.gms.auth.GooglePlayServicesAvailabilityException:
 okio.package-info
 com.google.common.collect.Tables$TransposeTable
 io.flutter.plugins.flutter_plugin_android_lifecycle.R$attr
+com.google.android.gms.internal.firebase-auth-api.zzjy:
+    static void <clinit>()
+    static final synthetic int[] zza
 com.google.common.util.concurrent.CycleDetectingLockFactory$WithExplicitOrdering
 com.google.common.graph.Traverser$InsertionOrder$2
 com.squareup.okhttp.internal.framed.FramedConnection$6
@@ -6005,9 +6005,7 @@ io.grpc.okhttp.OkHttpClientTransport$ClientFrameHandler:
     public void alternateService(int,java.lang.String,okio.ByteString,java.lang.String,int,long)
 com.google.common.reflect.Types$ClassOwnership$1LocalClass
 kotlin.jvm.internal.TypeReference$asString$args$1
-com.google.firebase.auth.PhoneMultiFactorGenerator:
-    public void <init>()
-    public static final java.lang.String FACTOR_ID
+com.google.firebase.auth.PhoneMultiFactorGenerator
 kotlin.collections.builders.SerializedMap
 com.google.common.collect.ByFunctionOrdering:
     private static final long serialVersionUID
@@ -6074,8 +6072,6 @@ com.google.firestore.v1.StructuredQuery$Builder:
     public com.google.firestore.v1.StructuredQuery$Builder setLimit(com.google.protobuf.Int32Value)
     public com.google.firestore.v1.StructuredQuery$Builder mergeLimit(com.google.protobuf.Int32Value)
     public com.google.firestore.v1.StructuredQuery$Builder clearLimit()
-com.google.firebase.firestore.TransactionOptions$Builder:
-    public void <init>(com.google.firebase.firestore.TransactionOptions)
 com.google.android.gms.common.internal.GmsClientSupervisor:
     public static void setUseHandlerThreadForCallbacks()
     public void unbindService(java.lang.String,android.content.ServiceConnection,java.lang.String)
@@ -6099,6 +6095,9 @@ com.google.common.collect.SortedLists$KeyPresentBehavior$3
 androidx.lifecycle.MediatorLiveData$Source
 com.google.api.ConfigChange$1
 kotlinx.coroutines.flow.FlowKt__ZipKt$combineTransform$$inlined$combineTransformUnsafe$FlowKt__ZipKt$4
+com.google.android.gms.internal.firebase-auth-api.zzhl:
+    static void <clinit>()
+    static final synthetic int[] zza
 kotlin.ranges.IntProgressionIterator:
     public final int getStep()
 com.google.api.LabelDescriptor$ValueType
@@ -6203,6 +6202,9 @@ io.grpc.okhttp.internal.framed.Http2$Writer:
 com.google.common.collect.Maps$IteratorBasedAbstractMap
 kotlin.collections.AbstractMap$Companion
 kotlin.jvm.internal.unsafe.MonitorKt
+com.google.android.gms.internal.firebase-auth-api.zzio:
+    static void <clinit>()
+    static final synthetic int[] zza
 com.google.common.base.CharMatcher$Invisible
 com.google.common.cache.LocalCache$EntryFactory$7
 com.google.android.gms.internal.auth.zzeo:
@@ -6341,9 +6343,6 @@ com.google.common.base.Splitter$1:
 com.google.common.util.concurrent.SmoothRateLimiter
 com.google.android.gms.common.api.internal.zaaf:
     public void <init>(com.google.android.gms.common.api.internal.ApiKey)
-com.google.android.gms.internal.firebase-auth-api.zzku:
-    static void <clinit>()
-    static final synthetic int[] zza
 kotlinx.coroutines.scheduling.CoroutineScheduler$Worker:
     public final kotlinx.coroutines.scheduling.CoroutineScheduler getScheduler()
 com.google.protobuf.Mixin$Builder
@@ -6418,6 +6417,9 @@ com.google.common.collect.Cut$AboveValue
 com.google.common.graph.DirectedNetworkConnections
 androidx.core.app.NotificationCompat$ServiceNotificationBehavior
 com.google.common.collect.SortedLists$KeyPresentBehavior$2
+com.google.firebase.firestore.local.SQLiteOverlayMigrationManager:
+    private static synthetic void lambda$hasPendingOverlayMigration$2(java.lang.Boolean[],android.database.Cursor)
+    boolean hasPendingOverlayMigration()
 io.grpc.inprocess.InternalInProcessServerBuilder
 kotlin.ranges.CharRange$Companion
 androidx.annotation.VisibleForTesting
@@ -6444,7 +6446,6 @@ com.google.common.util.concurrent.ListeningExecutorService
 androidx.legacy.coreutils.R$attr
 kotlin.contracts.ConditionalEffect
 com.google.android.gms.common.R$integer
-com.google.android.gms.internal.firebase-auth-api.zzpb
 kotlinx.coroutines.channels.ActorScope
 com.google.firebase.datatransport.R$styleable
 androidx.core.app.NotificationCompat$BigTextStyle:
@@ -6625,9 +6626,6 @@ kotlin.io.OnErrorAction
 com.mr.flutter.plugin.filepicker.R$dimen
 io.grpc.InternalChannelz$ChannelStats$Builder
 kotlinx.coroutines.flow.FlowKt__CountKt$count$1
-com.google.android.gms.internal.firebase-auth-api.zzgj:
-    static void <clinit>()
-    static final synthetic int[] zza
 com.google.android.gms.common.api.zad
 com.google.firebase.heartbeatinfo.HeartBeatConsumerComponent:
     private void <init>()
@@ -6867,9 +6865,6 @@ com.google.firestore.admin.v1.Index$IndexField$Order:
     public static final int ASCENDING_VALUE
     public static final int DESCENDING_VALUE
 com.google.common.collect.Maps$4
-com.google.android.gms.internal.firebase-auth-api.zzly:
-    static void <clinit>()
-    static final synthetic int[] zza
 io.grpc.Grpc:
     private void <init>()
     public static io.grpc.ManagedChannelBuilder newChannelBuilder(java.lang.String,io.grpc.ChannelCredentials)
@@ -7270,8 +7265,7 @@ io.grpc.internal.Stream:
 com.google.api.MetricDescriptorOrBuilder
 com.google.firebase.appcheck.interop.R$integer
 kotlinx.coroutines.flow.StartedLazily$command$1$invokeSuspend$$inlined$collect$1
-com.google.firebase.auth.PhoneMultiFactorAssertion:
-    public java.lang.String getFactorId()
+com.google.firebase.auth.PhoneMultiFactorAssertion
 com.google.firestore.v1.Target$ResumeTypeCase
 androidx.core.app.BundleCompat$Api18Impl:
     private void <init>()
@@ -7297,6 +7291,8 @@ androidx.core.graphics.drawable.IconCompat$Api28Impl:
     private void <init>()
 com.google.firebase.auth.PhoneAuthOptions$Builder:
     public com.google.firebase.auth.PhoneAuthOptions$Builder requireSmsValidation(boolean)
+    public com.google.firebase.auth.PhoneAuthOptions$Builder setMultiFactorHint(com.google.firebase.auth.PhoneMultiFactorInfo)
+    public com.google.firebase.auth.PhoneAuthOptions$Builder setMultiFactorSession(com.google.firebase.auth.MultiFactorSession)
 com.google.common.cache.CacheBuilderSpec$InitialCapacityParser
 com.google.android.gms.internal.auth.zzdn:
     public java.lang.Object set(int,java.lang.Object)
@@ -7359,6 +7355,9 @@ com.google.common.collect.AbstractBiMap$1
 com.google.protobuf.DescriptorProtos$DescriptorProto$ReservedRange$Builder
 com.google.firestore.v1.StructuredQuery$FilterOrBuilder
 io.flutter.plugins.sharedpreferences.R$string
+com.google.android.gms.internal.firebase-auth-api.zzgk:
+    static void <clinit>()
+    static final synthetic int[] zza
 com.google.firestore.v1.Target$QueryTarget:
     private void clearQueryType()
     private void clearParent()
@@ -7393,9 +7392,6 @@ com.google.android.datatransport.runtime.time.TimeModule_UptimeClockFactory$Inst
 com.google.firebase.firestore.R
 android.support.customtabs.ICustomTabsService
 com.google.common.collect.Maps$13
-com.google.android.gms.internal.firebase-auth-api.zzhn:
-    static void <clinit>()
-    static final synthetic int[] zza
 io.grpc.okhttp.OkHttpWritableBufferAllocator:
     private static final int MIN_BUFFER
     private static final int MAX_BUFFER
@@ -7474,8 +7470,6 @@ com.google.common.base.Preconditions:
     public static java.lang.Object checkNotNull(java.lang.Object,java.lang.String,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)
 kotlin.concurrent.TimersKt
 com.google.common.collect.TreeTraverser$PostOrderIterator
-io.flutter.plugins.firebase.auth.GeneratedAndroidFirebaseAuth$PigeonMultiFactorSession:
-    public java.lang.String getId()
 com.google.firebase.firestore.R$id
 com.google.api.HttpRule$PatternCase
 androidx.fragment.app.BackStackRecord:
@@ -7495,12 +7489,6 @@ androidx.fragment.app.BackStackRecord:
     static final java.lang.String TAG
 com.google.common.util.concurrent.AsyncFunction
 kotlin.collections.ArraysKt___ArraysKt$withIndex$6
-com.google.android.gms.internal.firebase-auth-api.zztq:
-    public final com.google.android.gms.tasks.Task zzk(com.google.firebase.FirebaseApp,com.google.firebase.auth.FirebaseUser,com.google.firebase.auth.AuthCredential,java.lang.String,com.google.firebase.auth.internal.zzbk)
-    public final com.google.android.gms.tasks.Task zzm(com.google.firebase.FirebaseApp,com.google.firebase.auth.FirebaseUser,com.google.firebase.auth.EmailAuthCredential,com.google.firebase.auth.internal.zzbk)
-    public final com.google.android.gms.tasks.Task zzo(com.google.firebase.FirebaseApp,com.google.firebase.auth.FirebaseUser,java.lang.String,java.lang.String,java.lang.String,com.google.firebase.auth.internal.zzbk)
-    public final com.google.android.gms.tasks.Task zzq(com.google.firebase.FirebaseApp,com.google.firebase.auth.FirebaseUser,com.google.firebase.auth.PhoneAuthCredential,java.lang.String,com.google.firebase.auth.internal.zzbk)
-    public final com.google.android.gms.tasks.Task zzw(java.lang.String)
 kotlinx.coroutines.internal.AtomicKt:
     public static synthetic void getNO_DECISION$annotations()
     public static synthetic void getRETRY_ATOMIC$annotations()
@@ -7572,9 +7560,6 @@ com.google.protobuf.Field$Kind
 kotlin.sequences.SequencesKt___SequencesKt$elementAt$1
 com.google.common.collect.StandardTable$Column$Values
 com.google.android.gms.auth.api.signin.GoogleSignInOptionsExtension
-com.google.android.gms.internal.firebase-auth-api.zziq:
-    static void <clinit>()
-    static final synthetic int[] zza
 kotlinx.coroutines.channels.AbstractSendChannel:
     private final boolean isFullImpl()
     private final java.lang.Throwable helpCloseAndGetSendException(java.lang.Object,kotlinx.coroutines.channels.Closed)
@@ -7635,11 +7620,17 @@ com.google.rpc.ErrorInfo$MetadataDefaultEntryHolder
 com.google.firestore.bundle.BundleElement$1
 com.google.common.collect.CompactHashMap$Itr
 com.google.common.collect.HashBiMap$EntrySet
+com.google.android.gms.internal.firebase-auth-api.zzkw:
+    static void <clinit>()
+    static final synthetic int[] zza
 com.google.gson.internal.bind.ArrayTypeAdapter
 androidx.core.content.ContextCompat$Api30Impl
 android.support.customtabs.ICustomTabsCallback$Default
 com.google.firebase.auth.MultiFactor:
+    public abstract com.google.android.gms.tasks.Task enroll(com.google.firebase.auth.MultiFactorAssertion,java.lang.String)
+    public abstract com.google.android.gms.tasks.Task getSession()
     public abstract com.google.android.gms.tasks.Task unenroll(com.google.firebase.auth.MultiFactorInfo)
+    public abstract com.google.android.gms.tasks.Task unenroll(java.lang.String)
 androidx.core.content.res.ResourcesCompat$ThemeCompat
 com.google.android.gms.common.api.internal.zabg
 kotlinx.coroutines.flow.FlowKt__TransformKt$map$$inlined$unsafeTransform$1$2$1
@@ -7669,6 +7660,7 @@ okio.Okio:
     public static varargs okio.Sink sink(java.nio.file.Path,java.nio.file.OpenOption[])
     public static okio.Sink blackhole()
 com.google.common.collect.Maps$12
+com.google.firebase.auth.internal.zzab
 com.google.android.gms.base.R$string:
     private void <init>()
     public static final int common_signin_button_text
@@ -7702,8 +7694,6 @@ kotlin.collections.ArraysKt__ArraysKt:
 io.grpc.InternalChannelz$ChannelTrace$Event$Builder:
     public io.grpc.InternalChannelz$ChannelTrace$Event$Builder setChannelRef(io.grpc.InternalWithLogId)
 com.google.common.collect.StandardTable$ColumnKeyIterator
-com.google.android.gms.internal.firebase-auth-api.zzlz:
-    private void <init>()
 com.google.api.Distribution$BucketOptions
 org.jetbrains.annotations.NonNls
 kotlin.text.FlagEnum
@@ -7866,8 +7856,6 @@ com.google.common.base.CharMatcher$Is:
     void setBits(java.util.BitSet)
 androidx.core.content.res.ConfigurationHelper
 kotlin.internal.OnlyInputTypes
-com.google.android.gms.internal.firebase-auth-api.zzzc:
-    void <init>()
 com.google.errorprone.annotations.Immutable
 kotlinx.coroutines.Delay$DefaultImpls
 com.google.android.gms.internal.auth-api.zbz
@@ -8053,6 +8041,8 @@ kotlinx.coroutines.flow.FlowKt__CollectKt$collect$3$emit$1
 com.google.apphosting.datastore.testing.DatastoreTestTrace$FirestoreV1Action$CreateDocumentOrBuilder
 com.google.common.collect.AbstractMapBasedMultimap$SortedKeySet
 com.squareup.okhttp.Connection
+com.google.android.gms.internal.firebase-auth-api.zzu:
+    private void <init>()
 kotlin.collections.ArraysKt___ArraysKt$withIndex$5
 com.google.common.collect.DiscreteDomain$IntegerDomain
 io.grpc.util.TransmitStatusRuntimeExceptionInterceptor$SerializingServerCall
@@ -8081,6 +8071,9 @@ com.google.common.collect.ForwardingMap
 com.google.android.gms.common.api.internal.LifecycleActivity:
     public void <init>(android.content.ContextWrapper)
 com.google.android.gms.internal.auth.zzbg
+com.google.android.gms.internal.firebase-auth-api.zzho:
+    static void <clinit>()
+    static final synthetic int[] zza
 com.google.common.collect.Synchronized$SynchronizedMultimap
 kotlin.random.Random$Default$Serialized
 com.google.firestore.v1.FirestoreGrpc:
@@ -8127,7 +8120,6 @@ com.google.common.util.concurrent.AbstractCatchingFuture$AsyncCatchingFuture
 io.flutter.util.PathUtils:
     public void <init>()
 kotlin.reflect.KProperty0
-com.google.android.gms.internal.firebase-auth-api.zzso
 com.google.firebase.storage.FirebaseStorageComponent:
     synchronized void clearInstancesForTesting()
 kotlin.ExperimentalMultiplatform
@@ -8138,8 +8130,6 @@ io.grpc.okhttp.internal.framed.FrameReader$Handler:
 com.google.protobuf.TextFormatEscaper$2
 kotlinx.coroutines.flow.FlowKt__BuildersKt$asFlow$$inlined$unsafeFlow$2$1
 androidx.core.os.LocaleListCompatWrapper$Api21Impl
-com.google.android.gms.internal.firebase-auth-api.zztr:
-    public abstract void zzm()
 com.google.firebase.R$drawable
 okhttp3.internal.http2.Http2Connection:
     public okhttp3.Protocol getProtocol()
@@ -8205,6 +8195,9 @@ com.google.android.gms.common.api.internal.zaci:
     public void <init>(com.google.android.gms.common.api.internal.RegisterListenerMethod,com.google.android.gms.common.api.internal.UnregisterListenerMethod,java.lang.Runnable)
 com.google.common.graph.AbstractNetwork
 kotlinx.coroutines.selects.WhileSelectKt$whileSelect$1
+com.google.android.gms.internal.firebase-auth-api.zzir:
+    static void <clinit>()
+    static final synthetic int[] zza
 androidx.webkit.internal.WebMessageAdapter
 com.google.common.collect.ObjectCountHashMap
 androidx.core.graphics.TypefaceCompatApi28Impl
@@ -8245,6 +8238,8 @@ com.google.firebase.auth.OAuthProvider$CredentialBuilder:
 com.google.firestore.v1.PreconditionOrBuilder
 com.google.common.util.concurrent.ClosingFuture$AsyncClosingFunction
 com.google.apphosting.datastore.testing.DatastoreTestTrace$FirestoreV1Action$ListCollectionIds
+com.google.android.gms.internal.firebase-auth-api.zzkx:
+    private void <init>()
 com.google.common.collect.RegularImmutableMap$EntrySet$1:
     public boolean isPartialView()
 androidx.lifecycle.ViewModelProvider$NewInstanceFactory
@@ -8620,6 +8615,7 @@ kotlinx.coroutines.channels.ProduceKt$awaitClose$2
 androidx.core.provider.RequestExecutor$ReplyRunnable$1
 androidx.core.app.FrameMetricsAggregator$MetricType
 com.google.common.collect.Multisets$2
+com.google.android.gms.internal.firebase-auth-api.zzvq
 kotlinx.coroutines.channels.AbstractChannelKt:
     public static synthetic void getEMPTY$annotations()
     public static synthetic void getOFFER_SUCCESS$annotations()
@@ -8711,8 +8707,6 @@ io.flutter.plugin.common.BinaryMessenger:
 com.google.android.gms.internal.auth.zzbj
 com.google.common.collect.Multimaps$AsMap$EntrySet
 com.google.android.gms.auth.zzc
-com.google.android.gms.internal.firebase-auth-api.zzlt:
-    private void <init>()
 androidx.browser.customtabs.CustomTabsClient$2
 com.google.common.collect.DenseImmutableTable$ImmutableArrayMap
 io.grpc.inprocess.InProcessServerBuilder
@@ -8750,6 +8744,8 @@ com.google.android.gms.common.AccountPicker
 com.google.type.Fraction$1
 kotlin.ranges.ClosedDoubleRange
 com.tekartik.sqflite.R$attr
+com.google.android.gms.internal.firebase-auth-api.zzxw:
+    void <init>()
 kotlin.sequences.USequencesKt___USequencesKt
 io.perfmark.StringFunction
 androidx.viewpager.widget.ViewPager$LayoutParams
@@ -8937,6 +8933,7 @@ com.google.android.datatransport.runtime.dagger.Subcomponent$Factory
 io.grpc.PartialForwardingClientCallListener
 kotlin.contracts.ContractBuilder$DefaultImpls
 com.google.common.collect.Synchronized$SynchronizedAsMapEntries$1$1
+com.google.android.gms.internal.firebase-auth-api.zzrd
 androidx.activity.R$styleable
 com.google.android.gms.internal.safetynet.zzr
 androidx.core.app.ActivityCompat$Api28Impl
@@ -8948,6 +8945,7 @@ com.google.firestore.v1.FirestoreGrpc$FirestoreImplBase
 com.google.firebase.messaging.WithinAppServiceConnection:
     private static final int REQUEST_TIMEOUT_MS
 com.google.android.gms.common.api.ResolvingResultCallbacks
+com.google.firebase.auth.internal.zzad
 io.grpc.okhttp.InternalOkHttpChannelBuilder
 com.google.common.escape.Escaper$1
 com.google.common.collect.MapMakerInternalMap$StrongKeyStrongValueSegment
@@ -9121,6 +9119,9 @@ io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack$FlutterMutator:
     public android.graphics.Path getPath()
     private android.graphics.Path path
 androidx.core.os.EnvironmentCompat$Api19Impl
+com.google.android.gms.internal.firebase-auth-api.zzhi:
+    static void <clinit>()
+    static final synthetic int[] zza
 com.google.common.base.Joiner:
     public static com.google.common.base.Joiner on(java.lang.String)
     private void <init>(com.google.common.base.Joiner)
@@ -9210,6 +9211,9 @@ io.grpc.stub.MetadataUtils$MetadataCapturingClientInterceptor$MetadataCapturingC
 androidx.savedstate.R
 com.google.apphosting.datastore.testing.DatastoreTestTrace$ValidationRule
 com.google.api.Endpoint$Builder
+com.google.android.gms.internal.firebase-auth-api.zzil:
+    static void <clinit>()
+    static final synthetic int[] zza
 androidx.core.R$integer
 kotlin.collections.ArraysKt___ArraysKt$asIterable$$inlined$Iterable$6
 com.google.android.gms.common.internal.zab:
@@ -9232,6 +9236,11 @@ com.google.android.gms.common.zzw
 kotlin.jvm.functions.Function15:
     public abstract java.lang.Object invoke(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)
 kotlinx.coroutines.channels.AbstractSendChannel$enqueueSend$$inlined$addLastIfPrevAndIf$1
+com.google.android.gms.internal.firebase-auth-api.zzuo:
+    public abstract void zzd(com.google.android.gms.internal.firebase-auth-api.zzvp,com.google.android.gms.internal.firebase-auth-api.zzun)
+    public abstract void zze(com.google.android.gms.internal.firebase-auth-api.zzvr,com.google.android.gms.internal.firebase-auth-api.zzun)
+    public abstract void zzm(java.lang.String,com.google.android.gms.internal.firebase-auth-api.zzun)
+    public abstract void zzu(com.google.android.gms.internal.firebase-auth-api.zzxp,com.google.android.gms.internal.firebase-auth-api.zzun)
 androidx.core.content.SharedPreferencesCompat$EditorCompat
 androidx.core.view.ViewCompat$Api30Impl
 kotlin.collections.ArraysKt___ArraysKt$asSequence$$inlined$Sequence$9
@@ -9239,10 +9248,12 @@ org.intellij.lang.annotations.Pattern
 androidx.customview.widget.ViewDragHelper$1
 com.squareup.okhttp.MediaType
 androidx.core.app.ActivityRecreator$LifecycleCheckCallbacks
+dev.fluttercommunity.plus.share.R$integer
 com.squareup.okhttp.ResponseBody$1
 kotlinx.coroutines.flow.internal.AbstractSharedFlow
 com.google.android.gms.internal.auth.zzbi
 kotlinx.coroutines.flow.MutableSharedFlow
+com.google.android.gms.internal.firebase-auth-api.zzvr
 com.google.android.gms.common.internal.AccountAccessor:
     public final boolean equals(java.lang.Object)
     public final android.accounts.Account zzb()
@@ -9318,9 +9329,6 @@ com.google.common.cache.LocalCache$AccessQueue
 com.google.firebase.firestore.util.LogicUtils:
     public void <init>()
 com.google.firestore.v1.GetDocumentRequest$Builder
-com.google.android.gms.internal.firebase-auth-api.zzkr:
-    static void <clinit>()
-    static final synthetic int[] zza
 com.google.common.graph.Graphs$TransposedGraph$1
 com.google.common.hash.Hashing$LinearCongruentialGenerator
 kotlin.reflect.KTypeProjection$WhenMappings
@@ -9343,8 +9351,6 @@ com.google.firebase.messaging.R$drawable
 com.google.android.gms.common.ErrorDialogFragment:
     public static com.google.android.gms.common.ErrorDialogFragment newInstance(android.app.Dialog)
 kotlinx.coroutines.flow.SubscribedFlowCollector
-com.google.android.gms.internal.firebase-auth-api.zzw:
-    private void <init>()
 kotlin.collections.ArraysKt___ArraysKt$withIndex$7
 androidx.core.os.BuildCompat$PrereleaseSdkCheck
 com.google.firestore.v1.TransactionOptionsOrBuilder
@@ -9420,7 +9426,6 @@ androidx.savedstate.SavedStateRegistry:
     private static final java.lang.String SAVED_COMPONENTS_KEY
 com.google.common.reflect.Types$2
 com.google.common.collect.Multimaps$UnmodifiableSortedSetMultimap
-com.google.firebase.annotations.PreviewApi
 com.google.common.util.concurrent.ClosingFuture$State
 kotlin.StandardKt
 com.google.api.Metric$Builder
@@ -9441,7 +9446,10 @@ com.google.rpc.BadRequest$1
 androidx.core.text.TextDirectionHeuristicsCompat$AnyStrong
 org.intellij.lang.annotations.JdkConstants$TreeSelectionMode
 com.google.firebase.auth.internal.zzac:
+    public final com.google.android.gms.tasks.Task enroll(com.google.firebase.auth.MultiFactorAssertion,java.lang.String)
+    public final com.google.android.gms.tasks.Task getSession()
     public final com.google.android.gms.tasks.Task unenroll(com.google.firebase.auth.MultiFactorInfo)
+    public final com.google.android.gms.tasks.Task unenroll(java.lang.String)
 com.google.firebase.firestore.DocumentReference:
     public java.lang.String getId()
     public com.google.firebase.firestore.CollectionReference getParent()
@@ -9561,6 +9569,7 @@ io.grpc.internal.MessageFramer:
     private static final byte COMPRESSED
 com.google.common.util.concurrent.AggregateFuture$ReleaseResourcesReason
 com.google.android.gms.common.api.internal.zaz
+dev.fluttercommunity.plus.share.R$drawable
 androidx.core.widget.ScrollerCompat
 androidx.core.view.TintableBackgroundView
 com.google.firebase.encoders.proto.ProtobufValueEncoderContext:
@@ -9577,6 +9586,9 @@ androidx.core.app.Person$Api22Impl
 com.google.common.hash.HashingOutputStream
 kotlinx.coroutines.channels.ChannelIterator:
     public synthetic abstract java.lang.Object next(kotlin.coroutines.Continuation)
+com.google.android.gms.internal.firebase-auth-api.zzge:
+    static void <clinit>()
+    static final synthetic int[] zza
 io.grpc.internal.AutoConfiguredLoadBalancerFactory$NoopLoadBalancer:
     public void handleResolvedAddressGroups(java.util.List,io.grpc.Attributes)
 com.google.common.reflect.TypeToken$TypeCollector$3
@@ -9595,9 +9607,6 @@ io.grpc.internal.ServerStreamListener
 androidx.webkit.R$attr
 io.grpc.ManagedChannelProvider$NewChannelBuilderResult
 com.google.android.gms.auth.api.identity.zbi
-com.google.android.gms.internal.firebase-auth-api.zzhh:
-    static void <clinit>()
-    static final synthetic int[] zza
 kotlinx.coroutines.flow.FlowKt__EmittersKt
 com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher
 io.grpc.util.AdvancedTlsX509TrustManager$Closeable
@@ -9611,6 +9620,7 @@ kotlinx.coroutines.CoroutineId:
     public final kotlinx.coroutines.CoroutineId copy(long)
 com.google.common.collect.AbstractIterator
 androidx.core.widget.ListPopupWindowCompat$Api19Impl
+com.google.android.gms.internal.firebase-auth-api.zzsh
 io.grpc.internal.OobChannel$2
 com.google.android.gms.common.api.internal.zabd
 io.flutter.plugins.sharedpreferences.R$styleable
@@ -9653,9 +9663,6 @@ kotlin.reflect.KProperty$Getter
 androidx.documentfile.provider.TreeDocumentFile
 androidx.core.view.ViewPropertyAnimatorCompat$Api18Impl
 kotlin.collections.ArraysKt___ArraysKt$asSequence$$inlined$Sequence$8
-com.google.android.gms.internal.firebase-auth-api.zzgg:
-    static void <clinit>()
-    static final synthetic int[] zza
 com.google.api.MonitoredResourceMetadata$UserLabelsDefaultEntryHolder
 com.google.apphosting.datastore.testing.DatastoreTestTrace$TestTrace$Builder
 com.google.api.ContextProto
@@ -9836,6 +9843,7 @@ com.google.protobuf.GeneratedMessageLite$ExtendableBuilder
 com.google.android.gms.auth.CookieUtil
 com.google.common.util.concurrent.FuturesGetChecked
 io.grpc.stub.ClientCalls$BlockingResponseStream
+com.google.android.gms.internal.firebase-auth-api.zzvs
 io.grpc.ExperimentalApi
 kotlin.ThrowsKt
 com.google.protobuf.DescriptorProtos$OneofOptions$Builder
@@ -9872,8 +9880,6 @@ androidx.core.widget.NestedScrollView$AccessibilityDelegate
 com.google.android.gms.internal.auth-api-phone.zzt
 androidx.annotation.Dimension
 com.google.common.base.Splitter$3
-com.google.android.gms.internal.firebase-auth-api.zzks:
-    private void <init>()
 androidx.core.widget.EdgeEffectCompat
 kotlinx.coroutines.channels.ChannelsKt__DeprecatedKt$map$1
 com.google.android.gms.common.internal.safeparcel.SafeParcelable$Constructor
@@ -9893,9 +9899,6 @@ com.google.android.gms.common.util.WorkSourceUtil:
 com.google.api.AuthRequirement$Builder
 com.google.protobuf.ProtocolStringList
 com.google.common.graph.DirectedGraphConnections$1$1
-com.google.android.gms.internal.firebase-auth-api.zzlv:
-    static void <clinit>()
-    static final synthetic int[] zza
 com.google.common.util.concurrent.ForwardingCondition
 com.google.common.collect.Sets$2
 androidx.lifecycle.LiveData:
@@ -9931,6 +9934,7 @@ com.google.android.gms.internal.auth-api.zbad
 com.google.common.collect.FilteredKeyMultimap$AddRejectingList
 kotlin.jvm.internal.PropertyReference2Impl
 io.grpc.InternalChannelz$ChannelTrace$Builder
+dev.fluttercommunity.plus.share.R$color
 com.google.common.collect.MultimapBuilder$2
 com.google.api.MetricDescriptor$MetricKind
 javax.annotation.meta.When
@@ -10033,7 +10037,6 @@ com.google.android.gms.common.api.HasApiKey
 com.tekartik.sqflite.operation.MethodCallOperation:
     public java.lang.String getMethod()
 androidx.core.app.JobIntentService$WorkEnqueuer
-io.flutter.plugins.firebase.auth.GeneratedAndroidFirebaseAuth$GenerateInterfacesCodec
 io.flutter.embedding.android.AndroidTouchProcessor$PointerChange
 com.google.api.BackendRule$PathTranslation$PathTranslationVerifier
 com.google.api.MetricRule$MetricCostsDefaultEntryHolder
@@ -10171,9 +10174,9 @@ okhttp3.HttpUrl$Builder:
     static final java.lang.String INVALID_HOST
 com.google.rpc.LocalizedMessageOrBuilder
 io.flutter.plugins.firebase.firestore.R
-com.google.common.collect.ImmutableCollection$ArrayBasedBuilder
-io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener
 androidx.core.view.MenuItemCompat$1
+io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener
+com.google.common.collect.ImmutableCollection$ArrayBasedBuilder
 kotlinx.coroutines.internal.ArrayQueue:
     public final void clear()
 com.google.common.base.CharMatcher:
@@ -10341,6 +10344,9 @@ kotlinx.coroutines.flow.FlowKt__CountKt$count$3
 javax.annotation.Nullable
 kotlin.collections.ArraysKt___ArraysKt$asSequence$$inlined$Sequence$7
 org.chromium.support_lib_boundary.util.Features
+com.google.android.gms.internal.firebase-auth-api.zzgh:
+    static void <clinit>()
+    static final synthetic int[] zza
 javax.annotation.CheckForSigned
 kotlin.sequences.SequencesKt___SequencesKt$distinct$1
 kotlin.text.CharsKt__CharJVMKt:
@@ -10391,9 +10397,6 @@ kotlinx.coroutines.channels.Channel:
 io.flutter.plugins.firebase.messaging.R$attr
 com.google.android.gms.internal.auth.zzbk
 kotlin.jvm.internal.DoubleSpreadBuilder
-com.google.android.gms.internal.firebase-auth-api.zzhk:
-    static void <clinit>()
-    static final synthetic int[] zza
 androidx.core.app.ActivityOptionsCompat$ActivityOptionsCompatImpl
 androidx.browser.customtabs.CustomTabsClient$1
 com.google.android.gms.auth.zzf
@@ -10444,17 +10447,11 @@ androidx.core.content.res.GradientColorInflaterCompat$ColorStops
 com.google.android.gms.internal.auth.zzah
 androidx.fragment.R$integer
 com.google.firebase.storage.R$style
-com.google.android.gms.internal.firebase-auth-api.zzin:
-    static void <clinit>()
-    static final synthetic int[] zza
 kotlinx.coroutines.flow.FlowKt__BuildersKt$asFlow$$inlined$unsafeFlow$4
 com.squareup.okhttp.internal.framed.Huffman
 com.google.protobuf.DescriptorProtos$SourceCodeInfoOrBuilder
 kotlinx.coroutines.ChildHandle$DefaultImpls
 androidx.core.graphics.drawable.DrawableCompat
-com.google.firebase.firestore.TransactionOptions:
-    static synthetic int access$000(com.google.firebase.firestore.TransactionOptions)
-    static final int DEFAULT_MAX_ATTEMPTS_COUNT
 com.google.android.gms.safetynet.SafetyNetApi$HarmfulAppsResponse
 com.google.android.gms.internal.common.zzaj
 com.google.android.gms.common.zzu
@@ -10479,8 +10476,6 @@ kotlin.collections.CollectionsKt__ReversedViewsKt:
     public void <init>()
 io.grpc.util.AdvancedTlsX509TrustManager$Verification
 com.google.rpc.PreconditionFailureOrBuilder
-com.google.android.gms.internal.firebase-auth-api.zzuq:
-    public final void zzm()
 com.google.protobuf.ExtensionRegistryFactory:
     void <init>()
     public static com.google.protobuf.ExtensionRegistryLite create()
@@ -10547,6 +10542,9 @@ io.flutter.plugin.editing.InputConnectionAdaptor:
     private static final java.lang.String TAG
 androidx.core.app.ShareCompat$Api16Impl
 com.google.rpc.context.AttributeContext$Peer$LabelsDefaultEntryHolder
+com.google.android.gms.internal.firebase-auth-api.zzkt:
+    static void <clinit>()
+    static final synthetic int[] zza
 com.google.common.base.Splitter$4
 com.google.protobuf.UnsafeUtil:
     static boolean isAndroid64()
@@ -10979,7 +10977,6 @@ com.google.api.Monitoring$Builder
 com.google.firebase.firestore.R$color
 com.google.common.hash.HashCode$IntHashCode
 kotlinx.coroutines.flow.FlowKt__BuildersKt$asFlow$$inlined$unsafeFlow$3
-com.google.android.gms.internal.firebase-auth-api.zzpa
 com.google.protobuf.RopeByteString$RopeInputStream
 android.support.customtabs.ICustomTabsService$Stub$Proxy
 androidx.core.view.ViewGroupCompat$Api18Impl
@@ -11058,7 +11055,11 @@ androidx.core.graphics.drawable.RoundedBitmapDrawable
 com.google.android.gms.auth.api.identity.zbg
 com.google.rpc.DebugInfo$1
 com.google.firebase.auth.internal.zzae:
+    static synthetic bridge com.google.firebase.auth.zze zza(com.google.firebase.auth.internal.zzae)
+    public final com.google.android.gms.tasks.Task resolveSignIn(com.google.firebase.auth.MultiFactorAssertion)
     public final com.google.firebase.auth.FirebaseAuth getFirebaseAuth()
+    public final com.google.firebase.auth.MultiFactorSession getSession()
+    public final java.util.List getHints()
 com.google.common.collect.Count
 androidx.browser.trusted.FutureUtils
 kotlin.text.StringsKt__RegexExtensionsJVMKt:
@@ -11632,6 +11633,9 @@ kotlin.collections.ArraysKt___ArraysJvmKt:
     private static final java.math.BigInteger sumOfBigInteger(boolean[],kotlin.jvm.functions.Function1)
     private static final java.math.BigInteger sumOfBigInteger(char[],kotlin.jvm.functions.Function1)
     public void <init>()
+com.google.android.gms.internal.firebase-auth-api.zzxs:
+    public abstract com.google.android.gms.internal.firebase-auth-api.zzxs zzf()
+    public synthetic bridge java.lang.Object clone()
 com.google.firebase.firestore.R$integer
 kotlinx.coroutines.internal.LocalAtomics_commonKt
 com.google.android.gms.common.api.internal.TaskApiCall:
@@ -11702,6 +11706,7 @@ com.google.android.gms.internal.auth.zzg:
     public abstract com.google.android.gms.tasks.Task zzb(com.google.android.gms.auth.AccountChangeEventsRequest)
     public abstract com.google.android.gms.tasks.Task zzd(android.accounts.Account)
     public abstract com.google.android.gms.tasks.Task zze(java.lang.String)
+com.google.android.gms.internal.firebase-auth-api.zznv
 androidx.core.view.accessibility.AccessibilityViewCommand$MoveWindowArguments
 com.google.gson.internal.LinkedHashTreeMap$Node
 com.google.common.math.BigDecimalMath$BigDecimalToDoubleRounder
@@ -11931,6 +11936,9 @@ androidx.core.app.RemoteInput:
     public static final int EDIT_CHOICES_BEFORE_SENDING_AUTO
     public static final int EDIT_CHOICES_BEFORE_SENDING_DISABLED
     public static final int EDIT_CHOICES_BEFORE_SENDING_ENABLED
+com.google.android.gms.internal.firebase-auth-api.zzhc:
+    static void <clinit>()
+    static final synthetic int[] zza
 androidx.core.view.ActionProvider$SubUiVisibilityListener
 com.google.rpc.context.AttributeContext$Request$Builder
 com.google.android.datatransport.runtime.dagger.internal.MembersInjectors$NoOpMembersInjector
@@ -11991,6 +11999,15 @@ com.squareup.okhttp.HttpUrl:
     static final java.lang.String FRAGMENT_ENCODE_SET
     static final java.lang.String FRAGMENT_ENCODE_SET_URI
 kotlin.reflect.KProperty$Accessor
+com.google.android.gms.internal.firebase-auth-api.zztf:
+    public final com.google.android.gms.tasks.Task zzg(com.google.firebase.FirebaseApp,com.google.firebase.auth.PhoneMultiFactorAssertion,com.google.firebase.auth.FirebaseUser,java.lang.String,com.google.firebase.auth.internal.zzg)
+    public final com.google.android.gms.tasks.Task zzh(com.google.firebase.FirebaseApp,com.google.firebase.auth.FirebaseUser,com.google.firebase.auth.PhoneMultiFactorAssertion,java.lang.String,com.google.firebase.auth.internal.zzg)
+    public final com.google.android.gms.tasks.Task zzk(com.google.firebase.FirebaseApp,com.google.firebase.auth.FirebaseUser,com.google.firebase.auth.AuthCredential,java.lang.String,com.google.firebase.auth.internal.zzbk)
+    public final com.google.android.gms.tasks.Task zzm(com.google.firebase.FirebaseApp,com.google.firebase.auth.FirebaseUser,com.google.firebase.auth.EmailAuthCredential,com.google.firebase.auth.internal.zzbk)
+    public final com.google.android.gms.tasks.Task zzo(com.google.firebase.FirebaseApp,com.google.firebase.auth.FirebaseUser,java.lang.String,java.lang.String,java.lang.String,com.google.firebase.auth.internal.zzbk)
+    public final com.google.android.gms.tasks.Task zzq(com.google.firebase.FirebaseApp,com.google.firebase.auth.FirebaseUser,com.google.firebase.auth.PhoneAuthCredential,java.lang.String,com.google.firebase.auth.internal.zzbk)
+    public final com.google.android.gms.tasks.Task zzw(java.lang.String)
+    public final com.google.android.gms.tasks.Task zzF(com.google.firebase.FirebaseApp,com.google.firebase.auth.FirebaseUser,java.lang.String,com.google.firebase.auth.internal.zzbk)
 com.google.common.hash.Striped64$Cell
 com.google.android.gms.common.util.CollectionUtils
 com.google.api.MonitoredResourceMetadataOrBuilder
@@ -12031,6 +12048,8 @@ androidx.lifecycle.Lifecycling:
     private static final int REFLECTIVE_CALLBACK
     private static final int GENERATED_CALLBACK
 io.flutter.plugins.firebase.firestore.R$dimen
+com.google.firebase.firestore.core.TransactionRunner:
+    public static final int DEFAULT_MAX_ATTEMPTS_COUNT
 com.google.android.gms.internal.firebase-auth-api.zzif:
     static void <clinit>()
     static final synthetic int[] zza
@@ -12067,8 +12086,6 @@ com.google.android.gms.auth.api.proxy.ProxyApi$ProxyResult
 com.google.common.hash.ChecksumHashFunction$ChecksumHasher
 io.grpc.InternalChannelz$ServerStats$Builder
 com.google.firestore.v1.WriteRequestOrBuilder
-com.google.android.gms.internal.firebase-auth-api.zzui:
-    public final void zzb(java.lang.String)
 io.grpc.util.TransmitStatusRuntimeExceptionInterceptor$SerializingServerCall$6
 com.google.firebase.firestore.R$style
 kotlinx.coroutines.AwaitKt
@@ -12169,6 +12186,8 @@ com.google.protobuf.InvalidProtocolBufferException$InvalidWireTypeException:
     private static final long serialVersionUID
 androidx.core.location.LocationManagerCompat$Api30Impl
 okhttp3.internal.cache.DiskLruCache$Editor$1
+com.google.android.gms.internal.firebase-auth-api.zzaba:
+    void <init>()
 com.google.firebase.firestore.local.MemoryRemoteDocumentCache:
     static synthetic com.google.firebase.database.collection.ImmutableSortedMap access$100(com.google.firebase.firestore.local.MemoryRemoteDocumentCache)
     java.lang.Iterable getDocuments()
@@ -12310,6 +12329,7 @@ kotlinx.coroutines.flow.FlowKt__TransformKt$runningReduce$$inlined$unsafeFlow$1
 io.grpc.internal.AbstractServerStream
 com.google.common.util.concurrent.Service$State$2
 com.google.common.collect.Multimaps$AsMap$EntrySet$1
+com.google.firebase.firestore.R$raw
 com.google.common.collect.AbstractMapEntry
 com.google.common.primitives.package-info
 com.google.firebase.firestore.proto.WriteBatch:
@@ -12455,11 +12475,11 @@ com.google.common.io.BaseEncoding$3
 androidx.core.content.pm.ShortcutManagerCompat$1
 androidx.core.app.JobIntentService$CompatWorkItem
 com.squareup.okhttp.TlsVersion
-com.google.common.graph.BaseGraph
 com.google.protobuf.AbstractMessageLite:
     protected static void checkByteStringIsUtf8(com.google.protobuf.ByteString)
     protected static void addAll(java.lang.Iterable,java.util.Collection)
     public void writeDelimitedTo(java.io.OutputStream)
+com.google.common.graph.BaseGraph
 kotlin.DeprecatedSinceKotlin
 androidx.core.content.res.ResourcesCompat$FontCallback
 kotlin.random.Random$Default:
@@ -12480,6 +12500,7 @@ kotlin.random.Random$Default:
 com.google.common.collect.ImmutableEnumSet
 com.google.common.collect.TreeRangeMap$SubRangeMap$SubRangeMapAsMap
 com.google.gson.internal.LinkedTreeMap$1
+com.google.android.gms.internal.firebase-auth-api.zznw
 kotlinx.coroutines.flow.FlowKt__ShareKt$launchSharingDeferred$1$invokeSuspend$$inlined$collect$1
 com.google.firestore.v1.RunQueryRequest
 com.google.android.gms.internal.auth-api.zbo:
@@ -12577,7 +12598,6 @@ org.chromium.support_lib_boundary.util.BoundaryInterfaceReflectionUtil:
 com.google.firebase.appcheck.interop.BuildConfig
 com.google.firebase.heartbeatinfo.AutoValue_SdkHeartBeatResult
 kotlin.collections.IndexingIterable
-io.flutter.plugins.firebase.auth.GeneratedAndroidFirebaseAuth$PigeonPhoneMultiFactorAssertion$Builder
 androidx.core.app.FrameMetricsAggregator$FrameMetricsBaseImpl
 kotlinx.coroutines.debug.internal.ConcurrentWeakMap$KeyValueSet
 androidx.browser.customtabs.CustomTabsIntent$ShareState
@@ -12636,6 +12656,7 @@ com.google.android.gms.internal.auth.zzf:
     public abstract com.google.android.gms.auth.AccountChangeEventsResponse zzh(com.google.android.gms.auth.AccountChangeEventsRequest)
 com.google.common.collect.Maps$NavigableKeySet
 kotlin.internal.DynamicExtension
+com.google.android.gms.internal.firebase-auth-api.zzsd
 android.support.customtabs.trusted.ITrustedWebActivityService$Default
 kotlin.UByteArray
 io.grpc.internal.ForwardingClientStreamTracer
@@ -12649,6 +12670,8 @@ com.google.common.base.Predicates$InPredicate
 com.google.protobuf.Mixin$1
 com.google.common.graph.MapRetrievalCache
 com.google.api.MonitoredResourceDescriptorOrBuilder
+com.google.android.gms.internal.firebase-auth-api.zztg:
+    public abstract void zzm()
 kotlinx.coroutines.flow.FlowKt__LimitKt$dropWhile$lambda-4$$inlined$collect$1$1
 com.squareup.okhttp.Response$Builder
 androidx.core.view.ViewCompat$NestedScrollType
@@ -14463,6 +14486,7 @@ com.google.firestore.bundle.NamedQuery
 androidx.browser.customtabs.CustomTabsSessionToken
 com.google.common.collect.TransformedListIterator
 com.google.common.collect.ImmutableMultisetGwtSerializationDependencies
+dev.fluttercommunity.plus.share.BuildConfig
 com.google.common.util.concurrent.Platform
 com.google.android.gms.internal.auth.zzam
 kotlinx.coroutines.flow.FlowKt__DelayKt$debounce$3
@@ -14574,6 +14598,9 @@ io.flutter.embedding.engine.FlutterEngineConnectionRegistry:
     private static final java.lang.String TAG
 org.intellij.lang.annotations.JdkConstants
 com.google.firebase.datatransport.R$layout
+com.google.android.gms.internal.firebase-auth-api.zzxu:
+    public java.lang.Object set(int,java.lang.Object)
+    public void add(int,java.lang.Object)
 com.google.firestore.bundle.BundledQuery:
     private void clearQueryType()
     private void clearParent()
@@ -14881,6 +14908,9 @@ io.flutter.embedding.engine.systemchannels.LifecycleChannel:
 com.google.android.gms.common.util.concurrent.NumberedThreadFactory
 com.google.android.gms.auth.api.Auth$AuthCredentialsOptions:
     public final java.lang.String zbd()
+com.google.android.gms.internal.firebase-auth-api.zzgb:
+    static void <clinit>()
+    static final synthetic int[] zza
 io.grpc.okhttp.internal.framed.Http2$Reader:
     public void readConnectionPreface()
 com.google.rpc.ResourceInfo
@@ -14987,9 +15017,6 @@ com.google.firestore.v1.WriteResult:
 com.google.android.gms.internal.auth.zzbq
 com.google.common.cache.RemovalListeners$1$1
 kotlinx.coroutines.flow.FlowKt__LimitKt$takeWhile$lambda-9$$inlined$collectWhile$1$1
-com.google.android.gms.internal.firebase-auth-api.zzhe:
-    static void <clinit>()
-    static final synthetic int[] zza
 kotlin.text.TypeAliasesKt
 com.google.firebase.appcheck.interop.R$color
 com.squareup.okhttp.internal.DiskLruCache$4
@@ -14997,7 +15024,6 @@ com.google.common.collect.AbstractMapBasedMultimap$Itr
 androidx.core.app.unusedapprestrictions.IUnusedAppRestrictionsBackportService$Stub
 com.google.firestore.v1.DocumentRemoveOrBuilder
 com.google.rpc.context.AttributeContext$Peer
-com.google.firebase.firestore.util.Util$1
 androidx.annotation.experimental.Experimental
 io.grpc.okhttp.internal.Platform:
     public java.lang.String getPrefix()
@@ -15018,6 +15044,8 @@ com.squareup.okhttp.internal.io.FileSystem$1
 io.grpc.okhttp.SslSocketFactoryChannelCredentials
 com.google.common.base.Functions$PredicateFunction
 com.google.common.collect.MapMakerInternalMap$WeakKeyStrongValueEntry$Helper
+com.google.android.gms.internal.firebase-auth-api.zzth:
+    public final void zzm()
 kotlinx.coroutines.debug.internal.Marked
 com.google.rpc.RequestInfoOrBuilder
 com.google.common.collect.AbstractMapBasedMultimap$KeySet
@@ -15140,8 +15168,6 @@ com.google.android.gms.internal.auth.zzal
 io.grpc.internal.ClientTransportFactory$SwapChannelCredentialsResult
 com.google.firestore.v1.WriteProto
 androidx.core.graphics.BlendModeUtils$Api29Impl
-com.google.android.gms.internal.firebase-auth-api.zzij:
-    private void <init>()
 com.google.common.collect.ArrayTable$RowMap
 com.google.firebase.installations.local.PersistedInstallation:
     public void clearForTesting()
@@ -15179,6 +15205,7 @@ kotlin.internal.PlatformImplementations:
 kotlin.jvm.internal.BooleanSpreadBuilder
 com.google.common.io.CountingOutputStream
 com.google.common.util.concurrent.ClosingFuture$Combiner2$2
+com.google.android.gms.internal.firebase-auth-api.zzvp
 okio.InflaterSource:
     public void <init>(okio.Source,java.util.zip.Inflater)
 com.google.api.MetricRule
@@ -15226,9 +15253,6 @@ com.google.common.util.concurrent.AbstractService$IsStoppedGuard
 kotlin.time.TimeSource$Companion
 com.google.common.util.concurrent.FuturesGetChecked$1
 com.google.common.collect.TreeRangeMap$SubRangeMap
-com.google.android.gms.internal.firebase-auth-api.zzls:
-    static void <clinit>()
-    static final synthetic int[] zza
 com.google.cloud.audit.AuditLog$Builder
 com.google.common.io.ByteStreams:
     private void <init>()
@@ -15271,6 +15295,7 @@ io.grpc.MethodDescriptor:
     public boolean isSampledToLocalTracing()
     public io.grpc.MethodDescriptor$Builder toBuilder()
     public io.grpc.MethodDescriptor$Builder toBuilder(io.grpc.MethodDescriptor$Marshaller,io.grpc.MethodDescriptor$Marshaller)
+dev.fluttercommunity.plus.share.R$style
 com.google.common.collect.TreeBasedTable$TreeRow
 kotlin.collections.AbstractIterator
 com.google.android.gms.common.api.internal.ListenerHolder$Notifier
@@ -15784,6 +15809,9 @@ androidx.core.graphics.drawable.IconCompat$IconType
 kotlinx.coroutines.sync.SemaphoreImpl$onCancellationRelease$1
 com.google.protobuf.DescriptorProtos$FileOptions$OptimizeMode
 io.flutter.plugins.googlesignin.R$dimen
+com.google.android.gms.internal.firebase-auth-api.zzhf:
+    static void <clinit>()
+    static final synthetic int[] zza
 com.squareup.okhttp.internal.DiskLruCache$3
 com.google.gson.internal.ConstructorConstructor$9
 com.google.protobuf.JavaType:
@@ -15794,6 +15822,7 @@ com.google.android.datatransport.runtime.dagger.internal.DaggerCollections
 com.google.common.math.Quantiles$1
 com.google.common.hash.LittleEndianByteArray$LittleEndianBytes
 com.google.common.collect.Lists$OnePlusArrayList
+com.google.android.gms.internal.firebase-auth-api.zzsf
 com.google.android.gms.auth.api.credentials.CredentialPickerConfig$Builder
 com.google.android.gms.base.R$color
 kotlin.collections.CollectionsKt:
@@ -15802,6 +15831,11 @@ kotlin.reflect.KParameter$DefaultImpls
 io.grpc.internal.MigratingThreadDeframer$1CloseOp
 com.google.common.collect.Lists$TransformingSequentialList$1
 androidx.core.content.ContentProviderCompat
+com.google.android.gms.internal.firebase-auth-api.zzti:
+    public final void zzh(com.google.android.gms.internal.firebase-auth-api.zznt,com.google.android.gms.internal.firebase-auth-api.zztg)
+    public final void zzi(com.google.android.gms.internal.firebase-auth-api.zznv,com.google.android.gms.internal.firebase-auth-api.zztg)
+    public final void zzs(com.google.android.gms.internal.firebase-auth-api.zzop,com.google.android.gms.internal.firebase-auth-api.zztg)
+    public final void zzB(com.google.android.gms.internal.firebase-auth-api.zzph,com.google.android.gms.internal.firebase-auth-api.zztg)
 kotlin.jvm.functions.Function21:
     public abstract java.lang.Object invoke(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)
 com.google.common.collect.GeneralRange
@@ -15897,6 +15931,8 @@ com.google.common.io.BaseEncoding$StandardBaseEncoding:
     private transient com.google.common.io.BaseEncoding upperCase
     private transient com.google.common.io.BaseEncoding lowerCase
 kotlinx.coroutines.selects.SeqNumber
+com.google.android.gms.internal.firebase-auth-api.zzyr:
+    void <init>()
 com.google.android.gms.internal.auth-api.zbj
 io.grpc.ServerInterceptors$KnownLengthBufferedInputStream
 io.grpc.internal.CallCredentialsApplyingTransportFactory$CallCredentialsApplyingTransport$2:
@@ -16414,6 +16450,9 @@ com.google.firestore.v1.CommitResponse:
 kotlinx.coroutines.LazyDeferredCoroutine
 kotlinx.coroutines.debug.internal.ConcurrentWeakMap$keys$1
 com.google.rpc.QuotaFailure$ViolationOrBuilder
+com.google.android.gms.internal.firebase-auth-api.zzje:
+    static void <clinit>()
+    static final synthetic int[] zza
 io.grpc.internal.ServiceConfigUtil:
     public static java.lang.String getHealthCheckedServiceName(java.util.Map)
 com.google.firebase.database.collection.package-info
@@ -16455,6 +16494,8 @@ com.google.firebase.encoders.DataEncoder:
     public abstract java.lang.String encode(java.lang.Object)
 com.google.common.base.Converter
 com.google.errorprone.annotations.FormatMethod
+com.google.android.gms.internal.firebase-auth-api.zzaab:
+    private void <init>()
 kotlin.collections.ArraysKt___ArraysKt$groupingBy$1
 com.google.common.collect.DiscreteDomain$LongDomain
 com.google.common.hash.Funnels
@@ -16482,6 +16523,8 @@ com.google.firestore.v1.TransactionOptions$Builder:
     public com.google.firestore.v1.TransactionOptions$Builder clearReadWrite()
 com.google.common.io.FileBackedOutputStream$MemoryOutput
 com.google.common.collect.Sets$PowerSet
+com.google.android.gms.internal.firebase-auth-api.zzkh:
+    private void <init>()
 com.google.protobuf.Internal$MapAdapter$EntryAdapter
 io.flutter.plugins.webviewflutter.R$color
 com.google.android.gms.auth.zzl:
@@ -16602,8 +16645,7 @@ androidx.fragment.R$layout
 kotlin.sequences.SequencesKt___SequencesKt$onEachIndexed$1
 com.google.errorprone.annotations.CompileTimeConstant
 com.google.common.collect.ForwardingMap$StandardEntrySet
-com.google.firebase.auth.MultiFactorAssertion:
-    public abstract java.lang.String getFactorId()
+com.google.firebase.auth.MultiFactorAssertion
 com.google.rpc.PreconditionFailure$1
 com.google.common.collect.ImmutableSortedMap$Builder
 kotlin.jvm.internal.AdaptedFunctionReference
@@ -17020,6 +17062,7 @@ com.google.common.annotations.GwtCompatible
 io.grpc.internal.AutoConfiguredLoadBalancerFactory$PolicyException:
     private static final long serialVersionUID
 io.flutter.plugins.firebase.storage.R$string
+dev.fluttercommunity.plus.share.R$styleable
 kotlin.Triple
 com.google.common.collect.Sets$FilteredNavigableSet
 com.google.common.graph.AbstractBaseGraph$2$3
@@ -17161,6 +17204,8 @@ com.google.firebase.firestore.proto.MaybeDocument$Builder:
     public boolean getHasCommittedMutations()
     public com.google.firebase.firestore.proto.MaybeDocument$Builder clearHasCommittedMutations()
 androidx.activity.R$style
+com.google.android.gms.internal.firebase-auth-api.zzuf:
+    public final void zzm()
 com.google.common.reflect.Invokable
 androidx.exifinterface.media.ExifInterface$IfdType
 com.google.j2objc.annotations.RetainedLocalRef
@@ -17340,8 +17385,6 @@ com.google.firestore.v1.ListenResponse$ResponseTypeCase:
 javax.annotation.OverridingMethodsMustInvokeSuper
 com.google.common.collect.ForwardingListMultimap
 com.squareup.okhttp.ConnectionSpec$1
-com.google.android.gms.internal.firebase-auth-api.zzal:
-    public final com.google.android.gms.internal.firebase-auth-api.zzan zzd()
 com.google.api.Documentation$Builder
 com.google.firebase.firestore.local.SQLiteIndexManager:
     private byte[] encodeSegments(com.google.firebase.firestore.model.FieldIndex)
@@ -17422,6 +17465,7 @@ kotlin.collections.CollectionsKt__MutableCollectionsKt:
     public static final boolean retainAll(java.util.List,kotlin.jvm.functions.Function1)
     private static final boolean filterInPlace$CollectionsKt__MutableCollectionsKt(java.util.List,kotlin.jvm.functions.Function1,boolean)
     public void <init>()
+com.google.android.gms.internal.firebase-auth-api.zzxq
 com.google.common.math.DoubleUtils
 com.google.firebase.auth.internal.zzn:
     public final com.google.firebase.auth.MultiFactorInfo getMultiFactorInfo()
@@ -17600,9 +17644,8 @@ kotlin.collections.ArraysKt___ArraysKt$withIndex$2
 kotlin.collections.CollectionsKt__IteratorsJVMKt:
     public static final java.util.Iterator iterator(java.util.Enumeration)
     public void <init>()
+com.google.android.gms.internal.firebase-auth-api.zznt
 kotlinx.coroutines.flow.FlowKt__ReduceKt$last$$inlined$collect$1
-com.google.android.gms.internal.firebase-auth-api.zzyt:
-    private void <init>()
 kotlinx.coroutines.flow.internal.UndispatchedContextCollector
 com.google.common.io.LittleEndianDataOutputStream
 com.google.protobuf.NewInstanceSchemas:
@@ -17642,7 +17685,10 @@ androidx.core.view.accessibility.AccessibilityViewCommand
 com.google.common.collect.MapMakerInternalMap$HashIterator
 io.flutter.plugins.firebase.messaging.R$drawable
 androidx.core.provider.FontRequestWorker$4
-com.google.android.gms.internal.firebase-auth-api.zzzw
+com.google.android.gms.internal.firebase-auth-api.zzzw:
+    public final int hashCode()
+    public final java.lang.String toString()
+    public final boolean equals(java.lang.Object)
 kotlinx.coroutines.flow.FlowKt__ReduceKt$last$1
 com.google.common.reflect.TypeToInstanceMap
 com.google.common.util.concurrent.CycleDetectingLockFactory$Policy
@@ -17973,6 +18019,8 @@ androidx.browser.browseractions.BrowserActionsIntent
 com.google.common.collect.ImmutableRangeMap
 com.google.android.gms.auth.api.R$attr
 io.grpc.internal.ServerImpl$ServerTransportListenerImpl$1TransportShutdownNow
+com.google.android.gms.internal.firebase-auth-api.zzaad:
+    private void <init>()
 com.google.common.base.Predicates$IsEqualToPredicate
 com.google.common.graph.AbstractBaseGraph$2$2
 com.google.protobuf.DescriptorProtos$EnumDescriptorProto
@@ -18114,6 +18162,7 @@ com.google.api.LogDescriptor
 com.google.rpc.RetryInfo
 org.intellij.lang.annotations.JdkConstants$ListSelectionMode
 com.google.android.gms.internal.auth-api.zbam
+com.google.android.gms.internal.firebase-auth-api.zzxp
 kotlinx.coroutines.internal.DispatchedContinuation:
     public static synthetic void get_state$kotlinx_coroutines_core$annotations()
     public final void resumeCancellableWith(java.lang.Object,kotlin.jvm.functions.Function1)
@@ -18362,6 +18411,8 @@ okhttp3.CertificatePinner$Builder:
 com.google.android.gms.common.images.zae
 com.google.protobuf.DescriptorProtos
 com.google.firebase.firestore.proto.TargetOrBuilder
+com.google.firebase.auth.PhoneMultiFactorInfo:
+    public java.lang.String getFactorId()
 kotlin.ranges.RangesKt:
     private void <init>()
 androidx.core.widget.EdgeEffectCompat$Api21Impl
@@ -18394,6 +18445,7 @@ com.google.common.collect.ImmutableList$SerializedForm
 com.google.firestore.v1.BatchGetDocumentsResponse$ResultCase:
     public static com.google.firestore.v1.BatchGetDocumentsResponse$ResultCase valueOf(int)
     public int getNumber()
+com.google.android.gms.internal.firebase-auth-api.zznu
 com.google.android.gms.common.api.internal.OptionalPendingResultImpl:
     public final com.google.android.gms.common.api.Result await()
     public final com.google.android.gms.common.api.Result get()
@@ -18585,9 +18637,6 @@ io.grpc.protobuf.lite.ProtoLiteUtils:
     private static final int BUF_SIZE
     static final int DEFAULT_MAX_MESSAGE_SIZE
 kotlinx.coroutines.flow.FlowKt__ZipKt$combine$6$2
-com.google.android.gms.internal.firebase-auth-api.zzhb:
-    static void <clinit>()
-    static final synthetic int[] zza
 com.google.android.gms.internal.auth.zzd:
     public final android.os.Bundle zzf(android.accounts.Account)
     public final android.os.Bundle zzg(java.lang.String)
@@ -18596,6 +18645,7 @@ com.google.common.util.concurrent.Striped$WeakSafeReadWriteLock
 com.google.firestore.v1.ListDocumentsRequest$ConsistencySelectorCase
 com.google.common.collect.HashBiMap$View$1
 com.google.common.collect.TreeRangeMap$1
+com.google.android.gms.internal.firebase-auth-api.zzsb
 com.google.gson.internal.bind.DefaultDateTypeAdapter
 androidx.browser.trusted.PackageIdentityUtils$SignaturesCompat
 com.google.api.ResourceDescriptor$1
@@ -18770,8 +18820,6 @@ androidx.core.content.res.ResourcesCompat:
     private static final java.lang.String TAG
     public static final int ID_NULL
 com.google.gson.internal.bind.CollectionTypeAdapterFactory
-com.google.android.gms.internal.firebase-auth-api.zzuh:
-    public final void zzm(java.lang.String,com.google.android.gms.internal.firebase-auth-api.zzuy)
 com.google.common.collect.SortedMultisets
 com.google.gson.internal.GsonBuildConfig
 com.google.firebase.firestore.proto.TargetGlobalOrBuilder
@@ -19243,9 +19291,12 @@ com.google.firebase.auth.FirebaseAuth:
     public com.google.android.gms.tasks.Task setFirebaseUIVersion(java.lang.String)
     public com.google.android.gms.tasks.Task updateCurrentUser(com.google.firebase.auth.FirebaseUser)
     public boolean isSignInWithEmailLink(java.lang.String)
+    public final com.google.android.gms.tasks.Task zzb(com.google.firebase.auth.FirebaseUser,com.google.firebase.auth.MultiFactorAssertion,java.lang.String)
     public final com.google.android.gms.tasks.Task zze(com.google.firebase.auth.FirebaseUser,com.google.firebase.auth.AuthCredential)
+    public final com.google.android.gms.tasks.Task zzh(com.google.firebase.auth.MultiFactorAssertion,com.google.firebase.auth.internal.zzag,com.google.firebase.auth.FirebaseUser)
     public final com.google.android.gms.tasks.Task zzj(android.app.Activity,com.google.firebase.auth.FederatedAuthProvider,com.google.firebase.auth.FirebaseUser)
     public final com.google.android.gms.tasks.Task zzk(android.app.Activity,com.google.firebase.auth.FederatedAuthProvider,com.google.firebase.auth.FirebaseUser)
+    public final com.google.android.gms.tasks.Task zzl(com.google.firebase.auth.FirebaseUser,java.lang.String)
 com.google.android.gms.safetynet.SafetyNetApi$zzb
 com.squareup.okhttp.internal.http.HttpDate$1
 kotlinx.coroutines.channels.Receive:
@@ -19253,11 +19304,15 @@ kotlinx.coroutines.channels.Receive:
 com.google.common.collect.EnumMultiset
 com.google.android.gms.internal.safetynet.zze:
     public void zza(com.google.android.gms.common.api.Status,com.google.android.gms.safetynet.zza)
+com.google.android.gms.internal.firebase-auth-api.zzqw
 kotlinx.coroutines.flow.FlowKt__ReduceKt$reduce$$inlined$collect$1
 androidx.core.os.LocaleListCompat$Api21Impl
 androidx.annotation.DisplayContext
 androidx.core.text.util.LinkifyCompat$LinkifyMask
 com.google.android.gms.common.images.ImageManager
+com.google.android.gms.internal.firebase-auth-api.zzgz:
+    static void <clinit>()
+    static final synthetic int[] zza
 com.google.gson.internal.reflect.UnsafeReflectionAccessor
 com.google.protobuf.AllocatedBuffer$1
 com.google.common.math.LongMath$MillerRabinTester$1
@@ -19299,6 +19354,8 @@ com.google.common.cache.LocalCache$Segment$1
 kotlin.jvm.JvmMultifileClass
 androidx.core.widget.NestedScrollView$SavedState$1
 com.google.common.io.ByteSource$AsCharSource
+com.google.android.gms.internal.firebase-auth-api.zzc:
+    private void <init>()
 kotlinx.coroutines.selects.UnbiasedSelectBuilderImpl
 com.google.android.gms.auth.api.credentials.CredentialsClient
 kotlinx.coroutines.JobKt__FutureKt
@@ -19404,7 +19461,7 @@ com.google.protobuf.Writer:
     public abstract void writeGroupList(int,java.util.List)
 com.google.gson.internal.bind.TypeAdapters$3
 com.google.firebase.firestore.Filter$CompositeFilter:
-    public void <init>(java.util.List,com.google.firebase.firestore.core.CompositeFilter$Operator)
+    public void <init>(java.util.List,com.google.firestore.v1.StructuredQuery$CompositeFilter$Operator)
 kotlin.jvm.JvmClassMappingKt:
     public static final java.lang.Class getJavaClass(kotlin.reflect.KClass)
     public static synthetic void getJavaClass$annotations(kotlin.reflect.KClass)
@@ -19489,6 +19546,9 @@ io.flutter.plugin.common.BasicMessageChannel:
 com.google.gson.internal.bind.ArrayTypeAdapter$1
 kotlin.sequences.SequencesKt___SequencesKt$asIterable$$inlined$Iterable$1
 kotlinx.coroutines.flow.FlowKt__ErrorsKt$catchImpl$1
+com.google.android.gms.internal.firebase-auth-api.zzag:
+    public abstract com.google.android.gms.internal.firebase-auth-api.zzal zzd()
+    public synthetic bridge java.util.Iterator iterator()
 com.google.errorprone.annotations.concurrent.UnlockMethod
 com.google.common.collect.CompactHashMap$ValuesView
 io.grpc.Metadata$BinaryMarshaller:
@@ -19656,8 +19716,6 @@ com.google.common.collect.UsingToStringOrdering
 androidx.activity.R
 androidx.print.PrintHelper$PrintUriAdapter$1
 com.google.gson.TypeAdapter
-io.flutter.plugins.firebase.auth.GeneratedAndroidFirebaseAuth$PigeonPhoneMultiFactorAssertion:
-    synthetic void <init>(io.flutter.plugins.firebase.auth.GeneratedAndroidFirebaseAuth$1)
 kotlin.jvm.internal.CharSpreadBuilder
 androidx.browser.R
 io.grpc.internal.ManagedChannelImpl$1ResetConnectBackoff
@@ -19669,6 +19727,7 @@ com.google.android.gms.internal.auth.zzp:
     public final void zzg(com.google.android.gms.internal.auth.zzk,android.accounts.Account)
     public final void zzh(com.google.android.gms.internal.auth.zzk,java.lang.String)
 io.grpc.InternalKnownTransport
+com.google.android.gms.internal.firebase-auth-api.zzop
 com.google.api.CustomHttpPattern
 io.grpc.inprocess.InProcessTransport$6
 com.google.common.collect.Sets$UnmodifiableNavigableSet
@@ -19912,6 +19971,7 @@ com.google.rpc.BadRequest$FieldViolation$Builder
 com.google.firestore.bundle.NamedQuery$Builder
 com.google.android.gms.internal.safetynet.zzd
 androidx.browser.trusted.PackageIdentityUtils$Api28Implementation
+com.google.android.gms.internal.firebase-auth-api.zzqx
 kotlin.jvm.internal.markers.KMutableSet
 com.google.protobuf.DescriptorProtos$ExtensionRangeOptionsOrBuilder
 com.google.common.primitives.SignedBytes
@@ -20100,6 +20160,9 @@ com.google.firestore.v1.UpdateDocumentRequest$Builder
 com.google.common.cache.CacheLoader
 com.google.rpc.ErrorInfo$Builder
 androidx.annotation.StyleRes
+com.google.android.gms.internal.firebase-auth-api.zzjb:
+    static void <clinit>()
+    static final synthetic int[] zza
 com.google.api.Advice
 com.google.common.base.CharMatcher$Or
 kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3$invokeSuspend$$inlined$collect$1$1
@@ -20185,6 +20248,8 @@ com.google.protobuf.DescriptorProtos$ServiceDescriptorProtoOrBuilder
 kotlinx.coroutines.flow.FlowKt__ReduceKt$singleOrNull$1
 com.google.firebase.components.R
 com.google.common.collect.CompactLinkedHashMap
+com.google.android.gms.internal.firebase-auth-api.zzwh:
+    public static long zza(java.lang.String)
 androidx.webkit.R$color
 javax.annotation.concurrent.Immutable
 kotlinx.coroutines.flow.FlowKt__ErrorsKt$retryWhen$$inlined$unsafeFlow$1$1
@@ -20419,6 +20484,7 @@ com.google.common.collect.BaseImmutableMultimap
 com.google.firebase.messaging.R$attr
 com.google.api.QuotaProto
 com.tekartik.sqflite.R$string
+com.google.android.gms.internal.firebase-auth-api.zzoq
 com.google.android.gms.common.data.DataHolder$Builder:
     static synthetic bridge java.util.ArrayList zab(com.google.android.gms.common.data.DataHolder$Builder)
     static synthetic bridge java.lang.String[] zac(com.google.android.gms.common.data.DataHolder$Builder)
@@ -20801,6 +20867,9 @@ com.google.firestore.v1.StructuredQuery$Filter:
     public boolean hasUnaryFilter()
 com.google.android.gms.internal.auth.zzfc:
     private void <init>()
+com.google.android.gms.internal.firebase-auth-api.zzfy:
+    static void <clinit>()
+    static final synthetic int[] zza
 androidx.core.view.accessibility.AccessibilityEventCompat$Api19Impl
 com.google.common.collect.ImmutableCollection$Builder:
     void <init>()
@@ -20853,14 +20922,10 @@ kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3
 io.flutter.plugins.imagepicker.R$string
 kotlinx.coroutines.flow.ChannelFlowBuilder
 com.google.android.gms.common.internal.ServiceSpecificExtraArgs$GamesExtraArgs
-com.google.android.gms.internal.firebase-auth-api.zze:
-    private void <init>()
 com.squareup.okhttp.internal.FaultHidingSink
+com.google.android.gms.internal.firebase-auth-api.zze:
+    public void <init>()
 com.google.api.ClientProto
-com.google.android.gms.internal.firebase-auth-api.zzaah:
-    public final int hashCode()
-    public final java.lang.String toString()
-    public final boolean equals(java.lang.Object)
 io.grpc.internal.JndiResourceResolverFactory$JndiResourceResolver:
     public java.util.List resolveSrv(java.lang.String)
 androidx.core.content.SharedPreferencesCompat
@@ -20897,15 +20962,16 @@ com.google.gson.internal.JsonReaderInternalAccess:
 io.grpc.stub.InternalClientCalls$StubType
 com.google.cloud.audit.AuthorizationInfo$Builder
 com.google.firebase.auth.MultiFactorInfo:
+    public abstract long getEnrollmentTimestamp()
+    public abstract java.lang.String getDisplayName()
+    public abstract java.lang.String getFactorId()
+    public abstract java.lang.String getUid()
     public static final java.lang.String FACTOR_ID_KEY
 androidx.core.view.accessibility.AccessibilityRecordCompat$Api16Impl
 com.google.common.cache.ReferenceEntry
 androidx.versionedparcelable.VersionedParcel$ParcelException
 com.google.type.Fraction
 com.google.protobuf.DescriptorProtos$UninterpretedOption$NamePart$Builder
-com.google.android.gms.internal.firebase-auth-api.zzjc:
-    static void <clinit>()
-    static final synthetic int[] zza
 com.google.android.gms.tasks.zzn:
     public final void zzc()
 kotlin.contracts.CallsInPlace
@@ -20987,9 +21053,6 @@ kotlinx.coroutines.DispatchersKt
 com.google.android.gms.common.api.internal.zaau
 kotlin.jvm.internal.Ref$DoubleRef
 com.google.firestore.v1.DocumentTransformOrBuilder
-com.google.android.gms.internal.firebase-auth-api.zzai:
-    public abstract com.google.android.gms.internal.firebase-auth-api.zzan zzd()
-    public synthetic bridge java.util.Iterator iterator()
 kotlin.random.XorWowRandom$Companion
 com.google.firebase.R$styleable
 io.grpc.InternalChannelz$ChannelStats
@@ -21052,6 +21115,9 @@ androidx.core.R$id:
     public static final int text2
     public static final int time
     public static final int title
+com.google.android.gms.internal.firebase-auth-api.zzwi:
+    public final java.lang.Long zzb()
+    public final java.lang.Long zzc()
 com.google.common.collect.LinkedListMultimap$1ValuesImpl
 kotlinx.coroutines.channels.ChannelsKt__DeprecatedKt$withIndex$1
 com.google.protobuf.MessageLite:
@@ -21138,7 +21204,10 @@ com.google.android.gms.auth.api.credentials.zbe
 com.google.android.gms.common.providers.zza
 com.squareup.okhttp.ConnectionSpec$Builder
 com.google.firebase.auth.MultiFactorResolver:
+    public abstract com.google.android.gms.tasks.Task resolveSignIn(com.google.firebase.auth.MultiFactorAssertion)
     public abstract com.google.firebase.auth.FirebaseAuth getFirebaseAuth()
+    public abstract com.google.firebase.auth.MultiFactorSession getSession()
+    public abstract java.util.List getHints()
 com.squareup.okhttp.OkHttpClient$1
 com.google.common.collect.Multisets$ElementSet
 com.google.android.gms.common.GoogleSignatureVerifier:
@@ -21252,8 +21321,6 @@ com.google.common.collect.Maps$FilteredEntryBiMap$1
 com.google.android.gms.auth.api.credentials.CredentialPickerConfig
 androidx.viewpager.widget.ViewPager$ViewPositionComparator
 com.google.android.gms.base.R
-com.google.android.gms.internal.firebase-auth-api.zzzt:
-    public final synthetic bridge com.google.android.gms.internal.firebase-auth-api.zzyd zzf()
 com.google.android.gms.safetynet.SafetyNetApi$zzc
 com.google.protobuf.BinaryWriter$SafeDirectWriter
 io.flutter.embedding.engine.systemchannels.PlatformViewsChannel:
@@ -21285,8 +21352,6 @@ com.google.firebase.firestore.util.Util:
     public static java.lang.Exception convertThrowableToException(java.lang.Throwable)
     public static varargs java.util.List collectUpdateArguments(int,java.lang.Object,java.lang.Object,java.lang.Object[])
     public static void diffCollections(java.util.Collection,java.util.Collection,java.util.Comparator,com.google.firebase.firestore.util.Consumer,com.google.firebase.firestore.util.Consumer)
-    public static java.lang.Iterable values(java.lang.Iterable)
-    private static synthetic java.util.Iterator lambda$values$3(java.lang.Iterable)
     private static final int AUTO_ID_LENGTH
     private static final java.lang.String AUTO_ID_ALPHABET
 com.google.common.collect.Lists$TwoPlusArrayList
@@ -21899,6 +21964,8 @@ androidx.versionedparcelable.VersionedParcel:
     private static final int TYPE_FLOAT
 com.google.common.collect.EmptyContiguousSet$SerializedForm
 kotlinx.coroutines.debug.internal.StackTraceFrame
+com.google.android.gms.internal.firebase-auth-api.zzaj:
+    public final com.google.android.gms.internal.firebase-auth-api.zzal zzd()
 kotlin.KotlinNothingValueException:
     public void <init>(java.lang.String)
     public void <init>(java.lang.String,java.lang.Throwable)
@@ -22009,6 +22076,8 @@ com.google.common.io.Closer$LoggingSuppressor
 com.google.common.util.concurrent.ForwardingFuture$SimpleForwardingFuture
 io.grpc.InternalServiceProviders$PriorityAccessor
 kotlin.io.FileTreeWalk$FileTreeWalkIterator$WhenMappings
+com.google.android.gms.internal.firebase-auth-api.zzhy:
+    private void <init>()
 com.google.common.collect.Iterables$UnmodifiableIterable
 com.google.android.gms.internal.auth.zzk
 com.google.common.util.concurrent.IgnoreJRERequirement
@@ -22149,6 +22218,9 @@ io.grpc.okhttp.internal.TlsVersion:
     public java.lang.String javaName()
 com.google.common.cache.LocalCache$AbstractReferenceEntry
 com.google.common.hash.MessageDigestHashFunction$1
+com.google.android.gms.internal.firebase-auth-api.zzlc:
+    static void <clinit>()
+    static final synthetic int[] zza
 androidx.core.graphics.BitmapCompat$Api17Impl
 com.google.firebase.database.collection.R$style
 com.google.common.collect.TreeRangeSet
@@ -22327,8 +22399,6 @@ okhttp3.Cache$Entry
 io.flutter.embedding.engine.deferredcomponents.PlayStoreDeferredComponentManager$1
 kotlinx.coroutines.sync.SemaphoreImpl
 io.grpc.inprocess.InProcessTransport$1
-com.google.android.gms.internal.firebase-auth-api.zzg:
-    public void <init>()
 com.google.firestore.admin.v1.Index$QueryScope$1
 com.google.common.reflect.TypeToken$InterfaceSet
 com.google.firebase.storage.TaskListenerImpl:
@@ -22346,6 +22416,8 @@ kotlin.random.RandomKt:
     public static final void checkRangeBounds(long,long)
     public static final void checkRangeBounds(double,double)
     public static final java.lang.String boundsErrorMessage(java.lang.Object,java.lang.Object)
+com.google.android.gms.internal.firebase-auth-api.zzyi:
+    private void <init>()
 com.google.firebase.firestore.FirebaseFirestoreSettings:
     public static final long CACHE_SIZE_UNLIMITED
     public static final java.lang.String DEFAULT_HOST
@@ -22357,6 +22429,7 @@ com.squareup.okhttp.internal.framed.Variant
 com.google.common.collect.Multisets$3$1
 com.google.common.escape.Escaper
 kotlinx.coroutines.flow.FlowKt__TransformKt$filterIsInstance$$inlined$filter$1
+com.google.android.gms.internal.firebase-auth-api.zzzl
 com.google.firebase.firestore.core.Query:
     public boolean containsCompositeFilters()
     public java.lang.String getCanonicalId()
@@ -22631,6 +22704,7 @@ com.google.android.gms.common.api.ResolvableApiException:
     public android.app.PendingIntent getResolution()
     public void startResolutionForResult(android.app.Activity,int)
 kotlin.text.Typography
+com.google.android.gms.internal.firebase-auth-api.zzqr
 com.google.gson.internal.sql.SqlTimeTypeAdapter$1
 com.squareup.okhttp.internal.framed.FramedStream$FramedDataSource
 com.google.firebase.firestore.util.ByteBufferInputStream
@@ -22660,6 +22734,7 @@ kotlinx.coroutines.flow.FlowKt__TransformKt$runningFold$$inlined$unsafeFlow$1$1
 androidx.core.app.ActivityCompat$Api23Impl:
     private void <init>()
 com.google.android.gms.common.providers.PooledExecutorsProvider
+com.google.android.gms.internal.firebase-auth-api.zzru
 com.google.common.util.concurrent.Futures$CallbackListener
 com.google.android.gms.common.data.zaa
 com.google.protobuf.DescriptorProtos$FieldDescriptorProto$Label$1
@@ -22775,10 +22850,12 @@ io.grpc.ChannelCredentials:
     public abstract io.grpc.ChannelCredentials withoutBearerTokens()
 com.google.protobuf.Struct$1
 kotlin.io.FileTreeWalk$WalkState
+com.google.android.gms.internal.firebase-auth-api.zzhx:
+    static void <clinit>()
+    static final synthetic int[] zza
 io.grpc.internal.AbstractStream:
     public final void setMessageCompression(boolean)
 android.support.customtabs.ICustomTabsCallback$Stub$Proxy
-com.google.android.gms.internal.firebase-auth-api.zzsx
 com.google.android.gms.common.api.internal.zaas
 com.google.apphosting.datastore.testing.DatastoreTestTrace$FirestoreV1Action$UpdateDocument$Builder
 com.google.longrunning.WaitOperationRequest$1
@@ -22836,9 +22913,6 @@ kotlin.ranges.CharRange
 com.google.common.collect.ImmutableRangeMap$Builder
 com.google.common.cache.LocalCache$AccessQueue$1
 io.grpc.stub.ClientCalls$StartableListener
-com.google.android.gms.internal.firebase-auth-api.zzhz:
-    static void <clinit>()
-    static final synthetic int[] zza
 io.grpc.ClientInterceptors$1:
     void <init>(io.grpc.MethodDescriptor$Marshaller,io.grpc.MethodDescriptor$Marshaller,io.grpc.ClientInterceptor)
     public io.grpc.ClientCall interceptCall(io.grpc.MethodDescriptor,io.grpc.CallOptions,io.grpc.Channel)
@@ -23078,8 +23152,6 @@ androidx.core.view.MenuItemCompat$Api26Impl
 com.google.rpc.context.AttributeContext$Resource$Builder
 com.google.type.ExprProto
 kotlin.text.Regex$special$$inlined$fromInt$1
-com.google.android.gms.internal.firebase-auth-api.zzabl:
-    void <init>()
 androidx.core.util.Pools$SynchronizedPool
 com.google.android.datatransport.BuildConfig
 com.google.common.util.concurrent.AggregateFutureState$SafeAtomicHelper
@@ -23102,9 +23174,6 @@ androidx.core.app.ComponentActivity$ExtraData
 com.google.common.collect.StandardTable$Column
 com.google.android.datatransport.runtime.dagger.internal.DelegateFactory
 io.flutter.plugins.firebase.functions.R$integer
-com.google.android.gms.internal.firebase-auth-api.zzka:
-    static void <clinit>()
-    static final synthetic int[] zza
 com.google.rpc.QuotaFailureOrBuilder
 io.grpc.util.SecretRoundRobinLoadBalancerProvider$Provider:
     private static final java.lang.String NO_CONFIG
@@ -23127,6 +23196,8 @@ io.flutter.plugins.firebase.messaging.ContextHolder:
     public void <init>()
 com.google.android.gms.internal.auth.zzbz
 com.google.protobuf.WireFormat$Utf8Validation$1
+com.google.android.gms.internal.firebase-auth-api.zzld:
+    private void <init>()
 kotlin.comparisons.ComparisonsKt__ComparisonsKt$compareByDescending$1
 com.google.common.util.concurrent.ListenerCallQueue
 com.google.common.collect.CompactLinkedHashSet
@@ -23849,15 +23920,13 @@ io.grpc.internal.AbstractServerStream$TransportState$2
 com.google.thirdparty.publicsuffix.PublicSuffixType
 com.google.android.gms.internal.safetynet.zzk$zzg
 com.google.apphosting.datastore.testing.DatastoreTestTrace$FirestoreV1Action$RemoveListen$Builder
+com.google.android.gms.internal.firebase-auth-api.zzqs
 com.google.rpc.context.AttributeContext$RequestOrBuilder
 com.google.android.gms.common.BlockingServiceConnection:
     public android.os.IBinder getServiceWithTimeout(long,java.util.concurrent.TimeUnit)
 com.google.firebase.installations.Utils:
     private static final java.lang.String APP_ID_IDENTIFICATION_SUBSTRING
 kotlin.text.MatchResult$Destructured
-com.google.android.gms.internal.firebase-auth-api.zzgv:
-    static void <clinit>()
-    static final synthetic int[] zza
 androidx.core.view.ContentInfoCompat$BuilderCompat31Impl
 com.google.protobuf.FieldInfo:
     public static com.google.protobuf.FieldInfo forField(java.lang.reflect.Field,int,com.google.protobuf.FieldType,boolean)
@@ -23901,6 +23970,7 @@ com.google.protobuf.BinaryWriter$UnsafeHeapWriter
 com.google.common.eventbus.package-info
 com.google.common.collect.MapMakerInternalMap$StrongKeyWeakValueEntry$Helper
 com.google.common.cache.LocalCache$AccessQueue$2
+com.google.android.gms.internal.firebase-auth-api.zzrv
 com.google.android.gms.internal.auth.zzhk:
     public abstract boolean zzb()
 androidx.core.view.accessibility.AccessibilityNodeProviderCompat$AccessibilityNodeProviderApi19
@@ -23978,8 +24048,6 @@ com.google.common.base.MoreObjects:
     private void <init>()
 com.google.common.collect.SortedLists$KeyAbsentBehavior$2
 kotlinx.coroutines.flow.FlowKt__LimitKt$emitAbort$1
-com.google.android.gms.internal.firebase-auth-api.zzrx:
-    public final void zzy(java.lang.String,com.google.android.gms.internal.firebase-auth-api.zzts)
 kotlin.collections.AbstractIterator$WhenMappings
 org.intellij.lang.annotations.JdkConstants$CalendarMonth
 com.google.api.DocumentationRule$1
@@ -24236,9 +24304,6 @@ kotlin.jvm.internal.ReflectionFactory:
     public kotlin.reflect.KType nothingType(kotlin.reflect.KType)
     private static final java.lang.String KOTLIN_JVM_FUNCTIONS
 kotlinx.coroutines.flow.internal.CombineKt$zipImpl$$inlined$unsafeFlow$1
-com.google.android.gms.internal.firebase-auth-api.zzle:
-    static void <clinit>()
-    static final synthetic int[] zza
 com.google.common.util.concurrent.AbstractExecutionThreadService$1$1
 com.google.firestore.v1.Target$TargetTypeCase
 io.grpc.ServerProvider$NewServerBuilderResult
@@ -24632,6 +24697,9 @@ io.flutter.plugin.platform.AccessibilityEventsDelegate:
     public boolean requestSendAccessibilityEvent(android.view.View,android.view.View,android.view.accessibility.AccessibilityEvent)
 kotlin.ArrayIntrinsicsKt
 com.google.common.util.concurrent.JdkFutureAdapters
+com.google.android.gms.internal.firebase-auth-api.zzgw:
+    static void <clinit>()
+    static final synthetic int[] zza
 androidx.concurrent.futures.CallbackToFutureAdapter$SafeFuture
 io.grpc.InternalChannelz$OtherSecurity:
     public void <init>(java.lang.String,java.lang.Object)
@@ -24648,7 +24716,6 @@ com.google.android.gms.common.util.PlatformVersion:
     public static boolean isAtLeastM()
     public static boolean isAtLeastS()
     public static boolean isAtLeastT()
-io.flutter.plugins.firebase.auth.GeneratedAndroidFirebaseAuth$GenerateInterfaces
 com.google.android.gms.dynamic.zae
 com.google.rpc.context.AttributeContext$Request$HeadersDefaultEntryHolder
 androidx.core.provider.RequestExecutor$DefaultThreadFactory$ProcessPriorityThread
@@ -24662,6 +24729,7 @@ com.google.common.collect.Interners
 androidx.fragment.app.FragmentManagerViewModel:
     void restoreFromSnapshot(androidx.fragment.app.FragmentManagerNonConfig)
     androidx.fragment.app.FragmentManagerNonConfig getSnapshot()
+dev.fluttercommunity.plus.share.R$string
 androidx.core.app.ActivityManagerCompat
 com.google.common.base.Suppliers$SupplierComposition
 androidx.browser.R$layout
@@ -24678,6 +24746,9 @@ com.google.common.hash.Hashing
 com.google.apphosting.datastore.testing.DatastoreTestTrace$FirestoreV1Action$RunQueryOrBuilder
 com.google.android.datatransport.runtime.ExecutionModule_ExecutorFactory$InstanceHolder:
     private void <init>()
+com.google.android.gms.internal.firebase-auth-api.zzfv:
+    static void <clinit>()
+    static final synthetic int[] zza
 kotlinx.coroutines.flow.FlowKt__ZipKt$combineTransformUnsafe$1$1
 kotlin.collections.GroupingKt__GroupingJVMKt
 com.google.api.LaunchStage$1
@@ -24685,13 +24756,11 @@ kotlinx.coroutines.debug.internal.DebugProbesImpl$dumpCoroutinesSynchronized$lam
 com.google.firebase.storage.network.connection.package-info
 androidx.annotation.GravityInt
 com.google.common.net.HttpHeaders$ReferrerPolicyValues
+com.google.android.gms.internal.firebase-auth-api.zzqv
 com.google.api.AuthenticationRuleOrBuilder
 com.google.firebase.firestore.util.FileUtil$LegacyFileDeleter:
     private void <init>()
 com.google.gson.internal.bind.ObjectTypeAdapter
-com.google.android.gms.internal.firebase-auth-api.zzgy:
-    static void <clinit>()
-    static final synthetic int[] zza
 androidx.core.view.WindowInsetsAnimationCompat$Impl21$Impl21OnApplyWindowInsetsListener$3
 org.intellij.lang.annotations.Identifier
 com.google.protobuf.FieldSet:
@@ -24733,12 +24802,6 @@ com.google.firebase.firestore.proto.MaybeDocumentOuterClass
 kotlinx.coroutines.scheduling.LimitingDispatcher:
     public java.util.concurrent.Executor getExecutor()
     public void dispatchYield(kotlin.coroutines.CoroutineContext,java.lang.Runnable)
-io.flutter.plugins.firebase.auth.GeneratedAndroidFirebaseAuth$PigeonMultiFactorInfo:
-    public java.lang.String getDisplayName()
-    public java.lang.Double getEnrollmentTimestamp()
-    public java.lang.String getFactorId()
-    public java.lang.String getUid()
-    public java.lang.String getPhoneNumber()
 androidx.core.view.WindowInsetsAnimationCompat$Impl21
 androidx.versionedparcelable.VersionedParcel$1
 com.google.common.collect.MinMaxPriorityQueue$QueueIterator
@@ -24859,6 +24922,7 @@ kotlin.sequences.SequencesKt___SequencesKt$filterNotNull$1
 com.google.api.ResourceReference$1
 io.grpc.internal.ManagedChannelImpl$1StatsFetcher
 com.google.android.gms.internal.auth.zzay
+dev.fluttercommunity.plus.share.R$layout
 kotlinx.coroutines.flow.FlowKt__LimitKt$takeWhile$$inlined$unsafeFlow$1$1
 com.squareup.okhttp.Credentials:
     private void <init>()
@@ -25034,6 +25098,7 @@ com.google.firestore.v1.Cursor:
     public com.google.firestore.v1.ValueOrBuilder getValuesOrBuilder(int)
 androidx.core.text.TextDirectionHeuristicsCompat$TextDirectionAlgorithm
 kotlinx.coroutines.android.HandlerContext$invokeOnTimeout$$inlined$DisposableHandle$1
+dev.fluttercommunity.plus.share.R$xml
 kotlin.sequences.TransformingSequence$iterator$1:
     public final java.util.Iterator getIterator()
 android.support.customtabs.IPostMessageService$Stub
@@ -25069,6 +25134,8 @@ com.google.api.SystemParameters$Builder
 com.google.errorprone.annotations.concurrent.LazyInit
 androidx.lifecycle.ComputableLiveData$1
 com.google.rpc.context.AttributeContext$Builder
+com.google.firebase.auth.FirebaseAuthMultiFactorException:
+    public com.google.firebase.auth.MultiFactorResolver getResolver()
 com.google.android.gms.internal.common.zzl
 com.google.common.reflect.TypeToken$TypeFilter$2
 com.google.api.AdviceOrBuilder
@@ -25081,6 +25148,7 @@ androidx.fragment.app.FragmentManagerImpl$FragmentTag:
     public static final int Fragment_tag
 com.google.common.util.concurrent.AggregateFuture$2
 androidx.core.os.CancellationSignal
+com.google.firebase.auth.zzi
 com.google.firebase.firestore.local.MemoryPersistence:
     public static com.google.firebase.firestore.local.MemoryPersistence createLruGcMemoryPersistence(com.google.firebase.firestore.local.LruGarbageCollector$Params,com.google.firebase.firestore.local.LocalSerializer)
 com.google.firestore.v1.Target$QueryTarget$Builder:
@@ -25252,11 +25320,11 @@ kotlin.Result:
     public final synthetic java.lang.Object unbox-impl()
     private final java.lang.Object value
 io.flutter.plugin.common.PluginRegistry
-com.google.firebase.firestore.auth.-$$Lambda$FirebaseAppCheckTokenProvider$hu48mr03bfT6X2LDSOXJket2KbA:
+com.google.firebase.functions.-$$Lambda$FirebaseContextProvider$qxwpW2MXdQeNzRquYTOSrwCOtMQ:
     public final void onAppCheckTokenChanged(com.google.firebase.appcheck.AppCheckTokenResult)
 androidx.core.view.-$$Lambda$ViewCompat$wxf3s7r4ODqhaNnVVlzx9IRcwjg:
     public final androidx.core.view.ContentInfoCompat onReceiveContent(androidx.core.view.ContentInfoCompat)
-com.google.firebase.functions.-$$Lambda$FirebaseContextProvider$qxwpW2MXdQeNzRquYTOSrwCOtMQ:
+com.google.firebase.firestore.auth.-$$Lambda$FirebaseAppCheckTokenProvider$hu48mr03bfT6X2LDSOXJket2KbA:
     public final void onAppCheckTokenChanged(com.google.firebase.appcheck.AppCheckTokenResult)
 kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher:
     public void close()
@@ -25265,6 +25333,8 @@ com.google.android.gms.common.internal.zap:
     final synthetic com.google.android.gms.common.internal.zas zad
 io.grpc.android.AndroidChannelBuilder:
     private static final java.lang.Class OKHTTP_CHANNEL_BUILDER_CLASS
+io.flutter.plugins.webviewflutter.InstanceManager:
+    private long nextIdentifier
 com.google.firestore.bundle.BundledQuery$LimitType:
     private static final com.google.protobuf.Internal$EnumLiteMap internalValueMap
 com.google.protobuf.AbstractParser:
@@ -25272,8 +25342,6 @@ com.google.protobuf.AbstractParser:
 com.google.firebase.firestore.util.AsyncQueue$DelayedTask:
     private final com.google.firebase.firestore.util.AsyncQueue$TimerId timerId
     private final long targetTimeMs
-com.google.android.gms.internal.firebase-auth-api.zzek:
-    final com.google.android.gms.internal.firebase-auth-api.zzbu zza
 com.google.firestore.v1.TargetChange$TargetChangeType:
     private static final com.google.protobuf.Internal$EnumLiteMap internalValueMap
 com.google.android.gms.internal.auth.zzeg:
@@ -25290,12 +25358,18 @@ com.google.firebase.installations.local.PersistedInstallationEntry:
     public static com.google.firebase.installations.local.PersistedInstallationEntry INSTANCE
 com.tekartik.sqflite.Database$1:
     final synthetic com.tekartik.sqflite.Database this$0
+com.google.android.gms.internal.firebase-auth-api.zzcf:
+    final synthetic com.google.android.gms.internal.firebase-auth-api.zzcg zza
 com.google.firebase.messaging.reporting.MessagingClientEventExtension:
     private static final com.google.firebase.messaging.reporting.MessagingClientEventExtension DEFAULT_INSTANCE
 com.google.android.gms.common.GooglePlayServicesManifestException:
     private final int zza
 kotlin.random.Random:
     public abstract int nextBits(int)
+com.google.android.gms.internal.firebase-auth-api.zzel:
+    private final byte[] zzf
+com.google.android.gms.internal.firebase-auth-api.zzfo:
+    final synthetic com.google.android.gms.internal.firebase-auth-api.zzfp zza
 io.grpc.internal.RetriableStream$1OptimizeDirectEntry:
     final synthetic io.grpc.internal.RetriableStream this$0
 io.grpc.okhttp.internal.Platform$Android:
@@ -25321,10 +25395,13 @@ io.grpc.internal.ManagedChannelImpl:
 okhttp3.internal.http2.Http2Stream$FramingSink:
     static final synthetic boolean $assertionsDisabled
 com.google.android.gms.auth.api.credentials.CredentialsApi
-com.google.android.gms.internal.firebase-auth-api.zzaa:
-    final synthetic com.google.android.gms.internal.firebase-auth-api.zzn zza
 io.grpc.internal.RetriableStream$1CompressorEntry:
     final synthetic io.grpc.internal.RetriableStream this$0
+com.google.android.gms.internal.firebase-auth-api.zzmd:
+    private final com.google.android.gms.internal.firebase-auth-api.zzmf zza
+    private final java.lang.String zzb
+    private final byte[] zzc
+    private final com.google.android.gms.internal.firebase-auth-api.zzmb zzd
 okhttp3.internal.http2.Http2Stream$FramingSource:
     static final synthetic boolean $assertionsDisabled
 kotlinx.coroutines.TimeoutCancellationException
@@ -25332,9 +25409,6 @@ kotlin.internal.PlatformImplementations$ReflectThrowable:
     private void <init>()
     public static final kotlin.internal.PlatformImplementations$ReflectThrowable INSTANCE
     public static final java.lang.reflect.Method getSuppressed
-com.google.android.gms.internal.firebase-auth-api.zzem:
-    public static final com.google.android.gms.internal.firebase-auth-api.zzkq zzb
-    public static final com.google.android.gms.internal.firebase-auth-api.zzkq zzc
 com.google.protobuf.FieldType:
     public boolean isList()
     public boolean isMap()
@@ -25362,12 +25436,11 @@ com.google.android.datatransport.runtime.firebase.transport.TimeWindow:
     private static final com.google.android.datatransport.runtime.firebase.transport.TimeWindow DEFAULT_INSTANCE
 io.grpc.internal.ReflectionLongAdderCounter:
     private static final java.lang.reflect.Method sumMethod
+com.google.android.gms.internal.firebase-auth-api.zzab:
+    final com.google.android.gms.internal.firebase-auth-api.zzl zzc
+com.google.android.gms.internal.firebase-auth-api.zzyh
 kotlinx.coroutines.scheduling.CoroutineScheduler:
     public static final kotlinx.coroutines.scheduling.CoroutineScheduler$Companion Companion
-com.google.android.gms.internal.firebase-auth-api.zzzk:
-    private static volatile boolean zzb
-com.google.android.gms.internal.firebase-auth-api.zzch:
-    final synthetic com.google.android.gms.internal.firebase-auth-api.zzci zza
 com.google.protobuf.MessageSchema:
     private static void storeFieldData(com.google.protobuf.FieldInfo,int[],int,java.lang.Object[])
 com.google.firebase.messaging.reporting.MessagingClientEvent:
@@ -25379,32 +25452,40 @@ com.google.android.datatransport.runtime.dagger.internal.InstanceFactory:
 com.google.android.gms.auth.api.signin.internal.zbd
 com.google.firebase.installations.FirebaseInstallationsException:
     private final com.google.firebase.installations.FirebaseInstallationsException$Status status
+com.google.android.gms.internal.firebase-auth-api.zzen:
+    private final com.google.android.gms.internal.firebase-auth-api.zzjx zza
+    private final com.google.android.gms.internal.firebase-auth-api.zzek zzb
+    private final com.google.android.gms.internal.firebase-auth-api.zzev zzc
+    private final com.google.android.gms.internal.firebase-auth-api.zzej zzd
 io.grpc.internal.ManagedChannelImpl$1ChannelCallTracerFactory:
     final synthetic io.grpc.internal.ManagedChannelImpl this$0
 com.google.android.gms.internal.firebase-auth-api.zzfq:
-    private final java.lang.Class zza
+    public static final com.google.android.gms.internal.firebase-auth-api.zzlj zzb
+    public static final com.google.android.gms.internal.firebase-auth-api.zzlj zzc
 com.google.firebase.firestore.proto.MaybeDocument$DocumentTypeCase:
     private final int value
+com.google.android.gms.internal.firebase-auth-api.zzm:
+    public static final java.nio.charset.Charset zza
+    public static final java.nio.charset.Charset zzb
+    public static final java.nio.charset.Charset zzd
+    public static final java.nio.charset.Charset zze
+    public static final java.nio.charset.Charset zzf
+com.google.android.gms.internal.firebase-auth-api.zziz
 com.google.firebase.functions.FirebaseFunctions:
     private final com.google.firebase.FirebaseApp app
 io.flutter.plugins.imagepicker.ImagePickerPlugin$ActivityState:
     final synthetic io.flutter.plugins.imagepicker.ImagePickerPlugin this$0
-com.google.android.gms.internal.firebase-auth-api.zzca:
-    public static final java.nio.charset.Charset zza
-com.google.android.gms.internal.firebase-auth-api.zzdd:
-    final synthetic com.google.android.gms.internal.firebase-auth-api.zzde zza
 com.google.firebase.messaging.FirebaseMessaging:
     private final java.util.concurrent.Executor taskExecutor
 androidx.lifecycle.Lifecycle:
     java.util.concurrent.atomic.AtomicReference mInternalScopeRef
 io.grpc.internal.DelayedStream:
     static final synthetic boolean $assertionsDisabled
+com.google.android.gms.internal.firebase-auth-api.zzts:
+    private void <init>()
+    private static final java.lang.String zza
 io.grpc.internal.RetriableStream$1MaxInboundMessageSizeEntry:
     final synthetic io.grpc.internal.RetriableStream this$0
-com.google.android.gms.internal.firebase-auth-api.zzjv
-com.google.android.gms.internal.firebase-auth-api.zzvy:
-    private static final java.lang.String zza
-    private static final com.google.android.gms.common.logging.Logger zzb
 com.google.common.io.BaseEncoding:
     private static final com.google.common.io.BaseEncoding BASE64_URL
     private static final com.google.common.io.BaseEncoding BASE32
@@ -25416,19 +25497,16 @@ com.google.android.gms.common.zzm:
     private static final java.lang.Object zzf
 io.grpc.Context$ExecutableListener:
     void deliver()
+com.google.android.gms.internal.firebase-auth-api.zznb:
+    private static final java.util.regex.Pattern zza
+    private static final java.util.regex.Pattern zzb
+com.google.android.gms.internal.firebase-auth-api.zzyb
 com.google.firestore.v1.Precondition$ConditionTypeCase:
     private final int value
 com.google.android.gms.common.internal.zzt:
     private static final android.net.Uri zzb
 com.google.firebase.storage.FirebaseStorage$1:
     final synthetic com.google.firebase.storage.FirebaseStorage this$0
-com.google.android.gms.internal.firebase-auth-api.zzcb:
-    public static final com.google.android.gms.internal.firebase-auth-api.zzlu zzd
-    public static final com.google.android.gms.internal.firebase-auth-api.zzlu zze
-com.google.android.gms.internal.firebase-auth-api.zzeh:
-    public static final com.google.android.gms.internal.firebase-auth-api.zzlu zza
-    public static final com.google.android.gms.internal.firebase-auth-api.zzlu zzb
-    public static final com.google.android.gms.internal.firebase-auth-api.zzlu zzc
 com.google.android.gms.internal.safetynet.zzy
 com.mr.flutter.plugin.filepicker.FilePickerPlugin$LifeCycleObserver:
     final synthetic com.mr.flutter.plugin.filepicker.FilePickerPlugin this$0
@@ -25438,25 +25516,13 @@ androidx.core.app.NotificationManagerCompat:
     private static final java.lang.Object sLock
 io.grpc.internal.DelayedClientCall$1DrainListenerRunnable:
     final synthetic io.grpc.internal.DelayedClientCall this$0
-com.google.android.gms.internal.firebase-auth-api.zzjw:
-    private static final com.google.android.gms.internal.firebase-auth-api.zzaaa zza
 io.flutter.plugin.editing.TextInputPlugin$2:
     final synthetic io.flutter.plugin.editing.TextInputPlugin this$0
 com.google.common.base.Platform:
     private static final java.util.logging.Logger logger
     private static final com.google.common.base.PatternCompiler patternCompiler
-com.google.android.gms.internal.firebase-auth-api.zzvz:
-    private java.lang.String zzb
-    private java.lang.String zzc
 com.google.firebase.firestore.model.FieldIndex:
     public static final java.util.Comparator SEMANTIC_COMPARATOR
-com.google.android.gms.internal.firebase-auth-api.zzna
-com.google.android.gms.internal.firebase-auth-api.zzo:
-    public static final java.nio.charset.Charset zza
-    public static final java.nio.charset.Charset zzb
-    public static final java.nio.charset.Charset zzd
-    public static final java.nio.charset.Charset zze
-    public static final java.nio.charset.Charset zzf
 com.google.android.gms.common.util.CrashUtils:
     private static final java.lang.String[] zza
 com.google.android.datatransport.runtime.firebase.transport.StorageMetrics:
@@ -25467,21 +25533,18 @@ com.google.android.gms.auth.api.signin.GoogleSignInOptions:
     private java.util.Map zaq
 io.grpc.internal.ManagedChannelImpl$1PanicSubchannelPicker:
     final synthetic io.grpc.internal.ManagedChannelImpl this$0
-com.google.android.gms.internal.firebase-auth-api.zzcc:
-    public static final com.google.android.gms.internal.firebase-auth-api.zzkq zzb
-    public static final com.google.android.gms.internal.firebase-auth-api.zzkq zzc
-    public static final com.google.android.gms.internal.firebase-auth-api.zzkq zzd
-    public static final com.google.android.gms.internal.firebase-auth-api.zzkq zzf
-    public static final com.google.android.gms.internal.firebase-auth-api.zzkq zzg
-    public static final com.google.android.gms.internal.firebase-auth-api.zzkq zzh
+com.google.android.gms.internal.firebase-auth-api.zzzf:
+    private final com.google.android.gms.internal.firebase-auth-api.zzzv zzab
+    private final java.lang.Class zzad
 com.google.android.datatransport.runtime.firebase.transport.ClientMetrics:
     private static final com.google.android.datatransport.runtime.firebase.transport.ClientMetrics DEFAULT_INSTANCE
 io.grpc.Context$CancellableContext:
     public boolean cancel(java.lang.Throwable)
 okhttp3.internal.http1.Http1Codec$FixedLengthSource:
     final synthetic okhttp3.internal.http1.Http1Codec this$0
-com.google.android.gms.internal.firebase-auth-api.zzql:
-    final synthetic com.google.android.gms.internal.firebase-auth-api.zzrx zzf
+com.google.android.gms.internal.firebase-auth-api.zzaau:
+    private final com.google.android.gms.internal.firebase-auth-api.zzaaw zzq
+com.google.android.gms.internal.firebase-auth-api.zziu
 io.grpc.NameResolver$1:
     final synthetic io.grpc.NameResolver this$0
 io.perfmark.Tag:
@@ -25503,10 +25566,10 @@ com.google.android.gms.common.api.internal.BaseImplementation$ApiMethodImpl:
     private final com.google.android.gms.common.api.Api mApi
 io.grpc.internal.AbstractStream$TransportState:
     private final io.grpc.internal.StatsTraceContext statsTraceCtx
-com.google.android.gms.internal.firebase-auth-api.zzdg:
-    final synthetic com.google.android.gms.internal.firebase-auth-api.zzdh zza
 kotlinx.coroutines.android.HandlerDispatcherKt:
     public static final kotlinx.coroutines.android.HandlerDispatcher Main
+com.google.android.gms.internal.firebase-auth-api.zziv:
+    private static final com.google.android.gms.internal.firebase-auth-api.zzzp zza
 com.google.firestore.v1.StructuredQuery$UnaryFilter$Operator$1
 okhttp3.internal.http2.Hpack$Writer:
     int headerTableSizeSetting
@@ -25528,6 +25591,7 @@ io.grpc.internal.KeepAliveManager:
     private static final long MIN_KEEPALIVE_TIMEOUT_NANOS
 io.grpc.internal.JndiResourceResolverFactory$JndiRecordFetcher:
     static final synthetic boolean $assertionsDisabled
+com.google.android.gms.internal.firebase-auth-api.zzt
 com.google.firestore.v1.StructuredQuery$Direction:
     private static final com.google.protobuf.Internal$EnumLiteMap internalValueMap
 com.google.common.base.Splitter$1:
@@ -25542,8 +25606,6 @@ io.flutter.plugins.webviewflutter.DisplayListenerProxy$1:
     final synthetic io.flutter.plugins.webviewflutter.DisplayListenerProxy this$0
 io.grpc.internal.DelayedClientTransport$2:
     final synthetic io.grpc.internal.DelayedClientTransport this$0
-com.google.android.gms.internal.firebase-auth-api.zzed:
-    final synthetic com.google.android.gms.internal.firebase-auth-api.zzee zza
 com.google.firebase.storage.FirebaseStorage:
     static final synthetic boolean $assertionsDisabled
 com.google.android.datatransport.runtime.dagger.internal.MemoizedSentinel
@@ -25557,6 +25619,9 @@ com.google.android.gms.auth.api.Auth:
     public static final com.google.android.gms.auth.api.signin.GoogleSignInApi GoogleSignInApi
 com.google.firestore.admin.v1.Index$IndexField$Order:
     private static final com.google.protobuf.Internal$EnumLiteMap internalValueMap
+com.google.android.gms.internal.firebase-auth-api.zzwy:
+    private java.lang.String zzc
+    private java.lang.String zzd
 com.google.firebase.functions.FirebaseContextProvider:
     private static synthetic void lambda$new$0(com.google.firebase.appcheck.AppCheckTokenResult)
     private final java.lang.String TAG
@@ -25576,10 +25641,13 @@ io.grpc.InternalChannelz$Tls:
     public final java.lang.String cipherSuiteStandardName
     public final java.security.cert.Certificate localCert
     public final java.security.cert.Certificate remoteCert
+com.google.android.gms.internal.firebase-auth-api.zzec:
+    final com.google.android.gms.internal.firebase-auth-api.zzbm zza
 io.grpc.internal.ApplicationThreadDeframer$3:
     final synthetic io.grpc.internal.ApplicationThreadDeframer this$0
-com.google.android.gms.internal.firebase-auth-api.zzfh:
-    private final com.google.android.gms.internal.firebase-auth-api.zzbi zzc
+com.google.android.gms.internal.firebase-auth-api.zzee:
+    public static final com.google.android.gms.internal.firebase-auth-api.zzkf zzb
+    public static final com.google.android.gms.internal.firebase-auth-api.zzkf zzc
 com.google.android.gms.safetynet.SafetyNetApi
 com.google.protobuf.ByteString$2
 com.google.android.gms.internal.auth.zzft:
@@ -25594,13 +25662,13 @@ kotlin.KotlinVersionCurrentValue:
     public static final kotlin.KotlinVersionCurrentValue INSTANCE
 androidx.exifinterface.media.ExifInterface$1:
     final synthetic androidx.exifinterface.media.ExifInterface this$0
-com.google.android.gms.internal.firebase-auth-api.zzv
+com.google.android.gms.internal.firebase-auth-api.zzv:
+    private static final java.util.logging.Logger zza
+    private static final com.google.android.gms.internal.firebase-auth-api.zzu zzb
 kotlinx.coroutines.internal.AtomicKt:
     public static final java.lang.Object RETRY_ATOMIC
 kotlinx.coroutines.channels.AbstractSendChannel:
     private static final synthetic java.util.concurrent.atomic.AtomicReferenceFieldUpdater onCloseHandler$FU
-com.google.android.gms.internal.firebase-auth-api.zzut:
-    com.google.android.gms.common.api.Status zzu
 com.google.firebase.auth.ActionCodeUrl:
     private final java.lang.String zzb
     private final java.lang.String zze
@@ -25621,8 +25689,11 @@ com.google.firebase.firestore.util.CustomClassMapper$BeanMapper:
 com.google.firestore.admin.v1.Index$IndexField$Order$1
 com.google.firestore.v1.DocumentTransform$FieldTransform$ServerValue:
     private static final com.google.protobuf.Internal$EnumLiteMap internalValueMap
+com.google.android.gms.internal.firebase-auth-api.zzfi:
+    private final java.lang.Class zza
 kotlinx.coroutines.ExecutorCoroutineDispatcher:
     public static final kotlinx.coroutines.ExecutorCoroutineDispatcher$Key Key
+com.google.android.gms.internal.firebase-auth-api.zzu
 okhttp3.internal.http2.Http2Connection:
     static final synthetic boolean $assertionsDisabled
 io.flutter.plugins.googlesignin.BackgroundTaskRunner$2:
@@ -25655,16 +25726,16 @@ com.google.firestore.v1.Value$ValueTypeCase:
     private final int value
 io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingPlugin$2:
     final synthetic io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingPlugin this$0
-com.google.android.gms.internal.firebase-auth-api.zzwt:
-    private java.lang.String zza
-    private java.lang.String zzb
-    private java.lang.String zzc
-com.google.android.gms.internal.firebase-auth-api.zzcz:
-    final synthetic com.google.android.gms.internal.firebase-auth-api.zzda zza
 androidx.arch.core.executor.DefaultTaskExecutor$1:
     final synthetic androidx.arch.core.executor.DefaultTaskExecutor this$0
 io.grpc.internal.RetriableStream$1RequestEntry:
     final synthetic io.grpc.internal.RetriableStream this$0
+com.google.android.gms.internal.firebase-auth-api.zzyz:
+    private static volatile boolean zzb
+com.google.android.gms.internal.firebase-auth-api.zzy:
+    final synthetic com.google.android.gms.internal.firebase-auth-api.zzl zza
+com.google.android.gms.internal.firebase-auth-api.zzqa:
+    final synthetic com.google.android.gms.internal.firebase-auth-api.zzrm zzf
 okhttp3.internal.Util:
     public static final okhttp3.RequestBody EMPTY_REQUEST
     public static final java.nio.charset.Charset ISO_8859_1
@@ -25683,20 +25754,10 @@ io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack$FlutterMutator:
     final synthetic io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack this$0
 com.google.android.datatransport.cct.internal.QosTier:
     private final int value
-com.google.android.gms.internal.firebase-auth-api.zzil
 io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingPlugin$1:
     final synthetic io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingPlugin this$0
-com.google.android.gms.internal.firebase-auth-api.zzwu:
-    private java.lang.String zze
-com.google.android.gms.internal.firebase-auth-api.zzw
-com.google.android.gms.internal.firebase-auth-api.zzxx:
-    private java.lang.String zzb
-    private java.lang.String zzc
-    private java.lang.String zzd
-    private java.lang.String zzf
 com.google.android.gms.internal.firebase-auth-api.zzx:
-    private static final java.util.logging.Logger zza
-    private static final com.google.android.gms.internal.firebase-auth-api.zzw zzb
+    final synthetic com.google.android.gms.internal.firebase-auth-api.zzy zza
 io.grpc.internal.DelayedStream$DelayedStreamListener:
     static final synthetic boolean $assertionsDisabled
 androidx.fragment.app.FragmentTransitionCompat21$1:
@@ -25715,8 +25776,6 @@ com.google.firebase.firestore.util.AsyncQueue$SynchronizedShutdownAwareExecutor$
     final synthetic com.google.firebase.firestore.util.AsyncQueue val$this$0
 com.google.android.gms.auth.zze:
     public static final com.google.android.gms.common.Feature[] zzj
-com.google.android.gms.internal.firebase-auth-api.zzim:
-    private static final com.google.android.gms.internal.firebase-auth-api.zzaaa zza
 okhttp3.CacheControl:
     public static final okhttp3.CacheControl FORCE_NETWORK
     public static final okhttp3.CacheControl FORCE_CACHE
@@ -25731,8 +25790,6 @@ com.google.android.gms.common.util.WorkSourceUtil:
     private static final java.lang.reflect.Method zzg
     private static final java.lang.reflect.Method zzh
     private static final java.lang.reflect.Method zzi
-com.google.android.gms.internal.firebase-auth-api.zzby:
-    final synthetic com.google.android.gms.internal.firebase-auth-api.zzfo zza
 com.google.protobuf.UninitializedMessageException:
     private final java.util.List missingFields
 okio.Base64:
@@ -25752,8 +25809,6 @@ com.google.firebase.storage.StorageReference:
 com.google.firestore.v1.DocumentTransform$FieldTransform$ServerValue$1
 io.flutter.FlutterInjector$Builder$NamedThreadFactory:
     final synthetic io.flutter.FlutterInjector$Builder this$0
-com.google.firebase.firestore.TransactionOptions:
-    static final com.google.firebase.firestore.TransactionOptions DEFAULT
 io.grpc.internal.DelayedClientCall$DelayedListener:
     static final synthetic boolean $assertionsDisabled
 com.google.protobuf.UnsafeUtil:
@@ -25771,12 +25826,14 @@ com.google.protobuf.UnsafeUtil:
     private static final long OBJECT_ARRAY_BASE_OFFSET
     private static final long OBJECT_ARRAY_INDEX_SCALE
     private static final int BYTE_ARRAY_ALIGNMENT
-com.google.android.gms.internal.firebase-auth-api.zzmz
+com.google.android.gms.internal.firebase-auth-api.zzww:
+    private java.lang.String zzc
+    private java.lang.Boolean zzd
+    private java.lang.String zze
+    private java.lang.String zzf
 com.google.firebase.functions.FirebaseFunctionsException$Code:
     private final int value
     private static final android.util.SparseArray STATUS_LIST
-com.google.android.gms.internal.firebase-auth-api.zzxz:
-    private java.lang.String zze
 androidx.core.view.ViewCompat:
     private static synthetic androidx.core.view.ContentInfoCompat lambda$static$0(androidx.core.view.ContentInfoCompat)
     private static final java.util.concurrent.atomic.AtomicInteger sNextGeneratedId
@@ -25785,10 +25842,8 @@ androidx.core.view.ViewCompat:
     private static final int[] ACCESSIBILITY_ACTIONS_RESOURCE_IDS
     private static final androidx.core.view.OnReceiveContentViewBehavior NO_OP_ON_RECEIVE_CONTENT_VIEW_BEHAVIOR
     private static final androidx.core.view.ViewCompat$AccessibilityPaneVisibilityManager sAccessibilityPaneVisibilityManager
-com.google.android.gms.internal.firebase-auth-api.zzz:
-    final synthetic com.google.android.gms.internal.firebase-auth-api.zzaa zza
 com.google.android.gms.internal.firebase-auth-api.zzbz:
-    private static final java.util.concurrent.ConcurrentMap zze
+    final synthetic com.google.android.gms.internal.firebase-auth-api.zzca zza
 io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundExecutor$1:
     final synthetic io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundExecutor this$0
 io.grpc.internal.DelayedClientTransport$3:
@@ -25797,12 +25852,11 @@ kotlin.KotlinVersion:
     public static final kotlin.KotlinVersion$Companion Companion
 io.grpc.ClientInterceptors:
     private static final io.grpc.ClientCall NOOP_CALL
-com.google.android.gms.internal.firebase-auth-api.zzkm
-com.google.android.gms.internal.firebase-auth-api.zzxs:
-    private java.lang.String zzf
-    private java.lang.String zzh
-    private java.lang.String zzi
+com.google.android.gms.internal.firebase-auth-api.zzbs:
+    public static final java.nio.charset.Charset zza
 com.google.firestore.v1.StructuredQuery$CompositeFilter$Operator$1
+com.google.android.gms.internal.firebase-auth-api.zzcv:
+    final synthetic com.google.android.gms.internal.firebase-auth-api.zzcw zza
 com.google.firebase.messaging.RemoteMessage$Notification:
     private final int[] lightSettings
     private final java.lang.Long eventTime
@@ -25819,6 +25873,8 @@ com.google.common.base.Charsets:
     public static final java.nio.charset.Charset UTF_16
 io.grpc.internal.RetriableStream$1HalfCloseEntry:
     final synthetic io.grpc.internal.RetriableStream this$0
+com.google.android.gms.internal.firebase-auth-api.zzzy:
+    public static final com.google.android.gms.internal.firebase-auth-api.zzzz zza
 com.google.firebase.iid.SyncTask:
     java.util.concurrent.ExecutorService processorExecutor
 com.google.android.gms.internal.auth.zzex
@@ -25834,25 +25890,24 @@ com.google.android.gms.common.api.internal.BasePendingResult:
 kotlinx.coroutines.internal.LockFreeLinkedListKt:
     private static final java.lang.Object LIST_EMPTY
 com.google.android.gms.internal.auth.zzdu
+com.google.android.gms.internal.firebase-auth-api.zzui:
+    com.google.android.gms.common.api.Status zzu
 androidx.core.app.NotificationCompatJellybean:
     private static final java.lang.Object sActionsLock
 io.grpc.okhttp.internal.ConnectionSpec:
     public static final io.grpc.okhttp.internal.ConnectionSpec COMPATIBLE_TLS
     public static final io.grpc.okhttp.internal.ConnectionSpec CLEARTEXT
-com.google.android.gms.internal.firebase-auth-api.zzkn:
-    private static final com.google.android.gms.internal.firebase-auth-api.zzaaa zza
+com.google.android.gms.internal.firebase-auth-api.zzvn:
+    private static final java.lang.String zza
+    private static final com.google.android.gms.common.logging.Logger zzb
 kotlin.KotlinVersion$Companion
-com.google.android.gms.internal.firebase-auth-api.zzlq
+com.google.android.gms.internal.firebase-auth-api.zzbt:
+    public static final com.google.android.gms.internal.firebase-auth-api.zzlj zzd
+    public static final com.google.android.gms.internal.firebase-auth-api.zzlj zze
 io.flutter.embedding.android.DrawableSplashScreen$1:
     final synthetic io.flutter.embedding.android.DrawableSplashScreen this$0
-com.google.android.gms.internal.firebase-auth-api.zzmt:
-    public static final com.google.android.gms.internal.firebase-auth-api.zzmt zzc
-    public static final com.google.android.gms.internal.firebase-auth-api.zzmt zzd
-com.google.android.gms.internal.firebase-auth-api.zzcw:
-    final synthetic com.google.android.gms.internal.firebase-auth-api.zzcx zza
 kotlin.random.Random$Default:
     public int nextBits(int)
-com.google.android.gms.internal.firebase-auth-api.zzzz
 okhttp3.CipherSuite:
     public static final okhttp3.CipherSuite TLS_RSA_WITH_NULL_MD5
     public static final okhttp3.CipherSuite TLS_RSA_WITH_NULL_SHA
@@ -25960,8 +26015,9 @@ io.grpc.Attributes$Builder:
 com.google.firebase.storage.StorageReference$3:
     final synthetic com.google.firebase.storage.StorageReference this$0
 com.google.android.gms.internal.firebase-auth-api.zzdz:
-    public static final com.google.android.gms.internal.firebase-auth-api.zzlu zzb
-    public static final com.google.android.gms.internal.firebase-auth-api.zzlu zzc
+    public static final com.google.android.gms.internal.firebase-auth-api.zzlj zza
+    public static final com.google.android.gms.internal.firebase-auth-api.zzlj zzb
+    public static final com.google.android.gms.internal.firebase-auth-api.zzlj zzc
 io.grpc.internal.ApplicationThreadDeframer$CloseableInitializingMessageProducer:
     final synthetic io.grpc.internal.ApplicationThreadDeframer this$0
 com.google.android.gms.internal.auth.zzdt
@@ -25982,12 +26038,13 @@ androidx.core.app.NotificationCompat$BubbleMetadata:
     public boolean getAutoExpandBubble()
     public boolean isNotificationSuppressed()
 com.google.android.gms.internal.firebase-auth-api.zzjl:
-    private static final com.google.android.gms.internal.firebase-auth-api.zzaaa zza
+    private static final com.google.android.gms.internal.firebase-auth-api.zzzp zza
 io.flutter.plugins.firebase.messaging.JobIntentService$ComponentNameWithWakeful:
     private android.content.ComponentName componentName
     private boolean useWakefulService
-com.google.android.gms.internal.firebase-auth-api.zzlr:
-    private static final com.google.android.gms.internal.firebase-auth-api.zzaaa zza
+com.google.android.gms.internal.firebase-auth-api.zzvo:
+    private java.lang.String zzb
+    private java.lang.String zzc
 io.grpc.Metadata$1:
     void <init>()
 okhttp3.ConnectionPool:
@@ -25996,8 +26053,12 @@ com.google.android.gms.common.api.internal.NonGmsServiceBrokerClient:
     private java.lang.String zal
     private static final java.lang.String zaa
 com.google.android.gms.internal.firebase-auth-api.zzbu:
-    private final com.google.android.gms.internal.firebase-auth-api.zzbo zzb
-    private final com.google.android.gms.internal.firebase-auth-api.zzge zzd
+    public static final com.google.android.gms.internal.firebase-auth-api.zzkf zzb
+    public static final com.google.android.gms.internal.firebase-auth-api.zzkf zzc
+    public static final com.google.android.gms.internal.firebase-auth-api.zzkf zzd
+    public static final com.google.android.gms.internal.firebase-auth-api.zzkf zzf
+    public static final com.google.android.gms.internal.firebase-auth-api.zzkf zzg
+    public static final com.google.android.gms.internal.firebase-auth-api.zzkf zzh
 io.grpc.StatusException:
     private final io.grpc.Metadata trailers
 io.grpc.internal.RetriableStream$1FlushEntry:
@@ -26045,6 +26106,8 @@ androidx.fragment.app.FragmentTransitionCompat21$4:
     final synthetic androidx.fragment.app.FragmentTransitionCompat21 this$0
 com.google.firestore.v1.Write$OperationCase:
     private final int value
+com.google.android.gms.internal.firebase-auth-api.zzcy:
+    final synthetic com.google.android.gms.internal.firebase-auth-api.zzcz zza
 com.google.android.gms.internal.auth.zzey
 okhttp3.ConnectionSpec:
     public static final okhttp3.ConnectionSpec RESTRICTED_TLS
@@ -26056,6 +26119,8 @@ io.grpc.okhttp.internal.Util:
     public static final byte[] EMPTY_BYTE_ARRAY
 com.google.protobuf.JavaType:
     private final java.lang.Class type
+com.google.android.gms.internal.firebase-auth-api.zzcr:
+    final synthetic com.google.android.gms.internal.firebase-auth-api.zzcs zza
 io.grpc.internal.CallCredentialsApplyingTransportFactory$CallCredentialsApplyingTransport$2:
     final synthetic io.grpc.MethodDescriptor val$method
     final synthetic io.grpc.CallOptions val$callOptions
@@ -26071,6 +26136,8 @@ io.perfmark.Link:
     final long linkId
 com.google.android.gms.internal.auth.zzc:
     private static final java.lang.ClassLoader zza
+com.google.android.gms.internal.firebase-auth-api.zzib:
+    private static final com.google.android.gms.internal.firebase-auth-api.zzzp zza
 androidx.fragment.app.FragmentTransitionImpl$1:
     final synthetic androidx.fragment.app.FragmentTransitionImpl this$0
 androidx.lifecycle.ViewModel:
@@ -26080,20 +26147,20 @@ com.google.common.util.concurrent.AbstractFuture$Failure:
 io.flutter.plugins.firebase.auth.FlutterFirebaseAuthPlugin$1:
     final synthetic io.flutter.plugins.firebase.auth.FlutterFirebaseAuthPlugin this$0
 com.google.android.gms.dynamite.zzl
-com.google.android.gms.internal.firebase-auth-api.zzcq:
-    final synthetic com.google.android.gms.internal.firebase-auth-api.zzcr zza
 com.google.firebase.storage.StreamDownloadTask$TaskSnapshot:
     private final long mBytesDownloaded
     final synthetic com.google.firebase.storage.StreamDownloadTask this$0
 com.google.protobuf.CodedInputStream:
     private boolean shouldDiscardUnknownFields
-com.google.android.gms.internal.firebase-auth-api.zzys
+com.google.android.gms.internal.firebase-auth-api.zzmp
 io.grpc.internal.CallTracer:
     private volatile long lastCallStartedNanos
     static final io.grpc.internal.CallTracer$Factory DEFAULT_FACTORY
+com.google.android.gms.internal.firebase-auth-api.zzzv:
+    private final java.lang.Class zzl
 androidx.arch.core.executor.ArchTaskExecutor$2
-com.google.android.gms.internal.firebase-auth-api.zzey:
-    final synthetic com.google.android.gms.internal.firebase-auth-api.zzez zza
+com.google.android.gms.internal.firebase-auth-api.zzdv:
+    final synthetic com.google.android.gms.internal.firebase-auth-api.zzdw zza
 com.google.firebase.storage.network.ResumableUploadCancelRequest:
     public static boolean cancelCalled
 com.google.protobuf.OneofInfo
@@ -26101,7 +26168,6 @@ com.google.android.gms.common.logging.Logger:
     private final com.google.android.gms.common.internal.GmsLogger zzc
 com.google.android.datatransport.cct.CCTDestination:
     public static final com.google.android.datatransport.cct.CCTDestination INSTANCE
-com.google.android.gms.internal.firebase-auth-api.zzjf
 okhttp3.internal.http2.Http2Stream:
     static final synthetic boolean $assertionsDisabled
 okhttp3.internal.connection.StreamAllocation:
@@ -26109,53 +26175,42 @@ okhttp3.internal.connection.StreamAllocation:
 okhttp3.internal.http.HttpHeaders:
     private static final okio.ByteString QUOTED_STRING_DELIMITERS
     private static final okio.ByteString TOKEN_DELIMITERS
-com.google.android.gms.internal.firebase-auth-api.zzaaa
 com.google.firebase.iid.InstanceIdResultImpl:
     private final java.lang.String id
 androidx.fragment.app.FragmentTransitionImpl$2:
     final synthetic androidx.fragment.app.FragmentTransitionImpl this$0
+com.google.android.gms.internal.firebase-auth-api.zzxo:
+    private java.lang.String zze
 com.google.firestore.v1.ListenResponse$ResponseTypeCase:
     private final int value
 com.tekartik.sqflite.operation.BatchOperation$BatchOperationResult:
     final synthetic com.tekartik.sqflite.operation.BatchOperation this$0
-com.google.android.gms.internal.firebase-auth-api.zzbo:
-    private final com.google.android.gms.internal.firebase-auth-api.zzaw zzc
 androidx.fragment.app.Fragment$1
-com.google.android.gms.internal.firebase-auth-api.zzmo:
-    private final com.google.android.gms.internal.firebase-auth-api.zzmq zza
-    private final java.lang.String zzb
-    private final byte[] zzc
-    private final com.google.android.gms.internal.firebase-auth-api.zzmm zzd
+com.google.android.gms.internal.firebase-auth-api.zzmo
 com.google.firebase.auth.internal.zzn:
     private final com.google.firebase.auth.MultiFactorInfo zza
 com.google.protobuf.LazyStringArrayList:
     public static final com.google.protobuf.LazyStringList EMPTY
+com.google.android.gms.internal.firebase-auth-api.zzbq:
+    final synthetic com.google.android.gms.internal.firebase-auth-api.zzfg zza
 com.google.android.gms.common.internal.ICancelToken
-com.google.android.gms.internal.firebase-auth-api.zzmq
 com.google.firebase.storage.StorageException:
     static final synthetic boolean $assertionsDisabled
-com.google.android.gms.internal.firebase-auth-api.zzct:
-    final synthetic com.google.android.gms.internal.firebase-auth-api.zzcu zza
-com.google.android.gms.internal.firebase-auth-api.zzyt
 com.google.android.gms.internal.auth-api.zbl
+com.google.android.gms.internal.firebase-auth-api.zzzw
 com.google.firebase.storage.StorageReference$2:
     final synthetic com.google.firebase.storage.StorageReference this$0
+com.google.android.gms.internal.firebase-auth-api.zzez:
+    private final com.google.android.gms.internal.firebase-auth-api.zzbf zzc
 io.grpc.internal.OobChannel:
     private volatile boolean shutdown
     private static final java.util.logging.Logger log
 okhttp3.internal.http.RetryAndFollowUpInterceptor:
     private final boolean forWebSocket
-com.google.android.gms.internal.firebase-auth-api.zzaad:
-    static final java.nio.charset.Charset zza
-    static final java.nio.charset.Charset zzc
-    public static final java.nio.ByteBuffer zze
-    public static final com.google.android.gms.internal.firebase-auth-api.zzyy zzf
 com.google.protobuf.BinaryReader$SafeHeapReader:
     private final int initialPos
 com.google.android.datatransport.cct.internal.ClientInfo$ClientType:
     private final int value
-com.google.android.gms.internal.firebase-auth-api.zzjg:
-    private static final com.google.android.gms.internal.firebase-auth-api.zzaaa zza
 com.tekartik.sqflite.operation.MethodCallOperation$Result:
     final synthetic com.tekartik.sqflite.operation.MethodCallOperation this$0
 io.grpc.InternalChannelz$Security:
@@ -26171,29 +26226,26 @@ com.google.firebase.encoders.Encoder
 com.google.android.gms.common.data.DataHolder:
     int zad
     private static final com.google.android.gms.common.data.DataHolder$Builder zaf
-com.google.android.gms.internal.firebase-auth-api.zzwo:
-    private static final java.lang.String zza
 com.google.android.gms.common.util.Strings:
     private static final java.util.regex.Pattern zza
 com.google.android.gms.common.api.Status:
     public static final com.google.android.gms.common.api.Status RESULT_DEAD_CLIENT
     public static final com.google.android.gms.common.api.Status zza
+com.google.android.gms.internal.firebase-auth-api.zzbr:
+    private static final java.util.concurrent.ConcurrentMap zze
 androidx.arch.core.executor.DefaultTaskExecutor:
     public void executeOnDiskIO(java.lang.Runnable)
 io.grpc.okhttp.internal.framed.Hpack$Writer:
     int headerTableSizeSetting
 com.google.firestore.v1.BatchGetDocumentsResponse$ResultCase:
     private final int value
-com.google.android.gms.internal.firebase-auth-api.zzyu:
-    private static final java.util.Comparator zza
-    private static final com.google.android.gms.internal.firebase-auth-api.zzyt zzd
+com.google.android.gms.internal.firebase-auth-api.zzzx:
+    private static final com.google.android.gms.internal.firebase-auth-api.zzyz zzb
 com.google.firebase.storage.StorageReference$1:
     final synthetic com.google.firebase.storage.StorageReference this$0
     static final synthetic boolean $assertionsDisabled
 io.flutter.embedding.engine.loader.FlutterLoader$InitResult:
     final java.lang.String dataDirPath
-com.google.android.gms.internal.firebase-auth-api.zzdx:
-    final synthetic com.google.android.gms.internal.firebase-auth-api.zzdy zza
 io.grpc.stub.ClientCalls:
     private static final java.util.logging.Logger logger
     static final synthetic boolean $assertionsDisabled
@@ -26205,8 +26257,6 @@ com.google.firestore.v1.StructuredQuery$FieldFilter$Operator:
     private static final com.google.protobuf.Internal$EnumLiteMap internalValueMap
 com.google.android.gms.internal.auth.zzcw:
     final synthetic com.google.android.gms.internal.auth.zzhl zza
-com.google.android.gms.internal.firebase-auth-api.zzabf:
-    private final com.google.android.gms.internal.firebase-auth-api.zzabh zzq
 com.google.android.gms.common.api.internal.zaag:
     private final java.lang.String zaa
 androidx.core.content.res.ResourcesCompat:
@@ -26218,14 +26268,14 @@ com.google.android.gms.internal.common.zzc:
 io.grpc.internal.CallTracer$1
 io.grpc.internal.ManagedChannelImpl$ConfigSelectingClientCall$1CloseInContext:
     final synthetic io.grpc.internal.ManagedChannelImpl$ConfigSelectingClientCall this$0
-com.google.android.gms.internal.firebase-auth-api.zzfw:
-    final synthetic com.google.android.gms.internal.firebase-auth-api.zzfx zza
 androidx.core.app.ComponentActivity:
     private androidx.collection.SimpleArrayMap mExtraDataMap
 kotlinx.coroutines.scheduling.TasksKt:
     public static final int BLOCKING_DEFAULT_PARALLELISM
 io.flutter.plugin.editing.ListenableEditingState$1:
     final synthetic io.flutter.plugin.editing.ListenableEditingState this$0
+com.google.android.gms.internal.firebase-auth-api.zzja:
+    private static final com.google.android.gms.internal.firebase-auth-api.zzzp zza
 com.google.firestore.v1.TargetChange$TargetChangeType$1
 io.grpc.internal.RetriableStream$1DeadlineEntry:
     final synthetic io.grpc.internal.RetriableStream this$0
@@ -26233,12 +26283,11 @@ com.google.android.gms.internal.auth.zzcz:
     private static volatile boolean zzf
     private static final java.util.concurrent.atomic.AtomicReference zzg
     private static final com.google.android.gms.internal.auth.zzdb zzh
+com.google.android.gms.internal.firebase-auth-api.zzlg:
+    private static final com.google.android.gms.internal.firebase-auth-api.zzzp zza
 io.grpc.Metadata$BinaryMarshaller
 io.grpc.okhttp.OkHttpClientTransport$4$1:
     final synthetic io.grpc.okhttp.OkHttpClientTransport$4 this$1
-com.google.android.gms.internal.firebase-auth-api.zzxj:
-    private java.lang.String zzc
-    private java.lang.String zzd
 io.flutter.plugins.webviewflutter.ThreadedInputConnectionProxyAdapterView:
     final android.view.View containerView
     private boolean triggerDelayed
@@ -26250,13 +26299,12 @@ com.google.firebase.firestore.remote.Datastore:
 com.google.android.gms.dynamite.zzh
 kotlin.jvm.internal.PackageReference:
     private final java.lang.String moduleName
-com.google.android.gms.internal.firebase-auth-api.zznm:
-    private static final java.util.regex.Pattern zza
-    private static final java.util.regex.Pattern zzb
-com.google.android.gms.internal.firebase-auth-api.zzym
 com.google.android.gms.auth.api.AuthProxyOptions:
     synthetic void <init>(android.os.Bundle,com.google.android.gms.auth.api.zzb)
     public static final com.google.android.gms.auth.api.AuthProxyOptions zza
+com.google.android.gms.internal.firebase-auth-api.zzzp
+com.google.android.gms.internal.firebase-auth-api.zzdp:
+    final synthetic com.google.android.gms.internal.firebase-auth-api.zzdq zza
 okhttp3.internal.http1.Http1Codec$UnknownLengthSource:
     final synthetic okhttp3.internal.http1.Http1Codec this$0
 androidx.collection.ContainerHelpers:
@@ -26283,38 +26331,22 @@ kotlinx.coroutines.scheduling.CoroutineScheduler$Companion
 com.google.protobuf.Internal:
     static final java.nio.charset.Charset ISO_8859_1
     public static final com.google.protobuf.CodedInputStream EMPTY_CODED_INPUT_STREAM
-com.google.android.gms.internal.firebase-auth-api.zzzq:
-    private final com.google.android.gms.internal.firebase-auth-api.zzaag zzab
-    private final java.lang.Class zzad
-com.google.android.gms.internal.firebase-auth-api.zzcn:
-    final synthetic com.google.android.gms.internal.firebase-auth-api.zzco zza
 io.grpc.NameResolver$ConfigOrError:
     static final synthetic boolean $assertionsDisabled
 com.google.android.gms.common.data.DataHolder$Builder:
     private final java.lang.String[] zaa
     private final java.util.ArrayList zab
     private final java.util.HashMap zac
-com.google.android.gms.internal.firebase-auth-api.zzet:
-    private final byte[] zzf
 androidx.arch.core.executor.ArchTaskExecutor$1
 com.google.firebase.storage.network.NetworkRequest:
     static final synthetic boolean $assertionsDisabled
-com.google.android.gms.internal.firebase-auth-api.zzev:
-    private final com.google.android.gms.internal.firebase-auth-api.zzki zza
-    private final com.google.android.gms.internal.firebase-auth-api.zzes zzb
-    private final com.google.android.gms.internal.firebase-auth-api.zzfd zzc
-    private final com.google.android.gms.internal.firebase-auth-api.zzer zzd
 com.google.firestore.admin.v1.Index$IndexField$ValueModeCase:
     private final int value
-com.google.android.gms.internal.firebase-auth-api.zzfy:
-    public static final com.google.android.gms.internal.firebase-auth-api.zzlu zzb
-    public static final com.google.android.gms.internal.firebase-auth-api.zzlu zzc
 com.google.android.gms.internal.safetynet.zzc:
     private static final java.lang.ClassLoader zzd
 com.google.common.base.Throwables:
     private static final java.lang.reflect.Method getStackTraceElementMethod
     private static final java.lang.reflect.Method getStackTraceDepthMethod
-com.google.android.gms.internal.firebase-auth-api.zzaah
 io.grpc.internal.JndiResourceResolverFactory$JndiResourceResolver:
     private static final java.util.regex.Pattern whitespace
     static final synthetic boolean $assertionsDisabled
@@ -26366,6 +26398,11 @@ androidx.core.R$id:
     public static final int accessibility_custom_action_7
     public static final int accessibility_custom_action_8
     public static final int accessibility_custom_action_9
+com.google.android.gms.internal.firebase-auth-api.zzwi:
+    private java.lang.String zza
+    private java.lang.String zzb
+    private java.lang.Long zzd
+    private java.lang.Long zze
 io.grpc.internal.RetriableStream$1:
     final synthetic io.grpc.internal.RetriableStream this$0
 com.squareup.okhttp.Request:
@@ -26374,6 +26411,11 @@ com.google.protobuf.LazyFieldLite:
     private static final com.google.protobuf.ExtensionRegistryLite EMPTY_REGISTRY
 com.google.firestore.v1.StructuredQuery$Filter$FilterTypeCase:
     private final int value
+com.google.android.gms.internal.firebase-auth-api.zzco:
+    final synthetic com.google.android.gms.internal.firebase-auth-api.zzcp zza
+com.google.android.gms.internal.firebase-auth-api.zzdr:
+    public static final com.google.android.gms.internal.firebase-auth-api.zzlj zzb
+    public static final com.google.android.gms.internal.firebase-auth-api.zzlj zzc
 com.google.firebase.messaging.SendException:
     private final int errorCode
 com.google.firebase.firestore.util.Util:
@@ -26387,13 +26429,9 @@ com.google.android.datatransport.runtime.firebase.transport.GlobalMetrics:
     private static final com.google.android.datatransport.runtime.firebase.transport.GlobalMetrics DEFAULT_INSTANCE
 com.google.android.datatransport.runtime.dagger.internal.DoubleCheck:
     static final synthetic boolean $assertionsDisabled
-com.google.android.gms.internal.firebase-auth-api.zzaag:
-    private final java.lang.Class zzl
+com.google.android.gms.internal.firebase-auth-api.zzia
 io.grpc.internal.RetriableStream$2:
     final synthetic io.grpc.internal.RetriableStream this$0
-com.google.android.gms.internal.firebase-auth-api.zzud:
-    private void <init>()
-    private static final java.lang.String zza
 okhttp3.internal.platform.AndroidPlatform:
     private final java.lang.Class sslParametersClass
 androidx.lifecycle.DefaultLifecycleObserver:
@@ -26403,15 +26441,29 @@ androidx.lifecycle.DefaultLifecycleObserver:
     public abstract void onPause(androidx.lifecycle.LifecycleOwner)
     public abstract void onStop(androidx.lifecycle.LifecycleOwner)
     public abstract void onDestroy(androidx.lifecycle.LifecycleOwner)
+com.google.android.gms.internal.firebase-auth-api.zzwj:
+    private java.lang.String zze
+com.google.android.gms.internal.firebase-auth-api.zzxm:
+    private java.lang.String zzb
+    private java.lang.String zzc
+    private java.lang.String zzd
+    private java.lang.String zzf
 okhttp3.internal.cache.CacheInterceptor$1:
     final synthetic okhttp3.internal.cache.CacheInterceptor this$0
 kotlin.KotlinNothingValueException
 com.google.firebase.firestore.remote.AndroidConnectivityMonitor$2:
     final synthetic com.google.firebase.firestore.remote.AndroidConnectivityMonitor this$0
 com.google.android.gms.dynamite.zzk
+com.google.android.gms.internal.firebase-auth-api.zzbm:
+    private com.google.android.gms.internal.firebase-auth-api.zzbj zzb
 io.grpc.okhttp.internal.framed.Header:
     public static final okio.ByteString TARGET_HOST
     public static final okio.ByteString VERSION
+com.google.android.gms.internal.firebase-auth-api.zzzs:
+    static final java.nio.charset.Charset zza
+    static final java.nio.charset.Charset zzc
+    public static final java.nio.ByteBuffer zze
+    public static final com.google.android.gms.internal.firebase-auth-api.zzyn zzf
 io.flutter.Log:
     private static int logLevel
     public static int ASSERT
@@ -26432,13 +26484,15 @@ io.grpc.okhttp.OkHttpClientTransport$2:
     final synthetic io.grpc.okhttp.OkHttpClientTransport this$0
 com.google.android.gms.safetynet.SafeBrowsingData:
     private static final java.lang.String TAG
-com.google.android.gms.internal.firebase-auth-api.zzaaj:
-    public static final com.google.android.gms.internal.firebase-auth-api.zzaak zza
 io.grpc.internal.RetriableStream$1AuthorityEntry:
     final synthetic io.grpc.internal.RetriableStream this$0
+com.google.android.gms.internal.firebase-auth-api.zzmf
 io.grpc.Attributes:
     static final synthetic boolean $assertionsDisabled
 kotlin.random.RandomKt
+com.google.android.gms.internal.firebase-auth-api.zzyi
+com.google.android.gms.internal.firebase-auth-api.zzci:
+    final synthetic com.google.android.gms.internal.firebase-auth-api.zzcj zza
 com.google.common.math.IntMath:
     static final byte[] maxLog10ForLeadingZeros
     static final int[] powersOf10
@@ -26466,8 +26520,6 @@ io.grpc.Context$DirectExecutor
 androidx.lifecycle.MethodCallsLogger:
     private java.util.Map mCalledMethods
 com.google.android.gms.internal.auth.zzea
-com.google.android.gms.internal.firebase-auth-api.zzaai:
-    private static final com.google.android.gms.internal.firebase-auth-api.zzzk zzb
 io.grpc.internal.ManagedChannelImpl$ChannelStreamProvider$1RetryStream:
     final synthetic io.grpc.Metadata val$headers
     final synthetic io.grpc.internal.RetryPolicy val$retryPolicy
@@ -26475,15 +26527,18 @@ io.grpc.internal.ManagedChannelImpl$ChannelStreamProvider$1RetryStream:
     final synthetic io.grpc.internal.RetriableStream$Throttle val$throttle
 com.google.firebase.heartbeatinfo.HeartBeatInfoStorage:
     private static com.google.firebase.heartbeatinfo.HeartBeatInfoStorage instance
+com.google.android.gms.internal.firebase-auth-api.zzwd:
+    private static final java.lang.String zza
 io.grpc.internal.JsonUtil:
     public void <init>()
     static final synthetic boolean $assertionsDisabled
 com.google.android.gms.common.internal.GmsClient:
     private static volatile java.util.concurrent.Executor zaa
-com.google.android.gms.internal.firebase-auth-api.zzad:
-    final com.google.android.gms.internal.firebase-auth-api.zzn zzc
 io.flutter.plugin.mouse.MouseCursorPlugin$2:
     final synthetic io.flutter.plugin.mouse.MouseCursorPlugin this$0
+com.google.android.gms.internal.firebase-auth-api.zzyj:
+    private static final java.util.Comparator zza
+    private static final com.google.android.gms.internal.firebase-auth-api.zzyi zzd
 androidx.exifinterface.media.ExifInterface:
     private boolean mModified
     public static final int[] BITS_PER_SAMPLE_GREYSCALE_1
@@ -26508,13 +26563,13 @@ com.google.firebase.firestore.bundle.BundleReader:
 io.flutter.embedding.engine.loader.FlutterApplicationInfo:
     public final java.lang.String vmSnapshotData
     public final java.lang.String isolateSnapshotData
+com.google.android.gms.internal.firebase-auth-api.zzkb
 androidx.core.content.ContextCompat:
     private static final java.lang.Object sLock
 com.google.android.gms.internal.firebase-auth-api.zzxh:
-    private java.lang.String zzc
-    private java.lang.Boolean zzd
-    private java.lang.String zze
     private java.lang.String zzf
+    private java.lang.String zzh
+    private java.lang.String zzi
 com.google.android.gms.internal.auth-api-phone.zzc:
     private static final java.lang.ClassLoader zza
 com.google.android.gms.dynamite.zzf
@@ -26523,6 +26578,8 @@ io.grpc.Context:
 com.google.android.gms.internal.auth-api.zbc:
     private static final java.lang.ClassLoader zba
 io.grpc.internal.ThreadOptimizedDeframer
+com.google.android.gms.internal.firebase-auth-api.zzeq:
+    final synthetic com.google.android.gms.internal.firebase-auth-api.zzer zza
 com.google.firebase.auth.internal.zzaw:
     final synthetic com.google.firebase.auth.internal.zzax zza
 io.flutter.plugin.platform.AccessibilityEventsDelegate:
@@ -26543,6 +26600,9 @@ androidx.loader.content.ModernAsyncTask:
     private static volatile java.util.concurrent.Executor sDefaultExecutor
 com.google.android.gms.common.internal.zzag:
     private static java.lang.String zzc
+com.google.android.gms.internal.firebase-auth-api.zzkc:
+    private static final com.google.android.gms.internal.firebase-auth-api.zzzp zza
+com.google.android.gms.internal.firebase-auth-api.zzlf
 androidx.core.view.WindowInsetsCompat:
     public static final androidx.core.view.WindowInsetsCompat CONSUMED
 com.google.android.gms.internal.auth.zzhm:
@@ -26561,16 +26621,24 @@ com.google.android.gms.internal.auth.zzhm:
 com.google.firebase.firestore.proto.Target$TargetTypeCase:
     private final int value
 com.google.android.gms.dynamite.zzg
+com.google.firebase.auth.FirebaseAuthMultiFactorException:
+    private com.google.firebase.auth.MultiFactorResolver zza
+com.google.android.gms.internal.firebase-auth-api.zzmi:
+    public static final com.google.android.gms.internal.firebase-auth-api.zzmi zzc
+    public static final com.google.android.gms.internal.firebase-auth-api.zzmi zzd
+com.google.android.gms.internal.firebase-auth-api.zzzo
 androidx.core.os.LocaleListCompat:
     private static final androidx.core.os.LocaleListCompat sEmptyLocaleList
+com.google.android.gms.internal.firebase-auth-api.zzcl:
+    final synthetic com.google.android.gms.internal.firebase-auth-api.zzcm zza
 androidx.arch.core.executor.TaskExecutor:
     public abstract void executeOnDiskIO(java.lang.Runnable)
 androidx.core.view.ViewCompat$AccessibilityViewProperty:
     private final int mContentChangeType
 com.google.android.gms.internal.auth.zzed:
     private final byte[] zzb
+androidx.lifecycle.DefaultLifecycleObserver$-CC
+io.flutter.view.TextureRegistry$SurfaceTextureEntry$-CC
 io.flutter.plugin.common.BinaryMessenger$-CC:
     public static io.flutter.plugin.common.BinaryMessenger$TaskQueue $default$makeBackgroundTaskQueue(io.flutter.plugin.common.BinaryMessenger,io.flutter.plugin.common.BinaryMessenger$TaskQueueOptions)
     public static void $default$setMessageHandler(io.flutter.plugin.common.BinaryMessenger,java.lang.String,io.flutter.plugin.common.BinaryMessenger$BinaryMessageHandler,io.flutter.plugin.common.BinaryMessenger$TaskQueue)
-androidx.lifecycle.DefaultLifecycleObserver$-CC
-io.flutter.view.TextureRegistry$SurfaceTextureEntry$-CC

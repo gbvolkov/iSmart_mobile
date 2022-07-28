@@ -232,6 +232,10 @@
         "source": "C:\\Users\\volko\\.gradle\\caches\\transforms-2\\files-2.1\\2acbb3857fd5d861de92820de4819457\\browser-1.4.0\\res\\layout\\browser_actions_context_menu_row.xml"
     },
     {
+        "merged": "C:\\Projects\\flutter\\iSmart\\iSmart_mobile\\build\\app\\intermediates\\res\\merged\\release\\xml_flutter_share_file_paths.xml.flat",
+        "source": "C:\\Projects\\flutter\\iSmart\\iSmart_mobile\\build\\share_plus\\intermediates\\packaged_res\\release\\xml\\flutter_share_file_paths.xml"
+    },
+    {
         "merged": "C:\\Projects\\flutter\\iSmart\\iSmart_mobile\\build\\app\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
         "source": "C:\\Users\\volko\\.gradle\\caches\\transforms-2\\files-2.1\\dbb41326c40b96eb8b7f4c9763a3c37a\\core-1.8.0\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
     },

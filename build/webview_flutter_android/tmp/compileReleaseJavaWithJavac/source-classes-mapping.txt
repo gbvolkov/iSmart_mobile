@@ -1,48 +1,21 @@
-io/flutter/plugins/webviewflutter/JavaScriptChannelFlutterApiImpl.java
- io.flutter.plugins.webviewflutter.JavaScriptChannelFlutterApiImpl
-io/flutter/plugins/webviewflutter/WebViewClientHostApiImpl.java
- io.flutter.plugins.webviewflutter.WebViewClientHostApiImpl
- io.flutter.plugins.webviewflutter.WebViewClientHostApiImpl$ReleasableWebViewClient
- io.flutter.plugins.webviewflutter.WebViewClientHostApiImpl$WebViewClientCompatImpl
- io.flutter.plugins.webviewflutter.WebViewClientHostApiImpl$WebViewClientCreator
- io.flutter.plugins.webviewflutter.WebViewClientHostApiImpl$WebViewClientImpl
-io/flutter/plugins/webviewflutter/JavaScriptChannelHostApiImpl.java
- io.flutter.plugins.webviewflutter.JavaScriptChannelHostApiImpl
- io.flutter.plugins.webviewflutter.JavaScriptChannelHostApiImpl$JavaScriptChannelCreator
+io/flutter/plugins/webviewflutter/FlutterAssetManager.java
+ io.flutter.plugins.webviewflutter.FlutterAssetManager
+ io.flutter.plugins.webviewflutter.FlutterAssetManager$PluginBindingFlutterAssetManager
+ io.flutter.plugins.webviewflutter.FlutterAssetManager$RegistrarFlutterAssetManager
+io/flutter/plugins/webviewflutter/CookieManagerHostApiImpl.java
+ io.flutter.plugins.webviewflutter.CookieManagerHostApiImpl
+io/flutter/plugins/webviewflutter/InputAwareWebView.java
+ io.flutter.plugins.webviewflutter.InputAwareWebView
+ io.flutter.plugins.webviewflutter.InputAwareWebView$1
 io/flutter/plugins/webviewflutter/ThreadedInputConnectionProxyAdapterView.java
  io.flutter.plugins.webviewflutter.ThreadedInputConnectionProxyAdapterView
 io/flutter/plugins/webviewflutter/DisplayListenerProxy.java
  io.flutter.plugins.webviewflutter.DisplayListenerProxy
  io.flutter.plugins.webviewflutter.DisplayListenerProxy$1
-io/flutter/plugins/webviewflutter/DownloadListenerHostApiImpl.java
- io.flutter.plugins.webviewflutter.DownloadListenerHostApiImpl
- io.flutter.plugins.webviewflutter.DownloadListenerHostApiImpl$DownloadListenerCreator
- io.flutter.plugins.webviewflutter.DownloadListenerHostApiImpl$DownloadListenerImpl
+io/flutter/plugins/webviewflutter/BuildConfig.java
+ io.flutter.plugins.webviewflutter.BuildConfig
 io/flutter/plugins/webviewflutter/Releasable.java
  io.flutter.plugins.webviewflutter.Releasable
-io/flutter/plugins/webviewflutter/FlutterWebViewFactory.java
- io.flutter.plugins.webviewflutter.FlutterWebViewFactory
-io/flutter/plugins/webviewflutter/JavaScriptChannel.java
- io.flutter.plugins.webviewflutter.JavaScriptChannel
-io/flutter/plugins/webviewflutter/WebViewHostApiImpl.java
- io.flutter.plugins.webviewflutter.WebViewHostApiImpl
- io.flutter.plugins.webviewflutter.WebViewHostApiImpl$InputAwareWebViewPlatformView
- io.flutter.plugins.webviewflutter.WebViewHostApiImpl$ReleasableValue
- io.flutter.plugins.webviewflutter.WebViewHostApiImpl$WebViewPlatformView
- io.flutter.plugins.webviewflutter.WebViewHostApiImpl$WebViewProxy
-io/flutter/plugins/webviewflutter/WebViewFlutterPlugin.java
- io.flutter.plugins.webviewflutter.WebViewFlutterPlugin
-io/flutter/plugins/webviewflutter/FlutterAssetManagerHostApiImpl.java
- io.flutter.plugins.webviewflutter.FlutterAssetManagerHostApiImpl
-io/flutter/plugins/webviewflutter/WebStorageHostApiImpl.java
- io.flutter.plugins.webviewflutter.WebStorageHostApiImpl
- io.flutter.plugins.webviewflutter.WebStorageHostApiImpl$WebStorageCreator
-io/flutter/plugins/webviewflutter/CookieManagerHostApiImpl.java
- io.flutter.plugins.webviewflutter.CookieManagerHostApiImpl
-io/flutter/plugins/webviewflutter/FlutterAssetManager.java
- io.flutter.plugins.webviewflutter.FlutterAssetManager
- io.flutter.plugins.webviewflutter.FlutterAssetManager$PluginBindingFlutterAssetManager
- io.flutter.plugins.webviewflutter.FlutterAssetManager$RegistrarFlutterAssetManager
 io/flutter/plugins/webviewflutter/GeneratedAndroidWebView.java
  io.flutter.plugins.webviewflutter.GeneratedAndroidWebView
  io.flutter.plugins.webviewflutter.GeneratedAndroidWebView$1
@@ -83,13 +56,40 @@ io/flutter/plugins/webviewflutter/GeneratedAndroidWebView.java
  io.flutter.plugins.webviewflutter.GeneratedAndroidWebView$WebViewHostApi
  io.flutter.plugins.webviewflutter.GeneratedAndroidWebView$WebViewHostApi$1
  io.flutter.plugins.webviewflutter.GeneratedAndroidWebView$WebViewHostApiCodec
-io/flutter/plugins/webviewflutter/BuildConfig.java
- io.flutter.plugins.webviewflutter.BuildConfig
+io/flutter/plugins/webviewflutter/FlutterAssetManagerHostApiImpl.java
+ io.flutter.plugins.webviewflutter.FlutterAssetManagerHostApiImpl
+io/flutter/plugins/webviewflutter/JavaScriptChannelFlutterApiImpl.java
+ io.flutter.plugins.webviewflutter.JavaScriptChannelFlutterApiImpl
+io/flutter/plugins/webviewflutter/WebViewClientHostApiImpl.java
+ io.flutter.plugins.webviewflutter.WebViewClientHostApiImpl
+ io.flutter.plugins.webviewflutter.WebViewClientHostApiImpl$ReleasableWebViewClient
+ io.flutter.plugins.webviewflutter.WebViewClientHostApiImpl$WebViewClientCompatImpl
+ io.flutter.plugins.webviewflutter.WebViewClientHostApiImpl$WebViewClientCreator
+ io.flutter.plugins.webviewflutter.WebViewClientHostApiImpl$WebViewClientImpl
+io/flutter/plugins/webviewflutter/JavaScriptChannelHostApiImpl.java
+ io.flutter.plugins.webviewflutter.JavaScriptChannelHostApiImpl
+ io.flutter.plugins.webviewflutter.JavaScriptChannelHostApiImpl$JavaScriptChannelCreator
+io/flutter/plugins/webviewflutter/DownloadListenerHostApiImpl.java
+ io.flutter.plugins.webviewflutter.DownloadListenerHostApiImpl
+ io.flutter.plugins.webviewflutter.DownloadListenerHostApiImpl$DownloadListenerCreator
+ io.flutter.plugins.webviewflutter.DownloadListenerHostApiImpl$DownloadListenerImpl
+io/flutter/plugins/webviewflutter/FlutterWebViewFactory.java
+ io.flutter.plugins.webviewflutter.FlutterWebViewFactory
+io/flutter/plugins/webviewflutter/JavaScriptChannel.java
+ io.flutter.plugins.webviewflutter.JavaScriptChannel
+io/flutter/plugins/webviewflutter/WebViewHostApiImpl.java
+ io.flutter.plugins.webviewflutter.WebViewHostApiImpl
+ io.flutter.plugins.webviewflutter.WebViewHostApiImpl$InputAwareWebViewPlatformView
+ io.flutter.plugins.webviewflutter.WebViewHostApiImpl$ReleasableValue
+ io.flutter.plugins.webviewflutter.WebViewHostApiImpl$WebViewPlatformView
+ io.flutter.plugins.webviewflutter.WebViewHostApiImpl$WebViewProxy
+io/flutter/plugins/webviewflutter/WebViewFlutterPlugin.java
+ io.flutter.plugins.webviewflutter.WebViewFlutterPlugin
+io/flutter/plugins/webviewflutter/WebStorageHostApiImpl.java
+ io.flutter.plugins.webviewflutter.WebStorageHostApiImpl
+ io.flutter.plugins.webviewflutter.WebStorageHostApiImpl$WebStorageCreator
 io/flutter/plugins/webviewflutter/WebViewClientFlutterApiImpl.java
  io.flutter.plugins.webviewflutter.WebViewClientFlutterApiImpl
-io/flutter/plugins/webviewflutter/InputAwareWebView.java
- io.flutter.plugins.webviewflutter.InputAwareWebView
- io.flutter.plugins.webviewflutter.InputAwareWebView$1
 io/flutter/plugins/webviewflutter/WebChromeClientFlutterApiImpl.java
  io.flutter.plugins.webviewflutter.WebChromeClientFlutterApiImpl
 io/flutter/plugins/webviewflutter/WebChromeClientHostApiImpl.java
@@ -99,6 +99,7 @@ io/flutter/plugins/webviewflutter/WebChromeClientHostApiImpl.java
  io.flutter.plugins.webviewflutter.WebChromeClientHostApiImpl$WebChromeClientImpl$1
 io/flutter/plugins/webviewflutter/InstanceManager.java
  io.flutter.plugins.webviewflutter.InstanceManager
+ io.flutter.plugins.webviewflutter.InstanceManager$FinalizationListener
 io/flutter/plugins/webviewflutter/WebSettingsHostApiImpl.java
  io.flutter.plugins.webviewflutter.WebSettingsHostApiImpl
  io.flutter.plugins.webviewflutter.WebSettingsHostApiImpl$WebSettingsCreator

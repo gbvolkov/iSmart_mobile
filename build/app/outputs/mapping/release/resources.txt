@@ -35,6 +35,7 @@ Referenced Strings:
   .%2e
   .Companion
   .flutter.image_provider
+  .flutter.share_provider
   .immediate
   .jpg
   .json
@@ -52,10 +53,7 @@ Referenced Strings:
   /getAccountInfo
   /getOobConfirmationCode
   /index.html
-  /mfaEnrollment:finalize
   /mfaEnrollment:start
-  /mfaEnrollment:withdraw
-  /mfaSignIn:finalize
   /mfaSignIn:start
   /o
   /o/
@@ -84,15 +82,15 @@ Referenced Strings:
   0x%08x
   1
   1$
-  1.20.0
+  1.19.1
   1.44.1
   1.7
-  10.3.3
+  10.3.1
+  11.4.4
   1157920892103562487626974469494075735...
   1157920892103562487626974469494075735...
-  12.0.1
   17.0.1
-  18.1.5
+  18.1.4
   1:
   2
   20.0.1
@@ -101,16 +99,16 @@ Referenced Strings:
   200
   204
   206
-  21.0.6
+  21.0.5
   21.1.0
-  23.0.6
-  24.2.1
+  23.0.5
+  24.1.2
   2:
   3
-  3.1.6
-  3.3.3
-  3.4.0
-  3.5.0
+  3.1.5
+  3.2.1
+  3.3.1
+  3.4.1
   304
   400
   404
@@ -347,7 +345,6 @@ Referenced Strings:
   CREATE_WEB_MESSAGE_CHANNEL
   CREDENTIAL_MISMATCH
   CREDENTIAL_TOO_OLD_LOGIN_AGAIN
-  CRUNCHY
   CT_ERROR
   CT_INFO
   CT_UNKNOWN
@@ -1075,7 +1072,6 @@ Referenced Strings:
   LAZY
   LEAN_BACK
   LEFT
-  LEGACY
   LESS_THAN
   LESS_THAN_OR_EQUAL
   LICENSE_CHECK_FAILED
@@ -1262,7 +1258,6 @@ Referenced Strings:
   OPERATOR_UNSPECIFIED
   OP_POST_NOTIFICATION
   OP_SET_MAX_LIFECYCLE
-  OR
   ORDER
   ORDER_UNSPECIFIED
   OUTBOUND
@@ -1384,7 +1379,6 @@ Referenced Strings:
   QueryEngine
   R:
   R::
-  RAW
   REACHABLE
   READY
   REAR
@@ -1677,7 +1671,6 @@ Referenced Strings:
   THIRD_PARTY_DEVICE_MANAGEMENT_REQUIRED
   TIMEOUT
   TIMESTAMP_VALUE
-  TINK
   TLS
   TLS_
   TLS_1_0
@@ -2131,7 +2124,6 @@ Referenced Strings:
   alt
   alwaysUse24HourFormat
   analyticsLabel
-  and
   android
   android.
   android.app.ActivityOptions
@@ -2148,11 +2140,16 @@ Referenced Strings:
   android.intent.action.PACKAGE_ADDED
   android.intent.action.PICK
   android.intent.action.RUN
+  android.intent.action.SEND
+  android.intent.action.SEND_MULTIPLE
   android.intent.action.USER_UNLOCKED
   android.intent.action.VIEW
   android.intent.category.OPENABLE
   android.intent.extra.ALLOW_MULTIPLE
   android.intent.extra.MIME_TYPES
+  android.intent.extra.STREAM
+  android.intent.extra.SUBJECT
+  android.intent.extra.TEXT
   android.intent.extra.USE_FRONT_CAMERA
   android.intent.extra.durationLimit
   android.intent.extras.CAMERA_FACING
@@ -2254,7 +2251,6 @@ Referenced Strings:
   announce
   anonymous
   any
-  ao
   api
   apiKey
   api_force_staging
@@ -2349,6 +2345,7 @@ Referenced Strings:
   birthdayMonth
   birthdayYear
   blockingTasksInBuffer
+  bo
   body
   bodyLocArgs
   bodyLocKey
@@ -2445,7 +2442,6 @@ Referenced Strings:
   cmd
   cn
   cn.google
-  co
   code
   codePoint
   code_
@@ -2693,7 +2689,6 @@ Referenced Strings:
   count_
   country
   countryName
-  cq
   cre
   create
   createAsync
@@ -2792,11 +2787,6 @@ Referenced Strings:
   dev.flutter.pigeon.JavaScriptChannelF...
   dev.flutter.pigeon.JavaScriptChannelF...
   dev.flutter.pigeon.JavaScriptChannelH...
-  dev.flutter.pigeon.MultiFactoResolver...
-  dev.flutter.pigeon.MultiFactorUserHos...
-  dev.flutter.pigeon.MultiFactorUserHos...
-  dev.flutter.pigeon.MultiFactorUserHos...
-  dev.flutter.pigeon.MultiFactorUserHos...
   dev.flutter.pigeon.PathProviderApi.ge...
   dev.flutter.pigeon.PathProviderApi.ge...
   dev.flutter.pigeon.PathProviderApi.ge...
@@ -2856,6 +2846,7 @@ Referenced Strings:
   dev.flutter.pigeon.WebViewHostApi.set...
   dev.flutter.pigeon.WebViewHostApi.set...
   dev.flutter.pigeon.WebViewHostApi.set...
+  dev.fluttercommunity.plus/share
   device
   deviceId
   deviceState
@@ -2897,7 +2888,7 @@ Referenced Strings:
   dynamicLinkDomain
   dynamiteLoader
   e
-  e.b.a.b.d.g.sn
+  e.b.a.b.d.g.jm
   eae_prk
   eagAttributes
   editingValue
@@ -2975,8 +2966,8 @@ Referenced Strings:
   f.b.o1.e
   f.b.o1.f
   f.b.r1.b
+  f3
   facebook.com
-  factorId
   factorIdKey
   failed_client_id
   failed_resolution
@@ -3019,8 +3010,6 @@ Referenced Strings:
   filters_
   final
   finalize
-  finalizeMfaEnrollment
-  finalizeMfaSignIn
   find
   findTrustAnchorByIssuerAndSignature
   fingerprint
@@ -3083,7 +3072,6 @@ Referenced Strings:
   forceResendingToken
   force_save_dialog
   format
-  fp
   fragment
   frame
   frameLogger
@@ -3214,6 +3202,7 @@ Referenced Strings:
   gmp_app_id
   gms:phenotype:phenotype_flag:debug_by...
   gmsv
+  go
   google.
   google.c.
   google.c.a.
@@ -3256,6 +3245,7 @@ Referenced Strings:
   h.u.j.a.a
   h.v.d.a
   h.v.e.a
+  h0
   h1
   h2
   h2_prior_knowledge
@@ -3292,7 +3282,6 @@ Referenced Strings:
   hl
   host
   hostedDomain
-  hp
   hts/frbslgigp.ogepscmv/ieo/eaybtho
   http
   http/1.0
@@ -3311,8 +3300,6 @@ Referenced Strings:
   https://www.googleapis.com/auth/games
   https://www.googleapis.com/auth/games...
   hybrid
-  i3
-  i7
   iOS
   iat
   icon
@@ -3422,8 +3409,6 @@ Referenced Strings:
   it
   it.parameterTypes
   items
-  j0
-  j7
   jClass
   jar
   jar:file:
@@ -3465,10 +3450,8 @@ Referenced Strings:
   javax.net.ssl.SNIHostName
   job
   jobscheduler
-  jp
   jpg
   json
-  k7
   keepAlivePinger
   key
   keyCode
@@ -3571,6 +3554,7 @@ Referenced Strings:
   list
   listen
   listener
+  lo
   loadBalancingConfig
   loadBalancingPolicy
   loadBalancingPolicyConfig
@@ -3601,7 +3585,6 @@ Referenced Strings:
   longPress
   longitude
   longitude_
-  lp
   m
   mAttachInfo
   mChildNodeIds
@@ -3677,6 +3660,7 @@ Referenced Strings:
   middleName
   miguelruivo.flutter.plugins.filepicker
   miguelruivo.flutter.plugins.filepicke...
+  mimeTypes
   min
   minimumVersion
   mipmap
@@ -3691,10 +3675,6 @@ Referenced Strings:
   move
   movies
   ms
-  multiFactorHints
-  multiFactorInfo
-  multiFactorResolverId
-  multiFactorSessionId
   music
   mutation_queues
   mutations
@@ -3731,6 +3711,7 @@ Referenced Strings:
   nextPageToken
   nextRequestWaitMillis
   next_request_ms
+  no
   noDrop
   noResult
   no_activity
@@ -3748,12 +3729,12 @@ Referenced Strings:
   notifications
   notifyLocalViewChanges
   notify_manager
-  np
   ns
   null
   nullValue
   num_attempts
   o
+  o3
   oauth
   oauth2:
   oauthAccessToken
@@ -3797,7 +3778,6 @@ Referenced Strings:
   once_
   oneTimeCode
   oneWay
-  oo
   oobCode
   op
   op_
@@ -3813,7 +3793,6 @@ Referenced Strings:
   operations
   optional
   options
-  or
   orderBy
   orderBy_
   org.apache.harmony.xnet.provider.jsse...
@@ -3886,7 +3865,6 @@ Referenced Strings:
   phoneResponseInfo
   phoneSessionInfo
   phoneSignInInfo
-  phoneVerificationInfo
   photoURL
   photoUrl
   pi
@@ -3922,6 +3900,7 @@ Referenced Strings:
   plugins.flutter.io/shared_preferences...
   plugins.flutter.io/url_launcher_android
   plugins.flutter.io/webview
+  pm
   podcasts
   point
   pokeByte
@@ -3995,6 +3974,7 @@ Referenced Strings:
   putInt
   putLong
   putObject
+  q6
   qosTier
   queries
   query
@@ -4004,7 +3984,6 @@ Referenced Strings:
   queryType_
   quic
   r
-  r3
   range
   raw
   raw:
@@ -4122,6 +4101,8 @@ Referenced Strings:
   rw
   rwt
   s
+  s0
+  s6
   sClassLoader
   safe
   safeCast
@@ -4155,6 +4136,7 @@ Referenced Strings:
   selectProtocol
   select_
   selected
+  selectedItems
   selectionBase
   selectionExtent
   semanticAction
@@ -4211,6 +4193,9 @@ Referenced Strings:
   sha1/
   sha1Cert
   sha256/
+  share
+  shareFiles
+  share_plus
   shared_secret
   short
   shouldRecoverAuth
@@ -4255,6 +4240,7 @@ Referenced Strings:
   sms_code_autofill
   sms_code_browser
   sms_retrieve
+  sn
   snapshot
   snapshotVersion_
   socket
@@ -4262,7 +4248,6 @@ Referenced Strings:
   source
   sourceExtension
   sourceExtensionJsonProto3
-  sp
   spdy/3.1
   spec
   splitInfo
@@ -4309,6 +4294,7 @@ Referenced Strings:
   sub
   subchannel
   subchannelRef
+  subject
   subtype
   success
   suffix
@@ -4325,6 +4311,7 @@ Referenced Strings:
   systemNavigationBarIconBrightness
   systemStatusBarContrastEnforced
   t
+  t6
   tag
   tagSocket
   tap
@@ -4445,14 +4432,13 @@ Referenced Strings:
   typeName
   typeUrl_
   u
-  u0
   uid
+  un
   unaryFilter
   unauthenticated
   unauthorized
   unavailable
   uncaughtExceptionHandler
-  unenrollMfa
   unimplemented
   uninstallDeferredComponent
   uniqueIdentifier
@@ -4508,7 +4494,6 @@ Referenced Strings:
   values_
   vary
   vendorId
-  verificationCode
   verificationId
   verifyApp
   verifyAssertionRequest
@@ -4550,6 +4535,7 @@ Referenced Strings:
   windowMetricsCalculator
   windowToken
   withData
+  wn
   work_account_client_is_whitelisted
   workerCtl
   wrapped_intent
@@ -4562,12 +4548,10 @@ Referenced Strings:
   www.googleapis.com/identitytoolkit/v3...
   x
   xlb
-  xp
   yes
-  yn
+  zn
   zoomIn
   zoomOut
-  zp
   zzd
   zze
   zzf
@@ -4592,6 +4576,7 @@ Marking integer:status_bar_notification_info_maxnum:2131099649 used because its 
 Marking string:status_bar_notification_info_overflow:2131361823 used because its prefix matches string pool constant status
 Marking string:default_web_client_id:2131361812 used because its prefix matches string pool constant default
 Marking xml:flutter_image_picker_file_paths:2131558400 used because its prefix matches string pool constant flutter
+Marking xml:flutter_share_file_paths:2131558401 used because its prefix matches string pool constant flutter
 Marking attr:colorScheme:2130771975 used because its prefix matches string pool constant color
 Marking string:fcm_fallback_notification_channel_label:2131361816 used because its prefix matches string pool constant fcm
 Marking color:notification_action_color_filter:2130837521 used because its prefix matches string pool constant notification
@@ -4633,7 +4618,7 @@ Marking layout:notification_template_part_chronometer:2131165191 used because it
 Marking layout:notification_template_part_time:2131165192 used because its prefix matches string pool constant notification
 Marking attr:imageAspectRatio:2130771989 used because its prefix matches string pool constant image
 Marking attr:imageAspectRatioAdjust:2130771990 used because its prefix matches string pool constant image
-Marking xml:image_share_filepaths:2131558401 used because its prefix matches string pool constant image
+Marking xml:image_share_filepaths:2131558402 used because its prefix matches string pool constant image
 Marking attr:activityAction:2130771968 used because its prefix matches string pool constant activity
 Marking attr:activityName:2130771969 used because its prefix matches string pool constant activity
 Marking string:project_id:2131361822 used because its prefix matches string pool constant project_id
@@ -4727,31 +4712,6 @@ Marking id:accessibility_custom_action_9:2131034144 used because its prefix matc
 Marking attr:scopeUris:2130771996 used because its prefix matches string pool constant scope
 Marking styleable:SplitPairRule:-1 used because its prefix matches string pool constant SplitPairRule
 Marking string:google_storage_bucket:2131361821 used because its prefix matches string pool constant google_storage_bucket
-Marking color:androidx_core_ripple_material_light:2130837504 used because its prefix matches string pool constant and
-Marking color:androidx_core_secondary_text_default_material_light:2130837505 used because its prefix matches string pool constant and
-Marking id:androidx_window_activity_scope:2131034152 used because its prefix matches string pool constant and
-Marking attr:android_colorBackground:-1 used because its prefix matches string pool constant and
-Marking attr:android_color:-1 used because its prefix matches string pool constant and
-Marking attr:android_alpha:-1 used because its prefix matches string pool constant and
-Marking attr:android_lStar:-1 used because its prefix matches string pool constant and
-Marking attr:android_fontStyle:-1 used because its prefix matches string pool constant and
-Marking attr:android_font:-1 used because its prefix matches string pool constant and
-Marking attr:android_fontWeight:-1 used because its prefix matches string pool constant and
-Marking attr:android_fontVariationSettings:-1 used because its prefix matches string pool constant and
-Marking attr:android_ttcIndex:-1 used because its prefix matches string pool constant and
-Marking attr:android_startColor:-1 used because its prefix matches string pool constant and
-Marking attr:android_centerColor:-1 used because its prefix matches string pool constant and
-Marking attr:android_endColor:-1 used because its prefix matches string pool constant and
-Marking attr:android_type:-1 used because its prefix matches string pool constant and
-Marking attr:android_gradientRadius:-1 used because its prefix matches string pool constant and
-Marking attr:android_centerX:-1 used because its prefix matches string pool constant and
-Marking attr:android_centerY:-1 used because its prefix matches string pool constant and
-Marking attr:android_startX:-1 used because its prefix matches string pool constant and
-Marking attr:android_startY:-1 used because its prefix matches string pool constant and
-Marking attr:android_endX:-1 used because its prefix matches string pool constant and
-Marking attr:android_endY:-1 used because its prefix matches string pool constant and
-Marking attr:android_tileMode:-1 used because its prefix matches string pool constant and
-Marking attr:android_offset:-1 used because its prefix matches string pool constant and
 Marking string:app_name:2131361792 used because its prefix matches string pool constant app
 Marking id:view_tree_lifecycle_owner:2131034201 used because its prefix matches string pool constant view
 Marking attr:primaryActivityName:2130771994 used because its prefix matches string pool constant primaryActivityName
@@ -5007,7 +4967,8 @@ attr:activityAction:2130771968,
    styleable:SplitPairRule:-1,
    styleable:SplitPlaceholderRule:-1,
    xml:flutter_image_picker_file_paths:2131558400,
-   xml:image_share_filepaths:2131558401,
+   xml:flutter_share_file_paths:2131558401,
+   xml:image_share_filepaths:2131558402,
    attr:android_colorBackground:-1,
    attr:android_color:-1,
    attr:android_alpha:-1,

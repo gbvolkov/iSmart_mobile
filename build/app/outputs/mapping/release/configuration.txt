@@ -136,6 +136,7 @@
 -keep class com.google.firebase.iid.FirebaseInstanceIdReceiver { <init>(); }
 -keep class com.google.firebase.messaging.FirebaseMessagingService { <init>(); }
 -keep class com.google.firebase.provider.FirebaseInitProvider { <init>(); }
+-keep class dev.fluttercommunity.plus.share.ShareFileProvider { <init>(); }
 -keep class io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService { <init>(); }
 -keep class io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider { <init>(); }
 -keep class io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver { <init>(); }
@@ -241,7 +242,7 @@
 -dontwarn sun.misc.Signal
 
 # End of content from C:\Users\volko\.gradle\caches\transforms-2\files-2.1\2467b8b7d7960cbee56853cce5dfd767\rules\lib\META-INF\proguard\coroutines.pro
-# The proguard configuration file for the following section is C:\Users\volko\.gradle\caches\transforms-2\files-2.1\589b30b2148461e44181f5f2a38b12f7\jetified-firebase-auth-21.0.6\proguard.txt
+# The proguard configuration file for the following section is C:\Users\volko\.gradle\caches\transforms-2\files-2.1\f46146a770eac87b43c22f9e8df4bfa0\jetified-firebase-auth-21.0.5\proguard.txt
 -dontwarn com.google.appengine.api.**
 -dontwarn okio.**
 -dontwarn org.apache.**
@@ -261,11 +262,11 @@
 # We keep all fields for every generated proto file as the runtime uses
 # reflection over them that ProGuard cannot detect. Without this keep
 # rule, fields may be removed that would cause runtime failures.
--keepclassmembers class * extends com.google.android.gms.internal.firebase-auth-api.zzzx {
+-keepclassmembers class * extends com.google.android.gms.internal.firebase-auth-api.zzzm {
   <fields>;
 }
 
-# End of content from C:\Users\volko\.gradle\caches\transforms-2\files-2.1\589b30b2148461e44181f5f2a38b12f7\jetified-firebase-auth-21.0.6\proguard.txt
+# End of content from C:\Users\volko\.gradle\caches\transforms-2\files-2.1\f46146a770eac87b43c22f9e8df4bfa0\jetified-firebase-auth-21.0.5\proguard.txt
 # The proguard configuration file for the following section is C:\Users\volko\.gradle\caches\transforms-2\files-2.1\093aad98a1f3c0511340e4091d863c89\jetified-firebase-functions-20.1.0\proguard.txt
 -dontwarn okio.**
 
@@ -286,7 +287,7 @@
 
 
 # End of content from C:\Users\volko\.gradle\caches\transforms-2\files-2.1\093aad98a1f3c0511340e4091d863c89\jetified-firebase-functions-20.1.0\proguard.txt
-# The proguard configuration file for the following section is C:\Users\volko\.gradle\caches\transforms-2\files-2.1\c1ef12edf308d8a24b0c8b40588a0ecd\jetified-firebase-firestore-24.2.1\proguard.txt
+# The proguard configuration file for the following section is C:\Users\volko\.gradle\caches\transforms-2\files-2.1\4fb5ec458a2dae72d94721609f0f29b0\jetified-firebase-firestore-24.1.2\proguard.txt
 # Needed for DNS resolution.  Present in OpenJDK, but not Android
 -dontwarn javax.naming.**
 
@@ -306,7 +307,7 @@
 -dontwarn okio.**
 -dontwarn com.google.j2objc.annotations.**
 
-# End of content from C:\Users\volko\.gradle\caches\transforms-2\files-2.1\c1ef12edf308d8a24b0c8b40588a0ecd\jetified-firebase-firestore-24.2.1\proguard.txt
+# End of content from C:\Users\volko\.gradle\caches\transforms-2\files-2.1\4fb5ec458a2dae72d94721609f0f29b0\jetified-firebase-firestore-24.1.2\proguard.txt
 # The proguard configuration file for the following section is C:\Users\volko\.gradle\caches\transforms-2\files-2.1\ef0472bb7080d625c6c04dc36129e599\jetified-firebase-auth-interop-20.0.0\proguard.txt
 # Can be removed once we pull in a dependency on firebase-common that includes
 # https://github.com/firebase/firebase-android-sdk/pull/1472/commits/856f1ca1151cdd88679bbc778892f23dfa34fc06#diff-a2ed34b5a38b4c6c686b09e54865eb48
@@ -499,11 +500,11 @@
 -keep class * implements com.google.firebase.components.ComponentRegistrar
 
 # End of content from C:\Users\volko\.gradle\caches\transforms-2\files-2.1\1c88d5e38c0c3850b2f75003b238ced5\jetified-firebase-components-17.0.0\proguard.txt
-# The proguard configuration file for the following section is C:\Users\volko\.gradle\caches\transforms-2\files-2.1\ef6fae7600c1464dd676421ab25f9422\jetified-transport-backend-cct-3.1.6\proguard.txt
+# The proguard configuration file for the following section is C:\Users\volko\.gradle\caches\transforms-2\files-2.1\c6234569519b6155bbd8411c63c4cf71\jetified-transport-backend-cct-3.1.5\proguard.txt
 -dontwarn com.google.auto.value.AutoValue
 -dontwarn com.google.auto.value.AutoValue$Builder
 
-# End of content from C:\Users\volko\.gradle\caches\transforms-2\files-2.1\ef6fae7600c1464dd676421ab25f9422\jetified-transport-backend-cct-3.1.6\proguard.txt
+# End of content from C:\Users\volko\.gradle\caches\transforms-2\files-2.1\c6234569519b6155bbd8411c63c4cf71\jetified-transport-backend-cct-3.1.5\proguard.txt
 # The proguard configuration file for the following section is C:\Users\volko\.gradle\caches\transforms-2\files-2.1\f4c63598ccac7678b5ee3acd2e05b3b3\jetified-transport-api-3.0.0\proguard.txt
 -dontwarn com.google.auto.value.AutoValue
 -dontwarn com.google.auto.value.AutoValue$Builder
