@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Projects\\flutter\\iSmart\\iSmart_mobile\\build\\google_sign_in\\intermediates\\res\\merged\\debug\\drawable-watch-v20\\common_google_signin_btn_text_dark_normal.xml",
+        "source": "C:\\Users\\volko\\.gradle\\caches\\transforms-2\\files-2.1\\33d336f366d3c6f0fd89f3107dd90002\\jetified-play-services-auth-16.0.1\\res\\drawable-watch-v20\\common_google_signin_btn_text_dark_normal.xml"
+    },
+    {
+        "merged": "C:\\Projects\\flutter\\iSmart\\iSmart_mobile\\build\\google_sign_in\\intermediates\\res\\merged\\debug\\drawable-watch-v20\\common_google_signin_btn_text_disabled.xml",
+        "source": "C:\\Users\\volko\\.gradle\\caches\\transforms-2\\files-2.1\\33d336f366d3c6f0fd89f3107dd90002\\jetified-play-services-auth-16.0.1\\res\\drawable-watch-v20\\common_google_signin_btn_text_disabled.xml"
+    },
+    {
+        "merged": "C:\\Projects\\flutter\\iSmart\\iSmart_mobile\\build\\google_sign_in\\intermediates\\res\\merged\\debug\\drawable-watch-v20\\common_google_signin_btn_text_light_normal.xml",
+        "source": "C:\\Users\\volko\\.gradle\\caches\\transforms-2\\files-2.1\\33d336f366d3c6f0fd89f3107dd90002\\jetified-play-services-auth-16.0.1\\res\\drawable-watch-v20\\common_google_signin_btn_text_light_normal.xml"
+    }
+]

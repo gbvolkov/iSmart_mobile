@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Projects\\flutter\\iSmart\\iSmart_mobile\\build\\google_sign_in_android\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_text_dark.xml",
+        "source": "C:\\Users\\volko\\.gradle\\caches\\transforms-2\\files-2.1\\7ba56569a9efbc0fa9acacc5890907b8\\jetified-play-services-base-18.0.1\\res\\color\\common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "C:\\Projects\\flutter\\iSmart\\iSmart_mobile\\build\\google_sign_in_android\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_tint.xml",
+        "source": "C:\\Users\\volko\\.gradle\\caches\\transforms-2\\files-2.1\\7ba56569a9efbc0fa9acacc5890907b8\\jetified-play-services-base-18.0.1\\res\\color\\common_google_signin_btn_tint.xml"
+    },
+    {
+        "merged": "C:\\Projects\\flutter\\iSmart\\iSmart_mobile\\build\\google_sign_in_android\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\Users\\volko\\.gradle\\caches\\transforms-2\\files-2.1\\7ba56569a9efbc0fa9acacc5890907b8\\jetified-play-services-base-18.0.1\\res\\color\\common_google_signin_btn_text_light.xml"
+    }
+]

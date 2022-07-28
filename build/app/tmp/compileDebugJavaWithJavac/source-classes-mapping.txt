@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/gbv/ismart/BuildConfig.java
+ com.gbv.ismart.BuildConfig
