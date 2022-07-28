@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "822939680529",
+    "project_id": "ismart-c92f2",
+    "storage_bucket": "ismart-c92f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822939680529:android:e2b01c3381c9cd74e056b0",
+        "android_client_info": {
+          "package_name": "com.gbv.ismart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "822939680529-n454clhg0ne3dddf3tedn60dhk7mns78.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gbv.ismart",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "822939680529-64k8c5g44p9goh22uge6bpd2hlgs07r7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRrxTZFMutAclqLs1RFeda1eGkqbTc6_E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "822939680529-64k8c5g44p9goh22uge6bpd2hlgs07r7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "822939680529-l7hqgq78nok7o07vjj6ocf3qi9ucd3ho.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.gbv.ismart"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822939680529:android:00f437570e1c134fe056b0",
+        "android_client_info": {
+          "package_name": "com.gv.ismartapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "822939680529-agbu9sak3egb4tots7jj64f55ulome5f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gv.ismartapp",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "822939680529-64k8c5g44p9goh22uge6bpd2hlgs07r7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRrxTZFMutAclqLs1RFeda1eGkqbTc6_E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "822939680529-64k8c5g44p9goh22uge6bpd2hlgs07r7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "822939680529-l7hqgq78nok7o07vjj6ocf3qi9ucd3ho.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.gbv.ismart"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
