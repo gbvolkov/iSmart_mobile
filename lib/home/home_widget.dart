@@ -163,9 +163,8 @@ class _HomeWidgetState extends State<HomeWidget> {
                                           .toList();
                                       ScaffoldMessenger.of(context)
                                           .hideCurrentSnackBar();
-                                      if (downloadUrls != null &&
-                                          downloadUrls.length ==
-                                              selectedMedia.length) {
+                                      if (downloadUrls.length ==
+                                          selectedMedia.length) {
                                         setState(() => uploadedFileUrl3 =
                                             downloadUrls.first);
                                         showUploadMessage(
@@ -310,6 +309,18 @@ class _HomeWidgetState extends State<HomeWidget> {
                       ),
                     ),
                   ),
+                Expanded(
+                  child: Align(
+                    alignment: AlignmentDirectional(1, 1),
+                    child: Text(
+                      'v.0.0.2 build 23',
+                      style: FlutterFlowTheme.of(context).bodyText1.override(
+                            fontFamily: 'Nunito Sans',
+                            fontSize: 10,
+                          ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
@@ -387,8 +398,8 @@ class _HomeWidgetState extends State<HomeWidget> {
                                     ),
                                     child: Image.network(
                                       functions.getImageURL(
-                                          FFAppState().baseURL!,
-                                          columnCategoriesRecord!.imageUrl!),
+                                          FFAppState().baseURL,
+                                          columnCategoriesRecord.imageUrl!),
                                       width: 100,
                                       height: 100,
                                       fit: BoxFit.cover,
@@ -419,7 +430,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   4, 0, 4, 0),
                                           child: AutoSizeText(
-                                            columnCategoriesRecord!.name!,
+                                            columnCategoriesRecord.name!,
                                             style: FlutterFlowTheme.of(context)
                                                 .title1,
                                           ),
@@ -427,10 +438,8 @@ class _HomeWidgetState extends State<HomeWidget> {
                                       ),
                                     ),
                                   ),
-                                  if (valueOrDefault(
-                                          currentUserDocument?.isAdmin,
-                                          false) ??
-                                      true)
+                                  if (valueOrDefault<bool>(
+                                      currentUserDocument?.isAdmin, false))
                                     Align(
                                       alignment:
                                           AlignmentDirectional(1.02, -1.08),
@@ -473,9 +482,8 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                   .toList();
                                               ScaffoldMessenger.of(context)
                                                   .hideCurrentSnackBar();
-                                              if (downloadUrls != null &&
-                                                  downloadUrls.length ==
-                                                      selectedMedia.length) {
+                                              if (downloadUrls.length ==
+                                                  selectedMedia.length) {
                                                 setState(() =>
                                                     uploadedFileUrl1 =
                                                         downloadUrls.first);
@@ -496,7 +504,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                 createCategoriesRecordData(
                                               imageUrl: uploadedFileUrl1,
                                             );
-                                            await columnCategoriesRecord!
+                                            await columnCategoriesRecord
                                                 .reference
                                                 .update(categoriesUpdateData);
                                           },
@@ -523,7 +531,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                       categoriesRecord
                                           .where('parent_id',
                                               isEqualTo:
-                                                  columnCategoriesRecord!.id)
+                                                  columnCategoriesRecord.id)
                                           .where('is_visible', isEqualTo: true)
                                           .orderBy('sort_order'),
                                 ),
@@ -603,7 +611,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                   onTap: () async {
                                                     setState(() => FFAppState()
                                                             .subjectSelectionGroupCode =
-                                                        gridViewCategoriesRecord!
+                                                        gridViewCategoriesRecord
                                                             .code!);
                                                     await queryCategoriesRecordOnce()
                                                         .then(
@@ -624,7 +632,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                   .search(
                                                                       valueOrDefault<
                                                                           String>(
-                                                                    gridViewCategoriesRecord!
+                                                                    gridViewCategoriesRecord
                                                                         .id,
                                                                     '\"\"',
                                                                   ))
@@ -644,8 +652,8 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                             .getFirstCategoryFromList(
                                                                 simpleSearchResults
                                                                     .toList(),
-                                                                gridViewCategoriesRecord!
-                                                                    .id!)!
+                                                                gridViewCategoriesRecord
+                                                                    .id!)
                                                             .subjectId!);
                                                     setState(() => FFAppState()
                                                             .currentClassID =
@@ -653,8 +661,8 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                             .getFirstCategoryFromList(
                                                                 simpleSearchResults
                                                                     .toList(),
-                                                                gridViewCategoriesRecord!
-                                                                    .id!)!
+                                                                gridViewCategoriesRecord
+                                                                    .id!)
                                                             .classId!);
                                                     setState(() => FFAppState()
                                                             .subjectSelectionCode =
@@ -662,8 +670,8 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                             .getFirstCategoryFromList(
                                                                 simpleSearchResults
                                                                     .toList(),
-                                                                gridViewCategoriesRecord!
-                                                                    .id!)!
+                                                                gridViewCategoriesRecord
+                                                                    .id!)
                                                             .code!);
                                                     setState(() => FFAppState()
                                                             .subjectSelectionID =
@@ -671,27 +679,27 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                             .getFirstCategoryFromList(
                                                                 simpleSearchResults
                                                                     .toList(),
-                                                                gridViewCategoriesRecord!
-                                                                    .id!)!
+                                                                gridViewCategoriesRecord
+                                                                    .id!)
                                                             .id!);
                                                     context.pushNamed(
                                                       'Themes',
                                                       queryParams: {
                                                         'currentCategoryID':
                                                             serializeParam(
-                                                                gridViewCategoriesRecord!
+                                                                gridViewCategoriesRecord
                                                                     .id,
                                                                 ParamType
                                                                     .String),
                                                         'currentCategoryName':
                                                             serializeParam(
-                                                                gridViewCategoriesRecord!
+                                                                gridViewCategoriesRecord
                                                                     .name,
                                                                 ParamType
                                                                     .String),
                                                         'currentCategoryDescription':
                                                             serializeParam(
-                                                                gridViewCategoriesRecord!
+                                                                gridViewCategoriesRecord
                                                                     .description,
                                                                 ParamType
                                                                     .String),
@@ -728,8 +736,8 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                   Image.network(
                                                                 functions.getImageURL(
                                                                     FFAppState()
-                                                                        .baseURL!,
-                                                                    gridViewCategoriesRecord!
+                                                                        .baseURL,
+                                                                    gridViewCategoriesRecord
                                                                         .imageUrl!),
                                                                 width: 70,
                                                                 height: 70,
@@ -752,7 +760,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                             AlignmentDirectional(
                                                                 0, 0),
                                                         child: Text(
-                                                          gridViewCategoriesRecord!
+                                                          gridViewCategoriesRecord
                                                               .name!,
                                                           textAlign:
                                                               TextAlign.center,
@@ -795,10 +803,10 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                     'platformURL': serializeParam(
                                                         functions.getCategoryPlatformURL(
                                                             FFAppState()
-                                                                .baseCategoryPlatformURL!,
-                                                            gridViewCategoriesRecord!
+                                                                .baseCategoryPlatformURL,
+                                                            gridViewCategoriesRecord
                                                                 .code!,
-                                                            gridViewCategoriesRecord!
+                                                            gridViewCategoriesRecord
                                                                 .type!,
                                                             '\"\"',
                                                             '\"\"',
@@ -810,10 +818,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                                               },
                                             ),
                                           ),
-                                          if (valueOrDefault(
-                                                  currentUserDocument?.isAdmin,
-                                                  false) ??
-                                              true)
+                                          if (valueOrDefault<bool>(
+                                              currentUserDocument?.isAdmin,
+                                              false))
                                             Align(
                                               alignment: AlignmentDirectional(
                                                   1.02, -1.08),
@@ -859,11 +866,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                       ScaffoldMessenger.of(
                                                               context)
                                                           .hideCurrentSnackBar();
-                                                      if (downloadUrls !=
-                                                              null &&
-                                                          downloadUrls.length ==
-                                                              selectedMedia
-                                                                  .length) {
+                                                      if (downloadUrls.length ==
+                                                          selectedMedia
+                                                              .length) {
                                                         setState(() =>
                                                             uploadedFileUrl2 =
                                                                 downloadUrls
@@ -886,7 +891,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                       imageUrl:
                                                           uploadedFileUrl2,
                                                     );
-                                                    await gridViewCategoriesRecord!
+                                                    await gridViewCategoriesRecord
                                                         .reference
                                                         .update(
                                                             categoriesUpdateData);

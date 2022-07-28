@@ -223,14 +223,12 @@ class _SubThemesWidgetState extends State<SubThemesWidget> {
                                 child: Builder(
                                   builder: (context) {
                                     final subthemesListFiltered = functions
-                                            .filterSubThemesList(
-                                                containerSubThemesRecordList
-                                                    .toList(),
-                                                txtSearchInpController!.text)
-                                            .map((e) => e)
-                                            .toList()
-                                            ?.toList() ??
-                                        [];
+                                        .filterSubThemesList(
+                                            containerSubThemesRecordList
+                                                .toList(),
+                                            txtSearchInpController!.text)
+                                        .map((e) => e)
+                                        .toList();
                                     return ListView.builder(
                                       padding: EdgeInsets.zero,
                                       primary: false,
@@ -278,7 +276,7 @@ class _SubThemesWidgetState extends State<SubThemesWidget> {
                                                           'platformURL': serializeParam(
                                                               functions.getSubThemePlatformURL(
                                                                   FFAppState()
-                                                                      .baseSimulatorURL!,
+                                                                      .baseSimulatorURL,
                                                                   widget.theme!,
                                                                   subthemesListFilteredItem,
                                                                   widget
@@ -309,7 +307,7 @@ class _SubThemesWidgetState extends State<SubThemesWidget> {
                                                                   .fromSTEB(8,
                                                                       0, 0, 0),
                                                           child: AutoSizeText(
-                                                            '${subthemesListFilteredItem!.number} ${subthemesListFilteredItem!.name}',
+                                                            '${subthemesListFilteredItem.number} ${subthemesListFilteredItem.name}',
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyText1
@@ -353,7 +351,7 @@ class _SubThemesWidgetState extends State<SubThemesWidget> {
                                                           'platformURL': serializeParam(
                                                               functions.getSubThemePlatformURL(
                                                                   FFAppState()
-                                                                      .baseSimulatorURL!,
+                                                                      .baseSimulatorURL,
                                                                   widget.theme!,
                                                                   subthemesListFilteredItem,
                                                                   widget

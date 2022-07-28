@@ -60,12 +60,14 @@ class _MarkdownWidgetState extends State<MarkdownWidget> {
   }
 }
 
+/*
 void launchUrl(Uri uri) async {
   String url = uri.toString();
   //if (await launcher.canLaunch(url)) {
-  await launcher.launch(url);
+    await launcher.launch(url);
   //}
 }
+*/
 
 // Handle the link. The [href] in the callback contains information
 // from the link. The url_launcher package or other similar package
@@ -76,5 +78,5 @@ Future<void> linkOnTapHandler(
   String title,
 ) async {
   var uri = Uri.parse(href);
-  launchUrl(uri);
+  launcher.launchUrl(uri);
 }

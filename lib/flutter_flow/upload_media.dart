@@ -192,7 +192,7 @@ Future<SelectedMedia?> selectFile({
   }
 
   final file = pickedFiles.files.first;
-  if (file?.bytes == null) {
+  if (file.bytes == null) {
     return null;
   }
   final path = storagePath(currentUserUid, file.name, false);

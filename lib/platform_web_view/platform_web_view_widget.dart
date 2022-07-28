@@ -80,8 +80,9 @@ class _PlatformWebViewWidgetState extends State<PlatformWebViewWidget> {
                       verticalScroll: false,
                       horizontalScroll: false,
                     ),
-                    if ((valueOrDefault(currentUserDocument?.isAdmin, false)) ==
-                        true)
+                    if ((valueOrDefault<bool>(
+                            currentUserDocument?.isAdmin, false) ==
+                        true))
                       AuthUserStreamWidget(
                         child: TextFormField(
                           controller: textController,
@@ -114,8 +115,8 @@ class _PlatformWebViewWidgetState extends State<PlatformWebViewWidget> {
                           style: FlutterFlowTheme.of(context).bodyText1,
                         ),
                       ),
-                    if (valueOrDefault(currentUserDocument?.isAdmin, false) ??
-                        true)
+                    if (valueOrDefault<bool>(
+                        currentUserDocument?.isAdmin, false))
                       AuthUserStreamWidget(
                         child: FlutterFlowIconButton(
                           borderColor: Colors.transparent,

@@ -72,7 +72,7 @@ class _NewsdetailsWidgetState extends State<NewsdetailsWidget> {
                         alignment: AlignmentDirectional(0, 0),
                         child: Image.network(
                           valueOrDefault<String>(
-                            widget.news!.image!,
+                            widget.news!.image,
                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/i-smart-je1a8v/assets/yocx559q3lpd/ismart_logo.png',
                           ),
                           width: double.infinity,

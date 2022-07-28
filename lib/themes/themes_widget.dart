@@ -165,19 +165,18 @@ class _ThemesWidgetState extends State<ThemesWidget> {
                                           onTap: () async {
                                             setState(() =>
                                                 FFAppState().currentClassID =
-                                                    listViewCategoriesRecord!
+                                                    listViewCategoriesRecord
                                                         .classId!);
                                             setState(() =>
                                                 FFAppState().currentSubjectID =
-                                                    listViewCategoriesRecord!
+                                                    listViewCategoriesRecord
                                                         .subjectId!);
                                             setState(() => FFAppState()
                                                     .subjectSelectionCode =
-                                                listViewCategoriesRecord!
-                                                    .code!);
+                                                listViewCategoriesRecord.code!);
                                             setState(() => FFAppState()
                                                     .subjectSelectionID =
-                                                listViewCategoriesRecord!.id!);
+                                                listViewCategoriesRecord.id!);
                                           },
                                           child: Material(
                                             color: Colors.transparent,
@@ -224,7 +223,7 @@ class _ThemesWidgetState extends State<ThemesWidget> {
                                                 alignment:
                                                     AlignmentDirectional(0, 0),
                                                 child: Text(
-                                                  listViewCategoriesRecord!
+                                                  listViewCategoriesRecord
                                                       .className!,
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(
@@ -374,14 +373,11 @@ class _ThemesWidgetState extends State<ThemesWidget> {
                                 child: Builder(
                                   builder: (context) {
                                     final themesListFiltered = functions
-                                            .filterThemesList(
-                                                containerThemesRecordList
-                                                    .toList(),
-                                                txtSearchInpController!.text)
-                                            .map((e) => e)
-                                            .toList()
-                                            ?.toList() ??
-                                        [];
+                                        .filterThemesList(
+                                            containerThemesRecordList.toList(),
+                                            txtSearchInpController!.text)
+                                        .map((e) => e)
+                                        .toList();
                                     return ListView.builder(
                                       padding: EdgeInsets.zero,
                                       primary: false,
@@ -476,7 +472,7 @@ class _ThemesWidgetState extends State<ThemesWidget> {
                                                                   .fromSTEB(8,
                                                                       0, 0, 0),
                                                           child: AutoSizeText(
-                                                            '${themesListFilteredItem!.number} ${themesListFilteredItem!.name}',
+                                                            '${themesListFilteredItem.number} ${themesListFilteredItem.name}',
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyText1
@@ -520,12 +516,12 @@ class _ThemesWidgetState extends State<ThemesWidget> {
                                                           'platformURL': serializeParam(
                                                               functions.getThemePlatformURL(
                                                                   FFAppState()
-                                                                      .baseCategoryPlatformURL!,
+                                                                      .baseCategoryPlatformURL,
                                                                   FFAppState()
-                                                                      .subjectSelectionCode!,
+                                                                      .subjectSelectionCode,
                                                                   FFAppState()
-                                                                      .subjectSelectionGroupCode!,
-                                                                  themesListFilteredItem!
+                                                                      .subjectSelectionGroupCode,
+                                                                  themesListFilteredItem
                                                                       .code!),
                                                               ParamType.String),
                                                         }.withoutNulls,

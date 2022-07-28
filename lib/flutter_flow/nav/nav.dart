@@ -315,12 +315,16 @@ class FFRoute {
                 )
               : builder(context, ffParams);
           final child = appStateNotifier.loading
-              ? Center(
-                  child: SizedBox(
-                    width: 50,
-                    height: 50,
-                    child: CircularProgressIndicator(
-                      color: FlutterFlowTheme.of(context).primaryColor,
+              ? Container(
+                  color: Colors.transparent,
+                  child: Center(
+                    child: Builder(
+                      builder: (context) => Image.asset(
+                        'assets/images/620d2782cf9e172916fd74d0_main_image.png',
+                        width: double.infinity,
+                        height: double.infinity,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 )

@@ -191,9 +191,8 @@ class _NewsWidgetState extends State<NewsWidget> {
                                                   .toList();
                                           ScaffoldMessenger.of(context)
                                               .hideCurrentSnackBar();
-                                          if (downloadUrls != null &&
-                                              downloadUrls.length ==
-                                                  selectedMedia.length) {
+                                          if (downloadUrls.length ==
+                                              selectedMedia.length) {
                                             setState(() => uploadedFileUrl =
                                                 downloadUrls.first);
                                             showUploadMessage(
@@ -384,14 +383,12 @@ class _NewsWidgetState extends State<NewsWidget> {
                                   child: Builder(
                                     builder: (context) {
                                       final mynews = functions
-                                              .getMyNews(
-                                                  newsNewsRecordList.toList(),
-                                                  currentUserReference!,
-                                                  '*')
-                                              .map((e) => e)
-                                              .toList()
-                                              ?.toList() ??
-                                          [];
+                                          .getMyNews(
+                                              newsNewsRecordList.toList(),
+                                              currentUserReference!,
+                                              '*')
+                                          .map((e) => e)
+                                          .toList();
                                       return ListView.builder(
                                         padding: EdgeInsets.zero,
                                         scrollDirection: Axis.vertical,
@@ -470,7 +467,7 @@ class _NewsWidgetState extends State<NewsWidget> {
                                                                   0),
                                                         ),
                                                         child: Image.network(
-                                                          mynewsItem!.image!,
+                                                          mynewsItem.image!,
                                                           width: 20,
                                                           height: 20,
                                                           fit: BoxFit.cover,
@@ -524,7 +521,7 @@ class _NewsWidgetState extends State<NewsWidget> {
                                                                             0),
                                                                 child:
                                                                     AutoSizeText(
-                                                                  mynewsItem!
+                                                                  mynewsItem
                                                                       .title!
                                                                       .maybeHandleOverflow(
                                                                     maxChars:
@@ -570,7 +567,7 @@ class _NewsWidgetState extends State<NewsWidget> {
                                                                         height:
                                                                             double.infinity,
                                                                         mdText:
-                                                                            mynewsItem!.newsText!,
+                                                                            mynewsItem.newsText!,
                                                                         txtColor:
                                                                             FlutterFlowTheme.of(context).secondaryText,
                                                                         linkColor:
@@ -601,14 +598,12 @@ class _NewsWidgetState extends State<NewsWidget> {
                                   child: Builder(
                                     builder: (context) {
                                       final mynews = functions
-                                              .getMyNews(
-                                                  newsNewsRecordList.toList(),
-                                                  currentUserReference!,
-                                                  'Тренажёр')
-                                              .map((e) => e)
-                                              .toList()
-                                              ?.toList() ??
-                                          [];
+                                          .getMyNews(
+                                              newsNewsRecordList.toList(),
+                                              currentUserReference!,
+                                              'Тренажёр')
+                                          .map((e) => e)
+                                          .toList();
                                       return ListView.builder(
                                         padding: EdgeInsets.zero,
                                         scrollDirection: Axis.vertical,
@@ -687,7 +682,7 @@ class _NewsWidgetState extends State<NewsWidget> {
                                                                   0),
                                                         ),
                                                         child: Image.network(
-                                                          mynewsItem!.image!,
+                                                          mynewsItem.image!,
                                                           width: 20,
                                                           height: 20,
                                                           fit: BoxFit.cover,
@@ -741,7 +736,7 @@ class _NewsWidgetState extends State<NewsWidget> {
                                                                             0),
                                                                 child:
                                                                     AutoSizeText(
-                                                                  mynewsItem!
+                                                                  mynewsItem
                                                                       .title!
                                                                       .maybeHandleOverflow(
                                                                     maxChars:
@@ -787,7 +782,7 @@ class _NewsWidgetState extends State<NewsWidget> {
                                                                         height:
                                                                             double.infinity,
                                                                         mdText:
-                                                                            mynewsItem!.newsText!,
+                                                                            mynewsItem.newsText!,
                                                                         txtColor:
                                                                             FlutterFlowTheme.of(context).secondaryText,
                                                                         linkColor:
@@ -818,14 +813,12 @@ class _NewsWidgetState extends State<NewsWidget> {
                                   child: Builder(
                                     builder: (context) {
                                       final mynews = functions
-                                              .getMyNews(
-                                                  newsNewsRecordList.toList(),
-                                                  currentUserReference!,
-                                                  'Новости')
-                                              .map((e) => e)
-                                              .toList()
-                                              ?.toList() ??
-                                          [];
+                                          .getMyNews(
+                                              newsNewsRecordList.toList(),
+                                              currentUserReference!,
+                                              'Новости')
+                                          .map((e) => e)
+                                          .toList();
                                       return ListView.builder(
                                         padding: EdgeInsets.zero,
                                         scrollDirection: Axis.vertical,
@@ -904,7 +897,7 @@ class _NewsWidgetState extends State<NewsWidget> {
                                                                   0),
                                                         ),
                                                         child: Image.network(
-                                                          mynewsItem!.image!,
+                                                          mynewsItem.image!,
                                                           width: 20,
                                                           height: 20,
                                                           fit: BoxFit.cover,
@@ -958,7 +951,7 @@ class _NewsWidgetState extends State<NewsWidget> {
                                                                             0),
                                                                 child:
                                                                     AutoSizeText(
-                                                                  mynewsItem!
+                                                                  mynewsItem
                                                                       .title!
                                                                       .maybeHandleOverflow(
                                                                     maxChars:
@@ -1004,7 +997,7 @@ class _NewsWidgetState extends State<NewsWidget> {
                                                                         height:
                                                                             double.infinity,
                                                                         mdText:
-                                                                            mynewsItem!.newsText!,
+                                                                            mynewsItem.newsText!,
                                                                         txtColor:
                                                                             FlutterFlowTheme.of(context).secondaryText,
                                                                         linkColor:
